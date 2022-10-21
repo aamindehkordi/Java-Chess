@@ -12,7 +12,7 @@ public class BoardUtils {
     public static final int NUM_TILES_PER_ROW = 8;
     /**
      * Sets tiles in a column to true.
-     * @param colNum
+     * @param colNum the column number
      * @return boolean array
      */
     private static boolean[] initCol(int colNum) {
