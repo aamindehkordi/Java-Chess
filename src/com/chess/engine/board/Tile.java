@@ -1,9 +1,11 @@
 package com.chess.engine.board;
 
 import com.chess.engine.pieces.Piece;
+
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import static java.util.Collections.unmodifiableMap;
 
 public abstract class Tile {
 
@@ -17,7 +19,7 @@ public abstract class Tile {
         for (int i = 0; i < 64; i++) {
             emptyTileMap.put(i, new EmptyTile(i));
         }
-        return unmodifiableMap(emptyTileMap);
+        return Collections.unmodifiableMap(new LinkedHashMap<>(emptyTileMap));
         //return ImmutableMap.copyOf(emptyTileMap);
     }
 
