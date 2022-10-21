@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="fix bugs with the knight's legal moves with extra functions" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Added more to BoardUtils and Knight">
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Knight.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +26,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2GNfURlmVRV4tIlgu55bJVBpqHW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -69,7 +75,7 @@
       <updated>1666233984289</updated>
       <workItem from="1666233985515" duration="2585000" />
       <workItem from="1666331979402" duration="250000" />
-      <workItem from="1666335632906" duration="3513000" />
+      <workItem from="1666335632906" duration="4508000" />
     </task>
     <task id="LOCAL-00001" summary="Immutable tile hashmap along with organized packages">
       <created>1666235671618</created>
@@ -113,7 +119,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666339141630</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added more to BoardUtils and Knight">
+      <created>1666339733548</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666339733548</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added more to BoardUtils and Knight">
+      <created>1666339761392</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666339761392</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,7 +159,8 @@
     <MESSAGE value="Getting started on the Knight" />
     <MESSAGE value="isValidCoords and BoardUtils Class" />
     <MESSAGE value="fix bugs with the knight's legal moves with extra functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs with the knight's legal moves with extra functions" />
+    <MESSAGE value="Added more to BoardUtils and Knight" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more to BoardUtils and Knight" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
