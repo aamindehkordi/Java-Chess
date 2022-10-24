@@ -4,6 +4,7 @@ import com.chess.engine.Alliance;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
+import com.chess.engine.board.Move.MajorMove;
 import com.chess.engine.board.Tile;
 
 import java.util.ArrayList;
@@ -18,14 +19,14 @@ public class Bishop extends Piece {
      *  7 = diagonal left down
      *  9 = diagonal right down
      */
-    private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES = {-9, -7, 7, 9};
+    private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES = { -9, -7, 7, 9 };
 
     Bishop(final int piecePosition, final Alliance pieceAlliance) {
         super(piecePosition, pieceAlliance);
     }
 
     @Override
-    public Collection<Move> calculateLegalMoves(Board board) {
+    public Collection<Move> calculateLegalMoves(final Board board) {
 
         final List<Move> legalMoves = new ArrayList<>();
         /* for each of the possible moves, check if the move is legal */
@@ -43,7 +44,7 @@ public class Bishop extends Piece {
                 final Tile candidateDestinationTile = board.getTile(candidateDestinationCoordinate);
                 /* if the tile is not occupied, add the move to the list of legal moves */
                 if (!candidateDestinationTile.isTileOccupied()) {
-                    legalMoves.add(new Move.MajorMove(board, this, candidateDestinationCoordinate));
+                    legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
                 } else {
                     /* if the tile is occupied, check if the piece is an enemy piece */
                     final Piece pieceAtDestination = candidateDestinationTile.getPiece();
