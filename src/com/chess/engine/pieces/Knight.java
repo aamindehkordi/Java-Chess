@@ -12,6 +12,15 @@ import static com.chess.engine.board.Move.*;
 
 public class Knight extends Piece {
 
+    /* -17 = up 2, left 1
+     * -15 = up 2, right 1
+     * -10 = up 1, left 2
+     * -6 = up 1, right 2
+     * 6 = down 1, right 2
+     * 10 = down 1, left 2
+     * 15 = down 2, right 1
+     * 17 = down 2, left 1
+     */
     private final static int[] CANDIDATE_MOVE_COORDINATE = {-17, -15, -10, -6, 6, 10, 15, 17};
 
     Knight(final int piecePosition, final Alliance pieceAlliance) {

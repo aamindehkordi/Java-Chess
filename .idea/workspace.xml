@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="updated uml, idk">
-      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Bishop.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="starting on the Bishop class">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Bishop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +38,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Ali" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,7 +99,8 @@
       <workItem from="1666346436499" duration="543000" />
       <workItem from="1666570921488" duration="68000" />
       <workItem from="1666571001151" duration="263000" />
-      <workItem from="1666571462875" duration="2265000" />
+      <workItem from="1666571462875" duration="3178000" />
+      <workItem from="1666649396459" duration="71000" />
     </task>
     <task id="LOCAL-00001" summary="Immutable tile hashmap along with organized packages">
       <created>1666235671618</created>
@@ -177,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666340347243</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="starting on the Bishop class">
+      <created>1666583319397</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1666583319397</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +227,8 @@
     <MESSAGE value="Tidied up the beginnings of Move class" />
     <MESSAGE value="build" />
     <MESSAGE value="updated uml, idk" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated uml, idk" />
+    <MESSAGE value="starting on the Bishop class" />
+    <option name="LAST_COMMIT_MESSAGE" value="starting on the Bishop class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
