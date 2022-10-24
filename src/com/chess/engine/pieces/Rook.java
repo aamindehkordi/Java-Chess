@@ -7,10 +7,7 @@ import com.chess.engine.board.Move;
 import com.chess.engine.board.Move.AttackMove;
 import com.chess.engine.board.Tile;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import static com.chess.engine.board.BoardUtils.*;
 import static com.chess.engine.board.Move.*;
@@ -24,6 +21,11 @@ public class Rook extends Piece{
      */
     private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES = {-8, -1, 1, 8};
 
+    /* Constructor
+     *
+     * @param piecePosition the position of the piece
+     * @param pieceAlliance the alliance of the piece
+     */
     Rook(final int piecePosition, final Alliance pieceAlliance) {
         super(piecePosition, pieceAlliance);
     }
@@ -42,7 +44,6 @@ public class Rook extends Piece{
                 }
                 /* add the offset to the current position */
                 candidateDestinationCoordinate += candidateCoordinateOffset;
-                /* if the tile is not occupied, add the move to the list of legal moves */
                 if (isValidTileCoordinate(candidateDestinationCoordinate)) {
                     /* if the tile is not occupied, add the move to the list of legal moves */
                     final Tile candidateDestinationTile = board.getTile(candidateDestinationCoordinate);
@@ -61,9 +62,10 @@ public class Rook extends Piece{
                 }
             }
         }
-        return Collections.unmodifiableList(legalMoves);
+        return Collections.unmodifiableList(new LinkedList<>(legalMoves));
     }
 
+    /* if the rook is on the first or eigth column, the move is illegal */
     private boolean isEighthColumnExclusion(int candidateDestinationCoordinate, int candidateCoordinateOffset) {
         return EIGHTH_COLUMN[candidateDestinationCoordinate] && (candidateCoordinateOffset == 1);
     }

@@ -23,11 +23,21 @@ public class Knight extends Piece {
      */
     private final static int[] CANDIDATE_MOVE_COORDINATE = {-17, -15, -10, -6, 6, 10, 15, 17};
 
+    /* Constructor
+     *
+     * @param piecePosition the position of the piece
+     * @param pieceAlliance the alliance of the piece
+     */
     Knight(final int piecePosition, final Alliance pieceAlliance) {
         super(piecePosition, pieceAlliance);
     }
 
     @Override
+    /* Calculate the legal moves for the Knight
+     *
+     * @param board the board
+     * @return a collection of legal moves
+     */
     public Collection<Move> calculateLegalMoves(final Board board) {
 
         final List<Move> legalMoves = new ArrayList<>();
@@ -48,26 +58,27 @@ public class Knight extends Piece {
                 final Tile candidateDestinationTile = board.getTile(candidateDestinationCoordinate);
 
                 if (!candidateDestinationTile.isTileOccupied()) {
-
+                    /* if the tile is not occupied, add the move to the list of legal moves */
                     legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
 
                 } else {
-
+                    /* if the tile is occupied, check if the piece is an enemy piece */
                     final Piece pieceAtDestination = candidateDestinationTile.getPiece();
                     final Alliance pieceAlliance = pieceAtDestination.getPieceAlliance();
 
                     if (this.pieceAlliance != pieceAlliance) {
-
+                        /* if the piece is an enemy piece, add the move to the list of legal moves */
                         legalMoves.add(new AttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination));
 
                     }
                 }
             }
         }
-
+        /* return an unmodifiable collection of legal moves */
         return Collections.unmodifiableList(new LinkedList<>(legalMoves));
     }
 
+    /* if the knight is on the 1st, 2nd, 7th, or 8th column then the corresponding move is illegal */
     private boolean isEighthColumnExclusion(final int currentPos, final int candidateOff) {
         return BoardUtils.EIGHTH_COLUMN[currentPos] && (candidateOff == -15 || candidateOff == -6 || candidateOff == 10 || candidateOff == 17);
     }
@@ -81,9 +92,9 @@ public class Knight extends Piece {
     }
 
     private static boolean isFirstColumnExclusion(final int currentPos, final int candidateOff){
-            /* if the current position is in the first column, then the knight cannot move to the left */
-            return BoardUtils.FIRST_COLUMN[currentPos] && ((candidateOff == -17) || (candidateOff == -10) ||
-                    (candidateOff == 6) || (candidateOff == 15));
-        }
+        /* if the current position is in the first column, then the knight cannot move to the left */
+        return BoardUtils.FIRST_COLUMN[currentPos] && ((candidateOff == -17) || (candidateOff == -10) ||
+                (candidateOff == 6) || (candidateOff == 15));
+    }
 
 }

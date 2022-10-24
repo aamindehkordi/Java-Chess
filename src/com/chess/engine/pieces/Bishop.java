@@ -7,10 +7,7 @@ import com.chess.engine.board.Move;
 import com.chess.engine.board.Move.MajorMove;
 import com.chess.engine.board.Tile;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Bishop extends Piece {
 
@@ -21,11 +18,21 @@ public class Bishop extends Piece {
      */
     private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES = { -9, -7, 7, 9 };
 
+    /* Constructor
+     *
+     * @param piecePosition the position of the piece
+     * @param pieceAlliance the alliance of the piece
+     */
     Bishop(final int piecePosition, final Alliance pieceAlliance) {
         super(piecePosition, pieceAlliance);
     }
 
     @Override
+    /* Calculate the legal moves for the Knight
+     *
+     * @param board the board
+     * @return an unmodifiable collection of legal moves
+     */
     public Collection<Move> calculateLegalMoves(final Board board) {
 
         final List<Move> legalMoves = new ArrayList<>();
@@ -60,7 +67,7 @@ public class Bishop extends Piece {
 
         }
         /* return an immutable copy of the list of legal moves */
-        return Collections.unmodifiableList(legalMoves);
+        return Collections.unmodifiableList(new LinkedList<>(legalMoves));
     }
 
     /* if the bishop is on the first or eigth column, the move is illegal */
