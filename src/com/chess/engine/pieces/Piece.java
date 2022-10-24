@@ -24,6 +24,7 @@ public abstract class Piece {
     Piece(final int piecePosition, final Alliance pieceAlliance) {
         this.piecePosition = piecePosition;
         this.pieceAlliance = pieceAlliance;
+        this.isFirstMove = isFirstMove();
     }
 
     /* Calculate the legal moves for the piece
