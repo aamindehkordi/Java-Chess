@@ -9,6 +9,8 @@ public class BoardUtils {
     public static final boolean[] SECOND_COLUMN = initCol(1);
     public static final boolean[] SEVENTH_COLUMN = initCol(6);
     public static final boolean[] EIGHTH_COLUMN = initCol(7);
+    public static final boolean[] SECOND_ROW = initRow(1);
+    public static final boolean[] SEVENTH_ROW = initRow(6);
 
     /**
      * This method is used to initialize the columns of the board.
@@ -27,6 +29,25 @@ public class BoardUtils {
             colNum += NUM_TILES_PER_ROW;
         } while (colNum < NUM_TILES);
         return column;
+    }
+
+    /**
+     * This method is used to initialize the rows of the board.
+     * @param rowNum the row number
+     * @return boolean array
+     */
+    private static boolean[] initRow(int rowNum) {
+        final boolean[] row = new boolean[NUM_TILES];
+        /*
+         * The following loop is used to initialize the rows of the board.
+         * The loop starts at the row number and increments by 1.
+         * The loop ends when the row number is greater than 7.
+         */
+        do {
+            row[rowNum] = true;
+            rowNum++;
+        } while (rowNum % NUM_TILES_PER_ROW != 0);
+        return row;
     }
 
     /* Constructor

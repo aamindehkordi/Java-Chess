@@ -14,6 +14,8 @@ public abstract class Piece {
     /* the alliance of the piece */
     protected final Alliance pieceAlliance;
 
+    protected final boolean isFirstMove;
+
     /* Constructor
      *
      * @param piecePosition the position of the piece
@@ -37,5 +39,9 @@ public abstract class Piece {
      */
     protected Alliance getPieceAlliance() {
         return this.pieceAlliance;
+    }
+
+    public boolean isFirstMove() {
+        return this.isFirstMove;
     }
 }

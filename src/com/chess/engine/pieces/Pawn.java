@@ -38,8 +38,21 @@ public class Pawn extends Piece {
 
             /* if you are moving one tile forward and the tile is not occupied, add the move to the list of legal moves */
             if(currentCandidateOffset == 8 && !board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
-                //TODO more work to do here!!!
+                //TODO Promotions
                 legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
+            }
+
+            /* if you are moving two tiles forward and the tile is not occupied, add the move to the list of legal moves */
+            else if( currentCandidateOffset == 16 && this.isFirstMove() &&
+                    (BoardUtils.SECOND_ROW[this.piecePosition] && this.getPieceAlliance().isBlack()) ||
+                    (BoardUtils.SEVENTH_ROW[this.piecePosition] && this.getPieceAlliance().isWhite()) ) {
+                /* between the current position and the destination position, there must be an empty tile */
+                final int behindCandidateDestinationCoordinate = this.piecePosition + (this.pieceAlliance.getDirection() * 8);
+                /* if both tiles are not occupied, add the move to the list of legal moves */
+                if(!board.getTile(behindCandidateDestinationCoordinate).isTileOccupied() &&
+                        !board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
+                    legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
+                }
             }
         }
 
