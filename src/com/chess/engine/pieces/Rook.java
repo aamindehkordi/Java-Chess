@@ -36,11 +36,6 @@ public class Rook extends Piece{
     }
 
     @Override
-    /** Calculate the legal moves for the Rook
-     *
-     * @param board the board
-     * @return an unmodifiable collection of legal moves
-     */
     public Collection<Move> calculateLegalMoves(final Board board) {
         final List<Move> legalMoves = new ArrayList<>();
         /* for each of the possible moves, check if the move is legal */
@@ -88,9 +83,9 @@ public class Rook extends Piece{
 
     /** If the rook is on the eighth column, the move is illegal
      *
-     * @param candidateDestinationCoordinate
-     * @param candidateCoordinateOffset
-     * @return
+     * @param candidateDestinationCoordinate the destination coordinate
+     * @param candidateCoordinateOffset the offset
+     * @return true if the move is illegal, false otherwise
      */
     private boolean isEighthColumnExclusion(int candidateDestinationCoordinate, int candidateCoordinateOffset) {
         return EIGHTH_COLUMN[candidateDestinationCoordinate] && (candidateCoordinateOffset == 1);
@@ -98,9 +93,9 @@ public class Rook extends Piece{
 
     /** If the rook is on the first column, the move is illegal
      *
-     * @param candidateDestinationCoordinate
-     * @param candidateCoordinateOffset
-     * @return
+     * @param candidateDestinationCoordinate the destination coordinate
+     * @param candidateCoordinateOffset the offset
+     * @return true if the move is illegal, false otherwise
      */
     private boolean isFirstColumnExclusion(int candidateDestinationCoordinate, int candidateCoordinateOffset) {
         return FIRST_COLUMN[candidateDestinationCoordinate] && (candidateCoordinateOffset == -1);

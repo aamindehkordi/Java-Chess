@@ -35,19 +35,10 @@ public class Knight extends Piece {
     }
 
     @Override
-    /** Prints the piece
-     *
-     * @return the piece as a string
-     */
     public String toString() {
         return PieceType.KNIGHT.toString();
     }
     @Override
-    /** Calculate the legal moves for the Knight
-     *
-     * @param board the board
-     * @return a collection of legal moves
-     */
     public Collection<Move> calculateLegalMoves(final Board board) {
 
         final List<Move> legalMoves = new ArrayList<>(); /* for each of the possible moves, check if the move is legal */
@@ -96,8 +87,8 @@ public class Knight extends Piece {
 
     /** if the knight is on the 8th column then the corresponding move is illegal
      *
-     * @param currentPos
-     * @param candidateOff
+     * @param currentPos the current position of the knight
+     * @param candidateOff the offset of the move
      * @return true if the move is illegal, false otherwise
      */
     private boolean isEighthColumnExclusion(final int currentPos, final int candidateOff) {
@@ -106,8 +97,8 @@ public class Knight extends Piece {
 
     /** if the knight is on the 7th column then the corresponding move is illegal
      *
-     * @param currentPos
-     * @param candidateOff
+     * @param currentPos the current position of the knight
+     * @param candidateOff the offset of the move
      * @return true if the move is illegal, false otherwise
      */
     private boolean isSeventhColumnExclusion(final int currentPos, final int candidateOff) {
@@ -116,8 +107,8 @@ public class Knight extends Piece {
 
     /** if the knight is on the 2nd column then the corresponding move is illegal
      *
-     * @param currentPos
-     * @param candidateOff
+     * @param currentPos the current position of the knight
+     * @param candidateOff the offset of the move
      * @return true if the move is illegal, false otherwise
      */
     private boolean isSecondColumnExclusion(final int currentPos, final int candidateOff) {
@@ -126,8 +117,8 @@ public class Knight extends Piece {
 
     /** if the knight is on the 1st column then the corresponding move is illegal
      *
-     * @param currentPos
-     * @param candidateOff
+     * @param currentPos the current position of the knight
+     * @param candidateOff the offset of the move
      * @return true if the move is illegal, false otherwise
      */
     private static boolean isFirstColumnExclusion(final int currentPos, final int candidateOff){

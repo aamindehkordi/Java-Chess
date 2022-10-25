@@ -28,19 +28,14 @@ public class Bishop extends Piece {
         super(PieceType.BISHOP, piecePosition, pieceAlliance);
     }
 
-    @Override
     /** Print the piece
      * @return the piece string
      */
+    @Override
     public String toString() {
         return PieceType.BISHOP.toString();
     }
     @Override
-    /** Calculate the legal moves for the Knight
-     *
-     * @param board the board
-     * @return an unmodifiable collection of legal moves
-     */
     public Collection<Move> calculateLegalMoves(final Board board) {
 
         final List<Move> legalMoves = new ArrayList<>(); /* for each of the possible moves, check if the move is legal */
@@ -85,8 +80,8 @@ public class Bishop extends Piece {
 
     /** if the bishop is on the first, the move is illegal
      *
-     * @param currentPosition
-     * @param candidateOffset
+     * @param currentPosition the current position of the bishop
+     * @param candidateOffset the offset of the move
      * @return true if the move is illegal, false otherwise
      */
     private static boolean isFirstColumnExclusion(final int currentPosition, final int candidateOffset) {
@@ -95,8 +90,8 @@ public class Bishop extends Piece {
 
     /** if the bishop is on the eigth column, the move is illegal
      *
-     * @param currentPosition
-     * @param candidateOffset
+     * @param currentPosition the current position of the bishop
+     * @param candidateOffset the offset of the move
      * @return true if the move is illegal, false otherwise
      */
     private static boolean isEighthColumnExclusion(final int currentPosition, final int candidateOffset) {

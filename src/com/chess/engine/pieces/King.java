@@ -35,11 +35,6 @@ public class King extends Piece{
     }
 
     @Override
-    /** Calculate the legal moves for the King
-     *
-     * @param board the board
-     * @return a collection of legal moves
-     */
     public Collection<Move> calculateLegalMoves(Board board) {
         final List<Move> legalMoves = new ArrayList<>();
 
@@ -79,10 +74,6 @@ public class King extends Piece{
     }
 
     @Override
-    /** Prints the piece
-     *
-     * @return the piece as a string
-     */
     public String toString() {
         return PieceType.KING.toString();
     }

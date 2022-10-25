@@ -116,6 +116,7 @@ public abstract class Player {
      *
      * @return true if the player is castled
      */
+    @SuppressWarnings("SameReturnValue")
     public boolean isCastled() {
         return false;
     }
@@ -183,9 +184,9 @@ public abstract class Player {
 
     /**
      *
-     * @param playerLegals
-     * @param opponentLegals
-     * @return
+     * @param playerLegals the player's legal moves
+     * @param opponentLegals the opponent's legal moves
+     * @return a collection of legal moves
      */
     protected  abstract Collection<Move> calculateKingCastles(Collection<Move> playerLegals, Collection<Move> opponentLegals);
 }

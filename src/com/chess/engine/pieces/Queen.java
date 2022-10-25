@@ -38,11 +38,6 @@ public class Queen extends Piece{
         return PieceType.QUEEN.toString();
     }
     @Override
-    /** Calculate the legal moves for the piece
-     *
-     * @param board the board
-     * @return an unmodifiable collection of legal moves
-     */
     public Collection<Move> calculateLegalMoves(Board board) {
         final List<Move> legalMoves = new ArrayList<>();
         /* for each of the possible moves, check if the move is legal */

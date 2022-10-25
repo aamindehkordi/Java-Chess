@@ -203,7 +203,7 @@ public class Board {
     /** ‘Builder’ class */
     public static class Builder {
 
-        Map<Integer, Piece> boardConfig; /* the board configuration */
+        final Map<Integer, Piece> boardConfig; /* the board configuration */
         Alliance nextMoveMaker; /* the next move maker */
         Pawn enPassantPawn; /* the en passant pawn */
 

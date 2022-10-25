@@ -51,9 +51,9 @@ public class BoardUtils {
     }
 
     /** Constructor
-     *
+     * <p>
      * DO NOT CONSTRUCT AN INSTANCE OF THIS CLASS
-     *
+     * <p>
      * BoardUtils is used to store constants and static methods
      * and should not be instantiated.
      */
