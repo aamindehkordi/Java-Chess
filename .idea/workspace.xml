@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Cleanup">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" afterDir="false" />
-    </list>
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Code now runs!" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,14 +105,7 @@
       <workItem from="1666571462875" duration="3178000" />
       <workItem from="1666649396459" duration="71000" />
       <workItem from="1666649473994" duration="30122000" />
-      <workItem from="1666720096642" duration="7481000" />
-    </task>
-    <task id="LOCAL-00001" summary="Immutable tile hashmap along with organized packages">
-      <created>1666235671618</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1666235671618</updated>
+      <workItem from="1666720096642" duration="7730000" />
     </task>
     <task id="LOCAL-00002" summary="Immutable tile hashmap along with organized packages">
       <created>1666235726829</created>
@@ -454,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666729099271</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Code now runs!">
+      <created>1666736999203</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1666736999204</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,7 +482,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Pawn Movement is complete, attack is remaining" />
     <MESSAGE value="Pawn Movement and Attack is complete, TODO: Promotions" />
     <MESSAGE value="King is nice and commented" />
     <MESSAGE value="Pawn comment adds" />
@@ -511,21 +506,12 @@
     <MESSAGE value="Finished with Castling and Cleanup" />
     <MESSAGE value="Added JavaDocs" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Code now runs!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code now runs!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.UnsupportedOperationException" package="java.lang" />
           <option name="timeStamp" value="16" />
