@@ -272,6 +272,33 @@ public abstract class Move {
             this.castleRookStart = castleRookStart;
             this.castleRookDestination = castleRookDestination;
         }
+
+        public Rook getCastleRook() {
+            return this.castleRook;
+        }
+
+        @Override
+        public boolean isCastlingMove() {
+            return true;
+        }
+
+        @Override
+        public Board execute() {
+            final Builder builder = new Builder(); /* create a new board builder */
+            for (final Piece piece : this.board.currentPlayer().getActivePieces()) { /* for each friendly piece on the board */
+                if (!this.movedPiece.equals(piece) && !this.castleRook.equals(piece)) { /* for all the pieces except the moved piece and the castle rook */
+                    builder.setPiece(piece); /* add them to the new board */
+                }
+            }
+            for (final Piece piece : this.board.currentPlayer().getOpponent().getActivePieces()) { /* for each ennemy piece on the board */
+                builder.setPiece(piece); /* add the piece to the board */
+            }
+            builder.setPiece(this.movedPiece.movePiece(this)); /* move the King */
+            //TODO look into first move of the castle rook
+            builder.setPiece(new Rook(this.castleRookDestination, this.castleRook.getPieceAlliance())); /* move the rook */
+            builder.setMoveMaker(this.board.currentPlayer().getOpponent().getAlliance()); /* set the move maker to the opponent */
+            return builder.build(); /* build the board */
+        }
     }
 
     public static final class KingSideCastleMove extends CastleMove {
@@ -287,6 +314,11 @@ public abstract class Move {
         public KingSideCastleMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Rook castleRook, final int castleRookStart, final int castleRookDestination) {
             super(board, movedPiece, destinationCoordinate, castleRook, castleRookStart, castleRookDestination);
         }
+
+        @Override
+        public String toString() {
+            return "O-O";
+        }
     }
 
     public static final class QueenSideCastleMove extends CastleMove {
@@ -301,6 +333,11 @@ public abstract class Move {
          */
         public QueenSideCastleMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Rook castleRook, final int castleRookStart, final int castleRookDestination) {
             super(board, movedPiece, destinationCoordinate, castleRook, castleRookStart, castleRookDestination);
+        }
+
+        @Override
+        public String toString() {
+            return "O-O-O";
         }
     }
 
