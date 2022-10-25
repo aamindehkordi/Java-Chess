@@ -2,6 +2,7 @@ package com.chess.engine.pieces;
 
 public enum PieceType {
 
+    /** Pawn */
     PAWN("P") {
         @Override
         public boolean isKing() {
@@ -13,6 +14,7 @@ public enum PieceType {
             return false;
         }
     },
+    /** Knight */
     KNIGHT("N") {
         @Override
         public boolean isKing() {
@@ -24,6 +26,7 @@ public enum PieceType {
             return false;
         }
     },
+    /** Bishop */
     BISHOP("B") {
         @Override
         public boolean isKing() {
@@ -35,6 +38,7 @@ public enum PieceType {
             return false;
         }
     },
+    /** Rook */
     ROOK("R") {
         @Override
         public boolean isKing() {
@@ -46,6 +50,7 @@ public enum PieceType {
             return true;
         }
     },
+    /** Queen */
     QUEEN("Q") {
         @Override
         public boolean isKing() {
@@ -57,6 +62,7 @@ public enum PieceType {
             return false;
         }
     },
+    /** King */
     KING("K") {
         @Override
         public boolean isKing() {
@@ -69,6 +75,7 @@ public enum PieceType {
         }
     };
 
+    /** The piece's name */
     private final String pieceName;
 
     /** Constructor
