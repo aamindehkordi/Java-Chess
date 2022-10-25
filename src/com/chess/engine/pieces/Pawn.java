@@ -25,7 +25,7 @@ public class Pawn extends Piece {
      * @param pieceAlliance the alliance of the piece
      */
     public Pawn(final int piecePosition, final Alliance pieceAlliance) {
-        super(piecePosition, pieceAlliance);
+        super(PieceType.PAWN ,piecePosition, pieceAlliance);
     }
 
     @Override

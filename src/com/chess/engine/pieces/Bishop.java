@@ -24,7 +24,7 @@ public class Bishop extends Piece {
      * @param pieceAlliance the alliance of the piece
      */
     public Bishop(final int piecePosition, final Alliance pieceAlliance) {
-        super(piecePosition, pieceAlliance);
+        super(PieceType.BISHOP, piecePosition, pieceAlliance);
     }
 
     @Override

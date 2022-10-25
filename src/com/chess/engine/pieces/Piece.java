@@ -8,6 +8,7 @@ import java.util.Collection;
 
 public abstract class Piece {
 
+    protected final PieceType pieceType;
     /* the position of the piece */
     protected final int piecePosition;
 
@@ -21,7 +22,8 @@ public abstract class Piece {
      * @param piecePosition the position of the piece
      * @param pieceAlliance the alliance of the piece
      */
-    Piece(final int piecePosition, final Alliance pieceAlliance) {
+    Piece(final PieceType pieceType, final int piecePosition, final Alliance pieceAlliance) {
+        this.pieceType = pieceType;
         this.piecePosition = piecePosition;
         this.pieceAlliance = pieceAlliance;
         this.isFirstMove = isFirstMove();
@@ -48,5 +50,8 @@ public abstract class Piece {
 
     public Integer getPiecePosition() {
         return this.piecePosition;
+    }
+    public PieceType getPieceType() {
+        return this.pieceType;
     }
 }

@@ -2,12 +2,19 @@ package com.chess.engine.board;
 
 import com.chess.engine.Alliance;
 import com.chess.engine.pieces.*;
+import com.chess.engine.player.BlackPlayer;
+import com.chess.engine.player.WhitePlayer;
 
 import java.util.*;
 
 public class Board {
 
     private final List<Tile> gameBoard; /* the game board */
+    private final WhitePlayer whitePlayer; /* the white player */
+    private final BlackPlayer blackPlayer; /* the black player */
+    private final Collection<Piece> whitePieces; /* the white pieces */
+    private final Collection<Piece> blackPieces; /* the black pieces */
+
 
     /* Constructor
     *
@@ -16,12 +23,15 @@ public class Board {
     private Board(Builder builder) {
         this.gameBoard = createGameBoard(builder); /* create the game board */
         /* the white pieces */
-        Collection<Piece> whitePieces = calculateActivePieces(this.gameBoard, Alliance.WHITE); /* calculate the white pieces */
+        whitePieces = calculateActivePieces(this.gameBoard, Alliance.WHITE); /* calculate the white pieces */
         /* the black pieces */
-        Collection<Piece> blackPieces = calculateActivePieces(this.gameBoard, Alliance.BLACK); /* calculate the black pieces */
+        blackPieces = calculateActivePieces(this.gameBoard, Alliance.BLACK); /* calculate the black pieces */
 
         final Collection<Move> whiteStandardLegalMoves = calculateLegalMoves(whitePieces); /* calculate the white legal moves */
         final Collection<Move> blackStandardLegalMoves = calculateLegalMoves(blackPieces); /* calculate the black legal moves */
+
+        this.whitePlayer = new WhitePlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the white player */
+        this.blackPlayer = new BlackPlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the black player */
     }
 
     @Override
@@ -39,6 +49,22 @@ public class Board {
             }
         }
         return builder.toString();
+    }
+
+    /* Returns the black pieces
+    *
+    * @return the black pieces
+     */
+    public Collection<Piece> getBlackPieces() {
+        return this.blackPieces;
+    }
+
+    /* Returns the white pieces
+    *
+    * @return the white pieces
+     */
+    public Collection<Piece> getWhitePieces() {
+        return this.whitePieces;
     }
 
     /* Calculate the legal moves for the pieces of a certain alliance
