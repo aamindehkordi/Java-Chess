@@ -27,6 +27,9 @@ public abstract class Move {
         return this.destinationCoordinate;
     }
 
+    /** Execute the move
+     * @return the new board
+     */
     public abstract Board execute();
 
 
@@ -39,29 +42,6 @@ public abstract class Move {
          */
         public MajorMove(final Board board, final Piece movedPiece, final int destinationCoordinate) {
             super(board, movedPiece, destinationCoordinate);
-        }
-
-        @Override
-        /** Execute the move
-         * @return the new board
-         */
-        public Board execute() {
-            return null;
-        }
-    }
-    public static final class AttackMove extends Move {
-        final Piece attackedPiece;
-
-        /** Constructor
-         *
-         * @param board the board
-         * @param movedPiece the piece that is being moved
-         * @param destinationCoordinate the destination coordinate
-         * @param attackedPiece the piece that is being attacked
-         */
-        public AttackMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Piece attackedPiece) {
-            super(board, movedPiece, destinationCoordinate);
-            this.attackedPiece = attackedPiece;
         }
 
         @Override
@@ -84,6 +64,26 @@ public abstract class Move {
             builder.setMoveMaker(this.board.currentPlayer().getOpponent().getAlliance()); /* set the move maker to the opponent */
 
             return builder.build(); /* build the board */
+        }
+    }
+    public static final class AttackMove extends Move {
+        final Piece attackedPiece;
+
+        /** Constructor
+         *
+         * @param board the board
+         * @param movedPiece the piece that is being moved
+         * @param destinationCoordinate the destination coordinate
+         * @param attackedPiece the piece that is being attacked
+         */
+        public AttackMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Piece attackedPiece) {
+            super(board, movedPiece, destinationCoordinate);
+            this.attackedPiece = attackedPiece;
+        }
+
+        @Override
+        public Board execute() {
+            return null;
         }
     }
 }
