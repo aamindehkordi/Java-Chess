@@ -3,14 +3,13 @@ package com.chess.engine.board;
 import com.chess.engine.Alliance;
 import com.chess.engine.pieces.*;
 
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Board {
 
     private final List<Tile> gameBoard; /* the game board */
+    private final Collection<Piece> whitePieces; /* the white pieces */
+    private final Collection<Piece> blackPieces; /* the black pieces */
 
     /* Constructor
     *
@@ -18,6 +17,72 @@ public class Board {
     */
     private Board(Builder builder) {
         this.gameBoard = createGameBoard(builder); /* create the game board */
+        this.whitePieces = calculateActivePieces(this.gameBoard, Alliance.WHITE); /* calculate the white pieces */
+        this.blackPieces = calculateActivePieces(this.gameBoard, Alliance.BLACK); /* calculate the black pieces */
+
+        final Collection<Move> whiteStandardLegalMoves = calculateLegalMoves(this.whitePieces); /* calculate the white legal moves */
+        final Collection<Move> blackStandardLegalMoves = calculateLegalMoves(this.blackPieces); /* calculate the black legal moves */
+    }
+
+    @Override
+    /* Get the string representation of the board
+    *
+    * @return the string representation of the board
+     */
+    public String toString() {
+        final StringBuilder builder = new StringBuilder(); /* the string builder */
+        for (int i = 0; i < BoardUtils.NUM_TILES; i++) { /* for each tile */
+            final String tileText = this.gameBoard.get(i).toString(); /* get the string representation of the tile, example: "  "  or "wp" */
+            builder.append(String.format("%3s", tileText)); /* append the string representation of the tile to the string builder, %3s = 3 spaces */
+            if ((i + 1) % BoardUtils.NUM_TILES_PER_ROW == 0) { /* if the tile is at the end of the row */
+                builder.append("\n"); /* append a new line to the string builder */
+            }
+        }
+        return builder.toString();
+    }
+
+    /* Pretty print the board
+    *
+    * @param tile the tile
+    * @return the string representation of the board
+     */
+    private static String prettyPrint(final Tile tile) {
+        if (tile.isTileOccupied()) {
+            return tile.getPiece().getPieceAlliance().isBlack() ? tile.getPiece().toString().toLowerCase() : tile.getPiece().toString(); /* if the tile is occupied, return the string representation of the piece */
+        }
+        return tile.toString(); /* if the tile is not occupied, return "-" */
+    }
+
+    /* Calculate the legal moves for the pieces of a certain alliance
+    *
+    * @param pieces the pieces
+    * @return a collection of legal moves
+     */
+    private Collection<Move> calculateLegalMoves(Collection<Piece> pieces) {
+        final List<Move> legalMoves = new ArrayList<>(); /* the legal moves */
+        for (final Piece piece : pieces) { /* for each piece */
+            legalMoves.addAll(piece.calculateLegalMoves(this)); /* add the legal moves of the piece to the list of legal moves */
+        }
+        return Collections.unmodifiableList(legalMoves); /* return an unmodifiable list of legal moves */
+    }
+
+    /* Calculate the active pieces of a given alliance
+    *
+    * @param gameBoard the game board
+    * @param alliance the alliance
+    * @return a collection of active pieces
+     */
+    private static Collection<Piece> calculateActivePieces(List<Tile> gameBoard, Alliance alliance) {
+        final List<Piece> activePieces = new ArrayList<>(); /* the active pieces */
+        for (final Tile tile : gameBoard) { /* for each tile on the board */
+            if (tile.isTileOccupied()) { /* if the tile is occupied */
+                final Piece piece = tile.getPiece(); /* get the piece */
+                if (piece.getPieceAlliance() == alliance) { /* if the piece is the same alliance */
+                    activePieces.add(piece); /* add the piece to the list of active pieces */
+                }
+            }
+        }
+        return Collections.unmodifiableList(activePieces); /* return the list of active pieces */
     }
 
     /* Create the game board

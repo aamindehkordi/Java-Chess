@@ -21,10 +21,10 @@ public abstract class Tile {
      */
     private static Map<Integer, EmptyTile> createAllPossibleEmptyTiles() {
 
-        final Map<Integer, EmptyTile> emptyTileMap = new HashMap<>();
+        final Map<Integer, EmptyTile> emptyTileMap = new HashMap<>(); /* emptyTileMap is a map of all the possible empty tiles */
         // Create all the empty tiles
         for (int i = 0; i < 64; i++) {
-            emptyTileMap.put(i, new EmptyTile(i));
+            emptyTileMap.put(i, new EmptyTile(i)); /* i is the tile coordinate */
         }
         // Return an unmodifiable map
         return Collections.unmodifiableMap(new LinkedHashMap<>(emptyTileMap));
@@ -75,6 +75,11 @@ public abstract class Tile {
         }
 
         @Override
+        public String toString() {
+            return "-";
+        }
+
+        @Override
         public boolean isTileOccupied() {
             return false;
         }
@@ -96,6 +101,12 @@ public abstract class Tile {
         OccupiedTile(int tileCoord, Piece pieceOnTile) {
             super(tileCoord);
             this.pieceOnTile = pieceOnTile;
+        }
+
+        @Override
+        public String toString() {
+            return getPiece().getPieceAlliance().isBlack() ? getPiece().toString().toLowerCase() :
+                    getPiece().toString();
         }
 
         @Override

@@ -38,7 +38,7 @@ public abstract class Piece {
      *
      * @return the alliance of the piece
      */
-    protected Alliance getPieceAlliance() {
+    public Alliance getPieceAlliance() {
         return this.pieceAlliance;
     }
 
