@@ -41,7 +41,7 @@ public abstract class Player {
      * @param opponentLegalMoves the opponent's legal moves
      * @return a collection of legal moves
      */
-    private static Collection<Move> calculateAttacksOnTile(int piecePosition, Collection<Move> opponentLegalMoves) {
+    protected static Collection<Move> calculateAttacksOnTile(int piecePosition, Collection<Move> opponentLegalMoves) {
         final List<Move> attackMoves = new ArrayList<>(); /* List of legal moves */
         for(final Move move : opponentLegalMoves){ /* For each legal move */
             if(piecePosition == move.getDestinationCoordinate()){ /* If the piece's position is the same as the destination coordinate */
@@ -179,4 +179,12 @@ public abstract class Player {
      * @return the opponent
      */
     public abstract Player getOpponent();
+
+    /**
+     *
+     * @param playerLegals
+     * @param opponentLegals
+     * @return
+     */
+    protected  abstract Collection<Move> calculateKingCastles(Collection<Move> playerLegals, Collection<Move> opponentLegals);
 }
