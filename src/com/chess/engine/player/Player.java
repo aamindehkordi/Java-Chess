@@ -182,7 +182,7 @@ public abstract class Player {
      */
     public abstract Player getOpponent();
 
-    /**
+    /** Calculate the king castles
      *
      * @param playerLegals the player's legal moves
      * @param opponentLegals the opponent's legal moves
