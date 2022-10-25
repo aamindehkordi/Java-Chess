@@ -2,6 +2,7 @@ package com.chess.engine.board;
 
 import com.chess.engine.board.Board.Builder;
 import com.chess.engine.pieces.Piece;
+import com.chess.engine.pieces.Rook;
 
 public abstract class Move {
 
@@ -27,10 +28,26 @@ public abstract class Move {
         return this.destinationCoordinate;
     }
 
-    /** Execute the move
-     * @return the new board
-     */
-    public abstract Board execute();
+    public Board execute() {
+
+        final Builder builder = new Builder(); /* create a new board builder */
+
+        for (final Piece piece : this.board.currentPlayer().getActivePieces()) { /* for each piece on the board */
+
+            //TODO hashcode and equals for pieces
+
+            if (!this.movedPiece.equals(piece)) { /* for all the pieces except the moved piece */
+                builder.setPiece(piece); /* add them to the new board */
+            }
+        }
+        for (final Piece piece : this.board.currentPlayer().getOpponent().getActivePieces()) { /* for each piece on the board */
+            builder.setPiece(piece); /* add the piece to the board */
+        }
+        builder.setPiece(this.movedPiece.movePiece(this)); /* move the piece */
+        builder.setMoveMaker(this.board.currentPlayer().getOpponent().getAlliance()); /* set the move maker to the opponent */
+
+        return builder.build(); /* build the board */
+    }
 
     /** Get the moved piece
      * @return the moved piece
@@ -39,7 +56,7 @@ public abstract class Move {
         return this.movedPiece;
     }
 
-
+    /** The Major Move class */
     public static final class MajorMove extends Move {
         /** Constructor
          *
@@ -51,29 +68,8 @@ public abstract class Move {
             super(board, movedPiece, destinationCoordinate);
         }
 
-        @Override
-        public Board execute() {
-
-            final Builder builder = new Builder(); /* create a new board builder */
-
-            for (final Piece piece : this.board.currentPlayer().getActivePieces()) { /* for each piece on the board */
-
-                //TODO hashcode and equals for pieces
-
-                if (!this.movedPiece.equals(piece)) { /* for all the pieces except the moved piece */
-                    builder.setPiece(piece); /* add them to the new board */
-                }
-            }
-            for (final Piece piece : this.board.currentPlayer().getOpponent().getActivePieces()) { /* for each piece on the board */
-                builder.setPiece(piece); /* add the piece to the board */
-            }
-            builder.setPiece(this.movedPiece.movePiece(this)); /* move the piece */
-            builder.setMoveMaker(this.board.currentPlayer().getOpponent().getAlliance()); /* set the move maker to the opponent */
-
-            return builder.build(); /* build the board */
-        }
     }
-    public static final class AttackMove extends Move {
+    public static class AttackMove extends Move {
         final Piece attackedPiece;
 
         /** Constructor
@@ -91,6 +87,123 @@ public abstract class Move {
         @Override
         public Board execute() {
             return null;
+        }
+    }
+
+    public static class PawnMove extends Move {
+        /** Constructor
+         *
+         * @param board the board
+         * @param movedPiece the piece that is being moved
+         * @param destinationCoordinate the destination coordinate
+         */
+        public PawnMove(final Board board, final Piece movedPiece, final int destinationCoordinate) {
+            super(board, movedPiece, destinationCoordinate);
+        }
+    }
+
+    public static class PawnAttackMove extends AttackMove {
+        /** Constructor
+         *
+         * @param board the board
+         * @param movedPiece the piece that is being moved
+         * @param destinationCoordinate the destination coordinate
+         * @param attackedPiece the piece that is being attacked
+         */
+        public PawnAttackMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Piece attackedPiece) {
+            super(board, movedPiece, destinationCoordinate, attackedPiece);
+        }
+    }
+
+    public static final class PawnEnPassantAttackMove extends PawnAttackMove {
+        /** Constructor
+         *
+         * @param board the board
+         * @param movedPiece the piece that is being moved
+         * @param destinationCoordinate the destination coordinate
+         * @param attackedPiece the piece that is being attacked
+         */
+        public PawnEnPassantAttackMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Piece attackedPiece) {
+            super(board, movedPiece, destinationCoordinate, attackedPiece);
+        }
+    }
+
+    public static final class PawnJump extends PawnMove {
+        /** Constructor
+         *
+         * @param board the board
+         * @param movedPiece the piece that is being moved
+         * @param destinationCoordinate the destination coordinate
+         */
+        public PawnJump(final Board board, final Piece movedPiece, final int destinationCoordinate) {
+            super(board, movedPiece, destinationCoordinate);
+        }
+    }
+
+    public static abstract class CastleMove extends Move {
+        protected final Rook castleRook;
+        protected final int castleRookStart;
+        protected final int castleRookDestination;
+
+        /** Constructor
+         *
+         * @param board the board
+         * @param movedPiece the piece that is being moved
+         * @param destinationCoordinate the destination coordinate
+         * @param castleRook the rook that is being castled
+         * @param castleRookStart the start coordinate of the rook
+         * @param castleRookDestination the destination coordinate of the rook
+         */
+        public CastleMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Rook castleRook, final int castleRookStart, final int castleRookDestination) {
+            super(board, movedPiece, destinationCoordinate);
+            this.castleRook = castleRook;
+            this.castleRookStart = castleRookStart;
+            this.castleRookDestination = castleRookDestination;
+        }
+    }
+
+    public static final class KingSideCastleMove extends CastleMove {
+        /** Constructor
+         *
+         * @param board the board
+         * @param movedPiece the piece that is being moved
+         * @param destinationCoordinate the destination coordinate
+         * @param castleRook the rook that is being castled
+         * @param castleRookStart the start coordinate of the rook
+         * @param castleRookDestination the destination coordinate of the rook
+         */
+        public KingSideCastleMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Rook castleRook, final int castleRookStart, final int castleRookDestination) {
+            super(board, movedPiece, destinationCoordinate, castleRook, castleRookStart, castleRookDestination);
+        }
+    }
+
+    public static final class QueenSideCastleMove extends CastleMove {
+        /** Constructor
+         *
+         * @param board the board
+         * @param movedPiece the piece that is being moved
+         * @param destinationCoordinate the destination coordinate
+         * @param castleRook the rook that is being castled
+         * @param castleRookStart the start coordinate of the rook
+         * @param castleRookDestination the destination coordinate of the rook
+         */
+        public QueenSideCastleMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Rook castleRook, final int castleRookStart, final int castleRookDestination) {
+            super(board, movedPiece, destinationCoordinate, castleRook, castleRookStart, castleRookDestination);
+        }
+    }
+
+    public static final class NullMove extends Move {
+        /** Constructor
+         *
+         * @param board the board
+         */
+        public NullMove(final Board board) {
+            super(board, null, -1);
+        }
+
+        @Override
+        public Board execute() {
+            throw new RuntimeException("Cannot execute the null move!");
         }
     }
 }
