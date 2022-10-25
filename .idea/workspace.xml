@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="cleanup">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Introduced critical methods for the Players and a helper class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -61,7 +59,6 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Downloaded.Files.Path.Enabled": "false",
-    "OverrideImplement.generate.javadoc": "true",
     "Repository.Attach.Annotations": "true",
     "Repository.Attach.JavaDocs": "true",
     "Repository.Attach.Sources": "true",
@@ -82,6 +79,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.chess.engine.player" />
       <recent name="com.chess.engine.board" />
       <recent name="com.chess.engine.pieces" />
     </key>
@@ -105,7 +103,7 @@
       <workItem from="1666571001151" duration="263000" />
       <workItem from="1666571462875" duration="3178000" />
       <workItem from="1666649396459" duration="71000" />
-      <workItem from="1666649473994" duration="13697000" />
+      <workItem from="1666649473994" duration="16525000" />
     </task>
     <task id="LOCAL-00001" summary="Immutable tile hashmap along with organized packages">
       <created>1666235671618</created>
@@ -310,7 +308,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666662705621</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Added Players and properly implemented PieceTypes">
+      <created>1666672578371</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1666672578371</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Introduced critical methods for the Players and a helper class">
+      <created>1666673345135</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1666673345135</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,8 +354,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Immutable tile hashmap along with organized packages" />
-    <MESSAGE value="Truly immutable tilemap" />
     <MESSAGE value="Getting started on the Knight" />
     <MESSAGE value="isValidCoords and BoardUtils Class" />
     <MESSAGE value="fix bugs with the knight's legal moves with extra functions" />
@@ -367,7 +377,9 @@
     <MESSAGE value="Heavy into Board" />
     <MESSAGE value="ToString!!!! Signs of Life" />
     <MESSAGE value="cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
+    <MESSAGE value="Added Players and properly implemented PieceTypes" />
+    <MESSAGE value="Introduced critical methods for the Players and a helper class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduced critical methods for the Players and a helper class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -19,6 +19,10 @@ public class Move {
         this.destinationCoordinate = destinationCoordinate;
     }
 
+    public int getDestinationCoordinate() {
+        return this.destinationCoordinate;
+    }
+
 
     public static final class MajorMove extends Move {
         /** Constructor
