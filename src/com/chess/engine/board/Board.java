@@ -3,6 +3,7 @@ package com.chess.engine.board;
 import com.chess.engine.Alliance;
 import com.chess.engine.pieces.*;
 import com.chess.engine.player.BlackPlayer;
+import com.chess.engine.player.Player;
 import com.chess.engine.player.WhitePlayer;
 
 import java.util.*;
@@ -165,6 +166,13 @@ public class Board {
         builder.setMoveMaker(Alliance.WHITE); /* set the move maker to white */
         // Build the board
         return builder.build(); /* build the board */
+    }
+
+    public Player blackPlayer() {
+        return this.blackPlayer; /* return the black player */
+    }
+    public Player whitePlayer() {
+        return this.whitePlayer; /* return the white player */
     }
 
     /* ‘Builder’ class */
