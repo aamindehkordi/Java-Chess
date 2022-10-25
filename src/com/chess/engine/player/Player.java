@@ -10,11 +10,23 @@ import java.util.*;
 
 public abstract class Player {
 
+    /** The board */
     protected final Board board;
+    /** The player's king */
     protected final King playerKing;
+    /** The player's legal moves */
     protected final Collection<Move> legalMoves;
+    /** The opponent's legal moves */
     protected final Collection<Move> opponentLegalMoves;
+    /** If the player is in check */
     private final boolean isInCheck;
+
+    /** Constructor
+     *
+     * @param board the board
+     * @param legalMoves the player's legal moves
+     * @param opponentMoves the opponent's legal moves
+     */
     public Player(final Board board, final Collection<Move> legalMoves, final Collection<Move> opponentMoves){
         this.board = board;
         this.playerKing = establishKing();
@@ -23,86 +35,148 @@ public abstract class Player {
         this.isInCheck = !Player.calculateAttacksOnTile(this.playerKing.getPiecePosition(), this.opponentLegalMoves).isEmpty();
     }
 
+    /** Calculate the attacks on a tile
+     *
+     * @param piecePosition the position of the piece
+     * @param opponentLegalMoves the opponent's legal moves
+     * @return a collection of legal moves
+     */
     private static Collection<Move> calculateAttacksOnTile(int piecePosition, Collection<Move> opponentLegalMoves) {
-        final List<Move> attackMoves = new ArrayList<>();
-        for(final Move move : opponentLegalMoves){
-            if(piecePosition == move.getDestinationCoordinate()){
-                attackMoves.add(move);
+        final List<Move> attackMoves = new ArrayList<>(); /* List of legal moves */
+        for(final Move move : opponentLegalMoves){ /* For each legal move */
+            if(piecePosition == move.getDestinationCoordinate()){ /* If the piece's position is the same as the destination coordinate */
+                attackMoves.add(move); /* Add the move to the list of legal moves */
             }
         }
-        return Collections.unmodifiableList(new LinkedList<>(attackMoves));
+        return Collections.unmodifiableList(new LinkedList<>(attackMoves)); /* Return the list of legal moves */
     }
 
+    /** Get the player's king
+     *
+     * @return the player's king
+     */
     private King establishKing() {
-        for (final Piece piece: getActivePieces()) {
-            if (piece.getPieceType().isKing()) {
-                return (King) piece;
+        for (final Piece piece: getActivePieces()) { /* For each piece */
+            if (piece.getPieceType().isKing()) { /* If the piece is a king */
+                return (King) piece; /* Return the king */
             }
         }
         throw new RuntimeException("There is no king! Not a valid board");
     }
 
+    /** Get the player's legal escape moves
+     *
+     * @return the player's legal moves
+     */
     protected boolean hasEscapeMoves() {
-        for (final Move move : this.legalMoves) {
-            final MoveTransition transition = makeMove(move);
-            if (transition.getMoveStatus().isDone()) {
-                return true;
+        for (final Move move : this.legalMoves) { /* For each legal move */
+            final MoveTransition transition = makeMove(move); /* Make the move */
+            if (transition.getMoveStatus().isDone()) { /* If the move is done */
+                return true; /* The player has an escape move */
             }
         }
-        return false;
+        return false; /* The player does not have an escape move */
     }
+
+    /** Checks if a move is legal
+     *
+     * @param move the move
+     * @return true if the move is legal
+     */
     public boolean isMoveLegal(final Move move) {
         return this.legalMoves.contains(move);
     }
 
+    /** Checks if the player is in check
+     *
+     * @return true if the player is in check
+     */
     public boolean isInCheck() {
         return this.isInCheck;
     }
 
+    /** Checks if the player is in checkmate
+     *
+     * @return true if the player is in checkmate
+     */
     public boolean isInCheckMate() {
         return this.isInCheck && !hasEscapeMoves();
     }
 
+    /** Checks if the player is in stalemate
+     *
+     * @return true if the player is in stalemate
+     */
     public boolean isInStaleMate() {
         return !this.isInCheck && !hasEscapeMoves();
     }
 
+    /** Checks if the player is castled
+     *
+     * @return true if the player is castled
+     */
     public boolean isCastled() {
         return false;
     }
 
+    /** Make a move
+     *
+     * @param move the move
+     * @return the move transition
+     */
     public MoveTransition makeMove(final Move move){
 
-        // Check if the move is legal
-        if(!isMoveLegal(move)){
-            return new MoveTransition(this.board, move, MoveStatus.ILLEGAL_MOVE);
+        if(!isMoveLegal(move)){ /* If the move is not legal */
+            return new MoveTransition(this.board, move, MoveStatus.ILLEGAL_MOVE); /* Return an illegal move */
         }
 
-        // Create a new board with the move made
-        final Board transitionBoard = move.execute();
+        final Board transitionBoard = move.execute(); /* Execute the move on a temporary board*/
 
-        // Create a new collection of legal moves for the opponent
+        /* Create a new collection of legal moves for the opponent on the new board */
         final Collection<Move> kingAttacks = Player.calculateAttacksOnTile(transitionBoard.currentPlayer().getOpponent().getPlayerKing().getPiecePosition(),
                 transitionBoard.currentPlayer().getLegalMoves());
 
-        // If the king is attacked from the move, the move is illegal
+        /* If the king is attacked from the move, the move is illegal */
         if(!kingAttacks.isEmpty()){
             return new MoveTransition(this.board, move, MoveStatus.LEAVES_PLAYER_IN_CHECK);
         }
 
+        /* Otherwise, the move is legal and then made */
         return new MoveTransition(transitionBoard, move, MoveStatus.DONE);
     }
 
+    /** Get the player's king
+     *
+     * @return the player's king
+     */
     private Piece getPlayerKing() {
         return this.playerKing;
     }
 
+    /** Get the player's legal moves
+     *
+     * @return the player's legal moves
+     */
     private Collection<Move> getLegalMoves() {
         return this.legalMoves;
     }
 
 
+    /** Gets the active pieces of a player
+     *
+     * @return the active pieces
+     */
     public abstract Collection<Piece> getActivePieces();
+
+    /** Gets the alliance of a player
+     *
+     * @return the alliance
+     */
     public abstract Alliance getAlliance();
+
+    /** Gets the opponent of a player
+     *
+     * @return the opponent
+     */
     public abstract Player getOpponent();
 }

@@ -2,7 +2,7 @@ package com.chess.engine;
 
 public enum Alliance {
 
-    /* the white alliance */
+    /** White */
     WHITE{
         @Override
         public int getDirection() {
@@ -20,7 +20,7 @@ public enum Alliance {
         }
     },
 
-    /* the black alliance */
+    /** Black */
     BLACK{
         @Override
         public int getDirection() {
@@ -38,19 +38,19 @@ public enum Alliance {
         }
     };
 
-    /* Get the direction of the alliance
+    /** Get the direction of the alliance
      *
      * @return the direction of the alliance : -1 for white, 1 for black
      */
     public abstract int getDirection();
 
-    /* Is the alliance white?
+    /** Is the alliance white?
      *
      * @return true if the alliance is white, false otherwise
      */
     public abstract boolean isWhite();
 
-    /* Is the alliance black?
+    /** Is the alliance black?
      *
      * @return true if the alliance is black, false otherwise
      */

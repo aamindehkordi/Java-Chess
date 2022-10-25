@@ -71,6 +71,9 @@ public enum PieceType {
 
     private final String pieceName;
 
+    /** Constructor
+     * @param pieceName the name of the piece
+     */
     PieceType(final String pieceName) {
         this.pieceName = pieceName;
     }
@@ -79,6 +82,14 @@ public enum PieceType {
     public String toString() {
         return this.pieceName;
     }
+
+    /** Is the piece a king?
+     * @return true if the piece is a king, false otherwise
+     */
     public abstract boolean isKing();
+
+    /** Is the piece a rook?
+     * @return true if the piece is a rook, false otherwise
+     */
     public abstract boolean isRook();
 }

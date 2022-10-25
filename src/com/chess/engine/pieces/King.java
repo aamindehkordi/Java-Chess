@@ -13,18 +13,19 @@ import java.util.List;
 
 public class King extends Piece{
 
-    /* -9: top left
-     * -8: top
-     * -7: top right
-     * -1: left
-     *  1: right
-     *  7: bottom left
-     *  8: bottom
-     *  9: bottom right
+    /** The possible move offsets for the king
+     * -9 : top left
+     * -8 : top
+     * -7 : top right
+     * -1 : left
+     *  1 : right
+     *  7 : bottom left
+     *  8 : bottom
+     *  9 : bottom right
      */
     private final static int[] CANDIDATE_MOVE_COORDINATE = {-9, -8, -7, -1, 1, 7, 8, 9};
 
-    /* Constructor
+    /** Constructor
      *
      * @param piecePosition the position of the piece
      * @param pieceAlliance the alliance of the piece
@@ -34,7 +35,7 @@ public class King extends Piece{
     }
 
     @Override
-    /* Calculate the legal moves for the King
+    /** Calculate the legal moves for the King
      *
      * @param board the board
      * @return a collection of legal moves
@@ -67,25 +68,29 @@ public class King extends Piece{
     }
 
     @Override
+    /** Prints the piece
+     *
+     * @return the piece as a string
+     */
     public String toString() {
         return PieceType.KING.toString();
     }
 
-    /* Check if the king is on the first column
+    /** If the king is on the first column, the move is illegal
      *
-     * @param currentPosition the current position of the king
-     * @param candidateOffset the offset of the move
-     * @return true if the king is on the first column, false otherwise
+     * @param piecePosition the current position of the king
+     * @param currentCandidateOffset the offset of the move
+     * @return true if the move is illegal
      */
     private boolean isEighthColumnExclusion(int piecePosition, int currentCandidateOffset) {
         return BoardUtils.EIGHTH_COLUMN[piecePosition] && (currentCandidateOffset == -9 || currentCandidateOffset == -1 || currentCandidateOffset == 7); /* if the king is on the eighth column, the move is illegal */
     }
 
-    /* Check if the king is on the eighth column
+    /** If the king is on the eighth column, the move is illegal
      *
-     * @param currentPosition the current position of the king
-     * @param candidateOffset the offset of the move
-     * @return true if the king is on the eighth column, false otherwise
+     * @param piecePosition the current position of the king
+     * @param currentCandidateOffset the offset of the move
+     * @return true if the move is illegal
      */
     private boolean isFirstColumnExclusion(int piecePosition, int currentCandidateOffset) {
         return BoardUtils.FIRST_COLUMN[piecePosition] && (currentCandidateOffset == -7 || currentCandidateOffset == 1 || currentCandidateOffset == 9); /* if the king is on the first column, the move is illegal */

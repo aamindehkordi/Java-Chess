@@ -8,6 +8,13 @@ import com.chess.engine.pieces.Piece;
 import java.util.Collection;
 
 public class WhitePlayer extends Player {
+
+    /** Constructor
+     *
+     * @param board the board
+     * @param whiteStandardLegalMoves the white player's legal moves
+     * @param blackStandardLegalMoves the black player's legal moves
+     */
     public WhitePlayer(Board board, Collection<Move> whiteStandardLegalMoves, Collection<Move> blackStandardLegalMoves) {
         super(board, whiteStandardLegalMoves, blackStandardLegalMoves);
     }

@@ -18,9 +18,9 @@ public class Board {
     private final Player currentPlayer; /* the current player */
 
 
-    /* Constructor
+    /** Constructor
     *
-    * param builder the builder
+    * @param builder the builder
     */
     private Board(Builder builder) {
         this.gameBoard = createGameBoard(builder); /* create the game board */
@@ -38,7 +38,7 @@ public class Board {
     }
 
     @Override
-    /* Get the string representation of the board
+    /** Get the string representation of the board
     *
     * @return the string representation of the board
      */
@@ -54,7 +54,7 @@ public class Board {
         return builder.toString();
     }
 
-    /* Returns the black pieces
+    /** Returns the black pieces
     *
     * @return the black pieces
      */
@@ -62,7 +62,7 @@ public class Board {
         return this.blackPieces;
     }
 
-    /* Returns the white pieces
+    /** Returns the white pieces
     *
     * @return the white pieces
      */
@@ -70,7 +70,7 @@ public class Board {
         return this.whitePieces;
     }
 
-    /* Calculate the legal moves for the pieces of a certain alliance
+    /** Calculate the legal moves for the pieces of a certain alliance
     *
     * @param pieces the pieces
     * @return a collection of legal moves
@@ -83,7 +83,7 @@ public class Board {
         return Collections.unmodifiableList(legalMoves); /* return an unmodifiable list of legal moves */
     }
 
-    /* Calculate the active pieces of a given alliance
+    /** Calculate the active pieces of a given alliance
     *
     * @param gameBoard the game board
     * @param alliance the alliance
@@ -102,7 +102,7 @@ public class Board {
         return Collections.unmodifiableList(activePieces); /* return the list of active pieces */
     }
 
-    /* Create the game board
+    /** Create the game board
     *
     * @param builder the builder
      */
@@ -114,7 +114,7 @@ public class Board {
         return Collections.unmodifiableList(new LinkedList<>(List.of(tiles))); /* return the game board */
     }
 
-    /* Get the tile at the given position
+    /** Get the tile at the given position
     *
     * @param tileCoordinate the position of the tile
     * @return the tile at the given position
@@ -123,7 +123,7 @@ public class Board {
         return gameBoard.get(tileCoordinate); /* return the tile at the given position */
     }
 
-    /*
+    /**
     * This class is used to build the board
     *
     * @return the builder
@@ -170,29 +170,41 @@ public class Board {
         return builder.build(); /* build the board */
     }
 
+    /** Gets the Black player
+     *
+     * @return the Black player
+     */
     public Player blackPlayer() {
         return this.blackPlayer; /* return the black player */
     }
+    /** Gets the White player
+     *
+     * @return the White player
+     */
     public Player whitePlayer() {
         return this.whitePlayer; /* return the white player */
     }
 
+    /** Gets the current player
+     *
+     * @return the current player
+     */
     public Player currentPlayer() {
         return this.currentPlayer; /* return the current player */
     }
 
-    /* ‘Builder’ class */
+    /** ‘Builder’ class */
     public static class Builder {
 
         Map<Integer, Piece> boardConfig; /* the board configuration */
         Alliance nextMoveMaker; /* the next move maker */
 
-        /* Constructor */
+        /** Constructor */
         public Builder() {
             this.boardConfig = new HashMap<>(); /* initialize the board configuration */
         }
 
-        /* Set the piece at the given position
+        /** Set the piece at the given position
         *
         * @param piece the piece
         * @return the builder
@@ -202,7 +214,7 @@ public class Board {
             return this;
         }
 
-        /* Set the next move maker
+        /** Set the next move maker
         *
         * @param nextMoveMaker the next move maker
         * @return the builder
@@ -211,7 +223,7 @@ public class Board {
             this.nextMoveMaker = nextMoveMaker; /* set the next move maker */
             return this;
         }
-        /* Build the board
+        /** Build the board
         *
         * @return the board
          */

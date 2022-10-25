@@ -50,7 +50,7 @@ public class BoardUtils {
         return row;
     }
 
-    /* Constructor
+    /** Constructor
      *
      * DO NOT CONSTRUCT AN INSTANCE OF THIS CLASS
      *
@@ -61,8 +61,8 @@ public class BoardUtils {
         throw new RuntimeException("You cannot instantiate me!");
     }
 
-    /**
-     * This method is used to check if the given coordinate is valid.
+    /** This method is used to check if the given coordinate is valid.
+     *
      * @param coord the coordinate
      * @return true if the coordinate is valid, false otherwise
      */

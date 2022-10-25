@@ -13,13 +13,14 @@ import java.util.List;
 
 public class Pawn extends Piece {
 
-    /* 8: up
+    /** The possible move offsets for a pawn
+    * 8: up
     * 7: up and right
     * 9: up and left
     */
     private final static int[] CANDIDATE_MOVE_COORDINATE = {8, 16, 7, 9};
 
-    /* Constructor
+    /** Constructor
      *
      * @param piecePosition the position of the piece
      * @param pieceAlliance the alliance of the piece
@@ -29,49 +30,46 @@ public class Pawn extends Piece {
     }
 
     @Override
+    /** Print the piece
+     *
+     * @return the piece as a string
+     */
     public String toString() {
         return PieceType.PAWN.toString();
     }
     @Override
-    /* Calculate the legal moves for the Pawn
+    /** Calculate the legal moves for the Pawn
      *
      * @param board the board
      * @return a collection of legal moves
      */
     public Collection<Move> calculateLegalMoves(final Board board) {
 
-        final List<Move> legalMoves = new ArrayList<>();
+        final List<Move> legalMoves = new ArrayList<>(); /* for each of the possible moves, check if the move is legal */
 
-        for(final int currentCandidateOffset : CANDIDATE_MOVE_COORDINATE) {
-
-            /* add the offset to the current position */
-            final int candidateDestinationCoordinate = this.piecePosition + (this.getPieceAlliance().getDirection() * currentCandidateOffset);
-
-            /* if the tile is not occupied, add the move to the list of legal moves */
-            if(!BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)) {
+        for(final int currentCandidateOffset : CANDIDATE_MOVE_COORDINATE) { /* for each of the possible moves*/
+            final int candidateDestinationCoordinate = this.piecePosition + (this.getPieceAlliance().getDirection() * currentCandidateOffset); /* add the offset to the current position */
+            if(!BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)) { /* if the tile is not occupied, add the move to the list of legal moves */
                 continue;
             }
 
-            /* if you are moving one tile forward and the tile is not occupied, add the move to the list of legal moves */
-            if(!board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
+            if(!board.getTile(candidateDestinationCoordinate).isTileOccupied()) { /* if you are moving one tile forward and the tile is not occupied, add the move to the list of legal moves */
                 //TODO Promotions
                 legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
             }
 
-            /* if you are moving two tiles forward and the tile is not occupied, add the move to the list of legal moves */
-            else if( currentCandidateOffset == 16 && this.isFirstMove() &&
-                    (BoardUtils.SECOND_ROW[this.piecePosition] && this.getPieceAlliance().isBlack()) ||
-                    (BoardUtils.SEVENTH_ROW[this.piecePosition] && this.getPieceAlliance().isWhite()) ) {
+            else if( currentCandidateOffset == 16 && this.isFirstMove() && /*if you are moving two tiles forward and it is the first move AND */
+                    (BoardUtils.SECOND_ROW[this.piecePosition] && this.getPieceAlliance().isBlack()) || /* if you are on the second row and your alliance is black or */
+                    (BoardUtils.SEVENTH_ROW[this.piecePosition] && this.getPieceAlliance().isWhite()) ) { /* if you are on the seventh row and your alliance is white */
                 /* between the current position and the destination position, there must be an empty tile */
                 final int behindCandidateDestinationCoordinate = this.piecePosition + (this.pieceAlliance.getDirection() * 8);
-                /* if both tiles are not occupied, add the move to the list of legal moves */
-                if(!board.getTile(behindCandidateDestinationCoordinate).isTileOccupied() &&
-                        !board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
-                    legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
+
+                if(!board.getTile(behindCandidateDestinationCoordinate).isTileOccupied() && /* if the tile behind the destination is not occupied and */
+                        !board.getTile(candidateDestinationCoordinate).isTileOccupied()) { /* if the destination tile is not occupied */
+                    legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate)); /* add the move to the list of legal moves */
                 }
             }
 
-            /* if you are moving one tile diagonally and the tile is occupied, add the move to the list of legal moves */
             else if(currentCandidateOffset == 7 &&                                                          /* if you are moving one tile diagonally */
                     !(BoardUtils.EIGHTH_COLUMN[this.piecePosition] && this.pieceAlliance.isWhite() ||       /* and you are not on the eighth column, and you are white */
                      (BoardUtils.FIRST_COLUMN[this.piecePosition] && this.pieceAlliance.isBlack()) ) ) {    /* or you are not on the first column, and you are black  (because of promotions)*/

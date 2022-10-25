@@ -80,11 +80,19 @@ public abstract class Tile {
         }
 
         @Override
+        /** Is the tile occupied?
+         *
+         * @return false
+         */
         public boolean isTileOccupied() {
             return false;
         }
 
         @Override
+        /** Get the piece on the tile
+         *
+         * @return null
+         */
         public Piece getPiece() {
             return null;
         }
@@ -104,17 +112,29 @@ public abstract class Tile {
         }
 
         @Override
+        /** Print the tile
+         *
+         * @return the piece on the tile
+         */
         public String toString() {
-            return getPiece().getPieceAlliance().isBlack() ? getPiece().toString().toLowerCase() :
+            return getPiece().getPieceAlliance().isBlack() ? getPiece().toString().toLowerCase() :          /* If the piece is black, print the piece in lowercase */
                     getPiece().toString();
         }
 
         @Override
+        /** Is the tile occupied?
+         *
+         * @return true
+         */
         public boolean isTileOccupied() {
             return true;
         }
 
         @Override
+        /** Get the piece on the tile
+         *
+         * @return the piece on the tile
+         */
         public Piece getPiece() {
             return this.pieceOnTile;
         }

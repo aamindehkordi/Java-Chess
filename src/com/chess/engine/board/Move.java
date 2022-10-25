@@ -8,7 +8,7 @@ public abstract class Move {
     final Piece movedPiece;
     final int destinationCoordinate;
 
-    /**
+    /** Constructor
      * @param board the board
      * @param movedPiece the piece that is being moved
      * @param destinationCoordinate the destination coordinate
@@ -19,6 +19,9 @@ public abstract class Move {
         this.destinationCoordinate = destinationCoordinate;
     }
 
+    /** Get the destination coordinate
+     * @return the destination coordinate
+     */
     public int getDestinationCoordinate() {
         return this.destinationCoordinate;
     }
@@ -38,6 +41,9 @@ public abstract class Move {
         }
 
         @Override
+        /** Execute the move
+         * @return the new board
+         */
         public Board execute() {
             return null;
         }
@@ -58,6 +64,9 @@ public abstract class Move {
         }
 
         @Override
+        /** Execute the move
+         * @return the new board
+         */
         public Board execute() {
             return null;
         }

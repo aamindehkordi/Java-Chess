@@ -13,14 +13,15 @@ import static com.chess.engine.board.Move.MajorMove;
 
 public class Rook extends Piece{
 
-    /* -8 = up
-     * 8 = down
+    /** The possible move offsets of a rook
+     * -8 = up
+     *  8 = down
      * -1 = left
-     * 1 = right
+     *  1 = right
      */
     private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES = {-8, -1, 1, 8};
 
-    /* Constructor
+    /** Constructor
      *
      * @param piecePosition the position of the piece
      * @param pieceAlliance the alliance of the piece
@@ -35,6 +36,11 @@ public class Rook extends Piece{
     }
 
     @Override
+    /** Calculate the legal moves for the Rook
+     *
+     * @param board the board
+     * @return an unmodifiable collection of legal moves
+     */
     public Collection<Move> calculateLegalMoves(final Board board) {
         final List<Move> legalMoves = new ArrayList<>();
         /* for each of the possible moves, check if the move is legal */
@@ -69,11 +75,22 @@ public class Rook extends Piece{
         return Collections.unmodifiableList(new LinkedList<>(legalMoves));
     }
 
-    /* if the rook is on the first or eighth column, the move is illegal */
+    /** If the rook is on the eighth column, the move is illegal
+     *
+     * @param candidateDestinationCoordinate
+     * @param candidateCoordinateOffset
+     * @return
+     */
     private boolean isEighthColumnExclusion(int candidateDestinationCoordinate, int candidateCoordinateOffset) {
         return EIGHTH_COLUMN[candidateDestinationCoordinate] && (candidateCoordinateOffset == 1);
     }
 
+    /** If the rook is on the first column, the move is illegal
+     *
+     * @param candidateDestinationCoordinate
+     * @param candidateCoordinateOffset
+     * @return
+     */
     private boolean isFirstColumnExclusion(int candidateDestinationCoordinate, int candidateCoordinateOffset) {
         return FIRST_COLUMN[candidateDestinationCoordinate] && (candidateCoordinateOffset == -1);
     }

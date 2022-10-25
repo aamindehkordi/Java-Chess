@@ -12,9 +12,19 @@ import static com.chess.engine.board.BoardUtils.isValidTileCoordinate;
 
 public class Queen extends Piece{
 
+    /** The offsets for the queen's legal moves
+     * -9  : up 1, left 1
+     * -8  : up 1
+     * -7  : up 1, right 1
+     * -1  : left 1
+     *  1  : right 1
+     *  7  : down 1, left 1
+     *  8  : down 1
+     *  9  : down 1, right 1
+     */
     private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES = {-9, -8, -7, -1, 1, 7, 8, 9};
 
-    /* Constructor
+    /** Constructor
      *
      * @param piecePosition the position of the piece
      * @param pieceAlliance the alliance of the piece
@@ -28,7 +38,7 @@ public class Queen extends Piece{
         return PieceType.QUEEN.toString();
     }
     @Override
-    /* Calculate the legal moves for the piece
+    /** Calculate the legal moves for the piece
      *
      * @param board the board
      * @return an unmodifiable collection of legal moves
@@ -68,10 +78,22 @@ public class Queen extends Piece{
         return Collections.unmodifiableList(new LinkedList<>(legalMoves));
     }
 
+    /** If the Queen is on the Eighth Column, the move is illegal
+     *
+     * @param candidateDestinationCoordinate the current position of the Queen
+     * @param currentCandidateOffset the offset of the move
+     * @return true if the move is illegal, false otherwise
+     */
     private boolean isEighthColumnExclusion(int candidateDestinationCoordinate, int currentCandidateOffset) {
         return BoardUtils.EIGHTH_COLUMN[candidateDestinationCoordinate] && (currentCandidateOffset == 1 || currentCandidateOffset == 9 || currentCandidateOffset == -7);
     }
 
+    /** If the Queen is on the First Column, the move is illegal
+     *
+     * @param candidateDestinationCoordinate the current position of the Queen
+     * @param currentCandidateOffset the offset of the move
+     * @return true if the move is illegal, false otherwise
+     */
     private boolean isFirstColumnExclusion(int candidateDestinationCoordinate, int currentCandidateOffset) {
         return BoardUtils.FIRST_COLUMN[candidateDestinationCoordinate] && (currentCandidateOffset == -1 || currentCandidateOffset == -9 || currentCandidateOffset == 7);
     }
