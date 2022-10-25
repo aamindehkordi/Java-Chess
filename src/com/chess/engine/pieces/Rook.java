@@ -26,7 +26,7 @@ public class Rook extends Piece{
      * @param piecePosition the position of the piece
      * @param pieceAlliance the alliance of the piece
      */
-    Rook(final int piecePosition, final Alliance pieceAlliance) {
+    public Rook(final int piecePosition, final Alliance pieceAlliance) {
         super(piecePosition, pieceAlliance);
     }
 

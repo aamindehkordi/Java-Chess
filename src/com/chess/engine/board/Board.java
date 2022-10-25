@@ -1,7 +1,127 @@
 package com.chess.engine.board;
 
+import com.chess.engine.Alliance;
+import com.chess.engine.pieces.*;
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
 public class Board {
-    public Tile getTile(int candidateDestinationCoordinate) {
-        return null;
+
+    private final List<Tile> gameBoard; /* the game board */
+
+    /* Constructor
+    *
+    * param builder the builder
+    */
+    private Board(Builder builder) {
+        this.gameBoard = createGameBoard(builder); /* create the game board */
+    }
+
+    /* Create the game board
+    *
+    * @param builder the builder
+     */
+    private static List<Tile> createGameBoard(final Builder builder) {
+        final Tile[] tiles = new Tile[BoardUtils.NUM_TILES]; /* the tiles */
+        for (int i = 0; i < BoardUtils.NUM_TILES; i++) { /* for each tile */
+            tiles[i] = Tile.createTile(i, builder.boardConfig.get(i)); /* create the tile */
+        }
+        return Collections.unmodifiableList(new LinkedList<>(List.of(tiles))); /* return the game board */
+    }
+
+    /* Get the tile at the given position
+    *
+    * @param tileCoordinate the position of the tile
+    * @return the tile at the given position
+    */
+    public Tile getTile(final int tileCoordinate) {
+        return gameBoard.get(tileCoordinate); /* return the tile at the given position */
+    }
+
+    /*
+    * This class is used to build the board
+    *
+    * @return the builder
+    */
+    public static Board createStandardBoard() {
+        final Builder builder = new Builder();
+        // Black Layout
+        builder.setPiece(new Rook(0, Alliance.BLACK)); /* set the black rook at position 0 or A8 */
+        builder.setPiece(new Knight(1, Alliance.BLACK)); /* set the black knight at position 1 or B8 */
+        builder.setPiece(new Bishop(2, Alliance.BLACK)); /* set the black bishop at position 2 or C8 */
+        builder.setPiece(new Queen(3, Alliance.BLACK)); /* set the black queen at position 3 or D8 */
+        builder.setPiece(new King(4, Alliance.BLACK)); /* set the black king at position 4 or E8 */
+        builder.setPiece(new Bishop(5, Alliance.BLACK)); /* set the black bishop at position 5 or F8 */
+        builder.setPiece(new Knight(6, Alliance.BLACK)); /* set the black knight at position 6 or G8 */
+        builder.setPiece(new Rook(7, Alliance.BLACK)); /* set the black rook at position 7 or H8 */
+        builder.setPiece(new Pawn(8, Alliance.BLACK)); /* set the black pawn at position 8 or A7 */
+        builder.setPiece(new Pawn(9, Alliance.BLACK)); /* set the black pawn at position 9 or B7 */
+        builder.setPiece(new Pawn(10, Alliance.BLACK)); /* set the black pawn at position 10 or C7 */
+        builder.setPiece(new Pawn(11, Alliance.BLACK)); /* set the black pawn at position 11 or D7 */
+        builder.setPiece(new Pawn(12, Alliance.BLACK)); /* set the black pawn at position 12 or E7 */
+        builder.setPiece(new Pawn(13, Alliance.BLACK)); /* set the black pawn at position 13 or F7 */
+        builder.setPiece(new Pawn(14, Alliance.BLACK)); /* set the black pawn at position 14 or G7 */
+        builder.setPiece(new Pawn(15, Alliance.BLACK)); /* set the black pawn at position 15 or H7 */
+        // White Layout
+        builder.setPiece(new Pawn(48, Alliance.WHITE)); /* set the white pawn at position 48 or A2 */
+        builder.setPiece(new Pawn(49, Alliance.WHITE)); /* set the white pawn at position 49 or B2 */
+        builder.setPiece(new Pawn(50, Alliance.WHITE)); /* set the white pawn at position 50 or C2 */
+        builder.setPiece(new Pawn(51, Alliance.WHITE)); /* set the white pawn at position 51 or D2 */
+        builder.setPiece(new Pawn(52, Alliance.WHITE)); /* set the white pawn at position 52 or E2 */
+        builder.setPiece(new Pawn(53, Alliance.WHITE)); /* set the white pawn at position 53 or F2 */
+        builder.setPiece(new Pawn(54, Alliance.WHITE)); /* set the white pawn at position 54 or G2 */
+        builder.setPiece(new Pawn(55, Alliance.WHITE)); /* set the white pawn at position 55 or H2 */
+        builder.setPiece(new Rook(56, Alliance.WHITE)); /* set the white rook at position 56 or A1 */
+        builder.setPiece(new Knight(57, Alliance.WHITE));   /* set the white knight at position 57 or B1 */
+        builder.setPiece(new Bishop(58, Alliance.WHITE));   /* set the white bishop at position 58 or C1 */
+        builder.setPiece(new Queen(59, Alliance.WHITE));    /* set the white queen at position 59 or D1 */
+        builder.setPiece(new King(60, Alliance.WHITE));    /* set the white king at position 60 or E1 */
+        builder.setPiece(new Bishop(61, Alliance.WHITE));   /* set the white bishop at position 61 or F1 */
+        builder.setPiece(new Knight(62, Alliance.WHITE));   /* set the white knight at position 62 or G1 */
+        builder.setPiece(new Rook(63, Alliance.WHITE));   /* set the white rook at position 63 or H1 */
+        // White to move
+        builder.setMoveMaker(Alliance.WHITE); /* set the move maker to white */
+        // Build the board
+        return builder.build(); /* build the board */
+    }
+
+    /* ‘Builder’ class */
+    public static class Builder {
+
+        Map<Integer, Piece> boardConfig; /* the board configuration */
+        Alliance nextMoveMaker; /* the next move maker */
+
+        /* Constructor */
+        public Builder() {}
+
+        /* Set the piece at the given position
+        *
+        * @param piece the piece
+        * @return the builder
+         */
+        public Builder setPiece(final Piece piece) {
+            this.boardConfig.put(piece.getPiecePosition(), piece);
+            return this;
+        }
+
+        /* Set the next move maker
+        *
+        * @param nextMoveMaker the next move maker
+        * @return the builder
+         */
+        public Builder setMoveMaker(final Alliance nextMoveMaker) {
+            this.nextMoveMaker = nextMoveMaker;
+            return this;
+        }
+        /* Build the board
+        *
+        * @return the board
+         */
+        public Board build() {
+            return new Board(this);
+        }
     }
 }

@@ -23,16 +23,14 @@ public class King extends Piece{
      *  9: bottom right
      */
     private final static int[] CANDIDATE_MOVE_COORDINATE = {-9, -8, -7, -1, 1, 7, 8, 9};
-    private final boolean canCastle;
 
     /* Constructor
      *
      * @param piecePosition the position of the piece
      * @param pieceAlliance the alliance of the piece
      */
-    King(int piecePosition, Alliance pieceAlliance, boolean canCastle) {
+    public King(int piecePosition, Alliance pieceAlliance) {
         super(piecePosition, pieceAlliance);
-        this.canCastle = canCastle;
     }
 
     @Override

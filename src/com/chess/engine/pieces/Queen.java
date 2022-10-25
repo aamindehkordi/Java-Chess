@@ -19,7 +19,7 @@ public class Queen extends Piece{
      * @param piecePosition the position of the piece
      * @param pieceAlliance the alliance of the piece
      */
-    Queen(final int piecePosition, final Alliance pieceAlliance) {
+    public Queen(final int piecePosition, final Alliance pieceAlliance) {
         super(piecePosition, pieceAlliance);
     }
 
