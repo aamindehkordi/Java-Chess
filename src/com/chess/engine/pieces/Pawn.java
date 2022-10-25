@@ -13,7 +13,11 @@ import java.util.List;
 
 public class Pawn extends Piece {
 
+    /* 8: up */
     private final static int[] CANDIDATE_MOVE_COORDINATE = {8};
+    /* 7: up and right
+     * 9: up and left
+     */
     private final static int[] CANDIDATE_ATTACK_MOVE_COORDINATE = {7, 9};
 
 
