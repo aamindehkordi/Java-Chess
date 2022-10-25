@@ -205,6 +205,7 @@ public class Board {
 
         Map<Integer, Piece> boardConfig; /* the board configuration */
         Alliance nextMoveMaker; /* the next move maker */
+        Pawn enPassantPawn; /* the en passant pawn */
 
         /** Constructor */
         public Builder() {
@@ -236,6 +237,10 @@ public class Board {
          */
         public Board build() {
             return new Board(this);
+        }
+
+        public void setEnPassantPawn(Pawn enPassantPawn) {
+            this.enPassantPawn = enPassantPawn;
         }
     }
 }

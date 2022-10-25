@@ -29,20 +29,20 @@ public class Pawn extends Piece {
         super(PieceType.PAWN ,piecePosition, pieceAlliance);
     }
 
-    @Override
     /** Print the piece
      *
      * @return the piece as a string
      */
+    @Override
     public String toString() {
         return PieceType.PAWN.toString();
     }
-    @Override
     /** Calculate the legal moves for the Pawn
      *
      * @param board the board
      * @return a collection of legal moves
      */
+    @Override
     public Collection<Move> calculateLegalMoves(final Board board) {
 
         final List<Move> legalMoves = new ArrayList<>(); /* for each of the possible moves, check if the move is legal */
@@ -58,7 +58,7 @@ public class Pawn extends Piece {
                 legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
             }
 
-            else if( currentCandidateOffset == 16 && this.isFirstMove() && /*if you are moving two tiles forward and it is the first move AND */
+            else if( currentCandidateOffset == 16 && this.isFirstMove() && /*if you are moving two tiles forward, and it is the first move AND */
                     (BoardUtils.SECOND_ROW[this.piecePosition] && this.getPieceAlliance().isBlack()) || /* if you are on the second row and your alliance is black or */
                     (BoardUtils.SEVENTH_ROW[this.piecePosition] && this.getPieceAlliance().isWhite()) ) { /* if you are on the seventh row and your alliance is white */
                 /* between the current position and the destination position, there must be an empty tile */

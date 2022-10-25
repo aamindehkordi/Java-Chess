@@ -1,6 +1,7 @@
 package com.chess.engine.board;
 
 import com.chess.engine.board.Board.Builder;
+import com.chess.engine.pieces.Pawn;
 import com.chess.engine.pieces.Piece;
 import com.chess.engine.pieces.Rook;
 
@@ -46,15 +47,15 @@ public abstract class Move {
      */
     @Override
     public boolean equals(final Object other) {
-        if (this == other) {
+        if (this == other) { /* if the moves are the same */
             return true;
         }
-        if (!(other instanceof Move)) {
+        if (!(other instanceof Move)) { /* if the other object is not a move */
             return false;
         }
-        final Move otherMove = (Move) other;
-        return getDestinationCoordinate() == otherMove.getDestinationCoordinate() &&
-                getMovedPiece().equals(otherMove.getMovedPiece());
+        final Move otherMove = (Move) other; /* cast the other object to a move */
+        return getDestinationCoordinate() == otherMove.getDestinationCoordinate() && /* True if the destination coordinates are the same */
+                getMovedPiece().equals(otherMove.getMovedPiece()); /* and the moved pieces are the same */
     }
 
     /** Get the destination coordinate
@@ -79,7 +80,7 @@ public abstract class Move {
         return this.movedPiece.getPiecePosition();
     }
 
-    /** Checks if the move is an attack
+    /** Checks if the move is an attacking move
      *
      * @return true if the move is an attack, false otherwise
      */
@@ -152,8 +153,34 @@ public abstract class Move {
         }
 
         @Override
+        public int hashCode() {
+            return this.attackedPiece.hashCode() + super.hashCode();
+        }
+
+        @Override
+        public boolean equals(final Object other) {
+            if (this == other) { /* if the moves are the same */
+                return true;
+            }
+            if (!(other instanceof AttackMove)) { /* if the other object is not an attack move */
+                return false;
+            }
+            final AttackMove otherAttackMove = (AttackMove) other; /* cast the other object to an attack move */
+            return super.equals(otherAttackMove) && getAttackedPiece().equals(otherAttackMove.getAttackedPiece()); /* True if the destination coordinates are the same */
+        }
+        @Override
         public Board execute() {
             return null;
+        }
+
+        @Override
+        public boolean isAttack() {
+            return true;
+        }
+
+        @Override
+        public Piece getAttackedPiece() {
+            return this.attackedPiece;
         }
     }
 
@@ -204,6 +231,24 @@ public abstract class Move {
          */
         public PawnJump(final Board board, final Piece movedPiece, final int destinationCoordinate) {
             super(board, movedPiece, destinationCoordinate);
+        }
+
+        @Override
+        public Board execute() {
+            final Builder builder = new Builder(); /* create a new board builder */
+            for (final Piece piece : this.board.currentPlayer().getActivePieces()) { /* for each piece on the board */
+                if (!this.movedPiece.equals(piece)) { /* for all the pieces except the moved piece */
+                    builder.setPiece(piece); /* add them to the new board */
+                }
+            }
+            for (final Piece piece : this.board.currentPlayer().getOpponent().getActivePieces()) { /* for each piece on the board */
+                builder.setPiece(piece); /* add the piece to the board */
+            }
+            final Pawn movedPawn = (Pawn) this.movedPiece.movePiece(this); /* move the piece */
+            builder.setPiece(movedPawn); /* add the moved piece to the board */ /* only difference */
+            builder.setEnPassantPawn(movedPawn); /* set the en passant pawn */
+            builder.setMoveMaker(this.board.currentPlayer().getOpponent().getAlliance()); /* set the move maker to the opponent */
+            return builder.build(); /* build the board */
         }
     }
 
