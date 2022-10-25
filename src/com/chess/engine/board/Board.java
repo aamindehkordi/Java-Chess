@@ -15,6 +15,7 @@ public class Board {
     private final BlackPlayer blackPlayer; /* the black player */
     private final Collection<Piece> whitePieces; /* the white pieces */
     private final Collection<Piece> blackPieces; /* the black pieces */
+    private final Player currentPlayer; /* the current player */
 
 
     /* Constructor
@@ -33,6 +34,7 @@ public class Board {
 
         this.whitePlayer = new WhitePlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the white player */
         this.blackPlayer = new BlackPlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the black player */
+        this.currentPlayer = null;
     }
 
     @Override
@@ -173,6 +175,10 @@ public class Board {
     }
     public Player whitePlayer() {
         return this.whitePlayer; /* return the white player */
+    }
+
+    public Player currentPlayer() {
+        return this.currentPlayer; /* return the current player */
     }
 
     /* ‘Builder’ class */

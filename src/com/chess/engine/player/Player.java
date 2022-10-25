@@ -72,7 +72,33 @@ public abstract class Player {
     }
 
     public MoveTransition makeMove(final Move move){
-        return null;
+
+        // Check if the move is legal
+        if(!isMoveLegal(move)){
+            return new MoveTransition(this.board, move, MoveStatus.ILLEGAL_MOVE);
+        }
+
+        // Create a new board with the move made
+        final Board transitionBoard = move.execute();
+
+        // Create a new collection of legal moves for the opponent
+        final Collection<Move> kingAttacks = Player.calculateAttacksOnTile(transitionBoard.currentPlayer().getOpponent().getPlayerKing().getPiecePosition(),
+                transitionBoard.currentPlayer().getLegalMoves());
+
+        // If the king is attacked from the move, the move is illegal
+        if(!kingAttacks.isEmpty()){
+            return new MoveTransition(this.board, move, MoveStatus.LEAVES_PLAYER_IN_CHECK);
+        }
+
+        return new MoveTransition(transitionBoard, move, MoveStatus.DONE);
+    }
+
+    private Piece getPlayerKing() {
+        return this.playerKing;
+    }
+
+    private Collection<Move> getLegalMoves() {
+        return this.legalMoves;
     }
 
 
