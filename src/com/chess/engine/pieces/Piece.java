@@ -38,6 +38,13 @@ public abstract class Piece {
     */
     public abstract Collection<Move> calculateLegalMoves(final Board board);
 
+    /** Return a new piece with the updated position
+     *
+     * @param move the move
+     * @return a new piece with the updated position
+     */
+    public abstract Piece movePiece(Move move);
+
     /** Get the alliance of the piece
      *
      * @return the alliance of the piece

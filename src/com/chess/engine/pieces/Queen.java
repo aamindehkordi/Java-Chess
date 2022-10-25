@@ -78,6 +78,17 @@ public class Queen extends Piece{
         return Collections.unmodifiableList(new LinkedList<>(legalMoves));
     }
 
+    /**
+     * Return a new piece with the updated position
+     *
+     * @param move the move
+     * @return a new piece with the updated position
+     */
+    @Override
+    public Piece movePiece(Move move) {
+        return new Queen(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
+    }
+
     /** If the Queen is on the Eighth Column, the move is illegal
      *
      * @param candidateDestinationCoordinate the current position of the Queen

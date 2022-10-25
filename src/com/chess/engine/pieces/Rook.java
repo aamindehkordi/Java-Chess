@@ -75,6 +75,17 @@ public class Rook extends Piece{
         return Collections.unmodifiableList(new LinkedList<>(legalMoves));
     }
 
+    /**
+     * Return a new piece with the updated position
+     *
+     * @param move the move
+     * @return a new piece with the updated position
+     */
+    @Override
+    public Piece movePiece(Move move) {
+        return new Rook(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
+    }
+
     /** If the rook is on the eighth column, the move is illegal
      *
      * @param candidateDestinationCoordinate

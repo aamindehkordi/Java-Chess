@@ -100,5 +100,16 @@ public class Pawn extends Piece {
 
         return Collections.unmodifiableList(legalMoves); /* return an unmodifiable list of legal moves */
     }
+
+    /**
+     * Return a new piece with the updated position
+     *
+     * @param move the move
+     * @return a new piece with the updated position
+     */
+    @Override
+    public Piece movePiece(Move move) {
+        return new Pawn(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
+    }
 }
 

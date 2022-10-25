@@ -72,6 +72,17 @@ public class Bishop extends Piece {
         return Collections.unmodifiableList(new LinkedList<>(legalMoves));
     }
 
+    /**
+     * Return a new piece with the updated position
+     *
+     * @param move the move
+     * @return a new piece with the updated position
+     */
+    @Override
+    public Piece movePiece(Move move) {
+        return new Bishop(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
+    }
+
     /** if the bishop is on the first, the move is illegal
      *
      * @param currentPosition

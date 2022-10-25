@@ -67,6 +67,17 @@ public class King extends Piece{
         return Collections.unmodifiableList(legalMoves);
     }
 
+    /**
+     * Return a new piece with the updated position
+     *
+     * @param move the move
+     * @return a new piece with the updated position
+     */
+    @Override
+    public Piece movePiece(Move move) {
+        return new King(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
+    }
+
     @Override
     /** Prints the piece
      *

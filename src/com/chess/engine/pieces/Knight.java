@@ -83,6 +83,17 @@ public class Knight extends Piece {
         return Collections.unmodifiableList(new LinkedList<>(legalMoves));
     }
 
+    /**
+     * Return a new piece with the updated position
+     *
+     * @param move the move
+     * @return a new piece with the updated position
+     */
+    @Override
+    public Piece movePiece(Move move) {
+        return new Knight(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
+    }
+
     /** if the knight is on the 8th column then the corresponding move is illegal
      *
      * @param currentPos
