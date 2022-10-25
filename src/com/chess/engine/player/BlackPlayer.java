@@ -14,7 +14,7 @@ public class BlackPlayer extends Player {
      * @param whiteStandardLegalMoves the white player's legal moves
      * @param blackStandardLegalMoves the black player's legal moves
      */
-    public BlackPlayer(Board board, Collection<Move> whiteStandardLegalMoves, Collection<Move> blackStandardLegalMoves) {
+    public BlackPlayer(final Board board, final Collection<Move> whiteStandardLegalMoves, final Collection<Move> blackStandardLegalMoves) {
         super(board, blackStandardLegalMoves, whiteStandardLegalMoves);
     }
     @Override

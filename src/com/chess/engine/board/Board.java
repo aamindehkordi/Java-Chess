@@ -8,6 +8,9 @@ import com.chess.engine.player.WhitePlayer;
 
 import java.util.*;
 
+/**
+ * The board
+ */
 public class Board {
 
     private final List<Tile> gameBoard; /* the game board */
@@ -22,7 +25,7 @@ public class Board {
     *
     * @param builder the builder
     */
-    private Board(Builder builder) {
+    private Board(final Builder builder) {
         this.gameBoard = createGameBoard(builder); /* create the game board */
         /* the white pieces */
         whitePieces = calculateActivePieces(this.gameBoard, Alliance.WHITE); /* calculate the white pieces */
@@ -34,14 +37,10 @@ public class Board {
 
         this.whitePlayer = new WhitePlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the white player */
         this.blackPlayer = new BlackPlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the black player */
-        this.currentPlayer = null;
+        this.currentPlayer = builder.nextMoveMaker.choosePlayer(this.whitePlayer, this.blackPlayer); /* set the current player */
     }
 
     @Override
-    /** Get the string representation of the board
-    *
-    * @return the string representation of the board
-     */
     public String toString() {
         final StringBuilder builder = new StringBuilder(); /* the string builder */
         for (int i = 0; i < BoardUtils.NUM_TILES; i++) { /* for each tile */
@@ -192,6 +191,8 @@ public class Board {
     public Player currentPlayer() {
         return this.currentPlayer; /* return the current player */
     }
+
+
 
     /** ‘Builder’ class */
     public static class Builder {
