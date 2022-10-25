@@ -55,10 +55,10 @@ public abstract class Piece {
         if (this == other) { /* if the pieces are the same */
             return true;
         }
-        if (!(other instanceof Piece)) { /* if the other object is not a piece */
+        if (!(other instanceof final Piece otherPiece)) { /* if the other object is not a piece */
             return false;
         }
-        final Piece otherPiece = (Piece) other; /* cast the other object to a piece */
+        /* cast the other object to a piece */
         return piecePosition == otherPiece.getPiecePosition() && pieceType == otherPiece.getPieceType() && /* True if the piece position and type are the same and */
                 pieceAlliance == otherPiece.getPieceAlliance() && isFirstMove == otherPiece.isFirstMove(); /* the piece alliance and first move are the same */
     }

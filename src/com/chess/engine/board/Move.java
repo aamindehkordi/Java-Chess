@@ -50,10 +50,10 @@ public abstract class Move {
         if (this == other) { /* if the moves are the same */
             return true;
         }
-        if (!(other instanceof Move)) { /* if the other object is not a move */
+        if (!(other instanceof final Move otherMove)) { /* if the other object is not a move */
             return false;
         }
-        final Move otherMove = (Move) other; /* cast the other object to a move */
+        /* cast the other object to a move */
         return getDestinationCoordinate() == otherMove.getDestinationCoordinate() && /* True if the destination coordinates are the same */
                 getMovedPiece().equals(otherMove.getMovedPiece()); /* and the moved pieces are the same */
     }
@@ -162,10 +162,10 @@ public abstract class Move {
             if (this == other) { /* if the moves are the same */
                 return true;
             }
-            if (!(other instanceof AttackMove)) { /* if the other object is not an attack move */
+            if (!(other instanceof final AttackMove otherAttackMove)) { /* if the other object is not an attack move */
                 return false;
             }
-            final AttackMove otherAttackMove = (AttackMove) other; /* cast the other object to an attack move */
+            /* cast the other object to an attack move */
             return super.equals(otherAttackMove) && getAttackedPiece().equals(otherAttackMove.getAttackedPiece()); /* True if the destination coordinates are the same */
         }
         @Override

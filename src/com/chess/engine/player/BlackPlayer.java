@@ -40,7 +40,7 @@ public class BlackPlayer extends Player {
      * @return
      */
     @Override
-    protected Collection<Move> calculateKingCastles(Collection<Move> playerLegals, Collection<Move> opponentLegals) {
+    protected Collection<Move> calculateKingCastles(final Collection<Move> playerLegals, final Collection<Move> opponentLegals) {
         final List<Move> kingCastles = new ArrayList<>(); /* List of legal moves */
 
         // KING SIDE CASTLE
@@ -51,7 +51,6 @@ public class BlackPlayer extends Player {
                 if (Player.calculateAttacksOnTile(5, opponentLegals).isEmpty() && /* If the tiles on the kingside are not attacked */
                     Player.calculateAttacksOnTile(6, opponentLegals).isEmpty() && /* If the tiles on the kingside are not attacked */
                     rookTile.getPiece().getPieceType().isRook()) { /* If the piece on the tile is a rook */
-                    //TODO more to come here (castling)
                     kingCastles.add(new Move.KingSideCastleMove(this.board, this.playerKing, 6, (Rook) rookTile.getPiece(), rookTile.getTileCoordinate(), 5)); /* Add the move to the list of legal moves */
                 }
             }
@@ -64,7 +63,6 @@ public class BlackPlayer extends Player {
                 if (Player.calculateAttacksOnTile(2, opponentLegals).isEmpty() && /* If the tiles on the queenside are not attacked */
                     Player.calculateAttacksOnTile(3, opponentLegals).isEmpty() && /* If the tiles on the queenside are not attacked */
                     rookTile.getPiece().getPieceType().isRook()) { /* If the piece on the tile is a rook */
-                    //TODO more to come here (castling)
                     kingCastles.add(new Move.QueenSideCastleMove(this.board, this.playerKing, 2, (Rook) rookTile.getPiece(), rookTile.getTileCoordinate(), 3)); /* Add the move to the list of legal moves */
                 }
             }

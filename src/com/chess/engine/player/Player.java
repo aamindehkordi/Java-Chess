@@ -30,7 +30,8 @@ public abstract class Player {
     public Player(final Board board, final Collection<Move> legalMoves, final Collection<Move> opponentMoves){
         this.board = board;
         this.playerKing = establishKing();
-        this.legalMoves = legalMoves;
+        legalMoves.addAll(calculateKingCastles(legalMoves, opponentMoves));
+        this.legalMoves = Collections.unmodifiableCollection(legalMoves);
         this.opponentLegalMoves = opponentMoves;
         this.isInCheck = !Player.calculateAttacksOnTile(this.playerKing.getPiecePosition(), this.opponentLegalMoves).isEmpty();
     }
