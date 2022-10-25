@@ -10,6 +10,8 @@ public abstract class Move {
     final Piece movedPiece;
     final int destinationCoordinate;
 
+    public static final Move NULL_MOVE = new NullMove();
+
     /** Constructor
      * @param board the board
      * @param movedPiece the piece that is being moved
@@ -195,15 +197,35 @@ public abstract class Move {
     public static final class NullMove extends Move {
         /** Constructor
          *
-         * @param board the board
          */
-        public NullMove(final Board board) {
-            super(board, null, -1);
+        public NullMove() {
+            super(null, null, -1);
         }
 
         @Override
         public Board execute() {
             throw new RuntimeException("Cannot execute the null move!");
         }
+    }
+
+    public static class MoveFactory {
+
+        private MoveFactory() {
+            throw new RuntimeException("Not instantiable!");
+        }
+
+        public static Move createMove(final Board board, final int currentCoordinate, final int destinationCoordinate) {
+
+            for(final Move move : board.getAllLegalMoves()) {
+                if(move.getCurrentCoordinate() == currentCoordinate && move.getDestinationCoordinate() == destinationCoordinate) {
+                    return move;
+                }
+            }
+            return NULL_MOVE;
+        }
+    }
+
+    private int getCurrentCoordinate() {
+        return this.movedPiece.getPiecePosition();
     }
 }

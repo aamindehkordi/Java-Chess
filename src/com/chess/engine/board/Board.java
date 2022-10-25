@@ -192,6 +192,12 @@ public class Board {
         return this.currentPlayer; /* return the current player */
     }
 
+    public Iterable<Move> getAllLegalMoves() {
+        List<Move> allLegalMoves = new ArrayList<>(); /* the list of all legal moves */
+        allLegalMoves.addAll(this.whitePlayer.getLegalMoves()); /* add all the white player's legal moves */
+        allLegalMoves.addAll(this.blackPlayer.getLegalMoves()); /* add all the black player's legal moves */
+        return Collections.unmodifiableList(allLegalMoves); /* return the list of all legal moves */
+    }
 
 
     /** ‘Builder’ class */

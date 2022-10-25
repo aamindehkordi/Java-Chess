@@ -157,7 +157,7 @@ public abstract class Player {
      *
      * @return the player's legal moves
      */
-    private Collection<Move> getLegalMoves() {
+    public Collection<Move> getLegalMoves() {
         return this.legalMoves;
     }
 

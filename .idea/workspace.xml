@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="COMMENTS">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Added concrete subclasses to the move class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/Alliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/Alliance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/BlackPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/BlackPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +107,7 @@
       <workItem from="1666571001151" duration="263000" />
       <workItem from="1666571462875" duration="3178000" />
       <workItem from="1666649396459" duration="71000" />
-      <workItem from="1666649473994" duration="21635000" />
+      <workItem from="1666649473994" duration="24924000" />
     </task>
     <task id="LOCAL-00001" summary="Immutable tile hashmap along with organized packages">
       <created>1666235671618</created>
@@ -356,7 +354,42 @@
       <option name="project" value="LOCAL" />
       <updated>1666677717124</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="cleanup">
+      <created>1666679056261</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1666679056261</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Filling up majorMove">
+      <created>1666679178264</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1666679178264</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Execute major move mostly done">
+      <created>1666679832677</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1666679832677</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Piece hashcode and equals complete">
+      <created>1666680404191</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1666680404191</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Added concrete subclasses to the move class">
+      <created>1666680929891</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1666680929891</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,10 +421,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added more to BoardUtils and Knight" />
-    <MESSAGE value="Tidied up the beginnings of Move class" />
-    <MESSAGE value="build" />
-    <MESSAGE value="updated uml, idk" />
     <MESSAGE value="starting on the Bishop class" />
     <MESSAGE value="finished up bishop and added more comments" />
     <MESSAGE value="minor cleanup" />
@@ -407,13 +436,17 @@
     <MESSAGE value="comments i think" />
     <MESSAGE value="Heavy into Board" />
     <MESSAGE value="ToString!!!! Signs of Life" />
-    <MESSAGE value="cleanup" />
     <MESSAGE value="Added Players and properly implemented PieceTypes" />
     <MESSAGE value="Introduced critical methods for the Players and a helper class" />
     <MESSAGE value="fleshing moves and players out" />
     <MESSAGE value="MakeMove has its bones" />
     <MESSAGE value="COMMENTS" />
-    <option name="LAST_COMMIT_MESSAGE" value="COMMENTS" />
+    <MESSAGE value="cleanup" />
+    <MESSAGE value="Filling up majorMove" />
+    <MESSAGE value="Execute major move mostly done" />
+    <MESSAGE value="Piece hashcode and equals complete" />
+    <MESSAGE value="Added concrete subclasses to the move class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added concrete subclasses to the move class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
