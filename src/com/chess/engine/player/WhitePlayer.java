@@ -37,9 +37,9 @@ public class WhitePlayer extends Player {
     }
 
     /**
-     * @param playerLegals
-     * @param opponentLegals
-     * @return
+     * @param playerLegals the player's legal moves
+     * @param opponentLegals Opponent's legal moves
+     * @return the legal moves for the king castles
      */
     @Override
     protected Collection<Move> calculateKingCastles(Collection<Move> playerLegals, Collection<Move> opponentLegals) {
