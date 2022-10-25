@@ -2,7 +2,6 @@ package com.chess.engine.pieces;
 
 import com.chess.engine.Alliance;
 import com.chess.engine.board.Board;
-import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
 import com.chess.engine.board.Move.AttackMove;
 import com.chess.engine.board.Tile;
@@ -10,7 +9,7 @@ import com.chess.engine.board.Tile;
 import java.util.*;
 
 import static com.chess.engine.board.BoardUtils.*;
-import static com.chess.engine.board.Move.*;
+import static com.chess.engine.board.Move.MajorMove;
 
 public class Rook extends Piece{
 
@@ -70,7 +69,7 @@ public class Rook extends Piece{
         return Collections.unmodifiableList(new LinkedList<>(legalMoves));
     }
 
-    /* if the rook is on the first or eigth column, the move is illegal */
+    /* if the rook is on the first or eighth column, the move is illegal */
     private boolean isEighthColumnExclusion(int candidateDestinationCoordinate, int candidateCoordinateOffset) {
         return EIGHTH_COLUMN[candidateDestinationCoordinate] && (candidateCoordinateOffset == 1);
     }

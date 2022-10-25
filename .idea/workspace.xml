@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="ToString!!!! Signs of Life">
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/PieceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/PieceType.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="cleanup">
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Knight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Rook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +108,7 @@
       <workItem from="1666571001151" duration="263000" />
       <workItem from="1666571462875" duration="3178000" />
       <workItem from="1666649396459" duration="71000" />
-      <workItem from="1666649473994" duration="12271000" />
+      <workItem from="1666649473994" duration="12669000" />
     </task>
     <task id="LOCAL-00001" summary="Immutable tile hashmap along with organized packages">
       <created>1666235671618</created>
@@ -296,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666661918752</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="cleanup">
+      <created>1666662016885</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1666662016885</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +362,8 @@
     <MESSAGE value="comments i think" />
     <MESSAGE value="Heavy into Board" />
     <MESSAGE value="ToString!!!! Signs of Life" />
-    <option name="LAST_COMMIT_MESSAGE" value="ToString!!!! Signs of Life" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

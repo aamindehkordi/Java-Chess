@@ -13,14 +13,11 @@ import java.util.List;
 
 public class Pawn extends Piece {
 
-    /* 8: up */
-    private final static int[] CANDIDATE_MOVE_COORDINATE = {8};
-
-    /* 7: up and right
-     * 9: up and left
-     */
-    private final static int[] CANDIDATE_ATTACK_MOVE_COORDINATE = {7, 9};
-
+    /* 8: up
+    * 7: up and right
+    * 9: up and left
+    */
+    private final static int[] CANDIDATE_MOVE_COORDINATE = {8, 16, 7, 9};
 
     /* Constructor
      *
@@ -56,7 +53,7 @@ public class Pawn extends Piece {
             }
 
             /* if you are moving one tile forward and the tile is not occupied, add the move to the list of legal moves */
-            if(currentCandidateOffset == 8 && !board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
+            if(!board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
                 //TODO Promotions
                 legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
             }
@@ -76,8 +73,8 @@ public class Pawn extends Piece {
 
             /* if you are moving one tile diagonally and the tile is occupied, add the move to the list of legal moves */
             else if(currentCandidateOffset == 7 &&                                                          /* if you are moving one tile diagonally */
-                    !(BoardUtils.EIGHTH_COLUMN[this.piecePosition] && this.pieceAlliance.isWhite() ||       /* and you are not on the eighth column and you are white */
-                     (BoardUtils.FIRST_COLUMN[this.piecePosition] && this.pieceAlliance.isBlack()) ) ) {    /* or you are not on the first column and you are black  (because of promptions)*/
+                    !(BoardUtils.EIGHTH_COLUMN[this.piecePosition] && this.pieceAlliance.isWhite() ||       /* and you are not on the eighth column, and you are white */
+                     (BoardUtils.FIRST_COLUMN[this.piecePosition] && this.pieceAlliance.isBlack()) ) ) {    /* or you are not on the first column, and you are black  (because of promotions)*/
                 /* if the tile is occupied*/
                 if(board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
                     /* get the piece on the tile */
@@ -90,8 +87,8 @@ public class Pawn extends Piece {
                 }
             }
             else if(currentCandidateOffset == 9 &&                                                       /* if you are moving one tile diagonally */
-                  !(BoardUtils.FIRST_COLUMN[this.piecePosition] && this.pieceAlliance.isWhite() ||       /* and you are not on the first column and you are white */
-                   (BoardUtils.EIGHTH_COLUMN[this.piecePosition] && this.pieceAlliance.isBlack()) ) ) {  /* or you are not on the eighth column and you are black  (because of promptions)*/
+                  !(BoardUtils.FIRST_COLUMN[this.piecePosition] && this.pieceAlliance.isWhite() ||       /* and you are not on the first column, and you are white */
+                   (BoardUtils.EIGHTH_COLUMN[this.piecePosition] && this.pieceAlliance.isBlack()) ) ) {  /* or you are not on the eighth column, and you are black  (because of promotions)*/
                 if(board.getTile(candidateDestinationCoordinate).isTileOccupied()) { /* if the tile is occupied*/
                     final Piece pieceAtDestination = board.getTile(candidateDestinationCoordinate).getPiece(); /* get the piece on the tile */
                     if(this.pieceAlliance != pieceAtDestination.getPieceAlliance()) { /* if the piece is not the same color as the pawn,*/

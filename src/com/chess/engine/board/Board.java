@@ -8,8 +8,6 @@ import java.util.*;
 public class Board {
 
     private final List<Tile> gameBoard; /* the game board */
-    private final Collection<Piece> whitePieces; /* the white pieces */
-    private final Collection<Piece> blackPieces; /* the black pieces */
 
     /* Constructor
     *
@@ -17,11 +15,13 @@ public class Board {
     */
     private Board(Builder builder) {
         this.gameBoard = createGameBoard(builder); /* create the game board */
-        this.whitePieces = calculateActivePieces(this.gameBoard, Alliance.WHITE); /* calculate the white pieces */
-        this.blackPieces = calculateActivePieces(this.gameBoard, Alliance.BLACK); /* calculate the black pieces */
+        /* the white pieces */
+        Collection<Piece> whitePieces = calculateActivePieces(this.gameBoard, Alliance.WHITE); /* calculate the white pieces */
+        /* the black pieces */
+        Collection<Piece> blackPieces = calculateActivePieces(this.gameBoard, Alliance.BLACK); /* calculate the black pieces */
 
-        final Collection<Move> whiteStandardLegalMoves = calculateLegalMoves(this.whitePieces); /* calculate the white legal moves */
-        final Collection<Move> blackStandardLegalMoves = calculateLegalMoves(this.blackPieces); /* calculate the black legal moves */
+        final Collection<Move> whiteStandardLegalMoves = calculateLegalMoves(whitePieces); /* calculate the white legal moves */
+        final Collection<Move> blackStandardLegalMoves = calculateLegalMoves(blackPieces); /* calculate the black legal moves */
     }
 
     @Override
