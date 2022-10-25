@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Queen is essentially the Bishop and Rook combined">
-      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/Alliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/Alliance.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Pawn Movement and Attack is complete, TODO: Promotions">
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +100,7 @@
       <workItem from="1666571001151" duration="263000" />
       <workItem from="1666571462875" duration="3178000" />
       <workItem from="1666649396459" duration="71000" />
-      <workItem from="1666649473994" duration="4737000" />
+      <workItem from="1666649473994" duration="8288000" />
     </task>
     <task id="LOCAL-00001" summary="Immutable tile hashmap along with organized packages">
       <created>1666235671618</created>
@@ -223,7 +221,35 @@
       <option name="project" value="LOCAL" />
       <updated>1666653838374</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="The begginings of the pawn">
+      <created>1666654711028</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1666654711028</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Pawn Movement is complete, attack is remaining">
+      <created>1666655628109</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1666655628109</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Pawn Movement is complete, attack is remaining">
+      <created>1666655725186</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1666655725186</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Pawn Movement and Attack is complete, TODO: Promotions">
+      <created>1666657122955</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1666657122955</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +296,10 @@
     <MESSAGE value="Rook was essentially the bishop with different directions" />
     <MESSAGE value="Commented essentially everything so far" />
     <MESSAGE value="Queen is essentially the Bishop and Rook combined" />
-    <option name="LAST_COMMIT_MESSAGE" value="Queen is essentially the Bishop and Rook combined" />
+    <MESSAGE value="The begginings of the pawn" />
+    <MESSAGE value="Pawn Movement is complete, attack is remaining" />
+    <MESSAGE value="Pawn Movement and Attack is complete, TODO: Promotions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pawn Movement and Attack is complete, TODO: Promotions" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
