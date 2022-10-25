@@ -6,10 +6,14 @@ import com.chess.engine.pieces.Rook;
 
 public abstract class Move {
 
+    /** The board */
     final Board board;
+    /** The piece being moved */
     final Piece movedPiece;
+    /** The destination coordinate */
     final int destinationCoordinate;
 
+    /** A null move */
     public static final Move NULL_MOVE = new NullMove();
 
     /** Constructor
@@ -23,6 +27,36 @@ public abstract class Move {
         this.destinationCoordinate = destinationCoordinate;
     }
 
+    /** Hashcode
+     * @return the hashcode
+     */
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + this.destinationCoordinate;
+        result = prime * result + this.movedPiece.hashCode();
+        result = prime * result + this.movedPiece.getPiecePosition();
+        return result;
+    }
+
+    /** Equals
+     * @param other the other move
+     * @return true if the moves are equal, false otherwise
+     */
+    @Override
+    public boolean equals(final Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof Move)) {
+            return false;
+        }
+        final Move otherMove = (Move) other;
+        return getDestinationCoordinate() == otherMove.getDestinationCoordinate() &&
+                getMovedPiece().equals(otherMove.getMovedPiece());
+    }
+
     /** Get the destination coordinate
      * @return the destination coordinate
      */
@@ -30,6 +64,44 @@ public abstract class Move {
         return this.destinationCoordinate;
     }
 
+    /** Get the moved piece
+     * @return the moved piece
+     */
+    public Piece getMovedPiece() {
+        return this.movedPiece;
+    }
+
+    /** Gets the current Coordinate of a piece
+     *
+     * @return the current coordinate of a piece
+     */
+    private int getCurrentCoordinate() {
+        return this.movedPiece.getPiecePosition();
+    }
+
+    /** Checks if the move is an attack
+     *
+     * @return true if the move is an attack, false otherwise
+     */
+    public boolean isAttack() {
+        return false;
+    }
+
+    /** Checks if the move is a castling move
+     *
+     * @return true if the move is a castling move, false otherwise
+     */
+    public boolean isCastlingMove() {
+        return false;
+    }
+
+    /** Gets the attacked piece
+     *
+     * @return the attacked piece
+     */
+    public Piece getAttackedPiece() {
+        return null;
+    }
     public Board execute() {
 
         final Builder builder = new Builder(); /* create a new board builder */
@@ -49,13 +121,6 @@ public abstract class Move {
         builder.setMoveMaker(this.board.currentPlayer().getOpponent().getAlliance()); /* set the move maker to the opponent */
 
         return builder.build(); /* build the board */
-    }
-
-    /** Get the moved piece
-     * @return the moved piece
-     */
-    public Piece getMovedPiece() {
-        return this.movedPiece;
     }
 
     /** The Major Move class */
@@ -225,7 +290,4 @@ public abstract class Move {
         }
     }
 
-    private int getCurrentCoordinate() {
-        return this.movedPiece.getPiecePosition();
-    }
 }
