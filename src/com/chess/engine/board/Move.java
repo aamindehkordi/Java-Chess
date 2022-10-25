@@ -21,7 +21,8 @@ public class Move {
 
 
     public static final class MajorMove extends Move {
-        /**
+        /** Constructor
+         *
          * @param board the board
          * @param movedPiece the piece that is being moved
          * @param destinationCoordinate the destination coordinate
@@ -33,7 +34,8 @@ public class Move {
     public static final class AttackMove extends Move {
         final Piece attackedPiece;
 
-        /**
+        /** Constructor
+         *
          * @param board the board
          * @param movedPiece the piece that is being moved
          * @param destinationCoordinate the destination coordinate
