@@ -5,6 +5,7 @@ import com.chess.engine.board.Board;
 import com.chess.engine.board.Move;
 import com.chess.engine.pieces.King;
 import com.chess.engine.pieces.Piece;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -27,13 +28,18 @@ public abstract class Player {
      * @param legalMoves the player's legal moves
      * @param opponentMoves the opponent's legal moves
      */
-    public Player(final Board board, final Collection<Move> legalMoves, final Collection<Move> opponentMoves){
+    Player(final Board board,
+           final Collection<Move> legalMoves,
+           final Collection<Move> opponentMoves) {
         this.board = board;
         this.playerKing = establishKing();
-        legalMoves.addAll(calculateKingCastles(legalMoves, opponentMoves));
+        this.isInCheck = !calculateAttacksOnTile(this.playerKing.getPiecePosition(), opponentMoves).isEmpty();
+        Collection<Move> castleMoves = calculateKingCastles(legalMoves, opponentMoves);
+        if (!castleMoves.isEmpty()) {
+            legalMoves.addAll(castleMoves);
+        }
         this.legalMoves = Collections.unmodifiableCollection(legalMoves);
-        this.opponentLegalMoves = opponentMoves;
-        this.isInCheck = !Player.calculateAttacksOnTile(this.playerKing.getPiecePosition(), this.opponentLegalMoves).isEmpty();
+        this.opponentLegalMoves = Collections.unmodifiableCollection(opponentMoves);
     }
 
     /** Calculate the attacks on a tile

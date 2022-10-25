@@ -73,6 +73,6 @@ public class WhitePlayer extends Player {
         }
 
 
-        return Collections.unmodifiableList(new LinkedList<>(kingCastles));
+        return kingCastles;
     }
 }
