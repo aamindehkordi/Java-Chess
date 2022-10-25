@@ -19,6 +19,8 @@ public abstract class Piece {
     /** Is piece's first move? */
     protected final boolean isFirstMove;
 
+    private final int cachedHashCode;
+
     /** Constructor
      *
      * @param piecePosition the position of the piece
@@ -29,6 +31,45 @@ public abstract class Piece {
         this.piecePosition = piecePosition;
         this.pieceAlliance = pieceAlliance;
         this.isFirstMove = isFirstMove();
+        this.cachedHashCode = computeHashCode();
+    }
+
+    /** Compute the hash code for the piece
+     *
+     * @return the hash code
+     */
+    private int computeHashCode() {
+        int result = pieceType.hashCode(); /* get the hash code of the piece type */
+        result = 31 * result + pieceAlliance.hashCode(); /* multiply the hash code by 31 and add the hash code of the piece alliance */
+        result = 31 * result + piecePosition; /* multiply the hash code by 31 and add the piece position */
+        result = 31 * result + (isFirstMove ? 1 : 0); /* multiply the hash code by 31 and add 1 if the piece is in its first move, 0 otherwise */
+        return result; /* return the hash code */
+    }
+
+    /** Checks if two pieces are equal not only in reference but also in terms of objects
+     * @param other the other piece
+     * @return true if the pieces are equal, false otherwise
+     */
+    @Override
+    public boolean equals(final Object other) {
+        if (this == other) { /* if the pieces are the same */
+            return true;
+        }
+        if (!(other instanceof Piece)) { /* if the other object is not a piece */
+            return false;
+        }
+        final Piece otherPiece = (Piece) other; /* cast the other object to a piece */
+        return piecePosition == otherPiece.getPiecePosition() && pieceType == otherPiece.getPieceType() && /* True if the piece position and type are the same and */
+                pieceAlliance == otherPiece.getPieceAlliance() && isFirstMove == otherPiece.isFirstMove(); /* the piece alliance and first move are the same */
+    }
+
+    /** Gets the hash code of the piece to make sure that the piece is not modified during move generation
+     *
+     * @return the hash code of the piece
+     */
+    @Override
+    public int hashCode() {
+        return this.cachedHashCode;
     }
 
     /** Calculate the legal moves for the piece

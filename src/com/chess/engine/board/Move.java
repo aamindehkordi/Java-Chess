@@ -27,15 +27,14 @@ public abstract class Move {
         return this.destinationCoordinate;
     }
 
-    /** Get the piece that is being moved
-     * @return the piece that is being moved
-     */
-
     /** Execute the move
      * @return the new board
      */
     public abstract Board execute();
 
+    /** Get the moved piece
+     * @return the moved piece
+     */
     public Piece getMovedPiece() {
         return this.movedPiece;
     }
