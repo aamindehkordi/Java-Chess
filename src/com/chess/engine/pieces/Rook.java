@@ -31,6 +31,11 @@ public class Rook extends Piece{
     }
 
     @Override
+    public String toString() {
+        return PieceType.ROOK.toString();
+    }
+
+    @Override
     public Collection<Move> calculateLegalMoves(final Board board) {
         final List<Move> legalMoves = new ArrayList<>();
         /* for each of the possible moves, check if the move is legal */

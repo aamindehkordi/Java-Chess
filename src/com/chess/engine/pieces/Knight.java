@@ -33,6 +33,10 @@ public class Knight extends Piece {
     }
 
     @Override
+    public String toString() {
+        return PieceType.KNIGHT.toString();
+    }
+    @Override
     /* Calculate the legal moves for the Knight
      *
      * @param board the board

@@ -66,6 +66,11 @@ public class King extends Piece{
         return Collections.unmodifiableList(legalMoves);
     }
 
+    @Override
+    public String toString() {
+        return PieceType.KING.toString();
+    }
+
     /* Check if the king is on the first column
      *
      * @param currentPosition the current position of the king

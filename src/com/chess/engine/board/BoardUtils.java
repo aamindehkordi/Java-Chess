@@ -9,8 +9,8 @@ public class BoardUtils {
     public static final boolean[] SECOND_COLUMN = initCol(1);
     public static final boolean[] SEVENTH_COLUMN = initCol(6);
     public static final boolean[] EIGHTH_COLUMN = initCol(7);
-    public static final boolean[] SECOND_ROW = initRow(1);
-    public static final boolean[] SEVENTH_ROW = initRow(6);
+    public static final boolean[] SECOND_ROW = initRow(8);
+    public static final boolean[] SEVENTH_ROW = initRow(48);
 
     /**
      * This method is used to initialize the columns of the board.

@@ -24,6 +24,10 @@ public class Queen extends Piece{
     }
 
     @Override
+    public String toString() {
+        return PieceType.QUEEN.toString();
+    }
+    @Override
     /* Calculate the legal moves for the piece
      *
      * @param board the board

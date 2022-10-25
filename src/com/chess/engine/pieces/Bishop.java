@@ -28,6 +28,10 @@ public class Bishop extends Piece {
     }
 
     @Override
+    public String toString() {
+        return PieceType.BISHOP.toString();
+    }
+    @Override
     /* Calculate the legal moves for the Knight
      *
      * @param board the board

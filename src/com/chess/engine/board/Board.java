@@ -41,18 +41,6 @@ public class Board {
         return builder.toString();
     }
 
-    /* Pretty print the board
-    *
-    * @param tile the tile
-    * @return the string representation of the board
-     */
-    private static String prettyPrint(final Tile tile) {
-        if (tile.isTileOccupied()) {
-            return tile.getPiece().getPieceAlliance().isBlack() ? tile.getPiece().toString().toLowerCase() : tile.getPiece().toString(); /* if the tile is occupied, return the string representation of the piece */
-        }
-        return tile.toString(); /* if the tile is not occupied, return "-" */
-    }
-
     /* Calculate the legal moves for the pieces of a certain alliance
     *
     * @param pieces the pieces
@@ -160,7 +148,9 @@ public class Board {
         Alliance nextMoveMaker; /* the next move maker */
 
         /* Constructor */
-        public Builder() {}
+        public Builder() {
+            this.boardConfig = new HashMap<>(); /* initialize the board configuration */
+        }
 
         /* Set the piece at the given position
         *
@@ -168,7 +158,7 @@ public class Board {
         * @return the builder
          */
         public Builder setPiece(final Piece piece) {
-            this.boardConfig.put(piece.getPiecePosition(), piece);
+            this.boardConfig.put(piece.getPiecePosition(), piece); /* set the piece at the given position */
             return this;
         }
 
@@ -178,7 +168,7 @@ public class Board {
         * @return the builder
          */
         public Builder setMoveMaker(final Alliance nextMoveMaker) {
-            this.nextMoveMaker = nextMoveMaker;
+            this.nextMoveMaker = nextMoveMaker; /* set the next move maker */
             return this;
         }
         /* Build the board

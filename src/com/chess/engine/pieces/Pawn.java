@@ -32,6 +32,10 @@ public class Pawn extends Piece {
     }
 
     @Override
+    public String toString() {
+        return PieceType.PAWN.toString();
+    }
+    @Override
     /* Calculate the legal moves for the Pawn
      *
      * @param board the board
