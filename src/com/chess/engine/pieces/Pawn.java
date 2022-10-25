@@ -15,17 +15,28 @@ public class Pawn extends Piece {
 
     /* 8: up */
     private final static int[] CANDIDATE_MOVE_COORDINATE = {8};
+
     /* 7: up and right
      * 9: up and left
      */
     private final static int[] CANDIDATE_ATTACK_MOVE_COORDINATE = {7, 9};
 
 
+    /* Constructor
+     *
+     * @param piecePosition the position of the piece
+     * @param pieceAlliance the alliance of the piece
+     */
     public Pawn(final int piecePosition, final Alliance pieceAlliance) {
         super(piecePosition, pieceAlliance);
     }
 
     @Override
+    /* Calculate the legal moves for the Pawn
+     *
+     * @param board the board
+     * @return a collection of legal moves
+     */
     public Collection<Move> calculateLegalMoves(final Board board) {
 
         final List<Move> legalMoves = new ArrayList<>();

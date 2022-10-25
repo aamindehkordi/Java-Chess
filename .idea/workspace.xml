@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Pawn Movement and Attack is complete, TODO: Promotions">
-      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" afterDir="false" />
-    </list>
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Board and Board Builders" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +98,7 @@
       <workItem from="1666571001151" duration="263000" />
       <workItem from="1666571462875" duration="3178000" />
       <workItem from="1666649396459" duration="71000" />
-      <workItem from="1666649473994" duration="8288000" />
+      <workItem from="1666649473994" duration="9773000" />
     </task>
     <task id="LOCAL-00001" summary="Immutable tile hashmap along with organized packages">
       <created>1666235671618</created>
@@ -249,7 +247,28 @@
       <option name="project" value="LOCAL" />
       <updated>1666657122955</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="King is nice and commented">
+      <created>1666658011443</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1666658011443</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Pawn comment adds">
+      <created>1666658101937</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1666658101937</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Board and Board Builders">
+      <created>1666659422180</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1666659422180</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +318,10 @@
     <MESSAGE value="The begginings of the pawn" />
     <MESSAGE value="Pawn Movement is complete, attack is remaining" />
     <MESSAGE value="Pawn Movement and Attack is complete, TODO: Promotions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pawn Movement and Attack is complete, TODO: Promotions" />
+    <MESSAGE value="King is nice and commented" />
+    <MESSAGE value="Pawn comment adds" />
+    <MESSAGE value="Board and Board Builders" />
+    <option name="LAST_COMMIT_MESSAGE" value="Board and Board Builders" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
