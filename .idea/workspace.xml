@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Cleanup">
-      <change afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/OOPChess.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/OOPChess.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/class-use/OOPChess.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/class-use/OOPChess.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/chess/engine/OOPChess.html" beforeDir="false" afterPath="$PROJECT_DIR$/com/chess/engine/OOPChess.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/OOPChess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/OOPChess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="cleanup">
+      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +89,9 @@
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="com.chess.engine.board.BoardUtils" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.chess" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -114,35 +111,7 @@
       <workItem from="1666649396459" duration="71000" />
       <workItem from="1666649473994" duration="30122000" />
       <workItem from="1666720096642" duration="8606000" />
-      <workItem from="1666753810138" duration="2425000" />
-    </task>
-    <task id="LOCAL-00005" summary="isValidCoords and BoardUtils Class">
-      <created>1666337903093</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1666337903093</updated>
-    </task>
-    <task id="LOCAL-00006" summary="fix bugs with the knight's legal moves with extra functions">
-      <created>1666339141630</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1666339141630</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Added more to BoardUtils and Knight">
-      <created>1666339733548</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1666339733548</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Added more to BoardUtils and Knight">
-      <created>1666339761392</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1666339761392</updated>
+      <workItem from="1666753810138" duration="2927000" />
     </task>
     <task id="LOCAL-00009" summary="Tidied up the beginnings of Move class">
       <created>1666340187262</created>
@@ -459,7 +428,35 @@
       <option name="project" value="LOCAL" />
       <updated>1666754255141</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Cleanup">
+      <created>1666821966349</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1666821966349</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Moved main class to main package">
+      <created>1666821990204</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1666821990204</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Created GUI package and Table class">
+      <created>1666822013432</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1666822013432</updated>
+    </task>
+    <task id="LOCAL-00057" summary="cleanup">
+      <created>1666822043713</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1666822043713</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,8 +488,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Pawn Movement and Attack is complete, TODO: Promotions" />
-    <MESSAGE value="King is nice and commented" />
     <MESSAGE value="Pawn comment adds" />
     <MESSAGE value="Board and Board Builders" />
     <MESSAGE value="comments i think" />
@@ -503,7 +498,6 @@
     <MESSAGE value="fleshing moves and players out" />
     <MESSAGE value="MakeMove has its bones" />
     <MESSAGE value="COMMENTS" />
-    <MESSAGE value="cleanup" />
     <MESSAGE value="Filling up majorMove" />
     <MESSAGE value="Execute major move mostly done" />
     <MESSAGE value="Piece hashcode and equals complete" />
@@ -516,7 +510,10 @@
     <MESSAGE value="Added JavaDocs" />
     <MESSAGE value="Code now runs!" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Moved main class to main package" />
+    <MESSAGE value="Created GUI package and Table class" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
