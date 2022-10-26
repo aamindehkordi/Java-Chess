@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="cleanup">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Added MenuBar to GUI">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,14 +112,7 @@
       <workItem from="1666649396459" duration="71000" />
       <workItem from="1666649473994" duration="30122000" />
       <workItem from="1666720096642" duration="8606000" />
-      <workItem from="1666753810138" duration="2927000" />
-    </task>
-    <task id="LOCAL-00009" summary="Tidied up the beginnings of Move class">
-      <created>1666340187262</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1666340187262</updated>
+      <workItem from="1666753810138" duration="4181000" />
     </task>
     <task id="LOCAL-00010" summary="build">
       <created>1666340193224</created>
@@ -456,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666822043713</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Added MenuBar to GUI">
+      <created>1666822421947</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1666822421947</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,8 +489,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Pawn comment adds" />
-    <MESSAGE value="Board and Board Builders" />
     <MESSAGE value="comments i think" />
     <MESSAGE value="Heavy into Board" />
     <MESSAGE value="ToString!!!! Signs of Life" />
@@ -513,7 +512,9 @@
     <MESSAGE value="Moved main class to main package" />
     <MESSAGE value="Created GUI package and Table class" />
     <MESSAGE value="cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
+    <MESSAGE value="Added MenuBar" />
+    <MESSAGE value="Added MenuBar to GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added MenuBar to GUI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
