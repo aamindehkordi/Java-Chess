@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Code now runs!">
-      <change afterPath="$PROJECT_DIR$/src/diagram.uml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Cleanup">
+      <change afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/OOPChess.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/OOPChess.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/class-use/OOPChess.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/class-use/OOPChess.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/chess/engine/OOPChess.html" beforeDir="false" afterPath="$PROJECT_DIR$/com/chess/engine/OOPChess.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/OOPChess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/OOPChess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,14 +114,7 @@
       <workItem from="1666649396459" duration="71000" />
       <workItem from="1666649473994" duration="30122000" />
       <workItem from="1666720096642" duration="8606000" />
-      <workItem from="1666753810138" duration="364000" />
-    </task>
-    <task id="LOCAL-00004" summary="Getting started on the Knight">
-      <created>1666337668419</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1666337668419</updated>
+      <workItem from="1666753810138" duration="2425000" />
     </task>
     <task id="LOCAL-00005" summary="isValidCoords and BoardUtils Class">
       <created>1666337903093</created>
@@ -455,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666737526325</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Cleanup">
+      <created>1666754255141</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1666754255141</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,9 +514,9 @@
     <MESSAGE value="Castling on White and Black Player" />
     <MESSAGE value="Finished with Castling and Cleanup" />
     <MESSAGE value="Added JavaDocs" />
-    <MESSAGE value="Cleanup" />
     <MESSAGE value="Code now runs!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code now runs!" />
+    <MESSAGE value="Cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
