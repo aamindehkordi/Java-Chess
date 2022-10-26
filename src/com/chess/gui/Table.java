@@ -14,6 +14,9 @@ public class Table {
 
     private final JFrame gameFrame; // JFrame is a class that creates a window
     private final BoardPanel boardPanel; // BoardPanel is a class that creates a board
+
+    private final Color lightTileColor;
+    private final Color darkTileColor;
     private static final Dimension OUTER_FRAME_DIMENSION = new Dimension(600, 600); // 600x600
     private static final Dimension BOARD_PANEL_DIMENSION = new Dimension(400, 350); // 400x350
     private static final Dimension TILE_PANEL_DIMENSION = new Dimension(10, 10); // 10x10
@@ -30,10 +33,14 @@ public class Table {
         this.gameFrame.setLayout(new BorderLayout()); // Sets the layout of the JFrame to a BorderLayout
         this.gameFrame.setJMenuBar(tableMenuBar); // Sets the JMenuBar of the JFrame to the JMenuBar created above
 
+        this.darkTileColor = Color.decode("#71573F");
+        this.lightTileColor = Color.decode("#B9A582");
+
         this.boardPanel = new BoardPanel(); // Creates a new BoardPanel
         this.gameFrame.add(this.boardPanel, BorderLayout.CENTER); // Adds the BoardPanel to the center of the JFrame
 
         this.gameFrame.setVisible(true); // Sets the JFrame to be visible
+
     }
 
     /**
@@ -102,15 +109,24 @@ public class Table {
             assignTileColor(); // Assign the color of the tile
             //assignTilePieceIcon(); // Assign the piece icon of the tile
             validate(); // Validate the tile
-
         }
 
         /**
-         * Assigns the color of the tile
+         * Assigns the color of the tile based on the id of the tile
          */
         private void assignTileColor() {
+            if (BoardUtils.FIRST_ROW[this.tileId] ||
+                    BoardUtils.THIRD_ROW[this.tileId] ||
+                    BoardUtils.FIFTH_ROW[this.tileId] ||
+                    BoardUtils.SEVENTH_ROW[this.tileId]) {
+                setBackground(this.tileId % 2 == 0 ? lightTileColor : darkTileColor);
+            } else if (BoardUtils.SECOND_ROW[this.tileId] ||
+                    BoardUtils.FOURTH_ROW[this.tileId] ||
+                    BoardUtils.SIXTH_ROW[this.tileId] ||
+                    BoardUtils.EIGHTH_ROW[this.tileId]) {
+                setBackground(this.tileId % 2 != 0 ? lightTileColor : darkTileColor);
+            }
 
         }
-
     }
 }

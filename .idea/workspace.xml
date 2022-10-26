@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Added board and tile classes to GUI">
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/BoardUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/BoardUtils.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Initialized all rows and columns">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,14 +112,7 @@
       <workItem from="1666649396459" duration="71000" />
       <workItem from="1666649473994" duration="30122000" />
       <workItem from="1666720096642" duration="8606000" />
-      <workItem from="1666753810138" duration="4426000" />
-    </task>
-    <task id="LOCAL-00011" summary="updated uml, idk">
-      <created>1666340347243</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1666340347243</updated>
+      <workItem from="1666753810138" duration="5232000" />
     </task>
     <task id="LOCAL-00012" summary="starting on the Bishop class">
       <created>1666583319397</created>
@@ -456,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666823695179</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Initialized all rows and columns">
+      <created>1666823888720</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1666823888720</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +489,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Heavy into Board" />
     <MESSAGE value="ToString!!!! Signs of Life" />
     <MESSAGE value="Added Players and properly implemented PieceTypes" />
     <MESSAGE value="Introduced critical methods for the Players and a helper class" />
@@ -513,7 +513,8 @@
     <MESSAGE value="Added MenuBar" />
     <MESSAGE value="Added MenuBar to GUI" />
     <MESSAGE value="Added board and tile classes to GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added board and tile classes to GUI" />
+    <MESSAGE value="Initialized all rows and columns" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialized all rows and columns" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
