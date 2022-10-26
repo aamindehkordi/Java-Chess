@@ -1,12 +1,17 @@
 package com.chess.gui;
 
 
+import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,11 +20,13 @@ public class Table {
     private final JFrame gameFrame; // JFrame is a class that creates a window
     private final BoardPanel boardPanel; // BoardPanel is a class that creates a board
 
-    private final Color lightTileColor;
-    private final Color darkTileColor;
+    private final Color lightTileColor; // Light tile color
+    private final Color darkTileColor; // Dark tile color
     private static final Dimension OUTER_FRAME_DIMENSION = new Dimension(600, 600); // 600x600
     private static final Dimension BOARD_PANEL_DIMENSION = new Dimension(400, 350); // 400x350
     private static final Dimension TILE_PANEL_DIMENSION = new Dimension(10, 10); // 10x10
+    private final Board chessBoard; // Board is a class that creates a board
+    private String defaultPieceImagesPath; // path to the images of the pieces
 
     /**
      * Constructor for the Table class
@@ -32,7 +39,8 @@ public class Table {
         final JMenuBar tableMenuBar = createTableMenuBar(); // Creates a new JMenuBar
         this.gameFrame.setLayout(new BorderLayout()); // Sets the layout of the JFrame to a BorderLayout
         this.gameFrame.setJMenuBar(tableMenuBar); // Sets the JMenuBar of the JFrame to the JMenuBar created above
-
+        this.defaultPieceImagesPath = "art/standard/"; // Sets the path to the images of the pieces
+        this.chessBoard = Board.createStandardBoard(); // Creates a new chess board
         this.darkTileColor = Color.decode("#71573F"); // Sets the dark tile color to a brown color
         this.lightTileColor = Color.decode("#B9A582"); // Sets the light tile color to a tan color
 
@@ -40,6 +48,7 @@ public class Table {
         this.gameFrame.add(this.boardPanel, BorderLayout.CENTER); // Adds the BoardPanel to the center of the JFrame
 
         this.gameFrame.setVisible(true); // Sets the JFrame to be visible
+
 
     }
 
@@ -135,20 +144,44 @@ public class Table {
             this.tileId = tileId; // Set the id of the tile
             setPreferredSize(TILE_PANEL_DIMENSION); // Set the size of the tile
             assignTileColor(); // Assign the color of the tile
-            //assignTilePieceIcon(); // Assign the piece icon of the tile
+            assignTilePieceIcon(chessBoard); // Assign the piece icon of the tile
             validate(); // Validate the tile
+        }
+
+        /**
+         * Assigns the color of the tile
+         *
+         * @param board the board the tile is on
+         */
+        private void assignTilePieceIcon(final Board board) {
+            this.removeAll(); // Remove all the components from the tile because we are going to add a new one
+            if (board.getTile(this.tileId).isTileOccupied()) { // If the tile is occupied
+                try { // Try to get the image of the piece
+                    final BufferedImage image = ImageIO.read(new File(defaultPieceImagesPath + // Get the image of the piece
+                            board.getTile(this.tileId).getPiece().getPieceAlliance().toString().substring(0, 1) + // Get the alliance of the piece
+                            board.getTile(this.tileId).getPiece().toString() + // Get the type of the piece
+                            ".png")); // Get the file extension
+                    add(new JLabel(new ImageIcon(image))); // Add the image to the tile
+                } catch (IOException e) { // If there is an error
+                    e.printStackTrace(); // Print the error to the console
+                }
+            }
+
         }
 
         /**
          * Assigns the color of the tile based on the id of the tile
          */
         private void assignTileColor() {
+            // If the id of the tile is even on these rows, set the color to the light tile color
             if (BoardUtils.FIRST_ROW[this.tileId] ||
                     BoardUtils.THIRD_ROW[this.tileId] ||
                     BoardUtils.FIFTH_ROW[this.tileId] ||
                     BoardUtils.SEVENTH_ROW[this.tileId]) {
                 setBackground(this.tileId % 2 == 0 ? lightTileColor : darkTileColor);
-            } else if (BoardUtils.SECOND_ROW[this.tileId] ||
+            }
+            // If the id of the tile is odd on these rows, set the color to the light tile color
+            else if (BoardUtils.SECOND_ROW[this.tileId] ||
                     BoardUtils.FOURTH_ROW[this.tileId] ||
                     BoardUtils.SIXTH_ROW[this.tileId] ||
                     BoardUtils.EIGHTH_ROW[this.tileId]) {
