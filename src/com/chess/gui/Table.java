@@ -33,8 +33,8 @@ public class Table {
         this.gameFrame.setLayout(new BorderLayout()); // Sets the layout of the JFrame to a BorderLayout
         this.gameFrame.setJMenuBar(tableMenuBar); // Sets the JMenuBar of the JFrame to the JMenuBar created above
 
-        this.darkTileColor = Color.decode("#71573F");
-        this.lightTileColor = Color.decode("#B9A582");
+        this.darkTileColor = Color.decode("#71573F"); // Sets the dark tile color to a brown color
+        this.lightTileColor = Color.decode("#B9A582"); // Sets the light tile color to a tan color
 
         this.boardPanel = new BoardPanel(); // Creates a new BoardPanel
         this.gameFrame.add(this.boardPanel, BorderLayout.CENTER); // Adds the BoardPanel to the center of the JFrame
@@ -56,21 +56,49 @@ public class Table {
     }
 
     /**
-     * Adds the file menu to the JMenuBar
+     * Creates and adds the file menu to the JMenuBar
      *
      * @return the File JMenu created
      */
     private JMenu createFileMenu() {
         final JMenu fileMenu = new JMenu("File");
-        final JMenuItem openPGN = new JMenuItem("Load PGN File");
-        openPGN.addActionListener(new ActionListener() {
+
+        addPGNMenuItem(fileMenu); // Adds the PGN menu item to the File JMenu
+        addExitMenuItem(fileMenu); // Adds the Exit menu item to the File JMenu
+
+        return fileMenu;
+    }
+
+    /**
+     * Adds the PGN menu item to the File JMenu
+     *
+     * @param fileMenu the File JMenu to add the PGN menu item to
+     */
+    private static void addPGNMenuItem(JMenu fileMenu) {
+        final JMenuItem openPGN = new JMenuItem("Load PGN File"); // Creates a new JMenuItem with the title "Load PGN File"
+        openPGN.addActionListener(new ActionListener() { // Adds an ActionListener to the JMenuItem
             @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Open up that pgn file!");
+            public void actionPerformed(ActionEvent e) { // When the JMenuItem is clicked, this method is called
+                System.out.println("Open up that pgn file!"); // Prints "Open up that pgn file!" to the console
             }
         });
         fileMenu.add(openPGN);
-        return fileMenu;
+    }
+
+    /**
+     * Adds the Exit menu item to the File JMenu
+     *
+     * @param fileMenu the File JMenu to add the Exit menu item to
+     */
+    private static void addExitMenuItem(JMenu fileMenu) {
+        final JMenuItem exitMenuItem = new JMenuItem("Exit"); // Creates a new JMenuItem with the title "Exit"
+        exitMenuItem.addActionListener(new ActionListener() { // Adds an ActionListener to the JMenuItem
+            @Override
+            public void actionPerformed(ActionEvent e) { // When the JMenuItem is clicked, this method is called
+                System.exit(0); // Exits the program
+            }
+        });
+        fileMenu.add(exitMenuItem); // Adds the JMenuItem to the File JMenu
     }
 
 
