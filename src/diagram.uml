@@ -2,11 +2,63 @@
 <Diagram>
   <ID>JAVA</ID>
   <OriginalElement />
-  <nodes />
+  <nodes>
+    <node x="233.0" y="36.0">com.chess.engine.player.WhitePlayer</node>
+    <node x="167.0" y="-86.0">com.chess.engine.pieces.Queen</node>
+    <node x="342.5" y="179.0">com.chess.engine.board.Tile</node>
+    <node x="-63.0" y="-128.0">com.chess.engine.pieces.Pawn</node>
+    <node x="-68.5" y="290.0">com.chess.engine.OOPChess</node>
+    <node x="233.0" y="161.0">com.chess.engine.board.Move</node>
+    <node x="-68.5" y="-86.0">com.chess.engine.pieces.Bishop</node>
+    <node x="451.5" y="186.0">com.chess.engine.board.BoardUtils</node>
+    <node x="-67.0" y="-39.0">com.chess.engine.pieces.Knight</node>
+    <node x="224.0" y="285.0">com.chess.engine.Alliance</node>
+    <node x="178.0" y="-128.0">com.chess.engine.pieces.Rook</node>
+    <node x="427.5" y="36.0">com.chess.engine.player.BlackPlayer</node>
+    <node x="183.0" y="-39.0">com.chess.engine.pieces.King</node>
+    <node x="333.5" y="94.0">com.chess.engine.board.Board</node>
+    <node x="61.5" y="36.0">com.chess.engine.pieces.Piece</node>
+  </nodes>
   <notes />
-  <edges />
-  <settings layout="Hierarchic Compact" zoom="1.0" showDependencies="false" x="413.0" y="60.5" />
-  <SelectedNodes />
+  <edges>
+    <edge source="com.chess.engine.pieces.Rook" target="com.chess.engine.pieces.Piece" relationship="GENERALIZATION">
+      <point x="0.0" y="14.0" />
+      <point x="222.0" y="0.5" />
+      <point x="107.0" y="0.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.chess.engine.pieces.Pawn" target="com.chess.engine.pieces.Piece" relationship="GENERALIZATION">
+      <point x="0.0" y="14.0" />
+      <point x="-18.0" y="-76.0" />
+      <point x="107.0" y="-76.0" />
+      <point x="0.0" y="-14.0" />
+    </edge>
+    <edge source="com.chess.engine.pieces.Bishop" target="com.chess.engine.pieces.Piece" relationship="GENERALIZATION">
+      <point x="0.0" y="14.0" />
+      <point x="-18.0" y="50.0" />
+      <point x="45.5" y="0.0" />
+    </edge>
+    <edge source="com.chess.engine.pieces.Queen" target="com.chess.engine.pieces.Piece" relationship="GENERALIZATION">
+      <point x="-15.0" y="-14.0" />
+      <point x="201.5" y="13.0" />
+      <point x="92.0" y="13.0" />
+      <point x="-15.0" y="14.0" />
+    </edge>
+    <edge source="com.chess.engine.pieces.Knight" target="com.chess.engine.pieces.Piece" relationship="GENERALIZATION">
+      <point x="0.0" y="14.0" />
+      <point x="-18.0" y="50.0" />
+      <point x="-45.5" y="0.0" />
+    </edge>
+    <edge source="com.chess.engine.pieces.King" target="com.chess.engine.pieces.Piece" relationship="GENERALIZATION">
+      <point x="41.5" y="4.5" />
+      <point x="77.0" y="-20.5" />
+      <point x="-30.0" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.0" showDependencies="false" x="569.0" y="77.5" />
+  <SelectedNodes>
+    <node>com.chess.engine.pieces.Piece</node>
+  </SelectedNodes>
   <Categories />
   <SCOPE>Project Files</SCOPE>
   <VISIBILITY>private</VISIBILITY>

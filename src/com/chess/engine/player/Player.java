@@ -5,7 +5,6 @@ import com.chess.engine.board.Board;
 import com.chess.engine.board.Move;
 import com.chess.engine.pieces.King;
 import com.chess.engine.pieces.Piece;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 

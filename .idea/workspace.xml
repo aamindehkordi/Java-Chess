@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Code now runs!">
-      <change afterPath="$PROJECT_DIR$/src/diagram.uml" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="added Board">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/diagram.uml" beforeDir="false" afterPath="$PROJECT_DIR$/src/diagram.uml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +39,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Ali" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -109,8 +110,15 @@
       <workItem from="1666571462875" duration="3178000" />
       <workItem from="1666649396459" duration="71000" />
       <workItem from="1666649473994" duration="30122000" />
-      <workItem from="1666720096642" duration="8606000" />
-      <workItem from="1666753810138" duration="364000" />
+      <workItem from="1666720096642" duration="7730000" />
+      <workItem from="1666754188211" duration="3966000" />
+    </task>
+    <task id="LOCAL-00003" summary="Truly immutable tilemap">
+      <created>1666332204805</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666332204805</updated>
     </task>
     <task id="LOCAL-00004" summary="Getting started on the Knight">
       <created>1666337668419</created>
@@ -441,21 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666736999204</updated>
     </task>
-    <task id="LOCAL-00051" summary="Code now runs!">
-      <created>1666737034809</created>
+    <task id="LOCAL-00051" summary="added Board">
+      <created>1666754380411</created>
       <option name="number" value="00051" />
       <option name="presentableId" value="LOCAL-00051" />
       <option name="project" value="LOCAL" />
-      <updated>1666737034809</updated>
+      <updated>1666754380412</updated>
     </task>
-    <task id="LOCAL-00052" summary="Code now runs!">
-      <created>1666737526325</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1666737526325</updated>
-    </task>
-    <option name="localTasksCounter" value="53" />
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +488,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Pawn Movement and Attack is complete, TODO: Promotions" />
     <MESSAGE value="King is nice and commented" />
     <MESSAGE value="Pawn comment adds" />
     <MESSAGE value="Board and Board Builders" />
@@ -512,7 +512,8 @@
     <MESSAGE value="Added JavaDocs" />
     <MESSAGE value="Cleanup" />
     <MESSAGE value="Code now runs!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code now runs!" />
+    <MESSAGE value="added Board" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Board" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
