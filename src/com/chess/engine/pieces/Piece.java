@@ -47,7 +47,7 @@ public abstract class Piece {
     }
 
     /** Checks if two pieces are equal not only in reference but also in terms of objects
-     * @param other the other piece
+     * @param other the other piece object
      * @return true if the pieces are equal, false otherwise
      */
     @Override
