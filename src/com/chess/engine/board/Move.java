@@ -8,11 +8,12 @@ import com.chess.engine.pieces.Rook;
 public abstract class Move {
 
     /** The board */
-    final Board board;
+    protected final Board board;
     /** The piece being moved */
-    final Piece movedPiece;
+    protected final Piece movedPiece;
     /** The destination coordinate */
-    final int destinationCoordinate;
+    protected final int destinationCoordinate;
+    protected final boolean isFirstMove;
 
     /** A null move */
     public static final Move NULL_MOVE = new NullMove();
@@ -22,10 +23,17 @@ public abstract class Move {
      * @param movedPiece the piece that is being moved
      * @param destinationCoordinate the destination coordinate
      */
-    Move(final Board board, final Piece movedPiece, final int destinationCoordinate) {
+    private Move(final Board board, final Piece movedPiece, final int destinationCoordinate) {
         this.board = board;
         this.movedPiece = movedPiece;
         this.destinationCoordinate = destinationCoordinate;
+        this.isFirstMove = movedPiece.isFirstMove();
+    }
+    Move(final Board board, final Piece movedPiece, final int destinationCoordinate, final boolean isFirstMove) {
+        this.board = board;
+        this.movedPiece = movedPiece;
+        this.destinationCoordinate = destinationCoordinate;
+        this.isFirstMove = movedPiece.isFirstMove();
     }
 
     /** Hashcode
@@ -38,6 +46,7 @@ public abstract class Move {
         result = prime * result + this.destinationCoordinate;
         result = prime * result + this.movedPiece.hashCode();
         result = prime * result + this.movedPiece.getPiecePosition();
+        result = prime * result + (this.isFirstMove ? 1 : 0);
         return result;
     }
 
@@ -54,7 +63,8 @@ public abstract class Move {
             return false;
         }
         /* cast the other object to a move */
-        return getDestinationCoordinate() == otherMove.getDestinationCoordinate() && /* True if the destination coordinates are the same */
+        return  getCurrentCoordinate() == otherMove.getCurrentCoordinate() && /* True if the current coordinates are the same and */
+                getDestinationCoordinate() == otherMove.getDestinationCoordinate() && /* True if the destination coordinates are the same */
                 getMovedPiece().equals(otherMove.getMovedPiece()); /* and the moved pieces are the same */
     }
 
@@ -109,8 +119,6 @@ public abstract class Move {
 
         for (final Piece piece : this.board.currentPlayer().getActivePieces()) { /* for each piece on the board */
 
-            //TODO hashcode and equals for pieces
-
             if (!this.movedPiece.equals(piece)) { /* for all the pieces except the moved piece */
                 builder.setPiece(piece); /* add them to the new board */
             }
@@ -134,6 +142,16 @@ public abstract class Move {
          */
         public MajorMove(final Board board, final Piece movedPiece, final int destinationCoordinate) {
             super(board, movedPiece, destinationCoordinate);
+        }
+
+        @Override
+        public boolean equals(final Object other) {
+            return this == other || other instanceof MajorMove && super.equals(other); // True if the moves are the same or if the other move is a major move and the moves are equal
+        }
+
+        @Override
+        public String toString() {
+            return movedPiece.getPieceType().toString() + BoardUtils.getPositionAtCoordinate(this.destinationCoordinate); // Return the piece type and the destination coordinate
         }
 
     }

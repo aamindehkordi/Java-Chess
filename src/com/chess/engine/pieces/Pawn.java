@@ -5,6 +5,8 @@ import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
 import com.chess.engine.board.Move.MajorMove;
+import com.chess.engine.board.Move.PawnAttackMove;
+import com.chess.engine.board.Move.PawnJump;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -82,7 +84,7 @@ public class Pawn extends Piece {
 
                 if(!board.getTile(behindCandidateDestinationCoordinate).isTileOccupied() &&                /* if the tile behind the destination is not occupied and */
                         !board.getTile(candidateDestinationCoordinate).isTileOccupied()) {                 /* if the destination tile is not occupied */
-                    legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate)); /* add the move to the list of legal moves */
+                    legalMoves.add(new PawnJump(board, this, candidateDestinationCoordinate)); /* add the move to the list of legal moves */
                 }
             }
 
@@ -96,7 +98,7 @@ public class Pawn extends Piece {
                     /* if the piece is not the same color as the pawn*/
                     if(this.pieceAlliance != pieceAtDestination.getPieceAlliance()) {
                         //TODO Promotions
-                        legalMoves.add(new Move.AttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination)); /* add the move to the list of legal moves */
+                        legalMoves.add(new PawnAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination)); /* add the move to the list of legal moves */
                     }
                 }
             }
@@ -107,7 +109,7 @@ public class Pawn extends Piece {
                     final Piece pieceAtDestination = board.getTile(candidateDestinationCoordinate).getPiece(); /* get the piece on the tile */
                     if(this.pieceAlliance != pieceAtDestination.getPieceAlliance()) { /* if the piece is not the same color as the pawn,*/
                         //TODO Promotions
-                        legalMoves.add(new Move.AttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination)); /* add the move to the list of legal moves */
+                        legalMoves.add(new PawnAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination)); /* add the move to the list of legal moves */
                     }
                 }
             }
