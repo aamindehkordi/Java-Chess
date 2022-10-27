@@ -127,6 +127,11 @@ public class Table {
         });
         fileMenu.add(exitMenuItem); // Adds the JMenuItem to the File JMenu
     }
+    /**
+     * Creates and adds the preferences menu to the JMenuBar
+     *
+     * @return the Preferences JMenu created
+     */
     private JMenu createPreferencesMenu() {
         final JMenu preferencesMenu = new JMenu("Preferences"); // Creates a new JMenu with the title "Preferences"
         final JMenuItem flipBoardMenuItem = new JMenuItem("Flip Board"); // Creates a new JMenuItem with the title "Flip Board"
@@ -151,6 +156,9 @@ public class Table {
         //preferencesMenu.add(createStyleMenu()); // Adds the Style JMenu to the Preferences JMenu
         return preferencesMenu; // Returns the Preferences JMenu created
     }
+
+    /** BoardDirection Class
+     * */
     public enum BoardDirection {
         NORMAL {
             @Override
@@ -176,11 +184,25 @@ public class Table {
             }
         };
 
+        /**
+         * Traverses the board tiles
+         *
+         * @param boardTiles the board tiles to traverse
+         * @return the board tiles traversed
+         */
         abstract List<TilePanel> traverse(final List<TilePanel> boardTiles);
+        /**
+         * Returns the opposite board direction
+         *
+         * @return the opposite board direction
+         */
         abstract BoardDirection opposite();
 
     }
 
+    /**
+     * BoardPanel Class
+     */
     private class BoardPanel extends JPanel {
         final List<TilePanel> boardTiles; // List of all the tiles on the board
 
@@ -211,6 +233,9 @@ public class Table {
         }
     }
 
+    /**
+     * TilePanel Class
+     */
     private class TilePanel extends JPanel {
         private final int tileId; // The id of the tile
 
@@ -228,6 +253,7 @@ public class Table {
             assignTilePieceIcon(chessBoard); // Assign the piece icon of the tile
             validate(); // Validate the tile
 
+            // Add a mouse listener to the tile
             addMouseListener(new MouseListener() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -254,11 +280,9 @@ public class Table {
                             humanMovedPiece = null; // Reset the human moved piece to null
                         }
                     }
-                    invokeLater(new Runnable() { // SwingUtilities.invokeLater() runs the code in the Runnable object on the main thread
-                        @Override
-                        public void run() {
-                            boardPanel.drawBoard(chessBoard); // Redraw the board
-                        }
+                    // SwingUtilities.invokeLater() runs the code in the Runnable object on the main thread
+                    invokeLater(() -> {
+                        boardPanel.drawBoard(chessBoard); // Redraw the board
                     });
                 }
 
