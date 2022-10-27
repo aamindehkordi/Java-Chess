@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="fixing bugs">
-      <change afterPath="$PROJECT_DIR$/src/com/chess/gui/TakenPiecesPanel.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Created new Dead Pieces Panel that sorts by piece value">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/PieceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/PieceType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,21 +143,7 @@
       <workItem from="1666649473994" duration="30122000" />
       <workItem from="1666720096642" duration="8606000" />
       <workItem from="1666753810138" duration="13805000" />
-      <workItem from="1666835273945" duration="9973000" />
-    </task>
-    <task id="LOCAL-00025" summary="comments i think">
-      <created>1666659837977</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1666659837977</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Heavy into Board">
-      <created>1666661119607</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1666661119607</updated>
+      <workItem from="1666835273945" duration="11487000" />
     </task>
     <task id="LOCAL-00027" summary="ToString!!!! Signs of Life">
       <created>1666661918752</created>
@@ -487,7 +474,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666844396727</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="fixing bugs">
+      <created>1666847944244</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1666847944244</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Created new Dead Pieces Panel that sorts by piece value">
+      <created>1666847982663</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1666847982663</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +520,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="filled out a few subclasses in the move class and comments" />
     <MESSAGE value="Attack Move and PawnJump complete" />
     <MESSAGE value="Castling on White and Black Player" />
     <MESSAGE value="Finished with Castling and Cleanup" />
@@ -544,7 +544,8 @@
     <MESSAGE value="comments" />
     <MESSAGE value="pieces move and are actually highlighted now" />
     <MESSAGE value="fixing bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing bugs" />
+    <MESSAGE value="Created new Dead Pieces Panel that sorts by piece value" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new Dead Pieces Panel that sorts by piece value" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -559,7 +560,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Move.java</url>
-          <line>385</line>
+          <line>391</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -579,7 +580,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Move.java</url>
-          <line>131</line>
+          <line>137</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

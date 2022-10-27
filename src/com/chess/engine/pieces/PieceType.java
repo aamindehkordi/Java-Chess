@@ -3,7 +3,7 @@ package com.chess.engine.pieces;
 public enum PieceType {
 
     /** Pawn */
-    PAWN("P") {
+    PAWN("P", 100) {
         @Override
         public boolean isKing() {
             return false;
@@ -15,7 +15,7 @@ public enum PieceType {
         }
     },
     /** Knight */
-    KNIGHT("N") {
+    KNIGHT("N", 300) {
         @Override
         public boolean isKing() {
             return false;
@@ -27,7 +27,7 @@ public enum PieceType {
         }
     },
     /** Bishop */
-    BISHOP("B") {
+    BISHOP("B", 300) {
         @Override
         public boolean isKing() {
             return false;
@@ -39,7 +39,7 @@ public enum PieceType {
         }
     },
     /** Rook */
-    ROOK("R") {
+    ROOK("R", 500) {
         @Override
         public boolean isKing() {
             return false;
@@ -51,7 +51,7 @@ public enum PieceType {
         }
     },
     /** Queen */
-    QUEEN("Q") {
+    QUEEN("Q", 900) {
         @Override
         public boolean isKing() {
             return false;
@@ -63,7 +63,7 @@ public enum PieceType {
         }
     },
     /** King */
-    KING("K") {
+    KING("K", 10000) {
         @Override
         public boolean isKing() {
             return true;
@@ -77,12 +77,19 @@ public enum PieceType {
 
     /** The piece's name */
     private final String pieceName;
+    /** The piece's value */
+    private final int pieceValue;
 
     /** Constructor
      * @param pieceName the name of the piece
      */
-    PieceType(final String pieceName) {
+    PieceType(final String pieceName, final int pieceValue) {
         this.pieceName = pieceName;
+        this.pieceValue = pieceValue;
+    }
+
+    public int getPieceValue() {
+        return pieceValue;
     }
 
     @Override

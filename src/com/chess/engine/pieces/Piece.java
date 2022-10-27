@@ -118,22 +118,4 @@ public abstract class Piece {
         return this.pieceType;
     }
 
-    public int getPieceValue() {
-        switch (this.pieceType) {
-            case PAWN:
-                return 100;
-            case KNIGHT:
-                return 300;
-            case BISHOP:
-                return 300;
-            case ROOK:
-                return 500;
-            case QUEEN:
-                return 900;
-            case KING:
-                return 10000;
-            default:
-                throw new RuntimeException("Should not reach here!");
-        }
-    }
 }
