@@ -233,6 +233,71 @@ public class Table {
         }
     }
 
+    public static class MoveLog {
+
+        // List of all the moves made
+        private final List<Move> moves;
+
+        /**
+         * Constructor for the MoveLog class
+         */
+        MoveLog() {
+            this.moves = new ArrayList<>();
+        }
+
+        /**
+         * Returns the list of moves made
+         *
+         * @return the list of moves made
+         */
+        public List<Move> getMoves() {
+            return this.moves;
+        }
+
+        /**
+         * Adds a move to the list of moves made
+         *
+         * @param move the move to add to the list of moves made
+         */
+        public void addMove(final Move move) {
+            this.moves.add(move);
+        }
+
+        /**
+         * Returns the number of moves made
+         *
+         * @return the number of moves made
+         */
+        public int size() {
+            return this.moves.size();
+        }
+
+        /**
+         * Clears the list of moves made
+         */
+        public void clear() {
+            this.moves.clear();
+        }
+
+        /**
+         * Removes the last move made
+         *
+         * @return the last move made
+         */
+        public Move removeMove(int index) {
+            return this.moves.remove(index);
+        }
+
+        /**
+         * Returns the last move made
+         *
+         * @return the last move made
+         */
+        public boolean removeMove(final Move move) {
+            return this.moves.remove(move);
+        }
+    }
+
     /**
      * TilePanel Class
      */
