@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Bug testing">
-      <change beforePath="$PROJECT_DIR$/JAVADOC/legal/jqueryUI.md" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/legal/jqueryUI.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/TakenPiecesPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/TakenPiecesPanel.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="cleanup">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Knight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Queen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Rook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +50,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2GNfURlmVRV4tIlgu55bJVBpqHW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -123,6 +126,11 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructuralSearchPlugin">
+    <searchConfiguration name="new LinkedList&lt;&gt;(legalMoves)" created="1666850543501" uuid="db4b32bb-b2a1-36a8-a896-0d91c20dad28" text="new LinkedList&lt;&gt;(legalMoves)" recursive="true" caseInsensitive="false" type="JAVA" pattern_context="default" scope_type="PROJECT" scope_descriptor="" history="1">
+      <constraint name="__context__" within="" contains="" />
+    </searchConfiguration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="" />
@@ -141,14 +149,7 @@
       <workItem from="1666649473994" duration="30122000" />
       <workItem from="1666720096642" duration="8606000" />
       <workItem from="1666753810138" duration="13805000" />
-      <workItem from="1666835273945" duration="12857000" />
-    </task>
-    <task id="LOCAL-00031" summary="Introduced critical methods for the Players and a helper class">
-      <created>1666673345135</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1666673345135</updated>
+      <workItem from="1666835273945" duration="13575000" />
     </task>
     <task id="LOCAL-00032" summary="fleshing moves and players out">
       <created>1666674155180</created>
@@ -486,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666849734930</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="cleanup">
+      <created>1666850304080</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1666850304080</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +532,6 @@
     <MESSAGE value="Cleanup" />
     <MESSAGE value="Moved main class to main package" />
     <MESSAGE value="Created GUI package and Table class" />
-    <MESSAGE value="cleanup" />
     <MESSAGE value="Added MenuBar" />
     <MESSAGE value="Added MenuBar to GUI" />
     <MESSAGE value="Added board and tile classes to GUI" />
@@ -543,7 +550,8 @@
     <MESSAGE value="Created new Dead Pieces Panel that sorts by piece value" />
     <MESSAGE value="Bugs" />
     <MESSAGE value="Bug testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug testing" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -557,28 +565,23 @@
           <option name="timeStamp" value="17" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Move.java</url>
-          <line>391</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
-          <line>143</line>
+          <line>142</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
-          <line>152</line>
+          <line>151</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
-          <line>148</line>
+          <line>147</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Move.java</url>
-          <line>137</line>
+          <line>135</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -603,7 +606,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
-          <line>41</line>
+          <line>40</line>
           <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>

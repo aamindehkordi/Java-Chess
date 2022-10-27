@@ -81,7 +81,7 @@ public class Knight extends Piece {
             }
         }
         /* return an unmodifiable collection of legal moves */
-        return Collections.unmodifiableList(new LinkedList<>(legalMoves));
+        return Collections.unmodifiableList(legalMoves);
     }
 
     /**

@@ -76,7 +76,7 @@ public class Rook extends Piece{
                 }
             }
         }
-        return Collections.unmodifiableList(new LinkedList<>(legalMoves));
+        return Collections.unmodifiableList(legalMoves);
     }
 
     /**

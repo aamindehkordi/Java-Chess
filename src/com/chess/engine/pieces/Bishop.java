@@ -74,7 +74,7 @@ public class Bishop extends Piece {
 
         }
         /* return an immutable copy of the list of legal moves */
-        return Collections.unmodifiableList(new LinkedList<>(legalMoves));
+        return Collections.unmodifiableList(legalMoves);
     }
 
     /**
