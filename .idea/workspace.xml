@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Added a mouse listener to the GUI tile class">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Pieces ~should~ be able to move on the gui">
+      <change afterPath="$PROJECT_DIR$/art/misc/green_dot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +84,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.chess.gui" />
       <recent name="com.chess.engine.board" />
       <recent name="com.chess.engine.player" />
       <recent name="com.chess.engine.pieces" />
@@ -111,14 +114,7 @@
       <workItem from="1666649396459" duration="71000" />
       <workItem from="1666649473994" duration="30122000" />
       <workItem from="1666720096642" duration="8606000" />
-      <workItem from="1666753810138" duration="11073000" />
-    </task>
-    <task id="LOCAL-00018" summary="The begginings of the pawn">
-      <created>1666654711028</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1666654711028</updated>
+      <workItem from="1666753810138" duration="13405000" />
     </task>
     <task id="LOCAL-00019" summary="Pawn Movement is complete, attack is remaining">
       <created>1666655628109</created>
@@ -456,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666831831554</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Pieces ~should~ be able to move on the gui">
+      <created>1666832666879</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1666832666879</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +491,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Execute major move mostly done" />
     <MESSAGE value="Piece hashcode and equals complete" />
     <MESSAGE value="Added concrete subclasses to the move class" />
     <MESSAGE value="filled out a few subclasses in the move class" />
@@ -513,7 +515,8 @@
     <MESSAGE value="comments" />
     <MESSAGE value="improvements" />
     <MESSAGE value="Added a mouse listener to the GUI tile class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a mouse listener to the GUI tile class" />
+    <MESSAGE value="Pieces ~should~ be able to move on the gui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pieces ~should~ be able to move on the gui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

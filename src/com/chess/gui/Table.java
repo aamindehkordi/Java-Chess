@@ -19,10 +19,11 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
-import static javax.swing.SwingUtilities.isLeftMouseButton;
-import static javax.swing.SwingUtilities.isRightMouseButton;
+import static javax.swing.SwingUtilities.*;
 
 public class Table {
 
@@ -39,6 +40,8 @@ public class Table {
     private Tile sourceTile; // source tile
     private Tile destinationTile; // destination tile
     private Piece humanMovedPiece; // human moved piece
+    private BoardDirection boardDirection; // board direction
+    private boolean highlightLegalMoves; // highlight legal moves
 
 
 
@@ -57,10 +60,10 @@ public class Table {
         this.chessBoard = Board.createStandardBoard(); // Creates a new chess board
         this.darkTileColor = Color.decode("#71573F"); // Sets the dark tile color to a brown color
         this.lightTileColor = Color.decode("#B9A582"); // Sets the light tile color to a tan color
-
+        this.boardDirection = BoardDirection.NORMAL; // Sets the board direction to normal
         this.boardPanel = new BoardPanel(); // Creates a new BoardPanel
         this.gameFrame.add(this.boardPanel, BorderLayout.CENTER); // Adds the BoardPanel to the center of the JFrame
-
+        this.highlightLegalMoves = true; // Sets highlightLegalMoves to false
         this.gameFrame.setVisible(true); // Sets the JFrame to be visible
 
 
@@ -74,6 +77,7 @@ public class Table {
     private JMenuBar createTableMenuBar() {
         final JMenuBar tableMenuBar = new JMenuBar(); // Creates a new JMenuBar
         tableMenuBar.add(createFileMenu()); // Adds a new JMenu to the JMenuBar
+        tableMenuBar.add(createPreferencesMenu()); // Adds the preferences JMenu to the JMenuBar
         return tableMenuBar; // Returns the JMenuBar created
 
     }
@@ -123,7 +127,59 @@ public class Table {
         });
         fileMenu.add(exitMenuItem); // Adds the JMenuItem to the File JMenu
     }
+    private JMenu createPreferencesMenu() {
+        final JMenu preferencesMenu = new JMenu("Preferences"); // Creates a new JMenu with the title "Preferences"
+        final JMenuItem flipBoardMenuItem = new JMenuItem("Flip Board"); // Creates a new JMenuItem with the title "Flip Board"
+        flipBoardMenuItem.addActionListener(new ActionListener() { // Adds an ActionListener to the JMenuItem
+            @Override
+            public void actionPerformed(ActionEvent e) { // When the JMenuItem is clicked, this method is called
+                boardDirection = boardDirection.opposite(); // Sets the board direction to the opposite of the current board direction
+                boardPanel.drawBoard(chessBoard); // Draws the board
+            }
+        });
+        preferencesMenu.add(flipBoardMenuItem); // Adds the JMenuItem to the Preferences JMenu
+        preferencesMenu.addSeparator(); // Adds a separator to the Preferences JMenu
+        final JCheckBox legalMoveHighlighterCheckbox = new JCheckBox("Highlight Legal Moves", true); // Creates a new JCheckBox with the title "Highlight Legal Moves" and sets it to false
 
+        legalMoveHighlighterCheckbox.addActionListener(new ActionListener() { // Adds an ActionListener to the JCheckBox
+            @Override
+            public void actionPerformed(ActionEvent e) { // When the JCheckBox is clicked, this method is called
+                System.out.println("Legal moves highlighting clicked"); // Prints "Legal moves highlighted" to the console
+            }
+        });
+        preferencesMenu.add(legalMoveHighlighterCheckbox); // Adds the JCheckBox to the Preferences JMenu
+        //preferencesMenu.add(createStyleMenu()); // Adds the Style JMenu to the Preferences JMenu
+        return preferencesMenu; // Returns the Preferences JMenu created
+    }
+    public enum BoardDirection {
+        NORMAL {
+            @Override
+            List<TilePanel> traverse(final List<TilePanel> boardTiles) {
+                return boardTiles;
+            }
+
+            @Override
+            BoardDirection opposite() {
+                return FLIPPED;
+            }
+        },
+        FLIPPED {
+            @Override
+            List<TilePanel> traverse(final List<TilePanel> boardTiles) {
+                Collections.reverse(boardTiles);
+                return boardTiles;
+            }
+
+            @Override
+            BoardDirection opposite() {
+                return NORMAL;
+            }
+        };
+
+        abstract List<TilePanel> traverse(final List<TilePanel> boardTiles);
+        abstract BoardDirection opposite();
+
+    }
 
     private class BoardPanel extends JPanel {
         final List<TilePanel> boardTiles; // List of all the tiles on the board
@@ -146,7 +202,7 @@ public class Table {
 
         public void drawBoard(final Board board) {
             removeAll(); // Remove all the tiles from the board
-            for (final TilePanel tilePanel : boardTiles) { // Loop through all the tiles
+            for (final TilePanel tilePanel : boardDirection.traverse(boardTiles)) { // Loop through all the tiles
                 tilePanel.drawTile(board); // Draw the tile
                 add(tilePanel); // Add the tile to the board
             }
@@ -188,13 +244,17 @@ public class Table {
                             }
                         } else { // If the source tile is not null aka the second click
                             destinationTile = chessBoard.getTile(tileId); // Set the destination tile to the tile that was clicked
-                            chessBoard = guiMakeMove(chessBoard, sourceTile.getTileCoordinate(), destinationTile.getTileCoordinate()); // Make the move
+                            final Move move = Move.MoveFactory.createMove(chessBoard, sourceTile.getTileCoordinate(), destinationTile.getTileCoordinate()); // Create a new move based on the source and destination tiles clicked
+                            final MoveTransition transition = chessBoard.currentPlayer().makeMove(move); // Make the move
+                            if (transition.getMoveStatus().isDone()) { // If the move was successful
+                                chessBoard = transition.getTransitionBoard(); // Set the chess board to the new chess board
+                            }
                             sourceTile = null; // Reset the source tile to null
                             destinationTile = null; // Reset the destination tile to null
                             humanMovedPiece = null; // Reset the human moved piece to null
                         }
                     }
-                    SwingUtilities.invokeLater(new Runnable() { // SwingUtilities.invokeLater() runs the code in the Runnable object on the main thread
+                    invokeLater(new Runnable() { // SwingUtilities.invokeLater() runs the code in the Runnable object on the main thread
                         @Override
                         public void run() {
                             boardPanel.drawBoard(chessBoard); // Redraw the board
@@ -224,6 +284,33 @@ public class Table {
             });
 
 
+        }
+
+
+        /**
+         * Highlights the legal moves of the piece on the tile that was clicked
+         *
+         * @param board the board the tile is on
+         */
+        private void highlightLegals(final Board board) {
+            if(highlightLegalMoves) { // If the user wants to highlight the legal moves
+                for (final Move move : pieceLegalMoves(board)) { // Loop through all the legal moves of the piece on the tile
+                    if (move.getDestinationCoordinate() == this.tileId) { // If the destination coordinate of the move is the tile that was clicked
+                        try {
+                            add(new JLabel(new ImageIcon(ImageIO.read(new File("art/misc/green_dot.png"))))); // Add a green dot to the tile
+                        } catch (IOException e) { // Catch any IOExceptions
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+        }
+
+        private Collection<Move> pieceLegalMoves(final Board board) {
+            if(humanMovedPiece != null && humanMovedPiece.getPieceAlliance() == board.currentPlayer().getAlliance()) { // If the human moved piece is not null and the human moved piece is the same color as the current player
+                return humanMovedPiece.calculateLegalMoves(board); // Return the legal moves of the human moved piece
+            }
+            return Collections.emptyList(); // Return an empty list
         }
 
         /**
@@ -274,15 +361,5 @@ public class Table {
             validate(); // Validate the tile
             repaint(); // Repaint the tile
         }
-    }
-
-
-    private Board guiMakeMove(Board chessBoard, int sourceTileCoord, int destinationTileCoord) {
-        final Move move = Move.MoveFactory.createMove(chessBoard, sourceTileCoord, destinationTileCoord); // Create a new move based on the source and destination tiles clicked
-        final MoveTransition transition = chessBoard.currentPlayer().makeMove(move); // Make the move
-        if (transition.getMoveStatus().isDone()) { // If the move was successful
-            chessBoard = transition.getTransitionBoard(); // Set the chess board to the new chess board
-        }
-        return chessBoard;
     }
 }
