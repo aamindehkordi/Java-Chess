@@ -347,17 +347,17 @@ public class Table {
                         System.out.println("First Tile Selected: Piece:" + humanMovedPiece + " Tile:" + sourceTile.getTileCoordinate());
 
                         } else {
-                            final Move move = Move.MoveFactory.createMove(chessBoard, sourceTile.getTileCoordinate(), tileId);
-                            final MoveTransition transition = chessBoard.currentPlayer().makeMove(move);
-                            if (transition.getMoveStatus().isDone()) {
-                                chessBoard = transition.getTransitionBoard();
+                            final Move move = Move.MoveFactory.createMove(chessBoard, sourceTile.getTileCoordinate(), tileId); // Create a move from the source tile to the tile that was clicked
+                            final MoveTransition transition = chessBoard.currentPlayer().makeMove(move); // Make the move
+                            if (transition.getMoveStatus().isDone()) { // If the move was successful
+                                chessBoard = transition.getTransitionBoard(); // Set the board to the transition board
                                 //moveLog.addMove(move);
                             }
-                            sourceTile = null;
-                            humanMovedPiece = null;
+                            sourceTile = null; // Set the source tile to null
+                            humanMovedPiece = null; // Set the human moved piece to null
 
                             //Testing
-                            System.out.println("Second Tile Selected: Piece:" + chessBoard.getTile(tileId) + " Tile: " + tileId);
+                            System.out.println("Second Tile Selected: Piece:" + chessBoard.getTile(tileId) + " Tile: " + tileId); // Print the piece and tile that was clicked
                         }
                     }
                     // SwingUtilities.invokeLater() runs the code in the Runnable object on the main thread
