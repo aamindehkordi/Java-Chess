@@ -130,6 +130,7 @@ public class Table {
 
         /**
          * Constructor for the BoardPanel class
+         * Creates the chess board full of JPanel Tiles
          */
         BoardPanel() {
             super(new GridLayout(8, 8)); // GridLayout is a layout manager that lays out a container's components in a grid
@@ -141,6 +142,16 @@ public class Table {
             }
             setPreferredSize(BOARD_PANEL_DIMENSION); // Set the size of the board to 400x350
             validate(); // Validate the board
+        }
+
+        public void drawBoard(final Board board) {
+            removeAll(); // Remove all the tiles from the board
+            for (final TilePanel tilePanel : boardTiles) { // Loop through all the tiles
+                tilePanel.drawTile(board); // Draw the tile
+                add(tilePanel); // Add the tile to the board
+            }
+            validate(); // Validate the board
+            repaint(); // Repaint the board
         }
     }
 
@@ -164,7 +175,7 @@ public class Table {
             addMouseListener(new MouseListener() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
-                    if (isRightMouseButton(e)) { // If the right mouse button is clicked
+                    if (isRightMouseButton(e)) { // If the right mouse button is clicked aka reset the move
                         sourceTile = null; // Set the source tile to null
                         destinationTile = null; // Set the destination tile to null
                         humanMovedPiece = null; // Set the human moved piece to null
@@ -177,16 +188,18 @@ public class Table {
                             }
                         } else { // If the source tile is not null aka the second click
                             destinationTile = chessBoard.getTile(tileId); // Set the destination tile to the tile that was clicked
-                            final Move move = Move.MoveFactory.createMove(chessBoard, sourceTile.getTileCoordinate(), destinationTile.getTileCoordinate()); // Create a new move
-                            final MoveTransition transition = chessBoard.currentPlayer().makeMove(move); // Make the move
-                            if (transition.getMoveStatus().isDone()) { // If the move was successful
-                                chessBoard = transition.getTransitionBoard(); // Set the chess board to the new chess board
-                            }
+                            chessBoard = guiMakeMove(chessBoard, sourceTile.getTileCoordinate(), destinationTile.getTileCoordinate()); // Make the move
                             sourceTile = null; // Reset the source tile to null
                             destinationTile = null; // Reset the destination tile to null
                             humanMovedPiece = null; // Reset the human moved piece to null
                         }
                     }
+                    SwingUtilities.invokeLater(new Runnable() { // SwingUtilities.invokeLater() runs the code in the Runnable object on the main thread
+                        @Override
+                        public void run() {
+                            boardPanel.drawBoard(chessBoard); // Redraw the board
+                        }
+                    });
                 }
 
                 @Override
@@ -254,5 +267,22 @@ public class Table {
             }
 
         }
+
+        public void drawTile(Board board) {
+            assignTileColor(); // Assign the color of the tile
+            assignTilePieceIcon(board); // Assign the piece icon of the tile
+            validate(); // Validate the tile
+            repaint(); // Repaint the tile
+        }
+    }
+
+
+    private Board guiMakeMove(Board chessBoard, int sourceTileCoord, int destinationTileCoord) {
+        final Move move = Move.MoveFactory.createMove(chessBoard, sourceTileCoord, destinationTileCoord); // Create a new move based on the source and destination tiles clicked
+        final MoveTransition transition = chessBoard.currentPlayer().makeMove(move); // Make the move
+        if (transition.getMoveStatus().isDone()) { // If the move was successful
+            chessBoard = transition.getTransitionBoard(); // Set the chess board to the new chess board
+        }
+        return chessBoard;
     }
 }
