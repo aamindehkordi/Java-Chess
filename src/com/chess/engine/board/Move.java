@@ -25,10 +25,16 @@ public abstract class Move {
      */
     private Move(final Board board, final Piece movedPiece, final int destinationCoordinate) {
         this.board = board;
-        this.movedPiece = movedPiece;
         this.destinationCoordinate = destinationCoordinate;
-        this.isFirstMove = movedPiece.isFirstMove();
+        this.movedPiece = movedPiece;
+        this.isFirstMove = false;
     }
+
+    /** Constructor
+     * @param board the board
+     * @param movedPiece the piece that is being moved
+     * @param destinationCoordinate the destination coordinate
+     */
     Move(final Board board, final Piece movedPiece, final int destinationCoordinate, final boolean isFirstMove) {
         this.board = board;
         this.movedPiece = movedPiece;
