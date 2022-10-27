@@ -328,16 +328,24 @@ public class Table {
                     return;
                 }*/
 
-                    if (isRightMouseButton(event)) {
-                        sourceTile = null;
-                        humanMovedPiece = null;
-                    } else if (isLeftMouseButton(event)) {
-                        if (sourceTile == null) {
-                            sourceTile = chessBoard.getTile(tileId);
-                            humanMovedPiece = sourceTile.getPiece();
-                            if (humanMovedPiece == null) {
-                                sourceTile = null;
+                    if (isRightMouseButton(event)) { // If the right mouse button is clicked
+                        sourceTile = null; // Set the source tile to null
+                        humanMovedPiece = null; // Set the human moved piece to null
+
+                        //Testing
+                        System.out.println("Right Clicked, Resetting");
+
+                    } else if (isLeftMouseButton(event)) { // If the left mouse button is clicked
+                        if (sourceTile == null) { // If the source tile is null (no piece has been selected)
+                            sourceTile = chessBoard.getTile(tileId); // Set the source tile to the tile that was clicked
+                            humanMovedPiece = sourceTile.getPiece(); // Set the human moved piece to the piece on the source tile
+                            if (humanMovedPiece == null) { // If the human moved piece is null (no piece was selected/ empty square was clicked)
+                                sourceTile = null; // Set the source tile to null
                             }
+
+                        //Testing
+                        System.out.println("First Tile Selected: Piece:" + humanMovedPiece + " Tile:" + sourceTile.getTileCoordinate());
+
                         } else {
                             final Move move = Move.MoveFactory.createMove(chessBoard, sourceTile.getTileCoordinate(), tileId);
                             final MoveTransition transition = chessBoard.currentPlayer().makeMove(move);
@@ -347,6 +355,9 @@ public class Table {
                             }
                             sourceTile = null;
                             humanMovedPiece = null;
+
+                            //Testing
+                            System.out.println("Second Tile Selected: Piece:" + chessBoard.getTile(tileId) + " Tile: " + tileId);
                         }
                     }
                     // SwingUtilities.invokeLater() runs the code in the Runnable object on the main thread

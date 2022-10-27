@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Created new Dead Pieces Panel that sorts by piece value">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/PieceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/PieceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,21 +141,7 @@
       <workItem from="1666649473994" duration="30122000" />
       <workItem from="1666720096642" duration="8606000" />
       <workItem from="1666753810138" duration="13805000" />
-      <workItem from="1666835273945" duration="11487000" />
-    </task>
-    <task id="LOCAL-00027" summary="ToString!!!! Signs of Life">
-      <created>1666661918752</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1666661918752</updated>
-    </task>
-    <task id="LOCAL-00028" summary="cleanup">
-      <created>1666662016885</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1666662016885</updated>
+      <workItem from="1666835273945" duration="12468000" />
     </task>
     <task id="LOCAL-00029" summary="cleanup">
       <created>1666662705621</created>
@@ -488,7 +472,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666847982663</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Created new Dead Pieces Panel that sorts by piece value">
+      <created>1666848639475</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1666848639475</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Bugs">
+      <created>1666848648687</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1666848648687</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +518,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Attack Move and PawnJump complete" />
     <MESSAGE value="Castling on White and Black Player" />
     <MESSAGE value="Finished with Castling and Cleanup" />
     <MESSAGE value="Added JavaDocs" />
@@ -545,7 +542,8 @@
     <MESSAGE value="pieces move and are actually highlighted now" />
     <MESSAGE value="fixing bugs" />
     <MESSAGE value="Created new Dead Pieces Panel that sorts by piece value" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created new Dead Pieces Panel that sorts by piece value" />
+    <MESSAGE value="Bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bugs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -590,7 +588,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/gui/Table.java</url>
-          <line>347</line>
+          <line>355</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
