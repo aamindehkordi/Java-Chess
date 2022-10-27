@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="added exit to menubar">
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BK.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BQ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WK.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WQ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/standard/BB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/standard/BK.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/standard/BN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/standard/BP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/standard/BQ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/standard/BR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/standard/WB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/standard/WK.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/standard/WN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/standard/WP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/standard/WQ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/standard/WR.png" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
     </list>
@@ -136,14 +112,7 @@
       <workItem from="1666649396459" duration="71000" />
       <workItem from="1666649473994" duration="30122000" />
       <workItem from="1666720096642" duration="8606000" />
-      <workItem from="1666753810138" duration="7338000" />
-    </task>
-    <task id="LOCAL-00014" summary="minor cleanup">
-      <created>1666650227017</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1666650227017</updated>
+      <workItem from="1666753810138" duration="9309000" />
     </task>
     <task id="LOCAL-00015" summary="Rook was essentially the bishop with different directions">
       <created>1666650724486</created>
@@ -481,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666824927022</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Pieces on the checkerboard">
+      <created>1666827441219</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1666827441219</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,9 +489,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fleshing moves and players out" />
-    <MESSAGE value="MakeMove has its bones" />
-    <MESSAGE value="COMMENTS" />
     <MESSAGE value="Filling up majorMove" />
     <MESSAGE value="Execute major move mostly done" />
     <MESSAGE value="Piece hashcode and equals complete" />
@@ -538,7 +511,10 @@
     <MESSAGE value="Gave the rows and columns color in GUI" />
     <MESSAGE value="Gave the rows and columns color in GUI and added exit to menubar" />
     <MESSAGE value="added exit to menubar" />
-    <option name="LAST_COMMIT_MESSAGE" value="added exit to menubar" />
+    <MESSAGE value="Pieces on the checkerboard" />
+    <MESSAGE value="comments" />
+    <MESSAGE value="improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

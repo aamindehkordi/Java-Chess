@@ -58,9 +58,9 @@ public class Table {
      * @return the JMenuBar created
      */
     private JMenuBar createTableMenuBar() {
-        final JMenuBar tableMenuBar = new JMenuBar();
-        tableMenuBar.add(createFileMenu());
-        return tableMenuBar;
+        final JMenuBar tableMenuBar = new JMenuBar(); // Creates a new JMenuBar
+        tableMenuBar.add(createFileMenu()); // Adds a new JMenu to the JMenuBar
+        return tableMenuBar; // Returns the JMenuBar created
 
     }
 
@@ -70,12 +70,12 @@ public class Table {
      * @return the File JMenu created
      */
     private JMenu createFileMenu() {
-        final JMenu fileMenu = new JMenu("File");
+        final JMenu fileMenu = new JMenu("File"); // Creates a new JMenu with the title "File"
 
         addPGNMenuItem(fileMenu); // Adds the PGN menu item to the File JMenu
         addExitMenuItem(fileMenu); // Adds the Exit menu item to the File JMenu
 
-        return fileMenu;
+        return fileMenu; // Returns the File JMenu created
     }
 
     /**
@@ -91,7 +91,7 @@ public class Table {
                 System.out.println("Open up that pgn file!"); // Prints "Open up that pgn file!" to the console
             }
         });
-        fileMenu.add(openPGN);
+        fileMenu.add(openPGN); // Adds the JMenuItem to the File JMenu
     }
 
     /**
