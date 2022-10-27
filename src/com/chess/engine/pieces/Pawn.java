@@ -58,36 +58,37 @@ public class Pawn extends Piece {
         final List<Move> legalMoves = new ArrayList<>(); /* for each of the possible moves, check if the move is legal */
 
         for(final int currentCandidateOffset : CANDIDATE_MOVE_COORDINATE) { /* for each of the possible moves*/
-            /* add the offset to the current position */
+            /* add the offset to the current position to get the destination coordinate */
             final int candidateDestinationCoordinate = this.piecePosition + (this.getPieceAlliance().getDirection() * currentCandidateOffset);
+
             if(!BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)) {
-                continue; /* if the tile is not occupied, add the move to the list of legal moves */
+                continue; /* if the tile is not occupied, continue checking*/
             }
 
             /* if you are moving one tile forward and the tile is not occupied*/
-            if(!board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
+            if(currentCandidateOffset == 8 && !board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
                 //TODO Promotions
 
                 /* add the move to the list of legal moves */
                 legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
             }
 
-            else if( currentCandidateOffset == 16 && this.isFirstMove() && /*if you are moving two tiles forward, and it is the first move AND */
+            else if (currentCandidateOffset == 16 && this.isFirstMove &&                                 /* if you are moving two tiles forward, and it is the first move AND */
                     ((BoardUtils.SECOND_ROW[this.piecePosition] && this.getPieceAlliance().isBlack()) || /* if you are on the second row and your alliance is black or */
-                    (BoardUtils.SEVENTH_ROW[this.piecePosition] && this.getPieceAlliance().isWhite())) ) { /* if you are on the seventh row and your alliance is white */
+                    (BoardUtils.SEVENTH_ROW[this.piecePosition] && this.getPieceAlliance().isWhite()))){ /* if you are on the seventh row and your alliance is white */
 
                 /* between the current position and the destination position, there must be an empty tile */
                 final int behindCandidateDestinationCoordinate = this.piecePosition + (this.pieceAlliance.getDirection() * 8);
 
-                if(!board.getTile(behindCandidateDestinationCoordinate).isTileOccupied() && /* if the tile behind the destination is not occupied and */
-                        !board.getTile(candidateDestinationCoordinate).isTileOccupied()) { /* if the destination tile is not occupied */
+                if(!board.getTile(behindCandidateDestinationCoordinate).isTileOccupied() &&                /* if the tile behind the destination is not occupied and */
+                        !board.getTile(candidateDestinationCoordinate).isTileOccupied()) {                 /* if the destination tile is not occupied */
                     legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate)); /* add the move to the list of legal moves */
                 }
             }
 
-            else if(currentCandidateOffset == 7 &&                                                          /* if you are moving one tile diagonally to the left */
+            else if (currentCandidateOffset == 7 &&                                                          /* if you are moving one tile diagonally to the left */
                     !((BoardUtils.EIGHTH_COLUMN[this.piecePosition] && this.pieceAlliance.isWhite() ||       /* and you are not on the eighth column, and you are white */
-                     (BoardUtils.FIRST_COLUMN[this.piecePosition] && this.pieceAlliance.isBlack()) )) ) {    /* or you are not on the first column, and you are black  (because of promotions)*/
+                    (BoardUtils.FIRST_COLUMN[this.piecePosition] && this.pieceAlliance.isBlack())))) {       /* or you are not on the first column, and you are black  (because of promotions)*/
                 /* if the tile is occupied*/
                 if(board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
                     /* get the piece on the tile */

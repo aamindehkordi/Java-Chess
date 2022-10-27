@@ -257,28 +257,31 @@ public class Table {
             // Add a mouse listener to the tile
             addMouseListener(new MouseListener() {
                 @Override
-                public void mouseClicked(MouseEvent e) {
-                    if (isRightMouseButton(e)) { // If the right mouse button is clicked aka reset the move
-                        sourceTile = null; // Set the source tile to null
-                        destinationTile = null; // Set the destination tile to null
-                        humanMovedPiece = null; // Set the human moved piece to null
-                    } else if (isLeftMouseButton(e)) { // If the left mouse button is clicked
-                        if (sourceTile == null) { // If the source tile is null aka the first click
-                            sourceTile = chessBoard.getTile(tileId); // Set the source tile to the tile that was clicked
-                            humanMovedPiece = sourceTile.getPiece(); // Set the human moved piece to the piece on the source tile
-                            if (humanMovedPiece == null) { // If the human moved piece is null aka there is no piece on the source tile
-                                sourceTile = null; // Set the source tile to null
+                public void mouseClicked(final MouseEvent event) {
+                /*if(Table.get().getGameSetup().isAIPlayer(Table.get().getGameBoard().currentPlayer()) ||
+                        BoardUtils.isEndGame(Table.get().getGameBoard())) {
+                    return;
+                }*/
+
+                    if (isRightMouseButton(event)) {
+                        sourceTile = null;
+                        humanMovedPiece = null;
+                    } else if (isLeftMouseButton(event)) {
+                        if (sourceTile == null) {
+                            sourceTile = chessBoard.getTile(tileId);
+                            humanMovedPiece = sourceTile.getPiece();
+                            if (humanMovedPiece == null) {
+                                sourceTile = null;
                             }
-                        } else { // If the source tile is not null aka the second click
-                            destinationTile = chessBoard.getTile(tileId); // Set the destination tile to the tile that was clicked
-                            final Move move = Move.MoveFactory.createMove(chessBoard, sourceTile.getTileCoordinate(), tileId); // Create a new move based on the source and destination tiles clicked
-                            final MoveTransition transition = chessBoard.currentPlayer().makeMove(move); // Make the move
-                            if (transition.getMoveStatus().isDone()) { // If the move was successful
-                                chessBoard = transition.getTransitionBoard(); // Set the chess board to the new chess board
+                        } else {
+                            final Move move = Move.MoveFactory.createMove(chessBoard, sourceTile.getTileCoordinate(), tileId);
+                            final MoveTransition transition = chessBoard.currentPlayer().makeMove(move);
+                            if (transition.getMoveStatus().isDone()) {
+                                chessBoard = transition.getTransitionBoard();
+                                //moveLog.addMove(move);
                             }
-                            sourceTile = null; // Reset the source tile to null
-                            destinationTile = null; // Reset the destination tile to null
-                            humanMovedPiece = null; // Reset the human moved piece to null
+                            sourceTile = null;
+                            humanMovedPiece = null;
                         }
                     }
                     // SwingUtilities.invokeLater() runs the code in the Runnable object on the main thread
@@ -291,17 +294,14 @@ public class Table {
                 public void mousePressed(MouseEvent e) {
 
                 }
-
                 @Override
                 public void mouseReleased(MouseEvent e) {
 
                 }
-
                 @Override
                 public void mouseEntered(MouseEvent e) {
 
                 }
-
                 @Override
                 public void mouseExited(MouseEvent e) {
 
@@ -319,7 +319,8 @@ public class Table {
          */
         private void highlightLegals(final Board board) {
             if(highlightLegalMoves) { // If the user wants to highlight the legal moves
-                for (final Move move : pieceLegalMoves(board)) { // Loop through all the legal moves of the piece on the tile
+                Collection<Move> legalPieceMoves = pieceLegalMoves(board); // Get the legal moves of the piece on the tile
+                for (final Move move : legalPieceMoves) { // Loop through all the legal moves of the piece on the tile
                     if (move.getDestinationCoordinate() == this.tileId) { // If the destination coordinate of the move is the tile that was clicked
                         try {
                             add(new JLabel(new ImageIcon(ImageIO.read(new File("art/misc/green_dot.png"))))); // Add a green dot to the tile
@@ -338,8 +339,16 @@ public class Table {
             return Collections.emptyList(); // Return an empty list
         }
 
+        public void drawTile(Board board) {
+            assignTileColor(); // Assign the color of the tile
+            assignTilePieceIcon(board); // Assign the piece icon of the tile
+            highlightLegals(board); // Highlight the legal moves of the piece on the tile
+            validate(); // Validate the tile
+            repaint(); // Repaint the tile
+        }
+
         /**
-         * Assigns the color of the tile
+         * Assigns the piece image to the tile its on
          *
          * @param board the board the tile is on
          */
@@ -378,14 +387,6 @@ public class Table {
                 setBackground(this.tileId % 2 != 0 ? lightTileColor : darkTileColor);
             }
 
-        }
-
-        public void drawTile(Board board) {
-            assignTileColor(); // Assign the color of the tile
-            assignTilePieceIcon(board); // Assign the piece icon of the tile
-            highlightLegals(board); // Highlight the legal moves of the piece on the tile
-            validate(); // Validate the tile
-            repaint(); // Repaint the tile
         }
     }
 }
