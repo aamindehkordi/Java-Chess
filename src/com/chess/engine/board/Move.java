@@ -15,8 +15,6 @@ public abstract class Move {
     protected final int destinationCoordinate;
     protected final boolean isFirstMove;
 
-    /** A null move */
-    public static final Move NULL_MOVE = new NullMove();
 
     /** Constructor
      * @param board the board
@@ -39,7 +37,7 @@ public abstract class Move {
         this.board = board;
         this.movedPiece = movedPiece;
         this.destinationCoordinate = destinationCoordinate;
-        this.isFirstMove = movedPiece.isFirstMove();
+        this.isFirstMove = isFirstMove;
     }
 
     /** Hashcode
@@ -381,8 +379,15 @@ public abstract class Move {
 
     public static class MoveFactory {
 
+        /** A null move */
+        public static final Move NULL_MOVE = new NullMove();
+
         private MoveFactory() {
             throw new RuntimeException("Not instantiable!");
+        }
+
+        public static Move getNullMove() {
+            return NULL_MOVE;
         }
 
         public static Move createMove(final Board board, final int currentCoordinate, final int destinationCoordinate) {

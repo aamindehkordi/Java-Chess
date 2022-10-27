@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Bugs">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Bug testing">
+      <change beforePath="$PROJECT_DIR$/JAVADOC/legal/jqueryUI.md" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/legal/jqueryUI.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/TakenPiecesPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/TakenPiecesPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,21 +141,7 @@
       <workItem from="1666649473994" duration="30122000" />
       <workItem from="1666720096642" duration="8606000" />
       <workItem from="1666753810138" duration="13805000" />
-      <workItem from="1666835273945" duration="12468000" />
-    </task>
-    <task id="LOCAL-00029" summary="cleanup">
-      <created>1666662705621</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1666662705621</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Added Players and properly implemented PieceTypes">
-      <created>1666672578371</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1666672578371</updated>
+      <workItem from="1666835273945" duration="12857000" />
     </task>
     <task id="LOCAL-00031" summary="Introduced critical methods for the Players and a helper class">
       <created>1666673345135</created>
@@ -486,7 +472,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666848648687</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Bug testing">
+      <created>1666849680913</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1666849680913</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Bug testing">
+      <created>1666849734930</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1666849734930</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +518,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Castling on White and Black Player" />
     <MESSAGE value="Finished with Castling and Cleanup" />
     <MESSAGE value="Added JavaDocs" />
     <MESSAGE value="Code now runs!" />
@@ -543,7 +542,8 @@
     <MESSAGE value="fixing bugs" />
     <MESSAGE value="Created new Dead Pieces Panel that sorts by piece value" />
     <MESSAGE value="Bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bugs" />
+    <MESSAGE value="Bug testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

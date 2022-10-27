@@ -58,19 +58,19 @@ public class TakenPiecesPanel extends JPanel {
                     whiteTakenPieces.add(takenPiece); /* add the piece to the white list */
                 } else if(takenPiece.getPieceAlliance().isBlack()){ /* if the piece is black */
                     blackTakenPieces.add(takenPiece); /* add the piece to the black list */
-                } else { /* if the piece is neither white or black */
+                } else { /* if the piece is neither white nor black */
                     throw new RuntimeException("Should not reach here!"); /* throw an exception */
                 }
             }
         }
 
-        Collections.sort(whiteTakenPieces, new Comparator<Piece>() {
+        Collections.sort(whiteTakenPieces, new Comparator<>() {
             @Override
             public int compare(Piece o1, Piece o2) {
                 return Integer.compare(o1.getPieceType().getPieceValue(), o2.getPieceType().getPieceValue()); /* sort the white pieces by value */
             }
         });
-        Collections.sort(blackTakenPieces, new Comparator<Piece>() {
+        Collections.sort(blackTakenPieces, new Comparator<>() {
             @Override
             public int compare(Piece o1, Piece o2) {
                 return Integer.compare(o1.getPieceType().getPieceValue(), o2.getPieceType().getPieceValue()); /* sort the black pieces by value */

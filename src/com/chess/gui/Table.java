@@ -36,7 +36,7 @@ public class Table {
     private static final Dimension BOARD_PANEL_DIMENSION = new Dimension(400, 350); // 400x350
     private static final Dimension TILE_PANEL_DIMENSION = new Dimension(10, 10); // 10x10
     private Board chessBoard; // Board is a class that creates a board
-    private String defaultPieceImagesPath; // path to the images of the pieces
+    private final String defaultPieceImagesPath; // path to the images of the pieces
     private Tile sourceTile; // source tile
     private Tile destinationTile; // destination tile
     private Piece humanMovedPiece; // human moved piece

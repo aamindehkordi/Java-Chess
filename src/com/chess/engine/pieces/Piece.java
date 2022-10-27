@@ -99,7 +99,7 @@ public abstract class Piece {
      * @return true if the piece is on still its first move
      */
     public boolean isFirstMove() {
-        return false;
+        return this.isFirstMove;
     }
 
     /** Get the piece's position
