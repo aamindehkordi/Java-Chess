@@ -149,7 +149,7 @@ public class Table {
         legalMoveHighlighterCheckbox.addActionListener(new ActionListener() { // Adds an ActionListener to the JCheckBox
             @Override
             public void actionPerformed(ActionEvent e) { // When the JCheckBox is clicked, this method is called
-                System.out.println("Legal moves highlighting clicked"); // Prints "Legal moves highlighted" to the console
+                highlightLegalMoves = legalMoveHighlighterCheckbox.isSelected(); // Sets highlightLegalMoves to the selected state of the JCheckBox
             }
         });
         preferencesMenu.add(legalMoveHighlighterCheckbox); // Adds the JCheckBox to the Preferences JMenu
@@ -251,6 +251,7 @@ public class Table {
             setPreferredSize(TILE_PANEL_DIMENSION); // Set the size of the tile
             assignTileColor(); // Assign the color of the tile
             assignTilePieceIcon(chessBoard); // Assign the piece icon of the tile
+
             validate(); // Validate the tile
 
             // Add a mouse listener to the tile
@@ -270,7 +271,7 @@ public class Table {
                             }
                         } else { // If the source tile is not null aka the second click
                             destinationTile = chessBoard.getTile(tileId); // Set the destination tile to the tile that was clicked
-                            final Move move = Move.MoveFactory.createMove(chessBoard, sourceTile.getTileCoordinate(), destinationTile.getTileCoordinate()); // Create a new move based on the source and destination tiles clicked
+                            final Move move = Move.MoveFactory.createMove(chessBoard, sourceTile.getTileCoordinate(), tileId); // Create a new move based on the source and destination tiles clicked
                             final MoveTransition transition = chessBoard.currentPlayer().makeMove(move); // Make the move
                             if (transition.getMoveStatus().isDone()) { // If the move was successful
                                 chessBoard = transition.getTransitionBoard(); // Set the chess board to the new chess board
@@ -382,6 +383,7 @@ public class Table {
         public void drawTile(Board board) {
             assignTileColor(); // Assign the color of the tile
             assignTilePieceIcon(board); // Assign the piece icon of the tile
+            highlightLegals(board); // Highlight the legal moves of the piece on the tile
             validate(); // Validate the tile
             repaint(); // Repaint the tile
         }

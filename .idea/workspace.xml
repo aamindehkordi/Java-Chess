@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="legal moves ~should~ be highlighting">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="comments">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,14 +113,8 @@
       <workItem from="1666649396459" duration="71000" />
       <workItem from="1666649473994" duration="30122000" />
       <workItem from="1666720096642" duration="8606000" />
-      <workItem from="1666753810138" duration="13756000" />
-    </task>
-    <task id="LOCAL-00020" summary="Pawn Movement is complete, attack is remaining">
-      <created>1666655725186</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1666655725186</updated>
+      <workItem from="1666753810138" duration="13805000" />
+      <workItem from="1666835273945" duration="1020000" />
     </task>
     <task id="LOCAL-00021" summary="Pawn Movement and Attack is complete, TODO: Promotions">
       <created>1666657122955</created>
@@ -457,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666834900043</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="comments">
+      <created>1666835236639</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1666835236639</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,12 +511,12 @@
     <MESSAGE value="Gave the rows and columns color in GUI and added exit to menubar" />
     <MESSAGE value="added exit to menubar" />
     <MESSAGE value="Pieces on the checkerboard" />
-    <MESSAGE value="comments" />
     <MESSAGE value="improvements" />
     <MESSAGE value="Added a mouse listener to the GUI tile class" />
     <MESSAGE value="Pieces ~should~ be able to move on the gui" />
     <MESSAGE value="legal moves ~should~ be highlighting" />
-    <option name="LAST_COMMIT_MESSAGE" value="legal moves ~should~ be highlighting" />
+    <MESSAGE value="comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
