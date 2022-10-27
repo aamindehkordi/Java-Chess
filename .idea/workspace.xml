@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="improvements" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="improvements">
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/MoveStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/MoveStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/MoveTransition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/MoveTransition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,14 +113,7 @@
       <workItem from="1666649396459" duration="71000" />
       <workItem from="1666649473994" duration="30122000" />
       <workItem from="1666720096642" duration="8606000" />
-      <workItem from="1666753810138" duration="9398000" />
-    </task>
-    <task id="LOCAL-00016" summary="Commented essentially everything so far">
-      <created>1666653239621</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1666653239621</updated>
+      <workItem from="1666753810138" duration="10347000" />
     </task>
     <task id="LOCAL-00017" summary="Queen is essentially the Bishop and Rook combined">
       <created>1666653838374</created>
@@ -454,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666830790955</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="improvements">
+      <created>1666830843951</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1666830843951</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

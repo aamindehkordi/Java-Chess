@@ -3,17 +3,26 @@ package com.chess.gui;
 
 import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
+import com.chess.engine.board.Move;
+import com.chess.engine.board.Tile;
+import com.chess.engine.pieces.Piece;
+import com.chess.engine.player.MoveTransition;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import static javax.swing.SwingUtilities.isLeftMouseButton;
+import static javax.swing.SwingUtilities.isRightMouseButton;
 
 public class Table {
 
@@ -25,8 +34,13 @@ public class Table {
     private static final Dimension OUTER_FRAME_DIMENSION = new Dimension(600, 600); // 600x600
     private static final Dimension BOARD_PANEL_DIMENSION = new Dimension(400, 350); // 400x350
     private static final Dimension TILE_PANEL_DIMENSION = new Dimension(10, 10); // 10x10
-    private final Board chessBoard; // Board is a class that creates a board
+    private Board chessBoard; // Board is a class that creates a board
     private String defaultPieceImagesPath; // path to the images of the pieces
+    private Tile sourceTile; // source tile
+    private Tile destinationTile; // destination tile
+    private Piece humanMovedPiece; // human moved piece
+
+
 
     /**
      * Constructor for the Table class
@@ -146,6 +160,57 @@ public class Table {
             assignTileColor(); // Assign the color of the tile
             assignTilePieceIcon(chessBoard); // Assign the piece icon of the tile
             validate(); // Validate the tile
+
+            addMouseListener(new MouseListener() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    if (isRightMouseButton(e)) { // If the right mouse button is clicked
+                        sourceTile = null; // Set the source tile to null
+                        destinationTile = null; // Set the destination tile to null
+                        humanMovedPiece = null; // Set the human moved piece to null
+                    } else if (isLeftMouseButton(e)) { // If the left mouse button is clicked
+                        if (sourceTile == null) { // If the source tile is null aka the first click
+                            sourceTile = chessBoard.getTile(tileId); // Set the source tile to the tile that was clicked
+                            humanMovedPiece = sourceTile.getPiece(); // Set the human moved piece to the piece on the source tile
+                            if (humanMovedPiece == null) { // If the human moved piece is null aka there is no piece on the source tile
+                                sourceTile = null; // Set the source tile to null
+                            }
+                        } else { // If the source tile is not null aka the second click
+                            destinationTile = chessBoard.getTile(tileId); // Set the destination tile to the tile that was clicked
+                            final Move move = Move.MoveFactory.createMove(chessBoard, sourceTile.getTileCoordinate(), destinationTile.getTileCoordinate()); // Create a new move
+                            final MoveTransition transition = chessBoard.currentPlayer().makeMove(move); // Make the move
+                            if (transition.getMoveStatus().isDone()) { // If the move was successful
+                                chessBoard = transition.getTransitionBoard(); // Set the chess board to the new chess board
+                            }
+                            sourceTile = null; // Reset the source tile to null
+                            destinationTile = null; // Reset the destination tile to null
+                            humanMovedPiece = null; // Reset the human moved piece to null
+                        }
+                    }
+                }
+
+                @Override
+                public void mousePressed(MouseEvent e) {
+
+                }
+
+                @Override
+                public void mouseReleased(MouseEvent e) {
+
+                }
+
+                @Override
+                public void mouseEntered(MouseEvent e) {
+
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+
+                }
+            });
+
+
         }
 
         /**
