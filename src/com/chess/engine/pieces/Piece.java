@@ -26,11 +26,11 @@ public abstract class Piece {
      * @param piecePosition the position of the piece
      * @param pieceAlliance the alliance of the piece
      */
-    Piece(final PieceType pieceType, final int piecePosition, final Alliance pieceAlliance) {
+    Piece(final PieceType pieceType, final int piecePosition, final Alliance pieceAlliance, final boolean isFirstMove) {
         this.pieceType = pieceType;
         this.piecePosition = piecePosition;
         this.pieceAlliance = pieceAlliance;
-        this.isFirstMove = isFirstMove();
+        this.isFirstMove = isFirstMove;
         this.cachedHashCode = computeHashCode();
     }
 
@@ -99,7 +99,7 @@ public abstract class Piece {
      * @return true if the piece is on still its first move
      */
     public boolean isFirstMove() {
-        return this.isFirstMove;
+        return false;
     }
 
     /** Get the piece's position

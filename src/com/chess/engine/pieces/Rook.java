@@ -27,9 +27,18 @@ public class Rook extends Piece{
      * @param pieceAlliance the alliance of the piece
      */
     public Rook(final int piecePosition, final Alliance pieceAlliance) {
-        super(PieceType.ROOK, piecePosition, pieceAlliance);
+        super(PieceType.ROOK, piecePosition, pieceAlliance, true);
     }
 
+    /** Constructor
+     *
+     * @param piecePosition the position of the piece
+     * @param pieceAlliance the alliance of the piece
+     * @param isFirstMove if the piece has moved
+     */
+    public Rook(final int piecePosition, final Alliance pieceAlliance, final boolean isFirstMove) {
+        super(PieceType.ROOK, piecePosition, pieceAlliance, isFirstMove);
+    }
     @Override
     public String toString() {
         return PieceType.ROOK.toString();

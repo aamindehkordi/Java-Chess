@@ -31,7 +31,17 @@ public class Knight extends Piece {
      * @param pieceAlliance the alliance of the piece
      */
     public Knight(final int piecePosition, final Alliance pieceAlliance) {
-        super(PieceType.KNIGHT ,piecePosition, pieceAlliance);
+        super(PieceType.KNIGHT ,piecePosition, pieceAlliance, true);
+    }
+
+    /** Constructor
+     *
+     * @param piecePosition the position of the piece
+     * @param pieceAlliance the alliance of the piece
+     * @param isFirstMove if the piece has moved
+     */
+    public Knight(final int piecePosition, final Alliance pieceAlliance, final boolean isFirstMove) {
+        super(PieceType.KNIGHT, piecePosition, pieceAlliance, isFirstMove);
     }
 
     @Override
