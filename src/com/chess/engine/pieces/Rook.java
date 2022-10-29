@@ -11,7 +11,7 @@ import java.util.*;
 import static com.chess.engine.board.BoardUtils.*;
 import static com.chess.engine.board.Move.MajorMove;
 
-public class Rook extends Bishop {
+public class Rook extends Piece {
 
     /** The possible move offsets of a rook
      * -8 = up
