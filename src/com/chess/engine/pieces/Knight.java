@@ -11,7 +11,7 @@ import java.util.*;
 import static com.chess.engine.board.Move.AttackMove;
 import static com.chess.engine.board.Move.MajorMove;
 
-public class Knight extends Piece {
+public class Knight extends Rook {
 
     /** The possible move offsets for a knight
      * -17 : up 2, left 1

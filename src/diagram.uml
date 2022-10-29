@@ -3,63 +3,319 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="233.0" y="36.0">com.chess.engine.player.WhitePlayer</node>
-    <node x="167.0" y="-86.0">com.chess.engine.pieces.Queen</node>
-    <node x="342.5" y="179.0">com.chess.engine.board.Tile</node>
-    <node x="-63.0" y="-128.0">com.chess.engine.pieces.Pawn</node>
-    <node x="-68.5" y="290.0">com.chess.engine.OOPChess</node>
-    <node x="233.0" y="161.0">com.chess.engine.board.Move</node>
-    <node x="-68.5" y="-86.0">com.chess.engine.pieces.Bishop</node>
-    <node x="451.5" y="186.0">com.chess.engine.board.BoardUtils</node>
-    <node x="-67.0" y="-39.0">com.chess.engine.pieces.Knight</node>
-    <node x="224.0" y="285.0">com.chess.engine.Alliance</node>
-    <node x="178.0" y="-128.0">com.chess.engine.pieces.Rook</node>
-    <node x="427.5" y="36.0">com.chess.engine.player.BlackPlayer</node>
-    <node x="183.0" y="-39.0">com.chess.engine.pieces.King</node>
-    <node x="333.5" y="94.0">com.chess.engine.board.Board</node>
-    <node x="61.5" y="36.0">com.chess.engine.pieces.Piece</node>
+    <node x="409.0" y="1353.0">com.chess.engine.board.Move.MoveFactory</node>
+    <node x="745.3904473329901" y="474.5000000000001">com.chess.engine.player.Player</node>
+    <node x="342.5" y="1636.0">com.chess.engine.board.Move.QueenSideCastleMove</node>
+    <node x="1562.0" y="2149.0">com.chess.gui.Table.MoveLog</node>
+    <node x="745.3904473329901" y="1050.0">com.chess.engine.player.WhitePlayer</node>
+    <node x="-148.60955266700995" y="1667.946971264142">com.chess.engine.board.Tile.OccupiedTile</node>
+    <node x="1399.0" y="1819.0">com.chess.engine.player.MoveStatus</node>
+    <node x="-148.6095526670099" y="2213.4705636410977">com.chess.engine.pieces.King</node>
+    <node x="1804.5" y="2124.0">com.chess.engine.pieces.PieceType</node>
+    <node x="1879.5" y="1376.0">com.chess.engine.board.Move.NullMove</node>
+    <node x="577.5" y="2216.0">com.chess.gui.Table.BoardPanel</node>
+    <node x="1619.5" y="1387.5">com.chess.engine.board.Move.PawnMove</node>
+    <node x="748.5" y="1636.0">com.chess.engine.board.Move.KingSideCastleMove</node>
+    <node x="795.5" y="2172.0">com.chess.gui.Table.TilePanel</node>
+    <node x="1686.5" y="915.0">com.chess.engine.Alliance</node>
+    <node x="1408.0" y="871.0">com.chess.engine.board.Move</node>
+    <node x="-141.1095526670099" y="518.5000000000001">com.chess.engine.board.Board</node>
+    <node x="1056.0" y="1320.0">com.chess.engine.board.Move.AttackMove</node>
+    <node x="604.5" y="2540.0">com.chess.engine.pieces.Knight</node>
+    <node x="244.5" y="2540.0">com.chess.engine.pieces.Bishop</node>
+    <node x="-148.60955266701012" y="2540.0">com.chess.engine.pieces.Queen</node>
+    <node x="1479.0" y="1636.0">com.chess.engine.board.Move.PawnJump</node>
+    <node x="1324.5" y="2540.0">com.chess.engine.pieces.Pawn</node>
+    <node x="1009.0" y="1867.5">com.chess.engine.board.Move.PawnEnPassantAttackMove</node>
+    <node x="1140.0" y="1647.5">com.chess.engine.board.Move.PawnAttackMove</node>
+    <node x="801.5" y="1855.0">com.chess.gui.TakenPiecesPanel</node>
+    <node x="1135.0" y="2149.0">com.chess.engine.board.BoardUtils</node>
+    <node x="185.3904473329901" y="1050.0">com.chess.engine.player.BlackPlayer</node>
+    <node x="-20.109552667009893" y="1040.5">com.chess.engine.board.Board.Builder</node>
+    <node x="479.5" y="1820.5">com.chess.engine.player.MoveTransition</node>
+    <node x="1359.0" y="1365.0">com.chess.engine.board.Move.MajorMove</node>
+    <node x="-141.10955266700995" y="1263.946971264142">com.chess.engine.board.Tile</node>
+    <node x="81.89044733299005" y="1667.946971264142">com.chess.engine.board.Tile.EmptyTile</node>
+    <node x="695.5" y="1342.0">com.chess.engine.board.Move.CastleMove</node>
+    <node x="-148.60955266700995" y="1811.0">com.chess.engine.pieces.Piece</node>
+    <node x="243.0" y="2183.0">com.chess.gui.Table.BoardDirection</node>
+    <node x="209.0" y="1811.0">com.chess.gui.Table</node>
+    <node x="964.5" y="2540.0">com.chess.engine.pieces.Rook</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="com.chess.engine.pieces.Rook" target="com.chess.engine.pieces.Piece" relationship="GENERALIZATION">
-      <point x="0.0" y="14.0" />
-      <point x="222.0" y="0.5" />
-      <point x="107.0" y="0.5" />
-      <point x="0.0" y="14.0" />
+    <edge source="com.chess.engine.board.Move.PawnEnPassantAttackMove" target="com.chess.engine.board.Move" relationship="INNER_CLASS">
+      <point x="0.0" y="-26.5" />
+      <point x="1193.0" y="1762.0" />
+      <point x="325.0" y="1762.0" />
+      <point x="325.0" y="1259.0" />
+      <point x="1533.0" y="1259.0" />
+      <point x="0.0" y="163.0" />
     </edge>
-    <edge source="com.chess.engine.pieces.Pawn" target="com.chess.engine.pieces.Piece" relationship="GENERALIZATION">
-      <point x="0.0" y="14.0" />
-      <point x="-18.0" y="-76.0" />
-      <point x="107.0" y="-76.0" />
-      <point x="0.0" y="-14.0" />
+    <edge source="com.chess.engine.pieces.Rook" target="com.chess.engine.pieces.Piece" relationship="GENERALIZATION">
+      <point x="0.0" y="-94.0" />
+      <point x="1133.0" y="2514.0" />
+      <point x="953.0" y="2514.0" />
+      <point x="953.0" y="2473.0" />
+      <point x="19.89044733299005" y="2473.0" />
+      <point x="0.0" y="174.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.CastleMove" target="com.chess.engine.board.Move" relationship="GENERALIZATION">
+      <point x="-15.0" y="-72.0" />
+      <point x="838.0" y="1290.0" />
+      <point x="1518.0" y="1290.0" />
+      <point x="-15.0" y="163.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.KingSideCastleMove" target="com.chess.engine.board.Move" relationship="INNER_CLASS">
+      <point x="0.0" y="38.0" />
+      <point x="933.0" y="1762.0" />
+      <point x="325.0" y="1762.0" />
+      <point x="325.0" y="1259.0" />
+      <point x="1533.0" y="1259.0" />
+      <point x="0.0" y="163.0" />
+    </edge>
+    <edge source="com.chess.engine.pieces.Rook" target="com.chess.engine.pieces.Bishop" relationship="GENERALIZATION">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Tile.OccupiedTile" target="com.chess.engine.board.Tile" relationship="GENERALIZATION">
+      <point x="0.0" y="-60.5" />
+      <point x="-49.10955266700995" y="1651.446971264142" />
+      <point x="27.89044733299005" y="1651.446971264142" />
+      <point x="-23.0" y="84.5" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.PawnMove" target="com.chess.engine.board.Move" relationship="GENERALIZATION">
+      <point x="-32.0" y="-26.5" />
+      <point x="1701.0" y="1328.0" />
+      <point x="1361.0" y="1328.0" />
+      <point x="1361.0" y="1290.0" />
+      <point x="1518.0" y="1290.0" />
+      <point x="-15.0" y="163.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.MajorMove" target="com.chess.engine.board.Move" relationship="GENERALIZATION">
+      <point x="-15.0" y="-49.0" />
+      <point x="1458.0" y="1328.0" />
+      <point x="1361.0" y="1328.0" />
+      <point x="1361.0" y="1290.0" />
+      <point x="1518.0" y="1290.0" />
+      <point x="-15.0" y="163.0" />
+    </edge>
+    <edge source="com.chess.gui.Table.BoardDirection" target="com.chess.gui.Table" relationship="INNER_CLASS">
+      <point x="150.0" y="0.0" />
+      <point x="561.0" y="2254.0" />
+      <point x="561.0" y="2122.0" />
+      <point x="333.0" y="2122.0" />
+      <point x="0.0" y="83.0" />
+    </edge>
+    <edge source="com.chess.engine.player.BlackPlayer" target="com.chess.engine.player.Player" relationship="GENERALIZATION">
+      <point x="264.5" y="0.0" />
+      <point x="729.8904473329901" y="1123.5" />
+      <point x="729.8904473329901" y="703.5000000000001" />
+      <point x="-264.5" y="0.0" />
+    </edge>
+    <edge source="com.chess.gui.Table.BoardPanel" target="com.chess.gui.Table" relationship="INNER_CLASS">
+      <point x="-95.5" y="0.0" />
+      <point x="561.0" y="2254.0" />
+      <point x="561.0" y="2122.0" />
+      <point x="333.0" y="2122.0" />
+      <point x="0.0" y="83.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.PawnAttackMove" target="com.chess.engine.board.Move.AttackMove" relationship="GENERALIZATION">
+      <point x="-100.0" y="-26.5" />
+      <point x="0.0" y="94.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.QueenSideCastleMove" target="com.chess.engine.board.Move" relationship="INNER_CLASS">
+      <point x="0.0" y="38.0" />
+      <point x="533.0" y="1762.0" />
+      <point x="325.0" y="1762.0" />
+      <point x="325.0" y="1259.0" />
+      <point x="1533.0" y="1259.0" />
+      <point x="0.0" y="163.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Tile.EmptyTile" target="com.chess.engine.board.Tile" relationship="INNER_CLASS">
+      <point x="-89.0" y="0.0" />
+      <point x="66.89044733299005" y="1728.446971264142" />
+      <point x="66.89044733299005" y="1633.946971264142" />
+      <point x="42.89044733299005" y="1633.946971264142" />
+      <point x="-8.0" y="84.5" />
     </edge>
     <edge source="com.chess.engine.pieces.Bishop" target="com.chess.engine.pieces.Piece" relationship="GENERALIZATION">
-      <point x="0.0" y="14.0" />
-      <point x="-18.0" y="50.0" />
-      <point x="45.5" y="0.0" />
+      <point x="0.0" y="-94.0" />
+      <point x="413.0" y="2514.0" />
+      <point x="953.0" y="2514.0" />
+      <point x="953.0" y="2473.0" />
+      <point x="19.89044733299005" y="2473.0" />
+      <point x="0.0" y="174.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.MajorMove" target="com.chess.engine.board.Move" relationship="INNER_CLASS">
+      <point x="0.0" y="-49.0" />
+      <point x="1473.0" y="1259.0" />
+      <point x="1533.0" y="1259.0" />
+      <point x="0.0" y="163.0" />
+    </edge>
+    <edge source="com.chess.gui.Table.TilePanel" target="com.chess.gui.Table" relationship="INNER_CLASS">
+      <point x="0.0" y="-82.0" />
+      <point x="953.0" y="2122.0" />
+      <point x="333.0" y="2122.0" />
+      <point x="0.0" y="83.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.PawnMove" target="com.chess.engine.board.Move" relationship="INNER_CLASS">
+      <point x="0.0" y="-26.5" />
+      <point x="1733.0" y="1259.0" />
+      <point x="1533.0" y="1259.0" />
+      <point x="0.0" y="163.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.QueenSideCastleMove" target="com.chess.engine.board.Move.CastleMove" relationship="GENERALIZATION">
+      <point x="0.0" y="-38.0" />
+      <point x="533.0" y="1572.0" />
+      <point x="853.0" y="1572.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="com.chess.engine.player.WhitePlayer" target="com.chess.engine.player.Player" relationship="GENERALIZATION">
+      <point x="-264.5" y="0.0" />
+      <point x="729.8904473329901" y="1123.5" />
+      <point x="729.8904473329901" y="703.5000000000001" />
+      <point x="-264.5" y="0.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.PawnJump" target="com.chess.engine.board.Move.PawnMove" relationship="GENERALIZATION">
+      <point x="106.5" y="-38.0" />
+      <point x="-33.5" y="26.5" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.KingSideCastleMove" target="com.chess.engine.board.Move.CastleMove" relationship="GENERALIZATION">
+      <point x="0.0" y="-38.0" />
+      <point x="933.0" y="1572.0" />
+      <point x="853.0" y="1572.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.PawnAttackMove" target="com.chess.engine.board.Move" relationship="INNER_CLASS">
+      <point x="0.0" y="26.5" />
+      <point x="1293.0" y="1762.0" />
+      <point x="325.0" y="1762.0" />
+      <point x="325.0" y="1259.0" />
+      <point x="1533.0" y="1259.0" />
+      <point x="0.0" y="163.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Tile.EmptyTile" target="com.chess.engine.board.Tile" relationship="GENERALIZATION">
+      <point x="0.0" y="-60.5" />
+      <point x="170.89044733299005" y="1651.446971264142" />
+      <point x="27.89044733299005" y="1651.446971264142" />
+      <point x="-23.0" y="84.5" />
     </edge>
     <edge source="com.chess.engine.pieces.Queen" target="com.chess.engine.pieces.Piece" relationship="GENERALIZATION">
-      <point x="-15.0" y="-14.0" />
-      <point x="201.5" y="13.0" />
-      <point x="92.0" y="13.0" />
-      <point x="-15.0" y="14.0" />
+      <point x="0.0" y="-94.0" />
+      <point x="19.89044733298988" y="2514.0" />
+      <point x="953.0" y="2514.0" />
+      <point x="953.0" y="2473.0" />
+      <point x="19.89044733299005" y="2473.0" />
+      <point x="0.0" y="174.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.NullMove" target="com.chess.engine.board.Move" relationship="GENERALIZATION">
+      <point x="-15.0" y="-38.0" />
+      <point x="1938.0" y="1328.0" />
+      <point x="1361.0" y="1328.0" />
+      <point x="1361.0" y="1290.0" />
+      <point x="1518.0" y="1290.0" />
+      <point x="-15.0" y="163.0" />
     </edge>
     <edge source="com.chess.engine.pieces.Knight" target="com.chess.engine.pieces.Piece" relationship="GENERALIZATION">
-      <point x="0.0" y="14.0" />
-      <point x="-18.0" y="50.0" />
-      <point x="-45.5" y="0.0" />
+      <point x="0.0" y="-116.0" />
+      <point x="773.0" y="2473.0" />
+      <point x="19.89044733299005" y="2473.0" />
+      <point x="0.0" y="174.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.MoveFactory" target="com.chess.engine.board.Move" relationship="INNER_CLASS">
+      <point x="0.0" y="-61.0" />
+      <point x="533.0" y="1259.0" />
+      <point x="1533.0" y="1259.0" />
+      <point x="0.0" y="163.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.AttackMove" target="com.chess.engine.board.Move" relationship="INNER_CLASS">
+      <point x="0.0" y="-94.0" />
+      <point x="1193.0" y="1259.0" />
+      <point x="1533.0" y="1259.0" />
+      <point x="0.0" y="163.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.CastleMove" target="com.chess.engine.board.Move" relationship="INNER_CLASS">
+      <point x="0.0" y="-72.0" />
+      <point x="853.0" y="1259.0" />
+      <point x="1533.0" y="1259.0" />
+      <point x="0.0" y="163.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.NullMove" target="com.chess.engine.board.Move" relationship="INNER_CLASS">
+      <point x="0.0" y="-38.0" />
+      <point x="1953.0" y="1259.0" />
+      <point x="1533.0" y="1259.0" />
+      <point x="0.0" y="163.0" />
+    </edge>
+    <edge source="com.chess.engine.pieces.Pawn" target="com.chess.engine.pieces.Piece" relationship="GENERALIZATION">
+      <point x="0.0" y="-72.0" />
+      <point x="1493.0" y="2514.0" />
+      <point x="953.0" y="2514.0" />
+      <point x="953.0" y="2473.0" />
+      <point x="19.89044733299005" y="2473.0" />
+      <point x="0.0" y="174.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.AttackMove" target="com.chess.engine.board.Move" relationship="GENERALIZATION">
+      <point x="-15.0" y="-94.0" />
+      <point x="1178.0" y="1290.0" />
+      <point x="1518.0" y="1290.0" />
+      <point x="-15.0" y="163.0" />
+    </edge>
+    <edge source="com.chess.engine.pieces.Knight" target="com.chess.engine.pieces.Rook" relationship="GENERALIZATION">
+      <point x="0.0" y="0.0" />
+      <point x="593.0" y="2656.0" />
+      <point x="593.0" y="2634.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Tile.OccupiedTile" target="com.chess.engine.board.Tile" relationship="INNER_CLASS">
+      <point x="99.5" y="0.0" />
+      <point x="66.89044733299005" y="1728.446971264142" />
+      <point x="66.89044733299005" y="1633.946971264142" />
+      <point x="42.89044733299005" y="1633.946971264142" />
+      <point x="-8.0" y="84.5" />
+    </edge>
+    <edge source="com.chess.gui.Table.MoveLog" target="com.chess.gui.Table" relationship="INNER_CLASS">
+      <point x="0.0" y="-105.0" />
+      <point x="1673.0" y="2122.0" />
+      <point x="333.0" y="2122.0" />
+      <point x="0.0" y="83.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Board.Builder" target="com.chess.engine.board.Board" relationship="INNER_CLASS">
+      <point x="0.0" y="-83.0" />
+      <point x="0.0" y="185.0" />
     </edge>
     <edge source="com.chess.engine.pieces.King" target="com.chess.engine.pieces.Piece" relationship="GENERALIZATION">
-      <point x="41.5" y="4.5" />
-      <point x="77.0" y="-20.5" />
-      <point x="-30.0" y="14.0" />
+      <point x="0.0" y="-94.0" />
+      <point x="19.890447332990107" y="2514.0" />
+      <point x="953.0" y="2514.0" />
+      <point x="953.0" y="2473.0" />
+      <point x="19.89044733299005" y="2473.0" />
+      <point x="0.0" y="174.0" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.PawnEnPassantAttackMove" target="com.chess.engine.board.Move.PawnAttackMove" relationship="GENERALIZATION">
+      <point x="-15.0" y="-26.5" />
+      <point x="-115.0" y="26.5" />
+    </edge>
+    <edge source="com.chess.engine.board.Move.PawnJump" target="com.chess.engine.board.Move" relationship="INNER_CLASS">
+      <point x="0.0" y="38.0" />
+      <point x="1593.0" y="1762.0" />
+      <point x="325.0" y="1762.0" />
+      <point x="325.0" y="1259.0" />
+      <point x="1533.0" y="1259.0" />
+      <point x="0.0" y="163.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Compact" zoom="1.0" showDependencies="false" x="569.0" y="77.5" />
+  <settings layout="Hierarchic Compact" zoom="0.5175643638273549" showDependencies="false" x="1037.643339313381" y="2322.656150072705" />
   <SelectedNodes>
-    <node>com.chess.engine.pieces.Piece</node>
+    <node>com.chess.engine.pieces.Pawn</node>
   </SelectedNodes>
-  <Categories />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
   <SCOPE>Project Files</SCOPE>
   <VISIBILITY>private</VISIBILITY>
 </Diagram>
