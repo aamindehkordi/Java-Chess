@@ -107,14 +107,7 @@
       <workItem from="1666649473994" duration="30122000" />
       <workItem from="1666720096642" duration="7730000" />
       <workItem from="1666754188211" duration="10526000" />
-      <workItem from="1667024290364" duration="309000" />
-    </task>
-    <task id="LOCAL-00005" summary="isValidCoords and BoardUtils Class">
-      <created>1666337903093</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1666337903093</updated>
+      <workItem from="1667024290364" duration="813000" />
     </task>
     <task id="LOCAL-00006" summary="fix bugs with the knight's legal moves with extra functions">
       <created>1666339141630</created>
@@ -452,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667024310521</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Started a UML describing the function of the program. Specifically started the skeleton code for the pieces class and subclasses. Methods not included.">
+      <created>1667024757784</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1667024757784</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
