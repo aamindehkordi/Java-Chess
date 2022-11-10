@@ -51,24 +51,27 @@ public class Bishop extends Piece {
         final List<Move> legalMoves = new ArrayList<>(); /* for each of the possible moves, check if the move is legal */
 
         for (final int currentCandidate : CANDIDATE_MOVE_VECTOR_COORDINATES){
-            int candidateDestinationCoordinate = this.piecePosition + currentCandidate;/* while the move is legal, keep adding it to the list of legal moves */
+            int candidateDestinationCoordinate = this.piecePosition;
             while (BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)) {
-                if (isFirstColumnExclusion(this.piecePosition, currentCandidate) ||    /* if the bishop is on the 1st or 8th columns, the move is illegal */
-                        isEighthColumnExclusion(this.piecePosition, currentCandidate)) {
+                /* if the bishop is on the these column, the move is illegal */
+                if (isFirstColumnExclusion(candidateDestinationCoordinate, currentCandidate) ||
+                        isEighthColumnExclusion(candidateDestinationCoordinate, currentCandidate)) {
                     break;
                 }
-
-                final Tile candidateDestinationTile = board.getTile(candidateDestinationCoordinate); /* get the tile at the destination */
-                if (!candidateDestinationTile.isTileOccupied()) { /* if the tile is not occupied, add the move to the list of legal moves */
-                    legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
-                } else { /* if the tile is occupied, check if the piece is an enemy piece */
-                    final Piece pieceAtDestination = candidateDestinationTile.getPiece(); /* get the piece at the destination */
-                    final Alliance pieceAlliance = pieceAtDestination.getPieceAlliance(); /* get the alliance of the piece at the destination */
-                    if (this.pieceAlliance != pieceAlliance) { /* if the piece is an enemy piece, add the move to the list of legal moves */
-                        legalMoves.add(new Move.AttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination));
+                /* add the offset to the current position */
+                candidateDestinationCoordinate += currentCandidate;
+                if (BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)) {
+                    final Tile candidateDestinationTile = board.getTile(candidateDestinationCoordinate);
+                    if (!candidateDestinationTile.isTileOccupied()) {
+                        legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
+                    } else {
+                        final Piece pieceAtDestination = candidateDestinationTile.getPiece();
+                        final Alliance pieceAlliance = pieceAtDestination.getPieceAlliance();
+                        if (this.pieceAlliance != pieceAlliance) {
+                            legalMoves.add(new Move.AttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination));
+                        }
+                        break;
                     }
-                    /* if the piece is an ally piece, the move is illegal */
-                    break;
                 }
             }
 

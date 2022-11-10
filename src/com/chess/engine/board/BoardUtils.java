@@ -29,87 +29,28 @@ public class BoardUtils {
     public static final boolean[] SEVENTH_COLUMN = initCol(6);
     public static final boolean[] EIGHTH_COLUMN = initCol(7);
 
-    public static final Map<String, Integer> ALGEBRAIC_NOTATION = initializeAlgebraicNotation();
+    public static final String[] ALGEBRAIC_NOTATION = initializeAlgebraicNotation();
     public static final Map<String, Integer> POSITION_TO_COORDINATE = initializePositionToCoordinateMap();
 
     private static Map<String, Integer> initializePositionToCoordinateMap() {
         final Map<String, Integer> positionToCoordinate = new HashMap<>();
         for (int i = 0; i < NUM_TILES; i++) {
-            positionToCoordinate.put(String.valueOf(ALGEBRAIC_NOTATION.get(i)), i);
+            positionToCoordinate.put(ALGEBRAIC_NOTATION[i], i);
         }
         return Collections.unmodifiableMap(positionToCoordinate);
     }
 
-
-    private static Map<String, Integer> initializeAlgebraicNotation() {
-        final Map<String, Integer> positionToCoordinate = new HashMap<>();
-        {
-            positionToCoordinate.put("a8", 0);
-            positionToCoordinate.put("b8", 1);
-            positionToCoordinate.put("c8", 2);
-            positionToCoordinate.put("d8", 3);
-            positionToCoordinate.put("e8", 4);
-            positionToCoordinate.put("f8", 5);
-            positionToCoordinate.put("g8", 6);
-            positionToCoordinate.put("h8", 7);
-            positionToCoordinate.put("a7", 8);
-            positionToCoordinate.put("b7", 9);
-            positionToCoordinate.put("c7", 10);
-            positionToCoordinate.put("d7", 11);
-            positionToCoordinate.put("e7", 12);
-            positionToCoordinate.put("f7", 13);
-            positionToCoordinate.put("g7", 14);
-            positionToCoordinate.put("h7", 15);
-            positionToCoordinate.put("a6", 16);
-            positionToCoordinate.put("b6", 17);
-            positionToCoordinate.put("c6", 18);
-            positionToCoordinate.put("d6", 19);
-            positionToCoordinate.put("e6", 20);
-            positionToCoordinate.put("f6", 21);
-            positionToCoordinate.put("g6", 22);
-            positionToCoordinate.put("h6", 23);
-            positionToCoordinate.put("a5", 24);
-            positionToCoordinate.put("b5", 25);
-            positionToCoordinate.put("c5", 26);
-            positionToCoordinate.put("d5", 27);
-            positionToCoordinate.put("e5", 28);
-            positionToCoordinate.put("f5", 29);
-            positionToCoordinate.put("g5", 30);
-            positionToCoordinate.put("h5", 31);
-            positionToCoordinate.put("a4", 32);
-            positionToCoordinate.put("b4", 33);
-            positionToCoordinate.put("c4", 34);
-            positionToCoordinate.put("d4", 35);
-            positionToCoordinate.put("e4", 36);
-            positionToCoordinate.put("f4", 37);
-            positionToCoordinate.put("g4", 38);
-            positionToCoordinate.put("h4", 39);
-            positionToCoordinate.put("a3", 40);
-            positionToCoordinate.put("b3", 41);
-            positionToCoordinate.put("c3", 42);
-            positionToCoordinate.put("d3", 43);
-            positionToCoordinate.put("e3", 44);
-            positionToCoordinate.put("f3", 45);
-            positionToCoordinate.put("g3", 46);
-            positionToCoordinate.put("h3", 47);
-            positionToCoordinate.put("a2", 48);
-            positionToCoordinate.put("b2", 49);
-            positionToCoordinate.put("c2", 50);
-            positionToCoordinate.put("d2", 51);
-            positionToCoordinate.put("e2", 52);
-            positionToCoordinate.put("f2", 53);
-            positionToCoordinate.put("g2", 54);
-            positionToCoordinate.put("h2", 55);
-            positionToCoordinate.put("a1", 56);
-            positionToCoordinate.put("b1", 57);
-            positionToCoordinate.put("c1", 58);
-            positionToCoordinate.put("d1", 59);
-            positionToCoordinate.put("e1", 60);
-            positionToCoordinate.put("f1", 61);
-            positionToCoordinate.put("g1", 62);
-            positionToCoordinate.put("h1", 63);
-        }
-        return Collections.unmodifiableMap(positionToCoordinate);
+    private static String[] initializeAlgebraicNotation() {
+        return new String[] {
+                "a8", "b8", "c8", "d8", "e8", "f8", "g8", "h8",
+                "a7", "b7", "c7", "d7", "e7", "f7", "g7", "h7",
+                "a6", "b6", "c6", "d6", "e6", "f6", "g6", "h6",
+                "a5", "b5", "c5", "d5", "e5", "f5", "g5", "h5",
+                "a4", "b4", "c4", "d4", "e4", "f4", "g4", "h4",
+                "a3", "b3", "c3", "d3", "e3", "f3", "g3", "h3",
+                "a2", "b2", "c2", "d2", "e2", "f2", "g2", "h2",
+                "a1", "b1", "c1", "d1", "e1", "f1", "g1", "h1"
+        };
     }
 
     /**
@@ -171,11 +112,11 @@ public class BoardUtils {
     }
 
     public static int getCoordinateAtPosition(final String position) {
-        return ALGEBRAIC_NOTATION.get(position);
+        return POSITION_TO_COORDINATE.get(position);
     }
 
-    public static int getPositionAtCoordinate(final int coord) {
-        return POSITION_TO_COORDINATE.get(coord);
+    public static String getPositionAtCoordinate(final int coordinate) {
+        return ALGEBRAIC_NOTATION[coordinate];
     }
 
 }

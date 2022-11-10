@@ -28,6 +28,9 @@ import static javax.swing.SwingUtilities.*;
 public class Table {
 
     private final JFrame gameFrame; // JFrame is a class that creates a window
+    private final GameHistoryPanel gameHistoryPanel; // the panel for the game history
+    private final TakenPiecesPanel takenPiecesPanel; // the panel for the taken pieces
+
     private final BoardPanel boardPanel; // BoardPanel is a class that creates a board
 
     private final Color lightTileColor; // Light tile color
@@ -36,6 +39,8 @@ public class Table {
     private static final Dimension BOARD_PANEL_DIMENSION = new Dimension(400, 350); // 400x350
     private static final Dimension TILE_PANEL_DIMENSION = new Dimension(10, 10); // 10x10
     private Board chessBoard; // Board is a class that creates a board
+    private final MoveLog moveLog; // MoveLog is a class that creates a move log
+
     private final String defaultPieceImagesPath; // path to the images of the pieces
     private Tile sourceTile; // source tile
     private Tile destinationTile; // destination tile
@@ -54,15 +59,24 @@ public class Table {
         this.gameFrame = new JFrame("Chess"); // Creates a new JFrame with the title "Chess"
         this.gameFrame.setSize(OUTER_FRAME_DIMENSION); // Sets the size of the JFrame to 600x600
         final JMenuBar tableMenuBar = createTableMenuBar(); // Creates a new JMenuBar
+
         this.gameFrame.setLayout(new BorderLayout()); // Sets the layout of the JFrame to a BorderLayout
+
         this.gameFrame.setJMenuBar(tableMenuBar); // Sets the JMenuBar of the JFrame to the JMenuBar created above
         this.defaultPieceImagesPath = "art/standard/"; // Sets the path to the images of the pieces
         this.chessBoard = Board.createStandardBoard(); // Creates a new chess board
+        this.gameHistoryPanel = new GameHistoryPanel(); // Creates a new GameHistoryPanel
+        this.takenPiecesPanel = new TakenPiecesPanel(); // Creates a new TakenPiecesPanel
+
         this.darkTileColor = Color.decode("#71573F"); // Sets the dark tile color to a brown color
         this.lightTileColor = Color.decode("#B9A582"); // Sets the light tile color to a tan color
+
         this.boardDirection = BoardDirection.NORMAL; // Sets the board direction to normal
         this.boardPanel = new BoardPanel(); // Creates a new BoardPanel
+        this.moveLog = new MoveLog(); // Creates a new MoveLog
+        this.gameFrame.add(this.takenPiecesPanel, BorderLayout.WEST); // Adds the TakenPiecesPanel to the left side of the JFrame
         this.gameFrame.add(this.boardPanel, BorderLayout.CENTER); // Adds the BoardPanel to the center of the JFrame
+        this.gameFrame.add(this.gameHistoryPanel, BorderLayout.EAST); // Adds the GameHistoryPanel to the right side of the JFrame
         this.highlightLegalMoves = true; // Sets highlightLegalMoves to false
         this.gameFrame.setVisible(true); // Sets the JFrame to be visible
 
@@ -351,7 +365,7 @@ public class Table {
                             final MoveTransition transition = chessBoard.currentPlayer().makeMove(move); // Make the move
                             if (transition.getMoveStatus().isDone()) { // If the move was successful
                                 chessBoard = transition.getTransitionBoard(); // Set the board to the transition board
-                                //moveLog.addMove(move);
+                                moveLog.addMove(move);
                             }
                             sourceTile = null; // Set the source tile to null
                             humanMovedPiece = null; // Set the human moved piece to null
@@ -362,7 +376,11 @@ public class Table {
                     }
                     // SwingUtilities.invokeLater() runs the code in the Runnable object on the main thread
                     invokeLater(() -> {
+
                         boardPanel.drawBoard(chessBoard); // Redraw the board
+                        gameHistoryPanel.redo(chessBoard, moveLog); // Redraw the game history
+                        takenPiecesPanel.redo(moveLog); // Redraw the taken pieces panel
+
                     });
                 }
 
