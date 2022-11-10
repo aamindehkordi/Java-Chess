@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Did the diagram better than nathan">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_28_22,_11_30_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_28_22,_11_30_PM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_25_22,_8_18_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_25_22__8_18_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_29_22,_1_00_AM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChessOOP/diagram.uml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChessOOP/diagram.uml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/TakenPiecesPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/TakenPiecesPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,14 +148,9 @@
       <workItem from="1666720096642" duration="8606000" />
       <workItem from="1666753810138" duration="13805000" />
       <workItem from="1666835273945" duration="13575000" />
-      <workItem from="1667031392554" duration="802000" />
-    </task>
-    <task id="LOCAL-00036" summary="cleanup">
-      <created>1666679056261</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1666679056261</updated>
+      <workItem from="1667031392554" duration="2067000" />
+      <workItem from="1667427093975" duration="600000" />
+      <workItem from="1668054679652" duration="265000" />
     </task>
     <task id="LOCAL-00037" summary="Filling up majorMove">
       <created>1666679178264</created>
@@ -487,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667031965570</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Did the diagram better than nathan">
+      <created>1667032217867</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1667032217867</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
