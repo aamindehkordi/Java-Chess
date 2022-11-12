@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="OMG a working game of chess (no en passant)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="tying up loose ends + en passant pt1">
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,14 +144,7 @@
       <workItem from="1667031392554" duration="2067000" />
       <workItem from="1667427093975" duration="600000" />
       <workItem from="1668054679652" duration="5516000" />
-      <workItem from="1668209659403" duration="1879000" />
-    </task>
-    <task id="LOCAL-00041" summary="filled out a few subclasses in the move class">
-      <created>1666682832184</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1666682832184</updated>
+      <workItem from="1668209659403" duration="2261000" />
     </task>
     <task id="LOCAL-00042" summary="filled out a few subclasses in the move class and comments">
       <created>1666683394977</created>
@@ -490,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668210631367</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="tying up loose ends + en passant pt1">
+      <created>1668211589759</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1668211589759</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,7 +530,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added MenuBar" />
     <MESSAGE value="Added MenuBar to GUI" />
     <MESSAGE value="Added board and tile classes to GUI" />
     <MESSAGE value="Initialized all rows and columns" />
@@ -556,7 +554,8 @@
     <MESSAGE value="Created new game history panel" />
     <MESSAGE value="Added movelog and fixed bugs" />
     <MESSAGE value="OMG a working game of chess (no en passant)" />
-    <option name="LAST_COMMIT_MESSAGE" value="OMG a working game of chess (no en passant)" />
+    <MESSAGE value="tying up loose ends + en passant pt1" />
+    <option name="LAST_COMMIT_MESSAGE" value="tying up loose ends + en passant pt1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -63,6 +63,7 @@ public class Pawn extends Piece {
             /* add the offset to the current position to get the destination coordinate */
             final int candidateDestinationCoordinate = this.piecePosition + (this.getPieceAlliance().getDirection() * currentCandidateOffset);
 
+            // One move forward
             if(!BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)) {
                 continue; /* if the tile is not occupied, continue checking*/
             }
@@ -74,7 +75,7 @@ public class Pawn extends Piece {
                 /* add the move to the list of legal moves */
                 legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
             }
-
+            // Two moves forward
             else if (currentCandidateOffset == 16 && this.isFirstMove &&                                 /* if you are moving two tiles forward, and it is the first move AND */
                     ((BoardUtils.SECOND_ROW[this.piecePosition] && this.getPieceAlliance().isBlack()) || /* if you are on the second row and your alliance is black or */
                     (BoardUtils.SEVENTH_ROW[this.piecePosition] && this.getPieceAlliance().isWhite()))){ /* if you are on the seventh row and your alliance is white */
@@ -88,6 +89,7 @@ public class Pawn extends Piece {
                 }
             }
 
+            // Attack move to the right
             else if (currentCandidateOffset == 7 &&                                                          /* if you are moving one tile diagonally to the left */
                     !((BoardUtils.EIGHTH_COLUMN[this.piecePosition] && this.pieceAlliance.isWhite() ||       /* and you are not on the eighth column, and you are white */
                     (BoardUtils.FIRST_COLUMN[this.piecePosition] && this.pieceAlliance.isBlack())))) {       /* or you are not on the first column, and you are black  (because of promotions)*/
@@ -102,12 +104,15 @@ public class Pawn extends Piece {
                     }
                 }
             }
+            // Attack move to the left
             else if(currentCandidateOffset == 9 &&                                                       /* if you are moving one tile diagonally to the right */
                   !((BoardUtils.FIRST_COLUMN[this.piecePosition] && this.pieceAlliance.isWhite() ||       /* and you are not on the first column, and you are white */
                    (BoardUtils.EIGHTH_COLUMN[this.piecePosition] && this.pieceAlliance.isBlack()) )) ) {  /* or you are not on the eighth column, and you are black  (because of promotions)*/
-                if(board.getTile(candidateDestinationCoordinate).isTileOccupied()) { /* if the tile is occupied*/
+                /* if the tile is occupied*/
+                if(board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
                     final Piece pieceAtDestination = board.getTile(candidateDestinationCoordinate).getPiece(); /* get the piece on the tile */
-                    if(this.pieceAlliance != pieceAtDestination.getPieceAlliance()) { /* if the piece is not the same color as the pawn,*/
+                    /* if the piece is not the same color as the pawn,*/
+                    if(this.pieceAlliance != pieceAtDestination.getPieceAlliance()) {
                         //TODO Promotions
                         legalMoves.add(new PawnAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination)); /* add the move to the list of legal moves */
                     }
