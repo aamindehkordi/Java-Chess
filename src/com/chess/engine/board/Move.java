@@ -160,6 +160,33 @@ public abstract class Move {
         }
 
     }
+
+    /** The Attack Move class */
+    public static class MajorAttackMove extends AttackMove {
+        /** Constructor
+         *
+         * @param board the board
+         * @param movedPiece the piece that is being moved
+         * @param destinationCoordinate the destination coordinate
+         * @param attackedPiece the piece that is being attacked
+         */
+        public MajorAttackMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Piece attackedPiece) {
+            super(board, movedPiece, destinationCoordinate, attackedPiece);
+        }
+
+        @Override
+        public boolean equals(final Object other) {
+            return this == other || other instanceof MajorAttackMove && super.equals(other); // True if the moves are
+                                                                                         // the same or if the other
+                                                                                         // move is a major attack
+                                                                                         // move and the moves are equal
+        }
+
+        @Override
+        public String toString() {
+            return movedPiece.getPieceType() + BoardUtils.getPositionAtCoordinate(this.destinationCoordinate); // Return the piece type and the destination coordinate
+        }
+    }
     public static class AttackMove extends Move {
         final Piece attackedPiece;
 
@@ -217,6 +244,20 @@ public abstract class Move {
         public PawnMove(final Board board, final Piece movedPiece, final int destinationCoordinate) {
             super(board, movedPiece, destinationCoordinate);
         }
+
+        @Override
+        public boolean equals(final Object other) {
+            return this == other || other instanceof PawnMove && super.equals(other); // True if the moves are the same
+                                                                                      // or if the other move is a pawn
+                                                                                      // move and the moves are equal
+        }
+
+        @Override
+        public String toString() {
+            return BoardUtils.getPositionAtCoordinate(this.destinationCoordinate); // Return the destination coordinate
+        }
+
+
     }
 
     public static class PawnAttackMove extends AttackMove {
@@ -252,6 +293,29 @@ public abstract class Move {
          */
         public PawnEnPassantAttackMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Piece attackedPiece) {
             super(board, movedPiece, destinationCoordinate, attackedPiece);
+        }
+
+        @Override
+        public boolean equals(final Object other) {
+            return this == other || other instanceof PawnEnPassantAttackMove && super.equals(other); // True if the moves are the same or if the other move is a pawn en passant attack move and the moves are equal
+        }
+
+        @Override
+        public Board execute() {
+            final Builder builder = new Builder(); // Create a new builder
+            for (final Piece piece : this.board.currentPlayer().getActivePieces()) { // For each piece in the current player's active pieces
+                if (!this.movedPiece.equals(piece)) { // If the piece is not the moved piece
+                    builder.setPiece(piece); // Set the piece as the active piece in the builder
+                }
+            }
+            for (final Piece piece : this.board.currentPlayer().getOpponent().getActivePieces()) { // For each piece in the current player's opponent's active pieces
+                if (!piece.equals(this.getAttackedPiece())) { // If the piece is not the attacked piece
+                    builder.setPiece(piece); // Set the piece as the active piece in the builder
+                }
+            }
+            builder.setPiece(this.movedPiece.movePiece(this)); // Set the moved piece as the active piece in the builder
+            builder.setMoveMaker(this.board.currentPlayer().getOpponent().getAlliance()); // Set the move maker as the opponent's alliance
+            return builder.build(); // Return the board
         }
     }
 
@@ -339,6 +403,27 @@ public abstract class Move {
             builder.setMoveMaker(this.board.currentPlayer().getOpponent().getAlliance()); /* set the move maker to the opponent */
             return builder.build(); /* build the board */
         }
+
+        @Override
+        public int hashCode() {
+            final int prime = 31;
+            int result = super.hashCode();
+            result = prime * result + this.castleRook.hashCode();
+            result = prime * result + this.castleRookDestination;
+            return result;
+        }
+
+        @Override
+        public boolean equals(final Object other) {
+            if (this == other) {
+                return true;
+            }
+            if (!(other instanceof CastleMove)) {
+                return false;
+            }
+            final CastleMove otherCastleMove = (CastleMove) other;
+            return super.equals(otherCastleMove) && this.castleRook.equals(otherCastleMove.getCastleRook());
+        }
     }
 
     public static final class KingSideCastleMove extends CastleMove {
@@ -356,9 +441,15 @@ public abstract class Move {
         }
 
         @Override
+        public boolean equals(final Object other) {
+            return this == other || other instanceof KingSideCastleMove && super.equals(other);
+        }
+
+        @Override
         public String toString() {
             return "O-O";
         }
+
     }
 
     public static final class QueenSideCastleMove extends CastleMove {
@@ -373,6 +464,11 @@ public abstract class Move {
          */
         public QueenSideCastleMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Rook castleRook, final int castleRookStart, final int castleRookDestination) {
             super(board, movedPiece, destinationCoordinate, castleRook, castleRookStart, castleRookDestination);
+        }
+
+        @Override
+        public boolean equals(final Object other) {
+            return this == other || other instanceof QueenSideCastleMove && super.equals(other);
         }
 
         @Override
