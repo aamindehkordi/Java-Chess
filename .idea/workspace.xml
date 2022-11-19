@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="x">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/Alliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/Alliance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="En Passant is highlighted but not executed">
       <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,13 +145,6 @@
       <workItem from="1667427093975" duration="600000" />
       <workItem from="1668054679652" duration="5516000" />
       <workItem from="1668209659403" duration="2261000" />
-    </task>
-    <task id="LOCAL-00043" summary="Attack Move and PawnJump complete">
-      <created>1666684167953</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1666684167953</updated>
     </task>
     <task id="LOCAL-00044" summary="Castling on White and Black Player">
       <created>1666685306303</created>
@@ -492,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668817943614</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="En Passant is highlighted but not executed">
+      <created>1668819730323</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1668819730323</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +541,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added board and tile classes to GUI" />
     <MESSAGE value="Initialized all rows and columns" />
     <MESSAGE value="Gave the rows and columns color in GUI" />
     <MESSAGE value="Gave the rows and columns color in GUI and added exit to menubar" />
@@ -569,7 +565,8 @@
     <MESSAGE value="OMG a working game of chess (no en passant)" />
     <MESSAGE value="tying up loose ends + en passant pt1" />
     <MESSAGE value="x" />
-    <option name="LAST_COMMIT_MESSAGE" value="x" />
+    <MESSAGE value="En Passant is highlighted but not executed" />
+    <option name="LAST_COMMIT_MESSAGE" value="En Passant is highlighted but not executed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -4,10 +4,7 @@ import com.chess.engine.Alliance;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
-import com.chess.engine.board.Move.MajorMove;
-import com.chess.engine.board.Move.PawnAttackMove;
-import com.chess.engine.board.Move.PawnJump;
-import com.chess.engine.board.Move.PawnMove;
+import com.chess.engine.board.Move.*;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -100,7 +97,7 @@ public class Pawn extends Piece {
                     final Pawn pieceAtDestination = board.getEnPassantPawn();
                     // if the pawn is on the tile to the right
                     if(board.getEnPassantPawn().getPiecePosition() == (this.piecePosition + (this.pieceAlliance.getOppositeDirection()))) {
-                        final Move move = new PawnAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination);
+                        final Move move = new PawnEnPassantAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination);
                         legalMoves.add(move);
                     }
                 }
@@ -125,7 +122,7 @@ public class Pawn extends Piece {
                     final Pawn pieceAtDestination = board.getEnPassantPawn();
                     // if the pawn is on the tile to the left
                     if(board.getEnPassantPawn().getPiecePosition() == (this.piecePosition - (this.pieceAlliance.getOppositeDirection()))) {
-                        final Move move = new PawnAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination);
+                        final Move move = new PawnEnPassantAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination);
                         legalMoves.add(move);
                     }
                 }
