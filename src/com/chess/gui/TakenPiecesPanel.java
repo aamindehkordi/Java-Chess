@@ -94,7 +94,7 @@ public class TakenPiecesPanel extends JPanel {
                 String defaultPieceImagesPath = "art/standard/"; /* the path to the default piece images */
                 final BufferedImage image = ImageIO.read(new File(defaultPieceImagesPath +  /* get the image for the piece */
                         takenPiece.getPieceAlliance().toString().substring(0, 1)
-                        + takenPiece.toString() + ".png"));
+                        + takenPiece + ".png"));
                 final ImageIcon icon = new ImageIcon(image); /* create an icon for the image */
                 final JLabel imageLabel = new JLabel(new ImageIcon(icon.getImage().getScaledInstance( /* create a label for the piece */
                         icon.getIconWidth() - 15, icon.getIconHeight() - 15, Image.SCALE_SMOOTH)));
@@ -112,7 +112,7 @@ public class TakenPiecesPanel extends JPanel {
                 String defaultPieceImagesPath = "art/standard/"; /* the path to the default piece images */
                 final BufferedImage image = ImageIO.read(new File(defaultPieceImagesPath +  /* get the image for the piece */
                         takenPiece.getPieceAlliance().toString().substring(0, 1)
-                        + takenPiece.toString() + ".png"));
+                        + takenPiece + ".png"));
                 final ImageIcon icon = new ImageIcon(image); /* create an icon for the image */
                 final JLabel imageLabel = new JLabel(new ImageIcon(icon.getImage().getScaledInstance( /* create a label for the piece */
                         icon.getIconWidth() - 15, icon.getIconHeight() - 15, Image.SCALE_SMOOTH)));

@@ -61,7 +61,7 @@ public class Table {
         final JMenuBar tableMenuBar = createTableMenuBar(); // Creates a new JMenuBar
 
         this.gameFrame.setLayout(new BorderLayout()); // Sets the layout of the JFrame to a BorderLayout
-
+        this.destinationTile = null; // Sets the destination tile to null
         this.gameFrame.setJMenuBar(tableMenuBar); // Sets the JMenuBar of the JFrame to the JMenuBar created above
         this.defaultPieceImagesPath = "art/standard/"; // Sets the path to the images of the pieces
         this.chessBoard = Board.createStandardBoard(); // Creates a new chess board
@@ -345,11 +345,12 @@ public class Table {
                     if (isRightMouseButton(event)) { // If the right mouse button is clicked
                         sourceTile = null; // Set the source tile to null
                         humanMovedPiece = null; // Set the human moved piece to null
-
+                        destinationTile = null; // Set the destination tile to null
                         //Testing
                         System.out.println("Right Clicked, Resetting");
 
                     } else if (isLeftMouseButton(event)) { // If the left mouse button is clicked
+                        // For the first click
                         if (sourceTile == null) { // If the source tile is null (no piece has been selected)
                             sourceTile = chessBoard.getTile(tileId); // Set the source tile to the tile that was clicked
                             humanMovedPiece = sourceTile.getPiece(); // Set the human moved piece to the piece on the source tile
@@ -360,19 +361,23 @@ public class Table {
                         //Testing
                         System.out.println("First Tile Selected: Piece:" + humanMovedPiece + " Tile:" + sourceTile.getTileCoordinate());
 
-                        } else {
-                            final Move move = Move.MoveFactory.createMove(chessBoard, sourceTile.getTileCoordinate(), tileId); // Create a move from the source tile to the tile that was clicked
+                        }
+                        // Second click
+                        else { // If the source tile is not null (a piece has been selected)
+                            destinationTile = chessBoard.getTile(tileId); // Set the destination tile to the tile that was clicked
+                            final Move move = Move.MoveFactory.createMove(chessBoard, sourceTile.getTileCoordinate(), destinationTile.getTileCoordinate()); // Create a move from the source tile to the destination tile
                             final MoveTransition transition = chessBoard.currentPlayer().makeMove(move); // Make the move
                             if (transition.getMoveStatus().isDone()) { // If the move was successful
-                                chessBoard = transition.getTransitionBoard(); // Set the board to the transition board
-                                moveLog.addMove(move);
+                                chessBoard = transition.getTransitionBoard(); // Set the chess board to the transition board
+                                moveLog.addMove(move); // Add the move to the move log
                             }
                             sourceTile = null; // Set the source tile to null
                             humanMovedPiece = null; // Set the human moved piece to null
-
-                            //Testing
-                            System.out.println("Second Tile Selected: Piece:" + chessBoard.getTile(tileId) + " Tile: " + tileId); // Print the piece and tile that was clicked
+                            destinationTile = null; // Set the destination tile to null
                         }
+
+                        //Testing
+                        System.out.println("Second Tile Selected: Piece:" + chessBoard.getTile(tileId) + " Tile: " + tileId); // Print the piece and tile that was clicked
                     }
                     // SwingUtilities.invokeLater() runs the code in the Runnable object on the main thread
                     invokeLater(() -> {
