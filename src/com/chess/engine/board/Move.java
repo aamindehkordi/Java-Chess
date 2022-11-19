@@ -303,19 +303,11 @@ public abstract class Move {
         @Override
         public Board execute() {
             final Builder builder = new Builder(); // Create a new builder
-            for (final Piece piece : this.board.currentPlayer().getActivePieces()) { // For each piece in the current player's active pieces
-                if (!this.movedPiece.equals(piece)) { // If the piece is not the moved piece
-                    builder.setPiece(piece); // Set the piece as the active piece in the builder
-                }
-            }
-            for (final Piece piece : this.board.currentPlayer().getOpponent().getActivePieces()) { // For each piece in the current player's opponent's active pieces
-                if (!piece.equals(this.getAttackedPiece())) { // If the piece is not the attacked piece
-                    builder.setPiece(piece); // Set the piece as the active piece in the builder
-                }
-            }
-            builder.setPiece(this.movedPiece.movePiece(this)); // Set the moved piece as the active piece in the builder
-            builder.setMoveMaker(this.board.currentPlayer().getOpponent().getAlliance()); // Set the move maker as the opponent's alliance
-            return builder.build(); // Return the board
+            this.board.currentPlayer().getActivePieces().stream().filter(piece -> !this.movedPiece.equals(piece)).forEach(builder::setPiece); // Add all the pieces to the builder except the moved piece
+            this.board.currentPlayer().getOpponent().getActivePieces().stream().filter(piece -> !piece.equals(this.getAttackedPiece())).forEach(builder::setPiece); // Add all the opponent's pieces to the builder except the attacked piece
+            builder.setPiece(this.movedPiece.movePiece(this)); // Move the piece
+            builder.setMoveMaker(this.board.currentPlayer().getOpponent().getAlliance()); // Set the move maker to the opponent
+            return builder.build(); // Build the board
         }
     }
 
