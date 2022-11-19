@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="idk what im doing">
-      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/TakenPiecesPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/TakenPiecesPanel.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="cleanup i think">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +69,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
     "last_opened_file_path": "/Users/ali/Library/CloudStorage/OneDrive-Personal/Desktop/Other/Coding/School/Object Oriented Programming/ChessOOP",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -147,14 +148,7 @@
       <workItem from="1667427093975" duration="600000" />
       <workItem from="1668054679652" duration="5516000" />
       <workItem from="1668209659403" duration="2261000" />
-      <workItem from="1668825021194" duration="2770000" />
-    </task>
-    <task id="LOCAL-00046" summary="Castling on White and Black Player">
-      <created>1666685839817</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1666685839817</updated>
+      <workItem from="1668825021194" duration="3515000" />
     </task>
     <task id="LOCAL-00047" summary="Finished with Castling and Cleanup">
       <created>1666686590157</created>
@@ -492,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668827281569</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="cleanup i think">
+      <created>1668828391054</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1668828391054</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +545,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Gave the rows and columns color in GUI" />
     <MESSAGE value="Gave the rows and columns color in GUI and added exit to menubar" />
     <MESSAGE value="added exit to menubar" />
     <MESSAGE value="Pieces on the checkerboard" />
@@ -569,7 +569,8 @@
     <MESSAGE value="x" />
     <MESSAGE value="En Passant is highlighted but not executed" />
     <MESSAGE value="idk what im doing" />
-    <option name="LAST_COMMIT_MESSAGE" value="idk what im doing" />
+    <MESSAGE value="cleanup i think" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup i think" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

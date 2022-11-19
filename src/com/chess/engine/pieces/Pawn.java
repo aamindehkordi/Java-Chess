@@ -99,7 +99,7 @@ public class Pawn extends Piece {
 
                 /* if there exist an en passant pawn, and its position is to the left of the current position */
                 if (board.getEnPassantPawn() != null && board.getEnPassantPawn().getPiecePosition() ==
-                        (this.piecePosition * (this.pieceAlliance.getOppositeDirection()))) {
+                        (this.piecePosition - (this.pieceAlliance.getOppositeDirection()))) {
                     final Piece pieceOnCandidate = board.getEnPassantPawn();
                     /* if the candidate piece is not the same alliance as the current piece add the move to the legals */
                     if (this.pieceAlliance != pieceOnCandidate.getPieceAlliance()) {
@@ -107,15 +107,15 @@ public class Pawn extends Piece {
                                 new PawnEnPassantAttackMove(board, this, candidateDestinationCoordinate, pieceOnCandidate));
 
                     }
-                    /* if the tile is occupied*/
-                    else if (board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
-                        /* get the piece on the tile */
-                        final Piece pieceAtDestination = board.getTile(candidateDestinationCoordinate).getPiece();
-                        /* if the piece is not the same color as the pawn*/
-                        if (this.pieceAlliance != pieceAtDestination.getPieceAlliance()) {
-                            //TODO Promotions
-                            legalMoves.add(new PawnAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination)); /* add the move to the list of legal moves */
-                        }
+                }
+                /* if the tile is occupied*/
+                else if (board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
+                    /* get the piece on the tile */
+                    final Piece pieceAtDestination = board.getTile(candidateDestinationCoordinate).getPiece();
+                    /* if the piece is not the same color as the pawn*/
+                    if (this.pieceAlliance != pieceAtDestination.getPieceAlliance()) {
+                        //TODO Promotions
+                        legalMoves.add(new PawnAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination)); /* add the move to the list of legal moves */
                     }
                 }
             }
@@ -126,7 +126,7 @@ public class Pawn extends Piece {
 
                 /* if there exist an en passant pawn, and its position is to the right of the current position */
                 if (board.getEnPassantPawn() != null && board.getEnPassantPawn().getPiecePosition() ==
-                        (this.piecePosition * (this.pieceAlliance.getOppositeDirection()))) {
+                        (this.piecePosition + (this.pieceAlliance.getOppositeDirection()))) {
                     final Piece pieceOnCandidate = board.getEnPassantPawn();
                     /* if the candidate piece is not the same alliance as the current piece add the move to the legals */
                     if (this.pieceAlliance != pieceOnCandidate.getPieceAlliance()) {
@@ -134,15 +134,15 @@ public class Pawn extends Piece {
                                 new PawnEnPassantAttackMove(board, this, candidateDestinationCoordinate, pieceOnCandidate));
 
                     }
-                    /* if the tile is occupied*/
-                    else if (board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
-                        /* get the piece on the tile */
-                        final Piece pieceAtDestination = board.getTile(candidateDestinationCoordinate).getPiece();
-                        /* if the piece is not the same color as the pawn*/
-                        if (this.pieceAlliance != pieceAtDestination.getPieceAlliance()) {
-                            //TODO Promotions
-                            legalMoves.add(new PawnAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination)); /* add the move to the list of legal moves */
-                        }
+                }
+                /* if the tile is occupied*/
+                else if (board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
+                    /* get the piece on the tile */
+                    final Piece pieceAtDestination = board.getTile(candidateDestinationCoordinate).getPiece();
+                    /* if the piece is not the same color as the pawn*/
+                    if (this.pieceAlliance != pieceAtDestination.getPieceAlliance()) {
+                        //TODO Promotions
+                        legalMoves.add(new PawnAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination)); /* add the move to the list of legal moves */
                     }
                 }
             }
