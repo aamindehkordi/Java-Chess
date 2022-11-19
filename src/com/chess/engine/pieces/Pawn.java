@@ -7,6 +7,7 @@ import com.chess.engine.board.Move;
 import com.chess.engine.board.Move.MajorMove;
 import com.chess.engine.board.Move.PawnAttackMove;
 import com.chess.engine.board.Move.PawnJump;
+import com.chess.engine.board.Move.PawnMove;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -73,7 +74,7 @@ public class Pawn extends Piece {
                 //TODO Promotions
 
                 /* add the move to the list of legal moves */
-                legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
+                legalMoves.add(new PawnMove(board, this, candidateDestinationCoordinate));
             }
             // Two moves forward
             else if (currentCandidateOffset == 16 && this.isFirstMove &&                                 /* if you are moving two tiles forward, and it is the first move AND */
@@ -93,8 +94,18 @@ public class Pawn extends Piece {
             else if (currentCandidateOffset == 7 &&                                                          /* if you are moving one tile diagonally to the left */
                     !((BoardUtils.EIGHTH_COLUMN[this.piecePosition] && this.pieceAlliance.isWhite() ||       /* and you are not on the eighth column, and you are white */
                     (BoardUtils.FIRST_COLUMN[this.piecePosition] && this.pieceAlliance.isBlack())))) {       /* or you are not on the first column, and you are black  (because of promotions)*/
+
+                // if there exists an en passant pawn
+                if(board.getEnPassantPawn() != null) {
+                    final Pawn pieceAtDestination = board.getEnPassantPawn();
+                    // if the pawn is on the tile to the right
+                    if(board.getEnPassantPawn().getPiecePosition() == (this.piecePosition + (this.pieceAlliance.getOppositeDirection()))) {
+                        final Move move = new PawnAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination);
+                        legalMoves.add(move);
+                    }
+                }
                 /* if the tile is occupied*/
-                if(board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
+                else if(board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
                     /* get the piece on the tile */
                     final Piece pieceAtDestination = board.getTile(candidateDestinationCoordinate).getPiece();
                     /* if the piece is not the same color as the pawn*/
@@ -108,8 +119,18 @@ public class Pawn extends Piece {
             else if(currentCandidateOffset == 9 &&                                                       /* if you are moving one tile diagonally to the right */
                   !((BoardUtils.FIRST_COLUMN[this.piecePosition] && this.pieceAlliance.isWhite() ||       /* and you are not on the first column, and you are white */
                    (BoardUtils.EIGHTH_COLUMN[this.piecePosition] && this.pieceAlliance.isBlack()) )) ) {  /* or you are not on the eighth column, and you are black  (because of promotions)*/
+
+                // if there exists an en passant pawn
+                if(board.getEnPassantPawn() != null) {
+                    final Pawn pieceAtDestination = board.getEnPassantPawn();
+                    // if the pawn is on the tile to the left
+                    if(board.getEnPassantPawn().getPiecePosition() == (this.piecePosition - (this.pieceAlliance.getOppositeDirection()))) {
+                        final Move move = new PawnAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination);
+                        legalMoves.add(move);
+                    }
+                }
                 /* if the tile is occupied*/
-                if(board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
+                else if(board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
                     final Piece pieceAtDestination = board.getTile(candidateDestinationCoordinate).getPiece(); /* get the piece on the tile */
                     /* if the piece is not the same color as the pawn,*/
                     if(this.pieceAlliance != pieceAtDestination.getPieceAlliance()) {

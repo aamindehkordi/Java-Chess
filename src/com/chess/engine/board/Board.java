@@ -19,6 +19,7 @@ public class Board {
     private final Collection<Piece> whitePieces; /* the white pieces */
     private final Collection<Piece> blackPieces; /* the black pieces */
     private final Player currentPlayer; /* the current player */
+    private final Pawn enPassantPawn; /* the pawn that can be captured en passant */
 
 
     /** Constructor
@@ -28,13 +29,14 @@ public class Board {
     private Board(final Builder builder) {
         this.gameBoard = createGameBoard(builder); /* create the game board */
         /* the white pieces */
-        whitePieces = calculateActivePieces(this.gameBoard, Alliance.WHITE); /* calculate the white pieces */
+        this.whitePieces = calculateActivePieces(this.gameBoard, Alliance.WHITE); /* calculate the white pieces */
         /* the black pieces */
-        blackPieces = calculateActivePieces(this.gameBoard, Alliance.BLACK); /* calculate the black pieces */
+        this.blackPieces = calculateActivePieces(this.gameBoard, Alliance.BLACK); /* calculate the black pieces */
 
         final Collection<Move> whiteStandardLegalMoves = calculateLegalMoves(whitePieces); /* calculate the white legal moves */
         final Collection<Move> blackStandardLegalMoves = calculateLegalMoves(blackPieces); /* calculate the black legal moves */
 
+        this.enPassantPawn = builder.enPassantPawn; /* the pawn that can be captured en passant */
         this.whitePlayer = new WhitePlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the white player */
         this.blackPlayer = new BlackPlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the black player */
         this.currentPlayer = builder.nextMoveMaker.choosePlayer(this.whitePlayer, this.blackPlayer); /* set the current player */
@@ -197,6 +199,10 @@ public class Board {
         allLegalMoves.addAll(this.whitePlayer.getLegalMoves()); /* add all the white player's legal moves */
         allLegalMoves.addAll(this.blackPlayer.getLegalMoves()); /* add all the black player's legal moves */
         return Collections.unmodifiableList(allLegalMoves); /* return the list of all legal moves */
+    }
+
+    public Pawn getEnPassantPawn() {
+        return this.enPassantPawn; /* return the en passant pawn */
     }
 
 

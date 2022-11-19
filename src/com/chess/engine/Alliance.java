@@ -71,4 +71,8 @@ public enum Alliance {
     public abstract boolean isBlack();
 
     public abstract Player choosePlayer(final WhitePlayer whitePlayer, final BlackPlayer blackPlayer);
+
+    public int getOppositeDirection() {
+        return -1 * this.getDirection();
+    }
 }

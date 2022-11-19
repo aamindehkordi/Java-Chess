@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="tying up loose ends + en passant pt1">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="x">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/Alliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/Alliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +39,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Ali" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,7 +49,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2GNfURlmVRV4tIlgu55bJVBpqHW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -145,13 +148,6 @@
       <workItem from="1667427093975" duration="600000" />
       <workItem from="1668054679652" duration="5516000" />
       <workItem from="1668209659403" duration="2261000" />
-    </task>
-    <task id="LOCAL-00042" summary="filled out a few subclasses in the move class and comments">
-      <created>1666683394977</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1666683394977</updated>
     </task>
     <task id="LOCAL-00043" summary="Attack Move and PawnJump complete">
       <created>1666684167953</created>
@@ -489,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668211589759</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="x">
+      <created>1668817943613</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1668817943614</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,6 +505,17 @@
           <value>
             <State>
               <option name="BEK_SORT_TYPE" value="1" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="En_Passant" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
             </State>
           </value>
         </entry>
@@ -530,7 +544,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added MenuBar to GUI" />
     <MESSAGE value="Added board and tile classes to GUI" />
     <MESSAGE value="Initialized all rows and columns" />
     <MESSAGE value="Gave the rows and columns color in GUI" />
@@ -555,7 +568,8 @@
     <MESSAGE value="Added movelog and fixed bugs" />
     <MESSAGE value="OMG a working game of chess (no en passant)" />
     <MESSAGE value="tying up loose ends + en passant pt1" />
-    <option name="LAST_COMMIT_MESSAGE" value="tying up loose ends + en passant pt1" />
+    <MESSAGE value="x" />
+    <option name="LAST_COMMIT_MESSAGE" value="x" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -584,12 +598,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Board.java</url>
-          <line>81</line>
+          <line>83</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Board.java</url>
-          <line>78</line>
+          <line>80</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
