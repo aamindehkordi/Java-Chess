@@ -105,7 +105,6 @@ public class Pawn extends Piece {
                     if (this.pieceAlliance != pieceOnCandidate.getPieceAlliance()) {
                         legalMoves.add(
                                 new PawnEnPassantAttackMove(board, this, candidateDestinationCoordinate, pieceOnCandidate));
-
                     }
                 }
                 /* if the tile is occupied*/

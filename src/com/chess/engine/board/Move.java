@@ -301,6 +301,11 @@ public abstract class Move {
         }
 
         @Override
+        public int hashCode() {
+            return super.hashCode() + this.attackedPiece.hashCode();
+        }
+
+        @Override
         public Board execute() {
             final Builder builder = new Builder(); // Create a new builder
             this.board.currentPlayer().getActivePieces().stream().filter(piece -> !this.movedPiece.equals(piece)).forEach(builder::setPiece); // Add all the pieces to the builder except the moved piece

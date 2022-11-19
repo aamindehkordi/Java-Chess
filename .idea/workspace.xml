@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="cleanup i think">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="cleanup">
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,14 +147,7 @@
       <workItem from="1667427093975" duration="600000" />
       <workItem from="1668054679652" duration="5516000" />
       <workItem from="1668209659403" duration="2261000" />
-      <workItem from="1668825021194" duration="3515000" />
-    </task>
-    <task id="LOCAL-00047" summary="Finished with Castling and Cleanup">
-      <created>1666686590157</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1666686590157</updated>
+      <workItem from="1668825021194" duration="3988000" />
     </task>
     <task id="LOCAL-00048" summary="Cleanup">
       <created>1666729060819</created>
@@ -493,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668828391054</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="cleanup">
+      <created>1668828954078</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1668828954078</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +557,6 @@
     <MESSAGE value="Created new Dead Pieces Panel that sorts by piece value" />
     <MESSAGE value="Bugs" />
     <MESSAGE value="Bug testing" />
-    <MESSAGE value="cleanup" />
     <MESSAGE value="merge nathan diagram" />
     <MESSAGE value="Did the diagram better than nathan" />
     <MESSAGE value="im back" />
@@ -570,7 +568,8 @@
     <MESSAGE value="En Passant is highlighted but not executed" />
     <MESSAGE value="idk what im doing" />
     <MESSAGE value="cleanup i think" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup i think" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
