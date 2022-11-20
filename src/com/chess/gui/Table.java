@@ -365,6 +365,9 @@ public class Table {
                         // Second click
                         else { // If the source tile is not null (a piece has been selected)
                             destinationTile = chessBoard.getTile(tileId); // Set the destination tile to the tile that was clicked
+                            if(tileId == 28 || tileId == 20){
+                                int x = 0;
+                            }
                             final Move move = Move.MoveFactory.createMove(chessBoard, sourceTile.getTileCoordinate(), destinationTile.getTileCoordinate()); // Create a move from the source tile to the destination tile
                             final MoveTransition transition = chessBoard.currentPlayer().makeMove(move); // Make the move
                             if (transition.getMoveStatus().isDone()) { // If the move was successful

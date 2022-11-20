@@ -28,6 +28,7 @@ public class Board {
     */
     private Board(final Builder builder) {
         this.gameBoard = createGameBoard(builder); /* create the game board */
+        this.enPassantPawn = builder.enPassantPawn; /* the pawn that can be captured en passant */
         /* the white pieces */
         this.whitePieces = calculateActivePieces(this.gameBoard, Alliance.WHITE); /* calculate the white pieces */
         /* the black pieces */
@@ -36,7 +37,6 @@ public class Board {
         final Collection<Move> whiteStandardLegalMoves = calculateLegalMoves(whitePieces); /* calculate the white legal moves */
         final Collection<Move> blackStandardLegalMoves = calculateLegalMoves(blackPieces); /* calculate the black legal moves */
 
-        this.enPassantPawn = builder.enPassantPawn; /* the pawn that can be captured en passant */
         this.whitePlayer = new WhitePlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the white player */
         this.blackPlayer = new BlackPlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the black player */
         this.currentPlayer = builder.nextMoveMaker.choosePlayer(this.whitePlayer, this.blackPlayer); /* set the current player */
