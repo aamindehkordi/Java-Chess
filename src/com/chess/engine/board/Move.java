@@ -86,6 +86,13 @@ public abstract class Move {
         return this.movedPiece;
     }
 
+    /** Get the current Board
+     * @return the current board
+     */
+    public  Board getBoard() {
+    	return this.board;
+    }
+
     /** Checks if the move is an attacking move
      *
      * @return true if the move is an attack, false otherwise
@@ -280,6 +287,89 @@ public abstract class Move {
         @Override
         public String toString() {
             return BoardUtils.getPositionAtCoordinate(this.movedPiece.getPiecePosition()).substring(0, 1) + "x" + BoardUtils.getPositionAtCoordinate(this.destinationCoordinate); // Return the piece type and the destination coordinate
+        }
+    }
+
+    public static class PawnPromotion extends Move {
+        final Move decoratedMove;
+        final Pawn promotedPawn;
+
+        /** Constructor
+         *
+         * @param decoratedMove the move that is being decorated
+         */
+        public PawnPromotion(final Move decoratedMove) {
+            super(decoratedMove.getBoard(), decoratedMove.getMovedPiece(), decoratedMove.getDestinationCoordinate());
+            this.decoratedMove = decoratedMove;
+            this.promotedPawn = (Pawn) decoratedMove.getMovedPiece();
+        }
+
+        @Override
+        public Board execute() {
+            /* Create a new board with the move executed */
+            final Board pawnMovedBoard = this.decoratedMove.execute();
+            /* Create a new board builder */
+            final Board.Builder builder = new Builder();
+            /* Loop through the current player's active pieces */
+            for (final Piece piece : pawnMovedBoard.currentPlayer().getActivePieces()) {
+                /* If the piece is not the promoted pawn */
+                if (!this.promotedPawn.equals(piece)) {
+                    /* Add the piece to the board builder */
+                    builder.setPiece(piece);
+                }
+            }
+            /* Loop through the current player's opponent's active pieces */
+            for (final Piece piece : pawnMovedBoard.currentPlayer().getOpponent().getActivePieces()) {
+                /* Add the piece to the board builder */
+                builder.setPiece(piece);
+            }
+            /* Add the promoted piece to the board builder */
+            builder.setPiece(this.promotedPawn.getPromotionPiece().movePiece(this));
+            /* Set the move maker */
+            builder.setMoveMaker(pawnMovedBoard.currentPlayer().getAlliance());
+            /* Return the new board */
+            return builder.build();
+        }
+
+        @Override
+        public boolean isAttack() {
+            return this.decoratedMove.isAttack();
+        }
+
+        @Override
+        public Piece getAttackedPiece() {
+            return this.decoratedMove.getAttackedPiece();
+        }
+
+        @Override
+        public int hashCode() {
+            return decoratedMove.hashCode() + (31 * this.promotedPawn.hashCode());
+        }
+
+        @Override
+        public boolean equals(final Object other) {
+            return this == other || other instanceof PawnPromotion && (super.equals(other));
+        }
+
+        @Override
+        public String toString() {
+            return "";
+        }
+
+        /** Returns the decorated move
+         *
+         * @return the decorated move
+         */
+        public Move getDecoratedMove() {
+            return this.decoratedMove;
+        }
+
+        /** Returns the pawn that is being promoted
+         *
+         * @return the pawn that is being promoted
+         */
+        public Pawn getPromotedPawn() {
+            return this.promotedPawn;
         }
     }
 

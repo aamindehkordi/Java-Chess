@@ -65,7 +65,8 @@ public class Pawn extends Piece {
 
         for (final int currentCandidateOffset : CANDIDATE_MOVE_COORDINATE) { /* for each of the possible moves*/
             /* add the offset to the current position to get the destination coordinate */
-            final int candidateDestinationCoordinate = this.piecePosition + (this.getPieceAlliance().getDirection() * currentCandidateOffset);
+            final int candidateDestinationCoordinate = this.piecePosition +
+                    (this.getPieceAlliance().getDirection() * currentCandidateOffset);
 
             // One move forward
             if (!BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)) {
@@ -74,16 +75,16 @@ public class Pawn extends Piece {
 
             /* if you are moving one tile forward and the tile is not occupied*/
             if (currentCandidateOffset == 8 && !board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
-                //TODO Promotions
-
-                /* add the move to the list of legal moves */
-                legalMoves.add(new PawnMove(board, this, candidateDestinationCoordinate));
+                if (this.pieceAlliance.isPawnPromotionSquare(candidateDestinationCoordinate)) {
+                    legalMoves.add(new PawnPromotion(new PawnMove(board, this, candidateDestinationCoordinate)));
+                } else {
+                    legalMoves.add(new PawnMove(board, this, candidateDestinationCoordinate));
+                }
             }
             // Two moves forward
             else if (currentCandidateOffset == 16 && this.isFirstMove &&                                 /* if you are moving two tiles forward, and it is the first move AND */
                     ((BoardUtils.SECOND_ROW[this.piecePosition] && this.getPieceAlliance().isBlack()) || /* if you are on the second row and your alliance is black or */
                             (BoardUtils.SEVENTH_ROW[this.piecePosition] && this.getPieceAlliance().isWhite()))) { /* if you are on the seventh row and your alliance is white */
-
                 /* between the current position and the destination position, there must be an empty tile */
                 final int behindCandidateDestinationCoordinate = this.piecePosition + (this.pieceAlliance.getDirection() * 8);
 
@@ -103,8 +104,9 @@ public class Pawn extends Piece {
                     final Piece pieceOnCandidate = board.getEnPassantPawn();
                     /* if the candidate piece is not the same alliance as the current piece add the move to the legals */
                     if (this.pieceAlliance != pieceOnCandidate.getPieceAlliance()) {
-                        legalMoves.add(
-                                new PawnEnPassantAttackMove(board, this, candidateDestinationCoordinate, pieceOnCandidate));
+                        legalMoves.add( /* add the move to the list of legal moves */
+                                new PawnEnPassantAttackMove(board, this,
+                                        candidateDestinationCoordinate, pieceOnCandidate));
                     }
                 }
                 /* if the tile is occupied*/
@@ -113,8 +115,13 @@ public class Pawn extends Piece {
                     final Piece pieceAtDestination = board.getTile(candidateDestinationCoordinate).getPiece();
                     /* if the piece is not the same color as the pawn*/
                     if (this.pieceAlliance != pieceAtDestination.getPieceAlliance()) {
-                        //TODO Promotions
-                        legalMoves.add(new PawnAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination)); /* add the move to the list of legal moves */
+                        if (this.pieceAlliance.isPawnPromotionSquare(candidateDestinationCoordinate)) {
+                            legalMoves.add(new PawnPromotion(new PawnAttackMove(board, this,
+                                    candidateDestinationCoordinate, pieceAtDestination)));
+                        } else {
+                            legalMoves.add(new PawnAttackMove(board, this,
+                                    candidateDestinationCoordinate, pieceAtDestination));
+                        }
                     }
                 }
             }
@@ -130,8 +137,8 @@ public class Pawn extends Piece {
                     /* if the candidate piece is not the same alliance as the current piece add the move to the legals */
                     if (this.pieceAlliance != pieceOnCandidate.getPieceAlliance()) {
                         legalMoves.add(
-                                new PawnEnPassantAttackMove(board, this, candidateDestinationCoordinate, pieceOnCandidate));
-
+                                new PawnEnPassantAttackMove(board, this,
+                                        candidateDestinationCoordinate, pieceOnCandidate));
                     }
                 }
                 /* if the tile is occupied*/
@@ -140,8 +147,13 @@ public class Pawn extends Piece {
                     final Piece pieceAtDestination = board.getTile(candidateDestinationCoordinate).getPiece();
                     /* if the piece is not the same color as the pawn*/
                     if (this.pieceAlliance != pieceAtDestination.getPieceAlliance()) {
-                        //TODO Promotions
-                        legalMoves.add(new PawnAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination)); /* add the move to the list of legal moves */
+                        if (this.pieceAlliance.isPawnPromotionSquare(candidateDestinationCoordinate)) {
+                            legalMoves.add(new PawnPromotion(new PawnAttackMove(board, this,
+                                    candidateDestinationCoordinate, pieceAtDestination)));
+                        } else {
+                            legalMoves.add(new PawnAttackMove(board, this,
+                                    candidateDestinationCoordinate, pieceAtDestination));
+                        }
                     }
                 }
             }
@@ -162,7 +174,9 @@ public class Pawn extends Piece {
         return new Pawn(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
     }
 
-
+    public Piece getPromotionPiece() {
+        return new Queen(this.piecePosition, this.pieceAlliance, false);
+    }
 }
 
 
