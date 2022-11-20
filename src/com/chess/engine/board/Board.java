@@ -205,6 +205,16 @@ public class Board {
         return this.enPassantPawn; /* return the en passant pawn */
     }
 
+    /** Gets all the pieces on the board
+     *
+     * @return all the pieces on the board
+     */
+    public Collection<Piece> getAllPieces() {
+        Collection<Piece> allPieces = new ArrayList<>(); /* the list of all pieces */
+        allPieces.addAll(this.whitePlayer.getActivePieces()); /* add all the white player's pieces */
+        allPieces.addAll(this.blackPlayer.getActivePieces()); /* add all the black player's pieces */
+        return Collections.unmodifiableCollection(allPieces); /* return the list of all pieces */
+    }
 
     /** ‘Builder’ class */
     public static class Builder {
