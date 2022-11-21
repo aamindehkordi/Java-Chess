@@ -323,8 +323,10 @@ public abstract class Move {
                 /* Add the piece to the board builder */
                 builder.setPiece(piece);
             }
+            /* Create the Promoted piece */
+            Piece queen = this.promotedPawn.getPromotionPiece();
             /* Add the promoted piece to the board builder */
-            builder.setPiece(this.promotedPawn.getPromotionPiece().movePiece(this));
+            builder.setPiece(queen.movePiece(this));
             /* Set the move maker */
             builder.setMoveMaker(pawnMovedBoard.currentPlayer().getAlliance());
             /* Return the new board */

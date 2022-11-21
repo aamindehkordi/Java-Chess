@@ -194,4 +194,8 @@ public abstract class Player {
      * @return a collection of legal moves
      */
     protected  abstract Collection<Move> calculateKingCastles(Collection<Move> playerLegals, Collection<Move> opponentLegals);
+
+    public abstract boolean isKingSideCastleCapable();
+
+    public abstract boolean isQueenSideCastleCapable();
 }
