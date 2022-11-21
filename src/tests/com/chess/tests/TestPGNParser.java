@@ -1,22 +1,8 @@
 package tests.com.chess.tests;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import java.util.List;
-
-import org.junit.Test;
-
-import com.chess.pgn.MySqlGamePersistence;
-import com.chess.pgn.PGNUtilities;
-import com.chess.pgn.ParsePGNException;
-import com.chess.engine.board.Board;
-import com.chess.engine.board.Move;
-import com.chess.engine.player.MoveTransition;
-import com.google.common.io.Resources;
-
 public class TestPGNParser {
 
+    /*
     @Test
     public void test1() throws IOException {
         doTest("com/chess/tests/pgn/t1.pgn");
@@ -123,4 +109,6 @@ public class TestPGNParser {
         final File testPGNFile = new File(url.getFile());
         PGNUtilities.persistPGNFile(testPGNFile);
     }
+
+     */
 }

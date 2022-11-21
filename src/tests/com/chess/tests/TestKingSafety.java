@@ -14,11 +14,11 @@ public class TestKingSafety {
     public void test1() {
         final Builder builder = new Builder();
         // Black Layout
-        builder.setPiece(new King(Alliance.BLACK, 4, false, false));
-        builder.setPiece(new Pawn(Alliance.BLACK, 12));
+        builder.setPiece(new King(4, Alliance.BLACK));
+        builder.setPiece(new Pawn(12, Alliance.BLACK));
         // White Layout
-        builder.setPiece(new Pawn(Alliance.WHITE, 52));
-        builder.setPiece(new King(Alliance.WHITE, 60, false, false));
+        builder.setPiece(new Pawn(52, Alliance.WHITE));
+        builder.setPiece(new King(60, Alliance.WHITE));
         builder.setMoveMaker(Alliance.WHITE);
         // Set the current player
         final Board board = builder.build();

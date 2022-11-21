@@ -1,19 +1,11 @@
 package tests.com.chess.tests;
 
-import com.chess.engine.board.Board;
-import com.chess.engine.player.ai.MiniMax;
-import com.chess.engine.player.ai.MoveStrategy;
-import com.chess.pgn.FenUtilities;
-import org.junit.Test;
-
-import static junit.framework.TestCase.assertEquals;
-
 /**
  * Created by amir.afghani on 6/4/17.
  * Tests from: https://chessprogramming.wikispaces.com/Perft+Results
  */
 public class TestEngine {
-
+    /*
     @Test
     public void kiwiPeteDepth1() {
         final Board board = FenUtilities.createGameFromFEN("r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1");
@@ -182,6 +174,8 @@ public class TestEngine {
         minMax.execute(board);
         assertEquals(minMax.getNumBoardsEvaluated(), 3894594L);
     }
+
+     */
 
 
 }

@@ -4,41 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Pawn promotion doesn't work but it should">
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/ChessTestSuite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestAlphaBeta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestFENParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestIterativeDeepening.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestKingSafety.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPGNParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPawnStructure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestRookStructure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestStaleMate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/pgn/queenPromotion.pgn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/pgn/smallerTest.pgn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/pgn/t1.pgn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/pgn/t10.pgn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/pgn/t2.pgn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/pgn/t3.pgn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/pgn/t4.pgn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/pgn/t5.pgn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/pgn/t6.pgn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/pgn/t7.pgn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/pgn/t8.pgn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/pgn/t9.pgn" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="The Beginnings of unit testers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChessOOP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChessOOP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/BlackPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/BlackPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestFENParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestFENParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestKingSafety.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestKingSafety.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPGNParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPGNParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPawnStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPawnStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestStaleMate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestStaleMate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +122,7 @@
       <recent name="com.tests.chess.engine.board" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestBoard">
+  <component name="RunManager" selected="JUnit.ChessTestSuite">
     <configuration name="com.chess.OOPChess" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -163,6 +139,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChessTestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChessOOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.com.chess.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.ChessTestSuite" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -199,6 +190,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ChessTestSuite" />
         <item itemvalue="JUnit.TestBoard" />
         <item itemvalue="JUnit.TestCheckmate" />
       </list>
@@ -235,13 +227,6 @@
       <workItem from="1668209659403" duration="2261000" />
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
-    </task>
-    <task id="LOCAL-00050" summary="Code now runs!">
-      <created>1666736999203</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1666736999204</updated>
     </task>
     <task id="LOCAL-00051" summary="Code now runs!">
       <created>1666737034809</created>
@@ -579,7 +564,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668941908446</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="The Beginnings of unit testers">
+      <created>1668944716649</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1668944716649</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added exit to menubar" />
     <MESSAGE value="Pieces on the checkerboard" />
     <MESSAGE value="improvements" />
     <MESSAGE value="Added a mouse listener to the GUI tile class" />
@@ -656,7 +647,8 @@
     <MESSAGE value="cleanup" />
     <MESSAGE value="En Passant is highlighted but not executed" />
     <MESSAGE value="Pawn promotion doesn't work but it should" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pawn promotion doesn't work but it should" />
+    <MESSAGE value="The Beginnings of unit testers" />
+    <option name="LAST_COMMIT_MESSAGE" value="The Beginnings of unit testers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,21 +1,8 @@
 package tests.com.chess.tests;
 
-import com.chess.engine.Alliance;
-import com.chess.engine.board.Board;
-import com.chess.engine.board.Board.Builder;
-import com.chess.engine.board.BoardUtils;
-import com.chess.engine.board.Move;
-import com.chess.engine.player.MoveTransition;
-import com.chess.engine.pieces.*;
-import com.chess.engine.player.ai.MiniMax;
-import com.chess.engine.player.ai.MoveStrategy;
-import com.chess.pgn.FenUtilities;
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
-
 public class TestMiniMax {
 
+    /*
     @Test
     public void testOpeningDepth1() {
         final Board board = Board.createStandardBoard();
@@ -235,5 +222,7 @@ public class TestMiniMax {
         final long numBoardsEvaluated = minMax.getNumBoardsEvaluated();
         assertEquals(numBoardsEvaluated, 191);
     }
+
+     */
 
 }

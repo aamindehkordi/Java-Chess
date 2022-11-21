@@ -1,19 +1,8 @@
 package tests.com.chess.tests;
 
-import com.chess.engine.Alliance;
-import com.chess.engine.board.Board;
-import com.chess.engine.board.Board.Builder;
-import com.chess.engine.pieces.King;
-import com.chess.engine.pieces.Pawn;
-import com.chess.engine.player.ai.PawnStructureAnalyzer;
-import com.chess.engine.player.ai.StandardBoardEvaluator;
-import com.chess.pgn.FenUtilities;
-import org.junit.Test;
-
-import static junit.framework.Assert.assertEquals;
-
 public class TestPawnStructure {
 
+    /*
     @Test
     public void testIsolatedPawnsOnStandardBoard() {
         final Board board = Board.createStandardBoard();
@@ -117,6 +106,8 @@ public class TestPawnStructure {
         assertEquals(PawnStructureAnalyzer.get().isolatedPawnPenalty(board.whitePlayer()), PawnStructureAnalyzer.ISOLATED_PAWN_PENALTY * 3);
         assertEquals(PawnStructureAnalyzer.get().isolatedPawnPenalty(board.blackPlayer()), PawnStructureAnalyzer.ISOLATED_PAWN_PENALTY * 3);
     }
+
+     */
 
 
 }
