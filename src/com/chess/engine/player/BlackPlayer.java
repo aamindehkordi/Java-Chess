@@ -10,6 +10,8 @@ import com.chess.engine.pieces.Rook;
 import java.util.*;
 
 public class BlackPlayer extends Player {
+    private Collection<Move> opponentLegals;
+
     /** Constructor
      *
      * @param board the board
@@ -18,6 +20,7 @@ public class BlackPlayer extends Player {
      */
     public BlackPlayer(final Board board, final Collection<Move> whiteStandardLegalMoves, final Collection<Move> blackStandardLegalMoves) {
         super(board, blackStandardLegalMoves, whiteStandardLegalMoves);
+        this.opponentLegals = whiteStandardLegalMoves;
     }
     @Override
     public Collection<Piece> getActivePieces() {
@@ -68,5 +71,21 @@ public class BlackPlayer extends Player {
             }
         }
         return Collections.unmodifiableList(new LinkedList<>(kingCastles)); /* Return the list of legal moves */
+    }
+
+    @Override
+    public boolean isKingSideCastleCapable() {
+        return this.playerKing.isFirstMove() && !this.isInCheck() && /* If the king has not moved and is not in check */
+                !this.board.getTile(5).isTileOccupied() && !this.board.getTile(6).isTileOccupied() && /* And if the tiles on the kingside are not occupied */
+                Player.calculateAttacksOnTile(5, this.opponentLegals).isEmpty() && /* If the tiles on the kingside are not attacked */
+                Player.calculateAttacksOnTile(6, this.opponentLegals).isEmpty(); /* If the tiles on the kingside are not attacked */
+    }
+
+    @Override
+    public boolean isQueenSideCastleCapable() {
+        return this.playerKing.isFirstMove() && !this.isInCheck() && /* If the king has not moved and is not in check */
+                !this.board.getTile(1).isTileOccupied() && !this.board.getTile(2).isTileOccupied() && !this.board.getTile(3).isTileOccupied() && /* And if the tiles on the queenside are not occupied */
+                Player.calculateAttacksOnTile(2, this.opponentLegals).isEmpty() && /* If the tiles on the queenside are not attacked */
+                Player.calculateAttacksOnTile(3, this.opponentLegals).isEmpty(); /* If the tiles on the queenside are not attacked */
     }
 }

@@ -13,6 +13,8 @@ import java.util.*;
 
 public class WhitePlayer extends Player {
 
+    private Collection<Move> opponentLegals;
+
     /** Constructor
      *
      * @param board the board
@@ -21,6 +23,7 @@ public class WhitePlayer extends Player {
      */
     public WhitePlayer(final Board board, final Collection<Move> whiteStandardLegalMoves, final Collection<Move> blackStandardLegalMoves) {
         super(board, whiteStandardLegalMoves, blackStandardLegalMoves);
+        this.opponentLegals = blackStandardLegalMoves;
     }
 
     @Override
@@ -74,5 +77,21 @@ public class WhitePlayer extends Player {
 
 
         return kingCastles;
+    }
+
+    @Override
+    public boolean isKingSideCastleCapable() {
+        return this.playerKing.isFirstMove() && !this.isInCheck() && /* If the king has not moved and is not in check */
+            !this.board.getTile(61).isTileOccupied() && !this.board.getTile(62).isTileOccupied() && /* And if the tiles on the kingside are not occupied */
+            Player.calculateAttacksOnTile(61, this.opponentLegals).isEmpty() && /* If the tiles on the kingside are not attacked */
+            Player.calculateAttacksOnTile(62, this.opponentLegals).isEmpty(); /* If the tiles on the kingside are not attacked */
+    }
+
+    @Override
+    public boolean isQueenSideCastleCapable() {
+        return this.playerKing.isFirstMove() && !this.isInCheck() && /* If the king has not moved and is not in check */
+            !this.board.getTile(59).isTileOccupied() && !this.board.getTile(58).isTileOccupied() && !this.board.getTile(57).isTileOccupied() && /* And if the tiles on the queenside not occupied */
+            Player.calculateAttacksOnTile(58, this.opponentLegals).isEmpty() && /* If the tiles on the queenside are not attacked */
+            Player.calculateAttacksOnTile(59, this.opponentLegals).isEmpty(); /* If the tiles on the queenside are not attacked */
     }
 }
