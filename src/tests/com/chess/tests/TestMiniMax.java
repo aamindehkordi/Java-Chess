@@ -1,8 +1,18 @@
 package tests.com.chess.tests;
 
+import com.chess.engine.Alliance;
+import com.chess.engine.board.Board;
+import com.chess.engine.board.Board.Builder;
+import com.chess.engine.pieces.*;
+import com.chess.engine.player.ai.MiniMax;
+import com.chess.engine.player.ai.MoveStrategy;
+import org.junit.jupiter.api.Test;
+
+import static junit.framework.TestCase.assertEquals;
+
 public class TestMiniMax {
 
-    /*
+
     @Test
     public void testOpeningDepth1() {
         final Board board = Board.createStandardBoard();
@@ -61,39 +71,39 @@ public class TestMiniMax {
     public void testKiwiPeteDepth1() {
         final Builder builder = new Builder();
         // Black Layout
-        builder.setPiece(new Rook(Alliance.BLACK, 0));
-        builder.setPiece(new King(Alliance.BLACK, 4, false, false));
-        builder.setPiece(new Rook(Alliance.BLACK, 7));
-        builder.setPiece(new Pawn(Alliance.BLACK, 8));
-        builder.setPiece(new Pawn(Alliance.BLACK, 10));
-        builder.setPiece(new Pawn(Alliance.BLACK, 11));
-        builder.setPiece(new Queen(Alliance.BLACK, 12));
-        builder.setPiece(new Pawn(Alliance.BLACK, 13));
-        builder.setPiece(new Bishop(Alliance.BLACK, 14));
-        builder.setPiece(new Bishop(Alliance.BLACK, 16));
-        builder.setPiece(new Knight(Alliance.BLACK, 17));
-        builder.setPiece(new Pawn(Alliance.BLACK, 20));
-        builder.setPiece(new Knight(Alliance.BLACK, 21));
-        builder.setPiece(new Pawn(Alliance.BLACK, 22));
-        builder.setPiece(new Pawn(Alliance.BLACK, 33));
-        builder.setPiece(new Pawn(Alliance.BLACK, 47));
+        builder.setPiece(new Rook(0, Alliance.BLACK));
+        builder.setPiece(new King(4, Alliance.BLACK, false));
+        builder.setPiece(new Rook(7, Alliance.BLACK));
+        builder.setPiece(new Pawn(8, Alliance.BLACK));
+        builder.setPiece(new Pawn(10, Alliance.BLACK));
+        builder.setPiece(new Pawn(11, Alliance.BLACK));
+        builder.setPiece(new Queen(12, Alliance.BLACK));
+        builder.setPiece(new Pawn(13, Alliance.BLACK));
+        builder.setPiece(new Bishop(14, Alliance.BLACK));
+        builder.setPiece(new Bishop(16, Alliance.BLACK));
+        builder.setPiece(new Knight(17, Alliance.BLACK));
+        builder.setPiece(new Pawn(20, Alliance.BLACK));
+        builder.setPiece(new Knight(21, Alliance.BLACK));
+        builder.setPiece(new Pawn(22, Alliance.BLACK));
+        builder.setPiece(new Pawn(33, Alliance.BLACK));
+        builder.setPiece(new Pawn(47, Alliance.BLACK));
         // White Layout
-        builder.setPiece(new Pawn(Alliance.WHITE, 27));
-        builder.setPiece(new Knight(Alliance.WHITE, 28));
-        builder.setPiece(new Pawn(Alliance.WHITE, 36));
-        builder.setPiece(new Knight(Alliance.WHITE, 42));
-        builder.setPiece(new Queen(Alliance.WHITE, 45));
-        builder.setPiece(new Pawn(Alliance.WHITE, 48));
-        builder.setPiece(new Pawn(Alliance.WHITE, 49));
-        builder.setPiece(new Pawn(Alliance.WHITE, 50));
-        builder.setPiece(new Bishop(Alliance.WHITE, 51));
-        builder.setPiece(new Bishop(Alliance.WHITE, 52));
-        builder.setPiece(new Pawn(Alliance.WHITE, 53));
-        builder.setPiece(new Pawn(Alliance.WHITE, 54));
-        builder.setPiece(new Pawn(Alliance.WHITE, 55));
-        builder.setPiece(new Rook(Alliance.WHITE, 56));
-        builder.setPiece(new King(Alliance.WHITE, 60, false, false));
-        builder.setPiece(new Rook(Alliance.WHITE, 63));
+        builder.setPiece(new Pawn(27, Alliance.WHITE));
+        builder.setPiece(new Knight(28, Alliance.WHITE));
+        builder.setPiece(new Pawn(36, Alliance.WHITE));
+        builder.setPiece(new Knight(42, Alliance.WHITE));
+        builder.setPiece(new Queen(45, Alliance.WHITE));
+        builder.setPiece(new Pawn(48, Alliance.WHITE));
+        builder.setPiece(new Pawn(49, Alliance.WHITE));
+        builder.setPiece(new Pawn(50, Alliance.WHITE));
+        builder.setPiece(new Bishop(51, Alliance.WHITE));
+        builder.setPiece(new Bishop(52, Alliance.WHITE));
+        builder.setPiece(new Pawn(53, Alliance.WHITE));
+        builder.setPiece(new Pawn(54, Alliance.WHITE));
+        builder.setPiece(new Pawn(55, Alliance.WHITE));
+        builder.setPiece(new Rook(56, Alliance.WHITE));
+        builder.setPiece(new King(60, Alliance.WHITE, false));
+        builder.setPiece(new Rook(63, Alliance.WHITE));
         // Set the current player
         builder.setMoveMaker(Alliance.WHITE);
         final Board board = builder.build();
@@ -107,48 +117,49 @@ public class TestMiniMax {
     public void testKiwiPeteDepth2() {
         final Builder builder = new Builder();
         // Black Layout
-        builder.setPiece(new Rook(Alliance.BLACK, 0));
-        builder.setPiece(new King(Alliance.BLACK, 4, false, false));
-        builder.setPiece(new Rook(Alliance.BLACK, 7));
-        builder.setPiece(new Pawn(Alliance.BLACK, 8));
-        builder.setPiece(new Pawn(Alliance.BLACK, 10));
-        builder.setPiece(new Pawn(Alliance.BLACK, 11));
-        builder.setPiece(new Queen(Alliance.BLACK, 12));
-        builder.setPiece(new Pawn(Alliance.BLACK, 13));
-        builder.setPiece(new Bishop(Alliance.BLACK, 14));
-        builder.setPiece(new Bishop(Alliance.BLACK, 16));
-        builder.setPiece(new Knight(Alliance.BLACK, 17));
-        builder.setPiece(new Pawn(Alliance.BLACK, 20));
-        builder.setPiece(new Knight(Alliance.BLACK, 21));
-        builder.setPiece(new Pawn(Alliance.BLACK, 22));
-        builder.setPiece(new Pawn(Alliance.BLACK, 33));
-        builder.setPiece(new Pawn(Alliance.BLACK, 47));
+        builder.setPiece(new Rook(0, Alliance.BLACK));
+        builder.setPiece(new King(4, Alliance.BLACK, false));
+        builder.setPiece(new Rook(7, Alliance.BLACK));
+        builder.setPiece(new Pawn(8, Alliance.BLACK));
+        builder.setPiece(new Pawn(10, Alliance.BLACK));
+        builder.setPiece(new Pawn(11, Alliance.BLACK));
+        builder.setPiece(new Queen(12, Alliance.BLACK));
+        builder.setPiece(new Pawn(13, Alliance.BLACK));
+        builder.setPiece(new Bishop(14, Alliance.BLACK));
+        builder.setPiece(new Bishop(16, Alliance.BLACK));
+        builder.setPiece(new Knight(17, Alliance.BLACK));
+        builder.setPiece(new Pawn(20, Alliance.BLACK));
+        builder.setPiece(new Knight(21, Alliance.BLACK));
+        builder.setPiece(new Pawn(22, Alliance.BLACK));
+        builder.setPiece(new Pawn(33, Alliance.BLACK));
+        builder.setPiece(new Pawn(47, Alliance.BLACK));
         // White Layout
-        builder.setPiece(new Pawn(Alliance.WHITE, 27));
-        builder.setPiece(new Knight(Alliance.WHITE, 28));
-        builder.setPiece(new Pawn(Alliance.WHITE, 36));
-        builder.setPiece(new Knight(Alliance.WHITE, 42));
-        builder.setPiece(new Queen(Alliance.WHITE, 45));
-        builder.setPiece(new Pawn(Alliance.WHITE, 48));
-        builder.setPiece(new Pawn(Alliance.WHITE, 49));
-        builder.setPiece(new Pawn(Alliance.WHITE, 50));
-        builder.setPiece(new Bishop(Alliance.WHITE, 51));
-        builder.setPiece(new Bishop(Alliance.WHITE, 52));
-        builder.setPiece(new Pawn(Alliance.WHITE, 53));
-        builder.setPiece(new Pawn(Alliance.WHITE, 54));
-        builder.setPiece(new Pawn(Alliance.WHITE, 55));
-        builder.setPiece(new Rook(Alliance.WHITE, 56));
-        builder.setPiece(new King(Alliance.WHITE, 60, false, false));
-        builder.setPiece(new Rook(Alliance.WHITE, 63));
+        builder.setPiece(new Pawn(27, Alliance.WHITE));
+        builder.setPiece(new Knight(28, Alliance.WHITE));
+        builder.setPiece(new Pawn(36, Alliance.WHITE));
+        builder.setPiece(new Knight(42, Alliance.WHITE));
+        builder.setPiece(new Queen(45, Alliance.WHITE));
+        builder.setPiece(new Pawn(48, Alliance.WHITE));
+        builder.setPiece(new Pawn(49, Alliance.WHITE));
+        builder.setPiece(new Pawn(50, Alliance.WHITE));
+        builder.setPiece(new Bishop(51, Alliance.WHITE));
+        builder.setPiece(new Bishop(52, Alliance.WHITE));
+        builder.setPiece(new Pawn(53, Alliance.WHITE));
+        builder.setPiece(new Pawn(54, Alliance.WHITE));
+        builder.setPiece(new Pawn(55, Alliance.WHITE));
+        builder.setPiece(new Rook(56, Alliance.WHITE));
+        builder.setPiece(new King(60, Alliance.WHITE, false));
+        builder.setPiece(new Rook(63, Alliance.WHITE));
         // Set the current player
         builder.setMoveMaker(Alliance.WHITE);
         final Board board = builder.build();
-        System.out.println(FenUtilities.createFENFromGame(board));
+        //System.out.println(FenUtilities.createFENFromGame(board));
         final MoveStrategy minMax = new MiniMax(2);
         minMax.execute(board);
         assertEquals(minMax.getNumBoardsEvaluated(), 1866L);
     }
 
+    /*
     @Test
     public void engineIntegrity1() {
         final Board board = FenUtilities.createGameFromFEN("8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - -\n");
@@ -174,22 +185,23 @@ public class TestMiniMax {
         final MoveStrategy minMax = new MiniMax(4);
         minMax.execute(board);
     }
+    */
 
     @Test
     public void testPosition3Depth1() {
         final Builder builder = new Builder();
         // Black Layout
-        builder.setPiece(new Pawn(Alliance.BLACK, 10));
-        builder.setPiece(new Pawn(Alliance.BLACK, 19));
-        builder.setPiece(new Rook(Alliance.BLACK, 31));
-        builder.setPiece(new Pawn(Alliance.BLACK, 37));
-        builder.setPiece(new King(Alliance.BLACK, 39, false, false));
+        builder.setPiece(new Pawn(10, Alliance.BLACK));
+        builder.setPiece(new Pawn(19, Alliance.BLACK));
+        builder.setPiece(new Rook(31, Alliance.BLACK));
+        builder.setPiece(new Pawn(37, Alliance.BLACK));
+        builder.setPiece(new King(39, Alliance.BLACK, false));
         // White Layout
-        builder.setPiece(new King(Alliance.WHITE, 24, false, false));
-        builder.setPiece(new Pawn(Alliance.WHITE, 25));
-        builder.setPiece(new Rook(Alliance.WHITE, 33));
-        builder.setPiece(new Pawn(Alliance.WHITE, 52));
-        builder.setPiece(new Pawn(Alliance.WHITE, 54));
+        builder.setPiece(new King(24, Alliance.WHITE, false));
+        builder.setPiece(new Pawn(25, Alliance.WHITE));
+        builder.setPiece(new Rook(33, Alliance.WHITE));
+        builder.setPiece(new Pawn(52, Alliance.WHITE));
+        builder.setPiece(new Pawn(54, Alliance.WHITE));
         // Set the current player
         builder.setMoveMaker(Alliance.WHITE);
         final Board board = builder.build();
@@ -203,17 +215,17 @@ public class TestMiniMax {
     public void testPosition3Depth2() {
         final Builder builder = new Builder();
         // Black Layout
-        builder.setPiece(new Pawn(Alliance.BLACK, 10));
-        builder.setPiece(new Pawn(Alliance.BLACK, 19));
-        builder.setPiece(new Rook(Alliance.BLACK, 31));
-        builder.setPiece(new Pawn(Alliance.BLACK, 37));
-        builder.setPiece(new King(Alliance.BLACK, 39, false, false));
+        builder.setPiece(new Pawn(10, Alliance.BLACK));
+        builder.setPiece(new Pawn(19, Alliance.BLACK));
+        builder.setPiece(new Rook(31, Alliance.BLACK));
+        builder.setPiece(new Pawn(37, Alliance.BLACK));
+        builder.setPiece(new King(39, Alliance.BLACK, false));
         // White Layout
-        builder.setPiece(new King(Alliance.WHITE, 24, false, false));
-        builder.setPiece(new Pawn(Alliance.WHITE, 25));
-        builder.setPiece(new Rook(Alliance.WHITE, 33));
-        builder.setPiece(new Pawn(Alliance.WHITE, 52));
-        builder.setPiece(new Pawn(Alliance.WHITE, 54));
+        builder.setPiece(new King(24, Alliance.WHITE, false));
+        builder.setPiece(new Pawn(25, Alliance.WHITE));
+        builder.setPiece(new Rook(33, Alliance.WHITE));
+        builder.setPiece(new Pawn(52, Alliance.WHITE));
+        builder.setPiece(new Pawn(54, Alliance.WHITE));
         // Set the current player
         builder.setMoveMaker(Alliance.WHITE);
         final Board board = builder.build();
@@ -223,6 +235,8 @@ public class TestMiniMax {
         assertEquals(numBoardsEvaluated, 191);
     }
 
-     */
+
+
+
 
 }

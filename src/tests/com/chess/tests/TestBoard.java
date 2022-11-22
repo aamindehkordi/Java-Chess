@@ -4,10 +4,17 @@ import com.chess.engine.Alliance;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.Board.Builder;
 import com.chess.engine.board.BoardUtils;
+import com.chess.engine.board.Move;
 import com.chess.engine.board.Move.MoveFactory;
 import com.chess.engine.pieces.*;
 import com.chess.engine.player.MoveTransition;
+import com.chess.engine.player.ai.BoardEvaluator;
+import com.chess.engine.player.ai.MiniMax;
+import com.chess.engine.player.ai.MoveStrategy;
+import com.chess.engine.player.ai.StandardBoardEvaluator;
 import org.junit.Test;
+
+import java.util.Optional;
 
 import static com.chess.engine.Alliance.BLACK;
 import static com.chess.engine.Alliance.WHITE;
@@ -78,7 +85,7 @@ public class TestBoard {
         assertFalse(board.currentPlayer().getOpponent().isInCheckMate());
         assertEquals(board.currentPlayer(), board.whitePlayer());
         assertEquals(board.currentPlayer().getOpponent(), board.blackPlayer());
-        /*
+
         BoardEvaluator evaluator = StandardBoardEvaluator.get();
         System.out.println(evaluator.evaluate(board, 0));
         assertEquals(StandardBoardEvaluator.get().evaluate(board, 0), 0);
@@ -94,10 +101,8 @@ public class TestBoard {
         assertEquals(moveTransition.getTransitionBoard().currentPlayer(), moveTransition.getTransitionBoard().blackPlayer());
 
         assertTrue(moveTransition.getMoveStatus().isDone());
-        assertEquals(moveTransition.getTransitionBoard().whitePlayer().getPlayerKing().getPiecePosition(), 61);
+        assertEquals(Optional.ofNullable(moveTransition.getTransitionBoard().whitePlayer().getPlayerKing().getPiecePosition()), 61);
         System.out.println(moveTransition.getTransitionBoard());
-                    
-         */
 
     }
 
@@ -264,6 +269,31 @@ public class TestBoard {
     }
 
     @Test
+    public void testFoolsMate() {
+        final Board board = Board.createStandardBoard();
+        final MoveTransition t1 = board.currentPlayer()
+                .makeMove(MoveFactory.createMove(board, BoardUtils.getCoordinateAtPosition("f2"),
+                        BoardUtils.getCoordinateAtPosition("f3")));
+        assertTrue(t1.getMoveStatus().isDone());
+        final MoveTransition t2 = t1.getTransitionBoard()
+                .currentPlayer()
+                .makeMove(MoveFactory.createMove(t1.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("e7"),
+                        BoardUtils.getCoordinateAtPosition("e5")));
+        assertTrue(t2.getMoveStatus().isDone());
+        final MoveTransition t3 = t2.getTransitionBoard()
+                .currentPlayer()
+                .makeMove(MoveFactory.createMove(t2.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("g2"),
+                        BoardUtils.getCoordinateAtPosition("g4")));
+        assertTrue(t3.getMoveStatus().isDone());
+        final MoveStrategy miniMax = new MiniMax(4);
+        final Move aiMove = miniMax.execute(t3.getTransitionBoard());
+        final Move bestMove = MoveFactory.createMove(t3.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("d8"),
+                BoardUtils.getCoordinateAtPosition("h4"));
+        assertEquals(aiMove, bestMove);
+
+    }
+
+    @Test
     public void mem() {
         final Runtime runtime = Runtime.getRuntime();
         long start, end;
@@ -284,6 +314,8 @@ public class TestBoard {
         }
         return count;
     }
+
+
 
 }
 

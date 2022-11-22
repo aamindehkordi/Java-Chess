@@ -29,4 +29,12 @@ public class MoveTransition {
     public Board getTransitionBoard() {
         return this.transitionBoard;
     }
+
+    public MoveTransition getTransitionMove() {
+        return this;
+    }
+
+    public int getFromBoard() {
+        return this.transitionBoard.getTile(this.move.getCurrentCoordinate()).getPiece().getPiecePosition();
+    }
 }

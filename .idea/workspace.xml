@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="min max recursive functions added">
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/StandardBoardEvaluator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/MoveTransition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/MoveTransition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MiniMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MiniMax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MoveStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MoveStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +31,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -92,6 +103,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.chess.engine.player.ai" />
       <recent name="com.chess.gui" />
       <recent name="com.chess.engine.board" />
       <recent name="com.chess.engine.player" />
@@ -114,7 +126,7 @@
       <recent name="com.tests.chess.engine.board" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestPieces.testPawnPromotion">
+  <component name="RunManager" selected="JUnit.TestBoard">
     <configuration name="com.chess.OOPChess" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -180,6 +192,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestMiniMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChessOOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.com.chess.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestMiniMax" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestPieces.testPawnPromotion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChessOOP" />
       <extension name="coverage">
@@ -198,9 +225,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestPieces.testPawnPromotion" />
-        <item itemvalue="JUnit.ChessTestSuite" />
         <item itemvalue="JUnit.TestBoard" />
+        <item itemvalue="JUnit.ChessTestSuite" />
+        <item itemvalue="JUnit.TestMiniMax" />
+        <item itemvalue="JUnit.TestPieces.testPawnPromotion" />
         <item itemvalue="JUnit.TestCheckmate" />
       </list>
     </recent_temporary>
@@ -685,34 +713,14 @@
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
-          <line>139</line>
-          <option name="timeStamp" value="104" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
-          <line>146</line>
-          <option name="timeStamp" value="108" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
-          <line>142</line>
-          <option name="timeStamp" value="109" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Move.java</url>
-          <line>420</line>
-          <option name="timeStamp" value="111" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Board.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="115" />
+          <line>254</line>
+          <option name="timeStamp" value="137" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="118" />
+          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/ai/MiniMax.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="138" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

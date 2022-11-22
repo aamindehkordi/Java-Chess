@@ -143,6 +143,10 @@ public abstract class Move {
         return this.movedPiece.getPiecePosition();
     }
 
+    public Move getMove() {
+        return this;
+    }
+
 
     /** The Major Move class */
     public static final class MajorMove extends Move {

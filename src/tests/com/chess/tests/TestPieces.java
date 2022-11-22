@@ -379,10 +379,10 @@ public class TestPieces {
         final Board.Builder builder = new Board.Builder();
         // Black Layout
         builder.setPiece(new Rook(3, Alliance.BLACK)); /* Rook on position 3 aka d8 */
-        builder.setPiece(new King(22, Alliance.BLACK)); /* King on position 22 aka g6 */
+        builder.setPiece(new King(22, Alliance.BLACK, false)); /* King on position 22 aka g6 */
         // White Layout
         builder.setPiece(new Pawn(15, Alliance.WHITE)); /* Pawn on position 15 aka h7 */
-        builder.setPiece(new King(52, Alliance.WHITE)); /* King on position 52 aka e2 */
+        builder.setPiece(new King(52, Alliance.WHITE, false)); /* King on position 52 aka e2 */
         // Set the current player
         builder.setMoveMaker(Alliance.WHITE);
         final Board board = builder.build();

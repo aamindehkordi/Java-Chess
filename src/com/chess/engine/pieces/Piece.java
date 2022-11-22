@@ -118,4 +118,7 @@ public abstract class Piece {
         return this.pieceType;
     }
 
+    public int getPieceValue() {
+        return this.pieceType.getPieceValue();
+    }
 }

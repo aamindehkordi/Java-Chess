@@ -156,7 +156,7 @@ public abstract class Player {
      *
      * @return the player's king
      */
-    private Piece getPlayerKing() {
+    public Piece getPlayerKing() {
         return this.playerKing;
     }
 
