@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="min max recursive functions added">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="PROMOTION WORKS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/Alliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/Alliance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,13 +238,6 @@
       <workItem from="1668209659403" duration="2261000" />
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
-    </task>
-    <task id="LOCAL-00056" summary="Created GUI package and Table class">
-      <created>1666822013432</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1666822013432</updated>
     </task>
     <task id="LOCAL-00057" summary="cleanup">
       <created>1666822043713</created>
@@ -583,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669098247061</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="PROMOTION WORKS">
+      <created>1669107032593</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1669107032593</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -635,7 +634,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="legal moves ~should~ be highlighting" />
     <MESSAGE value="comments" />
     <MESSAGE value="pieces move and are actually highlighted now" />
     <MESSAGE value="fixing bugs" />
@@ -660,7 +658,8 @@
     <MESSAGE value="..." />
     <MESSAGE value="Scaffolding for MiniMax and evaluations" />
     <MESSAGE value="min max recursive functions added" />
-    <option name="LAST_COMMIT_MESSAGE" value="min max recursive functions added" />
+    <MESSAGE value="PROMOTION WORKS" />
+    <option name="LAST_COMMIT_MESSAGE" value="PROMOTION WORKS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

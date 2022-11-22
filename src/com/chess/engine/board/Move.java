@@ -355,8 +355,21 @@ public abstract class Move {
 
         @Override
         public String toString() {
+            return movedPiece.getPieceType() + disambiguationFile() + "x" +
+                    BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
+        }
+
+        private String disambiguationFile() {
+            for (final Move move : this.board.currentPlayer().getLegalMoves()) {
+                if (move.getDestinationCoordinate() == this.destinationCoordinate &&
+                        !this.movedPiece.equals(move.getMovedPiece()) &&
+                        this.movedPiece.getPieceType().equals(move.getMovedPiece().getPieceType())) {
+                    return BoardUtils.getPositionAtCoordinate(this.movedPiece.getPiecePosition()).substring(0, 1);
+                }
+            }
             return "";
         }
+
 
         /** Returns the decorated move
          *
