@@ -76,7 +76,8 @@ public class Pawn extends Piece {
             /* if you are moving one tile forward and the tile is not occupied*/
             if (currentCandidateOffset == 8 && !board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
                 if (this.pieceAlliance.isPawnPromotionSquare(candidateDestinationCoordinate)) {
-                    legalMoves.add(new PawnPromotion(new PawnMove(board, this, candidateDestinationCoordinate)));
+                    legalMoves.add(new PawnPromotion(
+                            new PawnMove(board, this, candidateDestinationCoordinate)));
                 } else {
                     legalMoves.add(new PawnMove(board, this, candidateDestinationCoordinate));
                 }
