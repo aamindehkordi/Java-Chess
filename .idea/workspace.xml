@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="...">
-      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/BoardEvaluator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MiniMax.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MoveStrategy.java" afterDir="false" />
-    </list>
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Scaffolding for MiniMax and evaluations" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -238,13 +234,6 @@
       <workItem from="1668209659403" duration="2261000" />
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
-    </task>
-    <task id="LOCAL-00054" summary="Cleanup">
-      <created>1666821966349</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1666821966349</updated>
     </task>
     <task id="LOCAL-00055" summary="Moved main class to main package">
       <created>1666821990204</created>
@@ -582,7 +571,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669069849355</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="Scaffolding for MiniMax and evaluations">
+      <created>1669070272517</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1669070272517</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -634,7 +630,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added a mouse listener to the GUI tile class" />
     <MESSAGE value="Pieces ~should~ be able to move on the gui" />
     <MESSAGE value="legal moves ~should~ be highlighting" />
     <MESSAGE value="comments" />
@@ -659,7 +654,8 @@
     <MESSAGE value="The Beginnings of unit testers" />
     <MESSAGE value="Testers brought over from BlackWidow and fitted to current project - all tests failed :/" />
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="Scaffolding for MiniMax and evaluations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scaffolding for MiniMax and evaluations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
