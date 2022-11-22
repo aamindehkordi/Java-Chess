@@ -20,7 +20,45 @@ public class MiniMax implements MoveStrategy{
 
     @Override
     public Move execute(Board board, int depth) {
-        return null;
+        final long startTime = System.currentTimeMillis(); //Start to measure the time it takes to execute the algorithm
+
+        Move bestMove = null; //The best move to be returned
+
+        int highestSeenValue = Integer.MIN_VALUE; //The highest value seen so far
+        int lowestSeenValue = Integer.MAX_VALUE; //The lowest value seen so far
+
+        int currentValue; //The current value of the move being evaluated
+
+        int numMoves = board.currentPlayer().getLegalMoves().size(); //The number of legal moves
+
+        int moveCounter = 1; //The number of moves evaluated so far
+
+        System.out.println(board.currentPlayer() + " THINKING with depth = " + depth);
+
+        for(final Move move : board.currentPlayer().getLegalMoves()) { //For each legal move
+            final MoveTransition moveTransition = board.currentPlayer().makeMove(move); //Make the move
+            if(moveTransition.getMoveStatus().isDone()) { //If the move is legal
+                currentValue = board.currentPlayer().getAlliance().isWhite() ? //If the current player is white
+                        min(moveTransition.getTransitionBoard(), depth - 1) : //Call min
+                        max(moveTransition.getTransitionBoard(), depth - 1); // Else if the player is black, Call max
+                if(board.currentPlayer().getAlliance().isWhite() && currentValue >= highestSeenValue) { //If the current player is white AND the current value is greater than the highest value seen so far
+                    highestSeenValue = currentValue; //Set the highest value seen so far to the current value
+                    bestMove = move; //Set the best move to the current move
+                } else if(board.currentPlayer().getAlliance().isBlack() && currentValue <= lowestSeenValue) { //If the current player is black AND the current value is less than the lowest value seen so far
+                    lowestSeenValue = currentValue; //Set the lowest value seen so far to the current value
+                    bestMove = move; //Set the best move to the current move
+                }
+            }
+            System.out.println("Move " + moveCounter + " of " + numMoves + " evaluated.");
+            moveCounter++; //Increment the number of moves evaluated so far
+        }
+
+        final long executionTime = System.currentTimeMillis() - startTime; //Stop measuring the time it takes to execute the algorithm
+
+        return bestMove; //Return the best move
+
+
+
     }
 
     /**
@@ -43,6 +81,7 @@ public class MiniMax implements MoveStrategy{
         for( final Move move : board.currentPlayer().getLegalMoves()) { // for each legal move
             final MoveTransition moveTransition = board.currentPlayer().makeMove(move); // make the move
             if(moveTransition.getMoveStatus().isDone()) { // if the move is done
+                // recursively call max on the new board
                 final int currentValue = max(moveTransition.getTransitionBoard(), depth - 1); // get the max value of the board after the move
                 if(currentValue <= lowestSeenValue) { // if the current value is less than the lowest seen value
                     lowestSeenValue = currentValue; // set the lowest seen value to the current value
@@ -71,6 +110,7 @@ public class MiniMax implements MoveStrategy{
         for( final Move move : board.currentPlayer().getLegalMoves()) { // for each legal move
             final MoveTransition moveTransition = board.currentPlayer().makeMove(move); // make the move
             if(moveTransition.getMoveStatus().isDone()) { // if the move is done
+                // recursively call min on the new board
                 final int currentValue = min(moveTransition.getTransitionBoard(), depth - 1); // get the min value of the board after the move
                 if(currentValue >= highestSeenValue) { // if the current value is greater than the highest seen value
                     highestSeenValue = currentValue; // set the highest seen value to the current value
