@@ -75,16 +75,16 @@ public class Pawn extends Piece {
 
             /* if you are moving one tile forward and the tile is not occupied*/
             if (currentCandidateOffset == 8 && !board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
-                if (this.pieceAlliance.isPawnPromotionSquare(candidateDestinationCoordinate)) {
-                    legalMoves.add(new PawnPromotion(
+                if (this.pieceAlliance.isPawnPromotionSquare(candidateDestinationCoordinate)) { /* if the pawn is on the promotion square */
+                    legalMoves.add(new PawnPromotion( /* add a pawn promotion move */
                             new PawnMove(board, this, candidateDestinationCoordinate)));
-                } else {
+                } else { /* otherwise, add a normal move */
                     legalMoves.add(new PawnMove(board, this, candidateDestinationCoordinate));
                 }
             }
             // Two moves forward
             else if (currentCandidateOffset == 16 && this.isFirstMove &&                                 /* if you are moving two tiles forward, and it is the first move AND */
-                    ((BoardUtils.SECOND_ROW[this.piecePosition] && this.getPieceAlliance().isBlack()) || /* if you are on the second row and your alliance is black or */
+                    ((BoardUtils.SECOND_ROW[this.piecePosition] && this.getPieceAlliance().isBlack()) || /* if you are on the second row and your alliance is black OR */
                             (BoardUtils.SEVENTH_ROW[this.piecePosition] && this.getPieceAlliance().isWhite()))) { /* if you are on the seventh row and your alliance is white */
                 /* between the current position and the destination position, there must be an empty tile */
                 final int behindCandidateDestinationCoordinate = this.piecePosition + (this.pieceAlliance.getDirection() * 8);
@@ -116,10 +116,11 @@ public class Pawn extends Piece {
                     final Piece pieceAtDestination = board.getTile(candidateDestinationCoordinate).getPiece();
                     /* if the piece is not the same color as the pawn*/
                     if (this.pieceAlliance != pieceAtDestination.getPieceAlliance()) {
+                        /* if the pawn is on the promotion square */
                         if (this.pieceAlliance.isPawnPromotionSquare(candidateDestinationCoordinate)) {
                             legalMoves.add(new PawnPromotion(new PawnAttackMove(board, this,
-                                    candidateDestinationCoordinate, pieceAtDestination)));
-                        } else {
+                                    candidateDestinationCoordinate, pieceAtDestination))); /* add a pawn promotion move */
+                        } else { /* otherwise, add a normal move */
                             legalMoves.add(new PawnAttackMove(board, this,
                                     candidateDestinationCoordinate, pieceAtDestination));
                         }
@@ -137,7 +138,7 @@ public class Pawn extends Piece {
                     final Piece pieceOnCandidate = board.getEnPassantPawn();
                     /* if the candidate piece is not the same alliance as the current piece add the move to the legals */
                     if (this.pieceAlliance != pieceOnCandidate.getPieceAlliance()) {
-                        legalMoves.add(
+                        legalMoves.add( /* add the en passant move to the list of legal moves */
                                 new PawnEnPassantAttackMove(board, this,
                                         candidateDestinationCoordinate, pieceOnCandidate));
                     }
@@ -148,10 +149,11 @@ public class Pawn extends Piece {
                     final Piece pieceAtDestination = board.getTile(candidateDestinationCoordinate).getPiece();
                     /* if the piece is not the same color as the pawn*/
                     if (this.pieceAlliance != pieceAtDestination.getPieceAlliance()) {
+                        /* if the pawn is on the promotion square */
                         if (this.pieceAlliance.isPawnPromotionSquare(candidateDestinationCoordinate)) {
                             legalMoves.add(new PawnPromotion(new PawnAttackMove(board, this,
-                                    candidateDestinationCoordinate, pieceAtDestination)));
-                        } else {
+                                    candidateDestinationCoordinate, pieceAtDestination))); /* add a pawn promotion move */
+                        } else { /* otherwise, add a normal move */
                             legalMoves.add(new PawnAttackMove(board, this,
                                     candidateDestinationCoordinate, pieceAtDestination));
                         }
