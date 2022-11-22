@@ -7,12 +7,13 @@ import com.chess.engine.pieces.Rook;
 
 public abstract class Move {
 
-    /** The board */
+    /* The board */
     protected final Board board;
-    /** The piece being moved */
+    /* The piece being moved */
     protected final Piece movedPiece;
-    /** The destination coordinate */
+    /* The destination coordinate */
     protected final int destinationCoordinate;
+    /* Is this a first move? */
     protected final boolean isFirstMove;
 
 
@@ -256,8 +257,7 @@ public abstract class Move {
         public boolean equals(final Object other) {
             return this == other || other instanceof PawnMove && super.equals(other); // True if the moves are the same
                                                                                       // or if the other move is a pawn
-                                                                                      // move and the moves are equal
-        }
+        }                                                                             // move and the moves are equal
 
         @Override
         public String toString() {
@@ -286,7 +286,8 @@ public abstract class Move {
 
         @Override
         public String toString() {
-            return BoardUtils.getPositionAtCoordinate(this.movedPiece.getPiecePosition()).substring(0, 1) + "x" + BoardUtils.getPositionAtCoordinate(this.destinationCoordinate); // Return the piece type and the destination coordinate
+            return BoardUtils.getPositionAtCoordinate(this.movedPiece.getPiecePosition()).substring(0, 1)
+                    + "x" + BoardUtils.getPositionAtCoordinate(this.destinationCoordinate); // Return the piece type and the destination coordinate
         }
     }
 
@@ -355,8 +356,27 @@ public abstract class Move {
 
         @Override
         public String toString() {
+            return movedPiece.getPieceType() + disambiguationFile() + "x" +
+                    BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
+        }
+
+        /** Get the disambiguation file
+         *
+         * Disambiguation is used to distinguish between two pieces of the same type that can move to the same square
+         *
+         * @return the disambiguation file or an empty string if there is no disambiguation
+         */
+        private String disambiguationFile() {
+            for (final Move move : this.board.currentPlayer().getLegalMoves()) { // Loop through the current player's legal moves
+                if (move.getDestinationCoordinate() == this.destinationCoordinate && // If the move's destination coordinate is the same as this move's destination coordinate
+                        !this.movedPiece.equals(move.getMovedPiece()) && // and the move's moved piece is not the same as this move's moved piece
+                        this.movedPiece.getPieceType().equals(move.getMovedPiece().getPieceType())) { // and the move's moved piece type is the same as this move's moved piece type
+                    return BoardUtils.getPositionAtCoordinate(this.movedPiece.getPiecePosition()).substring(0, 1); // Return the file of the moved piece
+                }
+            }
             return "";
         }
+
 
         /** Returns the decorated move
          *
