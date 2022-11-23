@@ -4,18 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="min max recursive functions added">
-      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/StandardBoardEvaluator.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="im tired im sorry future me">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_22_22__1_09_AM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/BoardUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/BoardUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/MoveTransition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/MoveTransition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/BlackPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/BlackPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MiniMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MiniMax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MoveStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MoveStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +126,7 @@
       <recent name="com.tests.chess.engine.board" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestBoard">
+  <component name="RunManager" selected="JUnit.TestMiniMax">
     <configuration name="com.chess.OOPChess" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -177,7 +177,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCheckmate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestBoard.testAlgebreicNotation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChessOOP" />
       <extension name="coverage">
         <pattern>
@@ -186,8 +186,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestCheckmate" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestBoard" />
+      <option name="METHOD_NAME" value="testAlgebreicNotation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBoard.testFoolsMate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChessOOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.com.chess.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestBoard" />
+      <option name="METHOD_NAME" value="testFoolsMate" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -207,29 +224,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPieces.testPawnPromotion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ChessOOP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.com.chess.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestPieces" />
-      <option name="METHOD_NAME" value="testPawnPromotion" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestBoard" />
-        <item itemvalue="JUnit.ChessTestSuite" />
         <item itemvalue="JUnit.TestMiniMax" />
-        <item itemvalue="JUnit.TestPieces.testPawnPromotion" />
-        <item itemvalue="JUnit.TestCheckmate" />
+        <item itemvalue="JUnit.ChessTestSuite" />
+        <item itemvalue="JUnit.TestBoard.testFoolsMate" />
+        <item itemvalue="JUnit.TestBoard.testAlgebreicNotation" />
+        <item itemvalue="JUnit.TestBoard" />
       </list>
     </recent_temporary>
   </component>
@@ -264,13 +265,7 @@
       <workItem from="1668209659403" duration="2261000" />
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
-    </task>
-    <task id="LOCAL-00056" summary="Created GUI package and Table class">
-      <created>1666822013432</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1666822013432</updated>
+      <workItem from="1669163536639" duration="6236000" />
     </task>
     <task id="LOCAL-00057" summary="cleanup">
       <created>1666822043713</created>
@@ -608,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669098247061</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="im tired im sorry future me">
+      <created>1669113139957</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1669113139957</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -660,7 +662,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="legal moves ~should~ be highlighting" />
     <MESSAGE value="comments" />
     <MESSAGE value="pieces move and are actually highlighted now" />
     <MESSAGE value="fixing bugs" />
@@ -685,7 +686,8 @@
     <MESSAGE value="..." />
     <MESSAGE value="Scaffolding for MiniMax and evaluations" />
     <MESSAGE value="min max recursive functions added" />
-    <option name="LAST_COMMIT_MESSAGE" value="min max recursive functions added" />
+    <MESSAGE value="im tired im sorry future me" />
+    <option name="LAST_COMMIT_MESSAGE" value="im tired im sorry future me" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -713,14 +715,14 @@
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Board.java</url>
-          <line>254</line>
-          <option name="timeStamp" value="137" />
+          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/ai/MiniMax.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="138" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/ai/MiniMax.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="138" />
+          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="149" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
