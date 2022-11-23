@@ -156,7 +156,7 @@ public abstract class Player {
      *
      * @return the player's king
      */
-    public Piece getPlayerKing() {
+    public King getPlayerKing() {
         return this.playerKing;
     }
 
@@ -195,7 +195,11 @@ public abstract class Player {
      */
     protected  abstract Collection<Move> calculateKingCastles(Collection<Move> playerLegals, Collection<Move> opponentLegals);
 
-    public abstract boolean isKingSideCastleCapable();
-
-    public abstract boolean isQueenSideCastleCapable();
+    /** Check if the player has castle opportunities
+     *
+     * @return true if the player can castle on the king or queen side
+     */
+    protected boolean hasCastleOpportunities() {
+        return !this.isInCheck && !this.isCastled();
+    }
 }

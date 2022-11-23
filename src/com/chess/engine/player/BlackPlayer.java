@@ -44,48 +44,45 @@ public class BlackPlayer extends Player {
      */
     @Override
     protected Collection<Move> calculateKingCastles(final Collection<Move> playerLegals, final Collection<Move> opponentLegals) {
-        final List<Move> kingCastles = new ArrayList<>(); /* List of legal moves */
 
-        // KING SIDE CASTLE
-        if (this.playerKing.isFirstMove() && !this.isInCheck() && /* If the king has not moved and is not in check */
-            !this.board.getTile(5).isTileOccupied() && !this.board.getTile(6).isTileOccupied()) { /* And if the tiles on the kingside are not occupied */
-            final Tile rookTile = this.board.getTile(7); /* Get the tile of the rook */
-            if (rookTile.isTileOccupied() && rookTile.getPiece().isFirstMove()) { /* If the rook has not moved */
-                if (Player.calculateAttacksOnTile(5, opponentLegals).isEmpty() && /* If the tiles on the kingside are not attacked */
-                    Player.calculateAttacksOnTile(6, opponentLegals).isEmpty() && /* If the tiles on the kingside are not attacked */
-                    rookTile.getPiece().getPieceType().isRook()) { /* If the piece on the tile is a rook */
-                    kingCastles.add(new Move.KingSideCastleMove(this.board, this.playerKing, 6, (Rook) rookTile.getPiece(), rookTile.getTileCoordinate(), 5)); /* Add the move to the list of legal moves */
+        // If the king has no castle opportunities
+        if (!hasCastleOpportunities()) {
+            return Collections.emptyList();
+        }
+
+        final List<Move> kingCastles = new ArrayList<>(); // List of legal moves
+
+        //White Castling requirements
+        if (this.playerKing.isFirstMove() && this.playerKing.getPiecePosition() == 60 && !this.isInCheck()) {
+            //WHITE KING SIDE CASTLE
+            // If the tiles on the kingside are not occupied
+            if (!this.board.getTile(61).isTileOccupied() && !this.board.getTile(62).isTileOccupied()) {
+                final Tile rookTile = this.board.getTile(63);
+                // If the rook is on the tile and its first move
+                if (rookTile.isTileOccupied() && rookTile.getPiece().isFirstMove()) {
+                    // If the king is not in check
+                    if (Player.calculateAttacksOnTile(61, opponentLegals).isEmpty() &&
+                            Player.calculateAttacksOnTile(62, opponentLegals).isEmpty() &&
+                            rookTile.getPiece().getPieceType().isRook()) {
+                        kingCastles.add(new Move.KingSideCastleMove(this.board, this.playerKing, 62, (Rook) rookTile.getPiece(), rookTile.getTileCoordinate(), 61));
+                    }
+                }
+            }
+            //WHITE QUEEN SIDE CASTLE
+            // If the tiles on the queenside are not occupied
+            if (!this.board.getTile(59).isTileOccupied() && !this.board.getTile(58).isTileOccupied() && !this.board.getTile(57).isTileOccupied()) {
+                final Tile rookTile = this.board.getTile(56);
+                // If the rook is on the tile and it is the first move
+                if (rookTile.isTileOccupied() && rookTile.getPiece().isFirstMove()) {
+                    // If the king is not in check
+                    if (Player.calculateAttacksOnTile(58, opponentLegals).isEmpty() &&
+                            Player.calculateAttacksOnTile(59, opponentLegals).isEmpty() &&
+                            rookTile.getPiece().getPieceType().isRook()) {
+                        kingCastles.add(new Move.QueenSideCastleMove(this.board, this.playerKing, 58, (Rook) rookTile.getPiece(), rookTile.getTileCoordinate(), 59));
+                    }
                 }
             }
         }
-        // QUEEN SIDE CASTLE
-        if (this.playerKing.isFirstMove() && !this.isInCheck() && /* If the king has not moved and is not in check */
-            !this.board.getTile(1).isTileOccupied() && !this.board.getTile(2).isTileOccupied() && !this.board.getTile(3).isTileOccupied()) { /* And if the tiles on the queenside are not occupied */
-            final Tile rookTile = this.board.getTile(0); /* Get the tile on the queenside */
-            if (rookTile.isTileOccupied() && rookTile.getPiece().isFirstMove()) { /* If the rook has not moved */
-                if (Player.calculateAttacksOnTile(2, opponentLegals).isEmpty() && /* If the tiles on the queenside are not attacked */
-                    Player.calculateAttacksOnTile(3, opponentLegals).isEmpty() && /* If the tiles on the queenside are not attacked */
-                    rookTile.getPiece().getPieceType().isRook()) { /* If the piece on the tile is a rook */
-                    kingCastles.add(new Move.QueenSideCastleMove(this.board, this.playerKing, 2, (Rook) rookTile.getPiece(), rookTile.getTileCoordinate(), 3)); /* Add the move to the list of legal moves */
-                }
-            }
-        }
-        return Collections.unmodifiableList(new LinkedList<>(kingCastles)); /* Return the list of legal moves */
-    }
-
-    @Override
-    public boolean isKingSideCastleCapable() {
-        return this.playerKing.isFirstMove() && !this.isInCheck() && /* If the king has not moved and is not in check */
-                !this.board.getTile(5).isTileOccupied() && !this.board.getTile(6).isTileOccupied() && /* And if the tiles on the kingside are not occupied */
-                Player.calculateAttacksOnTile(5, this.opponentLegals).isEmpty() && /* If the tiles on the kingside are not attacked */
-                Player.calculateAttacksOnTile(6, this.opponentLegals).isEmpty(); /* If the tiles on the kingside are not attacked */
-    }
-
-    @Override
-    public boolean isQueenSideCastleCapable() {
-        return this.playerKing.isFirstMove() && !this.isInCheck() && /* If the king has not moved and is not in check */
-                !this.board.getTile(1).isTileOccupied() && !this.board.getTile(2).isTileOccupied() && !this.board.getTile(3).isTileOccupied() && /* And if the tiles on the queenside are not occupied */
-                Player.calculateAttacksOnTile(2, this.opponentLegals).isEmpty() && /* If the tiles on the queenside are not attacked */
-                Player.calculateAttacksOnTile(3, this.opponentLegals).isEmpty(); /* If the tiles on the queenside are not attacked */
+        return Collections.unmodifiableList(kingCastles);
     }
 }
