@@ -34,15 +34,15 @@ public class TestBoard {
         assertFalse(board.currentPlayer().isInCheck());
         assertFalse(board.currentPlayer().isInCheckMate());
         assertFalse(board.currentPlayer().isCastled());
-        assertTrue(board.currentPlayer().isKingSideCastleCapable());
-        assertTrue(board.currentPlayer().isQueenSideCastleCapable());
+        assertTrue(board.currentPlayer().getPlayerKing().isKingSideCastleCapable());
+        assertTrue(board.currentPlayer().getPlayerKing().isQueenSideCastleCapable());
         assertEquals(board.currentPlayer(), board.whitePlayer());
         assertEquals(board.currentPlayer().getOpponent(), board.blackPlayer());
         assertFalse(board.currentPlayer().getOpponent().isInCheck());
         assertFalse(board.currentPlayer().getOpponent().isInCheckMate());
         assertFalse(board.currentPlayer().getOpponent().isCastled());
-        assertTrue(board.currentPlayer().getOpponent().isKingSideCastleCapable());
-        assertTrue(board.currentPlayer().getOpponent().isQueenSideCastleCapable());
+        assertTrue(board.currentPlayer().getOpponent().getPlayerKing().isKingSideCastleCapable());
+        assertTrue(board.currentPlayer().getOpponent().getPlayerKing().isQueenSideCastleCapable());
         assertEquals("White", board.whitePlayer().toString());
         assertEquals("Black", board.blackPlayer().toString());
         /*
@@ -266,11 +266,68 @@ public class TestBoard {
         assertEquals(BoardUtils.getPositionAtCoordinate(5), "f8");
         assertEquals(BoardUtils.getPositionAtCoordinate(6), "g8");
         assertEquals(BoardUtils.getPositionAtCoordinate(7), "h8");
+        assertEquals(BoardUtils.getPositionAtCoordinate(8), "a7");
+        assertEquals(BoardUtils.getPositionAtCoordinate(9), "b7");
+        assertEquals(BoardUtils.getPositionAtCoordinate(10), "c7");
+        assertEquals(BoardUtils.getPositionAtCoordinate(11), "d7");
+        assertEquals(BoardUtils.getPositionAtCoordinate(12), "e7");
+        assertEquals(BoardUtils.getPositionAtCoordinate(13), "f7");
+        assertEquals(BoardUtils.getPositionAtCoordinate(14), "g7");
+        assertEquals(BoardUtils.getPositionAtCoordinate(15), "h7");
+        assertEquals(BoardUtils.getPositionAtCoordinate(16), "a6");
+        assertEquals(BoardUtils.getPositionAtCoordinate(17), "b6");
+        assertEquals(BoardUtils.getPositionAtCoordinate(18), "c6");
+        assertEquals(BoardUtils.getPositionAtCoordinate(19), "d6");
+        assertEquals(BoardUtils.getPositionAtCoordinate(20), "e6");
+        assertEquals(BoardUtils.getPositionAtCoordinate(21), "f6");
+        assertEquals(BoardUtils.getPositionAtCoordinate(22), "g6");
+        assertEquals(BoardUtils.getPositionAtCoordinate(23), "h6");
+        assertEquals(BoardUtils.getPositionAtCoordinate(24), "a5");
+        assertEquals(BoardUtils.getPositionAtCoordinate(25), "b5");
+        assertEquals(BoardUtils.getPositionAtCoordinate(26), "c5");
+        assertEquals(BoardUtils.getPositionAtCoordinate(27), "d5");
+        assertEquals(BoardUtils.getPositionAtCoordinate(28), "e5");
+        assertEquals(BoardUtils.getPositionAtCoordinate(29), "f5");
+        assertEquals(BoardUtils.getPositionAtCoordinate(30), "g5");
+        assertEquals(BoardUtils.getPositionAtCoordinate(31), "h5");
+        assertEquals(BoardUtils.getPositionAtCoordinate(32), "a4");
+        assertEquals(BoardUtils.getPositionAtCoordinate(33), "b4");
+        assertEquals(BoardUtils.getPositionAtCoordinate(34), "c4");
+        assertEquals(BoardUtils.getPositionAtCoordinate(35), "d4");
+        assertEquals(BoardUtils.getPositionAtCoordinate(36), "e4");
+        assertEquals(BoardUtils.getPositionAtCoordinate(37), "f4");
+        assertEquals(BoardUtils.getPositionAtCoordinate(38), "g4");
+        assertEquals(BoardUtils.getPositionAtCoordinate(39), "h4");
+        assertEquals(BoardUtils.getPositionAtCoordinate(40), "a3");
+        assertEquals(BoardUtils.getPositionAtCoordinate(41), "b3");
+        assertEquals(BoardUtils.getPositionAtCoordinate(42), "c3");
+        assertEquals(BoardUtils.getPositionAtCoordinate(43), "d3");
+        assertEquals(BoardUtils.getPositionAtCoordinate(44), "e3");
+        assertEquals(BoardUtils.getPositionAtCoordinate(45), "f3");
+        assertEquals(BoardUtils.getPositionAtCoordinate(46), "g3");
+        assertEquals(BoardUtils.getPositionAtCoordinate(47), "h3");
+        assertEquals(BoardUtils.getPositionAtCoordinate(48), "a2");
+        assertEquals(BoardUtils.getPositionAtCoordinate(49), "b2");
+        assertEquals(BoardUtils.getPositionAtCoordinate(50), "c2");
+        assertEquals(BoardUtils.getPositionAtCoordinate(51), "d2");
+        assertEquals(BoardUtils.getPositionAtCoordinate(52), "e2");
+        assertEquals(BoardUtils.getPositionAtCoordinate(53), "f2");
+        assertEquals(BoardUtils.getPositionAtCoordinate(54), "g2");
+        assertEquals(BoardUtils.getPositionAtCoordinate(55), "h2");
+        assertEquals(BoardUtils.getPositionAtCoordinate(56), "a1");
+        assertEquals(BoardUtils.getPositionAtCoordinate(57), "b1");
+        assertEquals(BoardUtils.getPositionAtCoordinate(58), "c1");
+        assertEquals(BoardUtils.getPositionAtCoordinate(59), "d1");
+        assertEquals(BoardUtils.getPositionAtCoordinate(60), "e1");
+        assertEquals(BoardUtils.getPositionAtCoordinate(61), "f1");
+        assertEquals(BoardUtils.getPositionAtCoordinate(62), "g1");
+        assertEquals(BoardUtils.getPositionAtCoordinate(63), "h1");
     }
 
     @Test
     public void testFoolsMate() {
         final Board board = Board.createStandardBoard();
+        //Set up the board
         final MoveTransition t1 = board.currentPlayer()
                 .makeMove(MoveFactory.createMove(board, BoardUtils.getCoordinateAtPosition("f2"),
                         BoardUtils.getCoordinateAtPosition("f3")));
@@ -285,10 +342,16 @@ public class TestBoard {
                 .makeMove(MoveFactory.createMove(t2.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("g2"),
                         BoardUtils.getCoordinateAtPosition("g4")));
         assertTrue(t3.getMoveStatus().isDone());
+
+        //Ask the AI for the best move
         final MoveStrategy miniMax = new MiniMax(4);
         final Move aiMove = miniMax.execute(t3.getTransitionBoard());
+
+        //The best move is checkmate
         final Move bestMove = MoveFactory.createMove(t3.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("d8"),
                 BoardUtils.getCoordinateAtPosition("h4"));
+
+        //Check that the AI move is the best move
         assertEquals(aiMove, bestMove);
 
     }
