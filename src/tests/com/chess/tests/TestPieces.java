@@ -497,8 +497,10 @@ public class TestPieces {
     public void testKingEquality() {
         final Board board = Board.createStandardBoard();
         final Board board2 = Board.createStandardBoard();
-        assertEquals(board.getTile(60), board2.getTile(60));
-        assertFalse(board.getTile(60).equals(null));
+        // Assert king equality on the two separate boards
+        assertEquals(board.currentPlayer().getActivePieces(), board2.currentPlayer().getActivePieces());
+
+        assertFalse(board.getTile(60) == null);
     }
 
 
