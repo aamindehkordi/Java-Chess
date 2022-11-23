@@ -482,8 +482,17 @@ public class Table extends Observable {
 
     }
 
+    /**
+     * AIThinkTank is a SwingWorker class that is used to calculate the best move for the AI player.
+     * This class is used to prevent the GUI from freezing while the AI is calculating the best move.
+     * The AI is implemented using the Minimax algorithm.
+     *
+     */
     private static class AIThinkTank extends SwingWorker<Move, String> {
 
+        /**
+         * The AI player.
+         */
         private AIThinkTank() {
         }
 
@@ -505,6 +514,8 @@ public class Table extends Observable {
             }
 
              */
+
+            /* Sets the best move to the move returned by the minimax algorithm. */
             final MoveStrategy miniMax = new MiniMax(Table.get().getGameSetup().getSearchDepth());
             final Move bestMove = miniMax.execute(Table.get().getGameBoard());
             return bestMove;
@@ -513,14 +524,21 @@ public class Table extends Observable {
         @Override
         public void done() {
             try {
+                // get() is a method of SwingWorker that returns the value returned by doInBackground()
                 final Move bestMove = get();
+                // The best move is set to the computer move.
                 Table.get().updateComputerMove(bestMove);
+                // The move is made on the board.
                 Table.get().updateGameBoard(Table.get().getGameBoard().currentPlayer().makeMove(bestMove).getTransitionBoard());
+                // The move is added to the move log.
                 Table.get().getMoveLog().addMove(bestMove);
+                // The GUI is updated.
                 Table.get().getGameHistoryPanel().redo(Table.get().getGameBoard(), Table.get().getMoveLog());
+                // The GUI is updated.
                 Table.get().getTakenPiecesPanel().redo(Table.get().getMoveLog());
                 Table.get().getBoardPanel().drawBoard(Table.get().getGameBoard());
                 //Table.get().getDebugPanel().redo();
+                // Updates the GUI to show the current player.
                 Table.get().moveMadeUpdate(PlayerType.COMPUTER);
             } catch (final Exception e) {
                 e.printStackTrace();
@@ -628,6 +646,11 @@ public class Table extends Observable {
             validate(); // Validate the board
         }
 
+        /**
+         * Draws the board
+         *
+         * @param board the board to draw
+         */
         public void drawBoard(final Board board) {
             removeAll(); // Remove all the tiles from the board
             for (final TilePanel tilePanel : boardDirection.traverse(boardTiles)) { // Loop through all the tiles
@@ -638,12 +661,24 @@ public class Table extends Observable {
             repaint(); // Repaint the board
         }
 
+        /**
+         * Sets the color of the dark tiles
+         *
+         * @param chessBoard the board to set the color of the dark tiles
+         * @param colorChoice the color to set the dark tiles
+         */
         public void setTileDarkColor(Board chessBoard, Color colorChoice) {
             for (final TilePanel tilePanel : boardDirection.traverse(boardTiles)) {
                 tilePanel.setTileDarkColor(chessBoard, colorChoice);
             }
         }
 
+        /**
+         * Sets the color of the light tiles
+         *
+         * @param chessBoard the board to set the color of the light tiles
+         * @param colorChoice the color to set the light tiles
+         */
         public void setTileLightColor(Board chessBoard, Color colorChoice) {
             for (final TilePanel tilePanel : boardDirection.traverse(boardTiles)) {
                 tilePanel.setTileLightColor(chessBoard, colorChoice);
@@ -909,13 +944,25 @@ public class Table extends Observable {
 
         }
 
+        /** Sets the dark tile color
+         *
+         * @param chessBoard the board the tile is on
+         * @param colorChoice the color to set the dark tile to
+         */
         public void setTileDarkColor(Board chessBoard, Color colorChoice) {
+            // If the tile is dark and the tile is not occupied
             if (chessBoard.getTile(this.tileId).isTileOccupied()) {
                 setBackground(colorChoice);
             }
         }
 
+        /** Sets the light tile color
+         *
+         * @param chessBoard the board the tile is on
+         * @param colorChoice the color to set the light tile to
+         */
         public void setTileLightColor(Board chessBoard, Color colorChoice) {
+            // If this tile is occupied, set the color to the colorChoice
             if (chessBoard.getTile(this.tileId).isTileOccupied()) {
                 setBackground(colorChoice);
             }

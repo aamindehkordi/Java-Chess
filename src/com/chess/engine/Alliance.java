@@ -81,10 +81,25 @@ public enum Alliance {
      */
     public abstract boolean isBlack();
 
+    /** Choose a player
+     *
+     * @param whitePlayer the white player
+     * @param blackPlayer the black player
+     * @return the player corresponding to the alliance
+     */
     public abstract Player choosePlayer(final WhitePlayer whitePlayer, final BlackPlayer blackPlayer);
 
+    /** Is the position a pawn promotion square?
+     *
+     * @param position the position
+     * @return true if the position is a pawn promotion square, false otherwise
+     */
     public abstract boolean isPawnPromotionSquare(int position);
 
+    /** Get the opposite alliance
+     *
+     * @return the opposite alliance
+     */
     public int getOppositeDirection() {
         return -1 * this.getDirection();
     }

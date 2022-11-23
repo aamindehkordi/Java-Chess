@@ -11,11 +11,17 @@ import java.util.Collection;
 public class MiniMax implements MoveStrategy{
     
 
+    /* The evaluation metric for the board. */
     private final BoardEvaluator boardEvaluator;
+    /* The depth of the search tree. */
     private final int searchDepth;
+    /* The number of boards evaluated. */
     private long boardsEvaluated;
 
 
+    /** Constructor for MiniMax
+     * @param searchDepth the depth of the search tree
+     */
     public MiniMax(final int searchDepth) {
         this.boardEvaluator = new StandardBoardEvaluator();
         this.searchDepth = searchDepth;
@@ -174,6 +180,12 @@ public class MiniMax implements MoveStrategy{
         return highestSeenValue;
     }
 
+    /**
+     * This method checks to see if the game is over
+     *
+     * @param board the board
+     * @return true if the game is over, false otherwise
+     */
     private boolean isGameOver(Board board) {
         return board.currentPlayer().isInCheckMate() ||
                 board.currentPlayer().isInStaleMate();

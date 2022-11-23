@@ -115,18 +115,38 @@ public class BoardUtils {
         return coord >= 0 && coord < NUM_TILES;
     }
 
+    /** Gets the coordinate of the given position.
+     *
+     * @param position the position
+     * @return the coordinate
+     */
     public static int getCoordinateAtPosition(final String position) {
         return POSITION_TO_COORDINATE.get(position);
     }
 
+    /** Gets the position of the given coordinate.
+     *
+     * @param coordinate the coordinate
+     * @return the position
+     */
     public static String getPositionAtCoordinate(final int coordinate) {
         return ALGEBRAIC_NOTATION[coordinate];
     }
 
+    /** The King Pawn Trap is a chess opening in which a player sacrifices a pawn
+     * in order to trap the opponent's king in the center of the board.
+     *
+     * @param board the board
+     * @param king the king
+     * @param frontTile the front tile
+     * @ return true if the king is in the King Pawn Trap, false otherwise
+     */
     public static boolean isKingPawnTrap(final Board board,
                                          final King king,
                                          final int frontTile) {
+        // Create the piece on the front tile
         final Piece piece = board.getTile(frontTile).getPiece();
+        // return true if the piece is a pawn and the piece is the same color as the king
         return piece != null &&
                 piece.getPieceType() == PieceType.PAWN &&
                 piece.getPieceAlliance() != king.getPieceAlliance();
