@@ -9,7 +9,6 @@ import com.chess.engine.board.Tile;
 
 import java.util.*;
 
-import static com.chess.engine.board.Move.AttackMove;
 import static com.chess.engine.board.Move.MajorMove;
 
 public class Knight extends Piece {

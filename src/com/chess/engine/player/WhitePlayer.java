@@ -17,7 +17,7 @@ import static com.chess.engine.pieces.PieceType.ROOK;
 
 public class WhitePlayer extends Player {
 
-    private Collection<Move> opponentLegals;
+    private final Collection<Move> opponentLegals;
 
     /** Constructor
      *

@@ -123,10 +123,10 @@ public class Table extends Observable {
 
     }
 
-    /**
-     * Creates and adds the file menu to the JMenuBar
-     *
-     * @return the File JMenu created
+    /*
+      Creates and adds the file menu to the JMenuBar
+
+      @return the File JMenu created
      */
 
     /**
@@ -163,7 +163,6 @@ public class Table extends Observable {
     /**
      * Creates and adds the preferences menu to the JMenuBar
      *
-     * @return the Preferences JMenu created
      */
 
     private void populateMenuBar(final JMenuBar tableMenuBar) {
@@ -773,7 +772,8 @@ public class Table extends Observable {
                             }
 
                         //Testing
-                        System.out.println("First Tile Selected: Piece:" + humanMovedPiece + " Tile:" + sourceTile.getTileCoordinate());
+                            assert sourceTile != null;
+                            System.out.println("First Tile Selected: Piece:" + humanMovedPiece + " Tile:" + sourceTile.getTileCoordinate());
 
                         }
                         // Second click

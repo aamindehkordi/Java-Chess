@@ -10,7 +10,7 @@ import com.chess.engine.pieces.Rook;
 import java.util.*;
 
 public class BlackPlayer extends Player {
-    private Collection<Move> opponentLegals;
+    private final Collection<Move> opponentLegals;
 
     /** Constructor
      *
