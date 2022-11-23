@@ -12,7 +12,6 @@ import static junit.framework.TestCase.assertEquals;
 
 public class TestMiniMax {
 
-
     @Test
     public void testOpeningDepth1() {
         final Board board = Board.createStandardBoard();
