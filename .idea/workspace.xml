@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Testers brought over from BlackWidow and fitted to current project - all tests failed :/">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="minimax should be fully working now">
+      <change afterPath="$PROJECT_DIR$/src/com/chess/gui/GameSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/OOPChess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/OOPChess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestBoard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -115,7 +119,7 @@
       <recent name="com.tests.chess.engine.board" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ChessTestSuite">
+  <component name="RunManager" selected="Application.com.chess.OOPChess">
     <configuration name="com.chess.OOPChess" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -253,13 +257,6 @@
       <workItem from="1668209659403" duration="2261000" />
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
-    </task>
-    <task id="LOCAL-00052" summary="Code now runs!">
-      <created>1666737526325</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1666737526325</updated>
     </task>
     <task id="LOCAL-00053" summary="Cleanup">
       <created>1666754255141</created>
@@ -597,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669064664549</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="minimax should be fully working now">
+      <created>1669170436852</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1669170436852</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -649,7 +653,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="improvements" />
     <MESSAGE value="Added a mouse listener to the GUI tile class" />
     <MESSAGE value="Pieces ~should~ be able to move on the gui" />
     <MESSAGE value="legal moves ~should~ be highlighting" />
@@ -674,7 +677,8 @@
     <MESSAGE value="Pawn promotion doesn't work but it should" />
     <MESSAGE value="The Beginnings of unit testers" />
     <MESSAGE value="Testers brought over from BlackWidow and fitted to current project - all tests failed :/" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testers brought over from BlackWidow and fitted to current project - all tests failed :/" />
+    <MESSAGE value="minimax should be fully working now" />
+    <option name="LAST_COMMIT_MESSAGE" value="minimax should be fully working now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -693,7 +697,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/gui/Table.java</url>
-          <line>466</line>
+          <line>884</line>
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -718,7 +722,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Move.java</url>
-          <line>328</line>
+          <line>340</line>
           <option name="timeStamp" value="111" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
