@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="minimax should be fully working now" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="minimax should be fully working now">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ChessOOP/diagram.uml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChessOOP/diagram.uml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/diagram.uml" beforeDir="false" afterPath="$PROJECT_DIR$/src/diagram.uml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,11 +214,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ChessTestSuite" />
-        <item itemvalue="JUnit.TestMiniMax" />
         <item itemvalue="JUnit.TestPieces.testPawnPromotion" />
-        <item itemvalue="JUnit.TestBoard" />
+        <item itemvalue="JUnit.TestMiniMax" />
         <item itemvalue="JUnit.TestCheckmate" />
+        <item itemvalue="JUnit.TestBoard" />
+        <item itemvalue="JUnit.ChessTestSuite" />
       </list>
     </recent_temporary>
   </component>
@@ -249,13 +253,7 @@
       <workItem from="1668209659403" duration="2261000" />
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
-    </task>
-    <task id="LOCAL-00053" summary="Cleanup">
-      <created>1666754255141</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1666754255141</updated>
+      <workItem from="1669179387935" duration="1088000" />
     </task>
     <task id="LOCAL-00054" summary="Cleanup">
       <created>1666821966349</created>
@@ -593,11 +591,29 @@
       <option name="project" value="LOCAL" />
       <updated>1669170436852</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Lots of cleanup is needed">
+      <created>1669177651391</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1669177651391</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -606,17 +622,6 @@
           <value>
             <State>
               <option name="BEK_SORT_TYPE" value="1" />
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="En_Passant" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
             </State>
           </value>
         </entry>
@@ -645,7 +650,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added a mouse listener to the GUI tile class" />
     <MESSAGE value="Pieces ~should~ be able to move on the gui" />
     <MESSAGE value="legal moves ~should~ be highlighting" />
     <MESSAGE value="comments" />
@@ -670,7 +674,8 @@
     <MESSAGE value="The Beginnings of unit testers" />
     <MESSAGE value="Testers brought over from BlackWidow and fitted to current project - all tests failed :/" />
     <MESSAGE value="minimax should be fully working now" />
-    <option name="LAST_COMMIT_MESSAGE" value="minimax should be fully working now" />
+    <MESSAGE value="Lots of cleanup is needed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lots of cleanup is needed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -714,7 +719,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Move.java</url>
-          <line>340</line>
+          <line>341</line>
           <option name="timeStamp" value="111" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
