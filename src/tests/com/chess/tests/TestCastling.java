@@ -4,9 +4,6 @@ import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
 import com.chess.engine.player.MoveTransition;
-//import com.chess.engine.player.ai.MoveStrategy;
-//import com.chess.engine.player.ai.StockAlphaBeta;
-//import com.chess.pgn.FenUtilities;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertTrue;
@@ -53,8 +50,8 @@ public class TestCastling {
         final MoveTransition t7 = t6.getTransitionBoard().currentPlayer().makeMove(wm1);
         assertTrue(t7.getMoveStatus().isDone());
         assertTrue(t7.getTransitionBoard().whitePlayer().isCastled());
-        assertFalse(t7.getTransitionBoard().whitePlayer().isKingSideCastleCapable());
-        assertFalse(t7.getTransitionBoard().whitePlayer().isQueenSideCastleCapable());
+        assertFalse(t7.getTransitionBoard().whitePlayer().getPlayerKing().isKingSideCastleCapable());
+        assertFalse(t7.getTransitionBoard().whitePlayer().getPlayerKing().isQueenSideCastleCapable());
     }
 
     @Test
@@ -116,8 +113,8 @@ public class TestCastling {
         final MoveTransition t11 = t10.getTransitionBoard().currentPlayer().makeMove(wm1);
         assertTrue(t11.getMoveStatus().isDone());
         assertTrue(t11.getTransitionBoard().whitePlayer().isCastled());
-        assertFalse(t11.getTransitionBoard().whitePlayer().isKingSideCastleCapable());
-        assertFalse(t11.getTransitionBoard().whitePlayer().isQueenSideCastleCapable());
+        assertFalse(t11.getTransitionBoard().whitePlayer().getPlayerKing().isKingSideCastleCapable());
+        assertFalse(t11.getTransitionBoard().whitePlayer().getPlayerKing().isQueenSideCastleCapable());
     }
 
     @Test
@@ -164,8 +161,8 @@ public class TestCastling {
         final MoveTransition t8 = t7.getTransitionBoard().currentPlayer().makeMove(wm1);
         assertTrue(t8.getMoveStatus().isDone());
         assertTrue(t8.getTransitionBoard().blackPlayer().isCastled());
-        assertFalse(t8.getTransitionBoard().blackPlayer().isKingSideCastleCapable());
-        assertFalse(t8.getTransitionBoard().blackPlayer().isQueenSideCastleCapable());
+        assertFalse(t8.getTransitionBoard().blackPlayer().getPlayerKing().isKingSideCastleCapable());
+        assertFalse(t8.getTransitionBoard().blackPlayer().getPlayerKing().isQueenSideCastleCapable());
     }
 
     @Test
@@ -233,8 +230,8 @@ public class TestCastling {
         final MoveTransition t12 = t11.getTransitionBoard().currentPlayer().makeMove(wm1);
         assertTrue(t12.getMoveStatus().isDone());
         assertTrue(t12.getTransitionBoard().blackPlayer().isCastled());
-        assertFalse(t12.getTransitionBoard().blackPlayer().isKingSideCastleCapable());
-        assertFalse(t12.getTransitionBoard().blackPlayer().isQueenSideCastleCapable());
+        assertFalse(t12.getTransitionBoard().blackPlayer().getPlayerKing().isKingSideCastleCapable());
+        assertFalse(t12.getTransitionBoard().blackPlayer().getPlayerKing().isQueenSideCastleCapable());
     }
 
     @Test
