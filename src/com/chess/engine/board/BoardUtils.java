@@ -1,5 +1,9 @@
 package com.chess.engine.board;
 
+import com.chess.engine.pieces.King;
+import com.chess.engine.pieces.Piece;
+import com.chess.engine.pieces.PieceType;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -119,4 +123,12 @@ public class BoardUtils {
         return ALGEBRAIC_NOTATION[coordinate];
     }
 
+    public static boolean isKingPawnTrap(final Board board,
+                                         final King king,
+                                         final int frontTile) {
+        final Piece piece = board.getTile(frontTile).getPiece();
+        return piece != null &&
+                piece.getPieceType() == PieceType.PAWN &&
+                piece.getPieceAlliance() != king.getPieceAlliance();
+    }
 }
