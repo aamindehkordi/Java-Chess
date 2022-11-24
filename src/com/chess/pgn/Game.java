@@ -3,6 +3,7 @@ package com.chess.pgn;
 import java.util.List;
 
 public abstract class Game implements Playable {
+    //TODO ADD COMMENTS
 
     protected final PGNGameTags tags;
     protected final List<String> moves;

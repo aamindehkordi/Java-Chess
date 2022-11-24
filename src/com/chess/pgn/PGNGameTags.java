@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PGNGameTags {
+    //TODO ADD COMMENTS
 
     private final Map<String,String> gameTags;
 

@@ -7,6 +7,7 @@ import com.chess.engine.player.Player;
 import java.sql.*;
 
 public class MySqlGamePersistence implements PGNPersistence {
+    //TODO ADD COMMENTS
 
     private final Connection dbConnection;
 
@@ -26,8 +27,8 @@ public class MySqlGamePersistence implements PGNPersistence {
         createGameTable();
         createIndex("outcome", "OutcomeIndex");
         createIndex("moves", "MoveIndex");
-//        createOutcomeIndex();
-//        createMovesIndex();
+        createOutcomeIndex();
+        createMovesIndex();
     }
 
     private static Connection createDBConnection() {

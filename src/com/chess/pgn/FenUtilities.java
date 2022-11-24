@@ -9,6 +9,7 @@ import com.chess.engine.pieces.*;
 import static com.chess.engine.board.Board.Builder;
 
 public class FenUtilities {
+//TODO ADD COMMENTS
 
     private FenUtilities() {
         throw new RuntimeException("Not Instantiable!");
@@ -163,10 +164,11 @@ public class FenUtilities {
     private static String calculateBoardText(final Board board) {
         final StringBuilder builder = new StringBuilder();
         for (int i = 0; i < BoardUtils.NUM_TILES; i++) {
-            final String tileText = board.getTile(i) == null ? "-" :
-                    board.getTile(i).getPiece().getPieceAlliance().isWhite() ? board.getTile(i).toString() :
-                    board.getTile(i).toString().toLowerCase();
+            final String tileText = board.getTile(i).toString();
             builder.append(tileText);
+            if((i + 1) % BoardUtils.NUM_TILES_PER_ROW == 0) {
+                builder.append("/");
+            }
         }
         builder.insert(8, "/");
         builder.insert(17, "/");

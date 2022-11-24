@@ -3,6 +3,7 @@ package com.chess.pgn;
 import java.util.Collections;
 
 public class InvalidGame extends Game {
+    //TODO ADD COMMENTS
 
     final String malformedGameText;
 
