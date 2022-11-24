@@ -8,6 +8,7 @@ import com.chess.engine.player.Player;
 import java.util.*;
 
 public final class KingSafetyAnalyzer {
+//TODO ADD COMMENTS
 
     private static final KingSafetyAnalyzer INSTANCE = new KingSafetyAnalyzer();
     private static final List<boolean[]> COLUMNS = initColumns();

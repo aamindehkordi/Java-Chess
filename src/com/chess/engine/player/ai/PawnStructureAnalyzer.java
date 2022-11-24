@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.stream.Collectors;
 
 public final class PawnStructureAnalyzer {
+//TODO ADD COMMENTS
 
     private static final PawnStructureAnalyzer INSTANCE = new PawnStructureAnalyzer();
 

@@ -8,6 +8,7 @@ import com.chess.engine.player.Player;
 import java.util.*;
 
 public final class RookStructureAnalyzer {
+//TODO ADD COMMENTS and FIX
 
     private static final RookStructureAnalyzer INSTANCE = new RookStructureAnalyzer();
     private static final  List<boolean[]> BOARD_COLUMNS = initColumns();

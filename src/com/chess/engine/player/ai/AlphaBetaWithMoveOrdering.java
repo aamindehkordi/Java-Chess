@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 import static com.chess.engine.board.BoardUtils.mvvlva;
 
 public class AlphaBetaWithMoveOrdering extends Observable implements MoveStrategy {
+//TODO ADD COMMENTS
 
     private final BoardEvaluator evaluator;
     private final int searchDepth;

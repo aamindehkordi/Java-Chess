@@ -15,6 +15,7 @@ import static com.chess.engine.board.BoardUtils.mvvlva;
 import static com.chess.engine.board.Move.MoveFactory;
 
 public class StockAlphaBeta extends Observable implements MoveStrategy {
+//TODO ADD COMMENTS
 
     private final BoardEvaluator evaluator;
     private final int searchDepth;
