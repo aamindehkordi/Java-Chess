@@ -4,47 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="cleanup">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/Alliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/Alliance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Bishop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Knight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Piece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/PieceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/PieceType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Queen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Rook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/MoveStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/MoveStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/MoveTransition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/MoveTransition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/AlphaBetaWithMoveOrdering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/AlphaBetaWithMoveOrdering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/BoardEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/BoardEvaluator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/KingSafetyAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/KingSafetyAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MiniMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MiniMax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MoveOrdering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MoveOrdering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/PawnStructureAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/PawnStructureAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/RookStructureAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/RookStructureAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/StandardBoardEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/StandardBoardEvaluator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/StockAlphaBeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/StockAlphaBeta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/GameHistoryPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/GameHistoryPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/GameSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/GameSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/pgn/FenUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/pgn/FenUtilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestAlphaBeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestAlphaBeta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestFENParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestFENParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestIterativeDeepening.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestIterativeDeepening.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPGNParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPGNParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPawnStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPawnStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" afterDir="false" />
-    </list>
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="needs cleanup &amp; comments" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,35 +63,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ali/Library/CloudStorage/OneDrive-Personal/Desktop/Other/Coding/School/Object Oriented Programming/ChessOOP/src/com/chess/engine/player/ai&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "extract.method.default.visibility": "private",
+    "last_opened_file_path": "/Users/ali/Library/CloudStorage/OneDrive-Personal/Desktop/Other/Coding/School/Object Oriented Programming/ChessOOP/src/com/chess/engine/player/ai",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.chess.gui" />
@@ -302,76 +267,6 @@
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
       <workItem from="1669179387935" duration="28423000" />
-    </task>
-    <task id="LOCAL-00074" summary="fixing bugs">
-      <created>1666847944244</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1666847944244</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Created new Dead Pieces Panel that sorts by piece value">
-      <created>1666847982663</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1666847982663</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Created new Dead Pieces Panel that sorts by piece value">
-      <created>1666848639475</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1666848639475</updated>
-    </task>
-    <task id="LOCAL-00077" summary="Bugs">
-      <created>1666848648687</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1666848648687</updated>
-    </task>
-    <task id="LOCAL-00078" summary="Bug testing">
-      <created>1666849680913</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1666849680913</updated>
-    </task>
-    <task id="LOCAL-00079" summary="Bug testing">
-      <created>1666849734930</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1666849734930</updated>
-    </task>
-    <task id="LOCAL-00080" summary="cleanup">
-      <created>1666850304080</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1666850304080</updated>
-    </task>
-    <task id="LOCAL-00081" summary="merge nathan diagram">
-      <created>1667030571505</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1667030571505</updated>
-    </task>
-    <task id="LOCAL-00082" summary="Did the diagram better than nathan">
-      <created>1667031689322</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1667031689322</updated>
-    </task>
-    <task id="LOCAL-00083" summary="Did the diagram better than nathan">
-      <created>1667031800317</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1667031800317</updated>
     </task>
     <task id="LOCAL-00084" summary="Did the diagram better than nathan">
       <created>1667031965570</created>
@@ -646,7 +541,77 @@
       <option name="project" value="LOCAL" />
       <updated>1669328508306</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="lowered search depth so tests dont take so long to run however most fail now because of this">
+      <created>1669333541501</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1669333541501</updated>
+    </task>
+    <task id="LOCAL-00124" summary="FEN works, PGN doesnt, lots of cleanup and debugging work needed">
+      <created>1669333582307</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1669333582307</updated>
+    </task>
+    <task id="LOCAL-00125" summary="cleanup needed">
+      <created>1669333600609</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1669333600609</updated>
+    </task>
+    <task id="LOCAL-00126" summary="cleanup and added logic needed for evaluations">
+      <created>1669333676840</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1669333676840</updated>
+    </task>
+    <task id="LOCAL-00127" summary="cleanup and comments">
+      <created>1669333727252</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1669333727252</updated>
+    </task>
+    <task id="LOCAL-00128" summary="added hotspots for each piece for evaluations">
+      <created>1669333753617</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1669333753617</updated>
+    </task>
+    <task id="LOCAL-00129" summary="comments">
+      <created>1669333766136</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1669333766136</updated>
+    </task>
+    <task id="LOCAL-00130" summary="cleanup">
+      <created>1669333800070</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1669333800070</updated>
+    </task>
+    <task id="LOCAL-00131" summary="cleaned up and proper, needs comments">
+      <created>1669333842671</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1669333842671</updated>
+    </task>
+    <task id="LOCAL-00132" summary="needs cleanup &amp; comments">
+      <created>1669333866286</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1669333866286</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -698,15 +663,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="idk what im doing" />
-    <MESSAGE value="cleanup i think" />
-    <MESSAGE value="En Passant is highlighted but not executed" />
-    <MESSAGE value="Pawn promotion doesn't work but it should" />
-    <MESSAGE value="The Beginnings of unit testers" />
-    <MESSAGE value="Testers brought over from BlackWidow and fitted to current project - all tests failed :/" />
-    <MESSAGE value="minimax should be fully working now" />
-    <MESSAGE value="Lots of cleanup is needed" />
-    <MESSAGE value="updated diagram" />
     <MESSAGE value="Added FEN support, not complete" />
     <MESSAGE value="Working on castling" />
     <MESSAGE value="Added Comments" />
@@ -722,8 +678,17 @@
     <MESSAGE value=".,." />
     <MESSAGE value="Debugging king legal moves" />
     <MESSAGE value="Updated more test cases" />
+    <MESSAGE value="lowered search depth so tests dont take so long to run however most fail now because of this" />
+    <MESSAGE value="FEN works, PGN doesnt, lots of cleanup and debugging work needed" />
+    <MESSAGE value="cleanup needed" />
+    <MESSAGE value="cleanup and added logic needed for evaluations" />
+    <MESSAGE value="cleanup and comments" />
+    <MESSAGE value="added hotspots for each piece for evaluations" />
+    <MESSAGE value="comments" />
     <MESSAGE value="cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
+    <MESSAGE value="cleaned up and proper, needs comments" />
+    <MESSAGE value="needs cleanup &amp; comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="needs cleanup &amp; comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
