@@ -1,12 +1,14 @@
 package tests.com.chess.tests;
 
-import org.junit.Test;
-
 import com.chess.engine.Alliance;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.Board.Builder;
 import com.chess.engine.pieces.King;
 import com.chess.engine.pieces.Pawn;
+import com.chess.engine.player.ai.KingSafetyAnalyzer;
+import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestKingSafety {
 
@@ -23,7 +25,7 @@ public class TestKingSafety {
         // Set the current player
         final Board board = builder.build();
 
-        //assertEquals(KingSafetyAnalyzer.get().calculateKingTropism(board.whitePlayer()).tropismScore(), 40);
+        assertEquals(KingSafetyAnalyzer.get().calculateKingTropism(board.whitePlayer()), 0);
     }
 
 }

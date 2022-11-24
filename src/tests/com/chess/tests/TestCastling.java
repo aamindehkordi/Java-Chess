@@ -4,14 +4,14 @@ import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
 import com.chess.engine.player.MoveTransition;
-import com.chess.engine.player.ai.MiniMax;
 import com.chess.engine.player.ai.MoveStrategy;
+import com.chess.engine.player.ai.StockAlphaBeta;
 import com.chess.pgn.FenUtilities;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertTrue;
-import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestCastling {
 
@@ -297,10 +297,10 @@ public class TestCastling {
                                 BoardUtils.getCoordinateAtPosition("c3")));
         assertTrue(t11.getMoveStatus().isDone());
 
-        //final MoveStrategy moveStrategy = new StockAlphaBeta(6);
-        final MoveStrategy moveStrategy = new MiniMax(4);
+        final MoveStrategy moveStrategy = new StockAlphaBeta(6);
+        //final MoveStrategy moveStrategy = new MiniMax(4);
 
-        //moveStrategy.execute(t11.getTransitionBoard());
+        moveStrategy.execute(t11.getTransitionBoard());
         final Move aiMove = moveStrategy.execute(t11.getTransitionBoard());
         final Move bestMove = Move.MoveFactory.createMove(t11.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("d7"),
                 BoardUtils.getCoordinateAtPosition("d8"));
