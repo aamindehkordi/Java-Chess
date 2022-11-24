@@ -81,7 +81,7 @@ public class Board {
         for (final Piece piece : pieces) { /* for each piece */
             legalMoves.addAll(piece.calculateLegalMoves(this)); /* add the legal moves of the piece to the list of legal moves */
         }
-        return Collections.unmodifiableList(legalMoves); /* return an unmodifiable list of legal moves */
+        return Collections.unmodifiableList(new LinkedList<Move>(legalMoves)); /* return an unmodifiable list of legal moves */
     }
 
     /** Calculate the active pieces of a given alliance

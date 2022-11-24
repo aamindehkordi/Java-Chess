@@ -36,12 +36,15 @@ public abstract class Player {
         Collection<Move> kingAttacks = calculateAttacksOnTile(this.playerKing.getPiecePosition(), opponentMoves);
         this.isInCheck = !kingAttacks.isEmpty();
         Collection<Move> castleMoves = calculateKingCastles(legalMoves, opponentMoves);
-        if (!castleMoves.isEmpty()) {
-            legalMoves.addAll(castleMoves);
+        if (castleMoves != null) {
+            this.legalMoves = new ArrayList<>(legalMoves);
+            this.legalMoves.addAll(castleMoves);
+        } else {
+            this.legalMoves = legalMoves;
         }
+        this.opponentLegalMoves = Collections.unmodifiableList(new LinkedList<>(opponentMoves));
         this.moveNumber = 0;
-        this.legalMoves = Collections.unmodifiableCollection(legalMoves);
-        this.opponentLegalMoves = Collections.unmodifiableCollection(opponentMoves);
+
     }
 
     /** Calculate the attacks on a tile
@@ -124,9 +127,8 @@ public abstract class Player {
      *
      * @return true if the player is castled
      */
-    @SuppressWarnings("SameReturnValue")
     public boolean isCastled() {
-        return false;
+        return this.getPlayerKing().isCastled();
     }
 
     /** Make a move
@@ -141,7 +143,6 @@ public abstract class Player {
         }
 
         final Board transitionBoard = move.execute(); /* Execute the move on a temporary board*/
-        this.moveNumber++; /* Increment the move number */
         /* Create a new collection of legal moves for the opponent on the new board */
         final Collection<Move> kingAttacks = Player.calculateAttacksOnTile(transitionBoard.currentPlayer().getOpponent().getPlayerKing().getPiecePosition(),
                 transitionBoard.currentPlayer().getLegalMoves());

@@ -9,10 +9,7 @@ import com.chess.engine.board.Move.QueenSideCastleMove;
 import com.chess.engine.pieces.Piece;
 import com.chess.engine.pieces.Rook;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import static com.chess.engine.pieces.PieceType.ROOK;
 
@@ -77,7 +74,10 @@ public class WhitePlayer extends Player {
                             kingSideRook.getPieceType() == ROOK) {
                         // Add the move to the list of legal moves
                         if(!BoardUtils.isKingPawnTrap(this.board, this.playerKing, 52)) {
-                            kingCastles.add(new KingSideCastleMove(this.board, this.playerKing, 62, (Rook) kingSideRook, kingSideRook.getPiecePosition(), 61));
+                            Move kingSideCastle = new KingSideCastleMove(this.board, this.playerKing, 62,
+                                    (Rook) kingSideRook, kingSideRook.getPiecePosition(), 61);
+                            kingCastles.add(kingSideCastle);
+                            this.playerKing.setCastled();
                         }
                     }
                 }
@@ -95,13 +95,16 @@ public class WhitePlayer extends Player {
                             queenSideRook.getPieceType() == ROOK) {
                         // Add the move to the list of legal moves
                         if(!BoardUtils.isKingPawnTrap(this.board, this.playerKing, 52)) {
-                            kingCastles.add(new QueenSideCastleMove(this.board, this.playerKing, 58, (Rook) queenSideRook, queenSideRook.getPiecePosition(), 59));
+                            Move queenSideCastle = new QueenSideCastleMove(this.board, this.playerKing, 58,
+                                    (Rook) queenSideRook, queenSideRook.getPiecePosition(), 59);
+                            kingCastles.add(queenSideCastle);
+                            this.playerKing.setCastled();
                         }
                     }
                 }
             }
         }
-        return Collections.unmodifiableList(kingCastles);
+        return Collections.unmodifiableList(new LinkedList<>(kingCastles));
     }
 
 }

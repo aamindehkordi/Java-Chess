@@ -64,7 +64,9 @@ public class BlackPlayer extends Player {
                     if (Player.calculateAttacksOnTile(61, opponentLegals).isEmpty() &&
                             Player.calculateAttacksOnTile(62, opponentLegals).isEmpty() &&
                             rookTile.getPiece().getPieceType().isRook()) {
-                        kingCastles.add(new Move.KingSideCastleMove(this.board, this.playerKing, 62, (Rook) rookTile.getPiece(), rookTile.getTileCoordinate(), 61));
+                        Move kingSideCastle = new Move.KingSideCastleMove(this.board, this.playerKing, 62, (Rook) rookTile.getPiece(), rookTile.getTileCoordinate(), 61);
+                        kingCastles.add( kingSideCastle );
+                        this.playerKing.setCastled();
                     }
                 }
             }
@@ -78,11 +80,13 @@ public class BlackPlayer extends Player {
                     if (Player.calculateAttacksOnTile(58, opponentLegals).isEmpty() &&
                             Player.calculateAttacksOnTile(59, opponentLegals).isEmpty() &&
                             rookTile.getPiece().getPieceType().isRook()) {
-                        kingCastles.add(new Move.QueenSideCastleMove(this.board, this.playerKing, 58, (Rook) rookTile.getPiece(), rookTile.getTileCoordinate(), 59));
+                        Move queenSideCastle = new Move.QueenSideCastleMove(this.board, this.playerKing, 58, (Rook) rookTile.getPiece(), rookTile.getTileCoordinate(), 59);
+                            kingCastles.add( queenSideCastle );
+                            this.playerKing.setCastled();
                     }
                 }
             }
         }
-        return Collections.unmodifiableList(kingCastles);
+        return Collections.unmodifiableList(new LinkedList<>(kingCastles));
     }
 }
