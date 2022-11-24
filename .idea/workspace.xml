@@ -4,8 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Working on castling">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="breakpoints">
+      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/GameFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/InvalidGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/MySqlGamePersistence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/PGNGameTags.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/PGNPersistence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/PGNUtilities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/ParsePGNException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/PlayPGNException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/Playable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/ValidGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/pgn/FenUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/pgn/FenUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestFENParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestFENParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestIterativeDeepening.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestIterativeDeepening.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPGNParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPGNParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestRookStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestRookStructure.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,35 +83,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ali/Library/CloudStorage/OneDrive-Personal/Desktop/Other/Coding/School/Object Oriented Programming/ChessOOP&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "extract.method.default.visibility": "private",
+    "last_opened_file_path": "/Users/ali/Library/CloudStorage/OneDrive-Personal/Desktop/Other/Coding/School/Object Oriented Programming/ChessOOP/src/com/chess/pgn",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.chess.gui" />
@@ -97,6 +120,7 @@
       <recent name="com.chess.engine.pieces" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/chess/pgn" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -113,7 +137,7 @@
       <recent name="com.tests.chess.engine.board" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestCastling">
+  <component name="RunManager" selected="JUnit.ChessTestSuite">
     <configuration name="com.chess.OOPChess" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -164,7 +188,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCheckmate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCastling.testNoCastlingOutOfCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChessOOP" />
       <extension name="coverage">
         <pattern>
@@ -173,8 +197,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestCheckmate" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestCastling" />
+      <option name="METHOD_NAME" value="testNoCastlingOutOfCheck" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -212,13 +237,17 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestCastling" />
         <item itemvalue="JUnit.ChessTestSuite" />
+        <item itemvalue="JUnit.TestCastling.testNoCastlingOutOfCheck" />
+        <item itemvalue="JUnit.TestCastling" />
         <item itemvalue="JUnit.TestPieces.testPawnPromotion" />
         <item itemvalue="JUnit.TestMiniMax" />
-        <item itemvalue="JUnit.TestCheckmate" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SliceToolwindowSettings">
+    <option name="autoScroll" value="true" />
+    <option name="preview" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="StructuralSearchPlugin">
@@ -251,21 +280,7 @@
       <workItem from="1668209659403" duration="2261000" />
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
-      <workItem from="1669179387935" duration="12195000" />
-    </task>
-    <task id="LOCAL-00058" summary="Added MenuBar to GUI">
-      <created>1666822421947</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1666822421947</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Added board and tile classes to GUI">
-      <created>1666823695179</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1666823695179</updated>
+      <workItem from="1669179387935" duration="14762000" />
     </task>
     <task id="LOCAL-00060" summary="Initialized all rows and columns">
       <created>1666823888720</created>
@@ -596,7 +611,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669270546467</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Added Comments">
+      <created>1669271101235</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1669271101235</updated>
+    </task>
+    <task id="LOCAL-00108" summary="breakpoints">
+      <created>1669271292143</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1669271292143</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -648,8 +677,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="pieces move and are actually highlighted now" />
-    <MESSAGE value="fixing bugs" />
     <MESSAGE value="Created new Dead Pieces Panel that sorts by piece value" />
     <MESSAGE value="Bugs" />
     <MESSAGE value="Bug testing" />
@@ -673,7 +700,9 @@
     <MESSAGE value="cleanup" />
     <MESSAGE value="Added FEN support, not complete" />
     <MESSAGE value="Working on castling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on castling" />
+    <MESSAGE value="Added Comments" />
+    <MESSAGE value="breakpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="breakpoints" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -696,19 +725,9 @@
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java</url>
-          <line>117</line>
-          <option name="timeStamp" value="100" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Move.java</url>
-          <line>341</line>
-          <option name="timeStamp" value="111" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Board.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="115" />
+          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="126" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

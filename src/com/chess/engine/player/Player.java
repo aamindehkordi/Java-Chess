@@ -210,4 +210,12 @@ public abstract class Player {
      * @return the alliance
      */
     public abstract Alliance getAlliance();
+
+    public boolean isKingSideCastleCapable() {
+        return this.playerKing.isKingSideCastleCapable();
+    }
+
+    public boolean isQueenSideCastleCapable() {
+        return this.playerKing.isQueenSideCastleCapable();
+    }
 }
