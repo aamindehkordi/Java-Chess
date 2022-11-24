@@ -8,7 +8,7 @@ import com.chess.engine.board.Tile;
 import com.chess.engine.pieces.Piece;
 import com.chess.engine.player.MoveTransition;
 import com.chess.engine.player.Player;
-import com.chess.engine.player.ai.MiniMax;
+import com.chess.engine.player.ai.AlphaBetaWithMoveOrdering;
 import com.chess.engine.player.ai.MoveStrategy;
 
 import javax.imageio.ImageIO;
@@ -516,8 +516,8 @@ public class Table extends Observable {
              */
 
             /* Sets the best move to the move returned by the minimax algorithm. */
-            final MoveStrategy miniMax = new MiniMax(Table.get().getGameSetup().getSearchDepth());
-            final Move bestMove = miniMax.execute(Table.get().getGameBoard());
+            final MoveStrategy AlphaBetaWithMoveOrderOrdering = new AlphaBetaWithMoveOrdering(Table.get().getGameSetup().getSearchDepth(), 1500);
+            final Move bestMove = AlphaBetaWithMoveOrderOrdering.execute(Table.get().getGameBoard());
             return bestMove;
         }
 

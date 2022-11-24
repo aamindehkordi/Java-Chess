@@ -4,81 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Castling works?">
-      <change afterPath="$PROJECT_DIR$/art/fancy/BB.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy/BK.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy/BN.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy/BP.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy/BQ.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy/BR.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy/WB.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy/WK.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy/WN.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy/WP.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy/WQ.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy/WR.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy2/BB.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy2/BK.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy2/BN.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy2/BP.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy2/BQ.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy2/BR.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy2/WB.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy2/WK.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy2/WN.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy2/WP.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy2/WQ.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/fancy2/WR.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BB.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BK.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BN.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BP.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BQ.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BR.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WB.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WK.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WN.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WP.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WQ.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WR.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/misc/illegal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/misc/red_dot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/simple/BB.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/simple/BK.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/simple/BN.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/simple/BP.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/simple/BQ.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/simple/BR.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/simple/WB.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/simple/WK.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/simple/WN.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/simple/WP.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/simple/WQ.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/art/simple/WR.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/AlphaBetaWithMoveOrdering.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/KingSafetyAnalyzer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MoveOrdering.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/PawnStructureAnalyzer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/RookStructureAnalyzer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/StockAlphaBeta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/BoardUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/BoardUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/BlackPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/BlackPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestAlphaBeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestAlphaBeta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestKingSafety.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestKingSafety.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestRookStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestRookStructure.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment=".,.">
+      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
@@ -327,42 +264,7 @@
       <workItem from="1668209659403" duration="2261000" />
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
-      <workItem from="1669179387935" duration="28126000" />
-    </task>
-    <task id="LOCAL-00066" summary="Added a mouse listener to the GUI tile class">
-      <created>1666831831554</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1666831831554</updated>
-    </task>
-    <task id="LOCAL-00067" summary="Pieces ~should~ be able to move on the gui">
-      <created>1666832666879</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1666832666879</updated>
-    </task>
-    <task id="LOCAL-00068" summary="legal moves ~should~ be highlighting">
-      <created>1666834900043</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1666834900043</updated>
-    </task>
-    <task id="LOCAL-00069" summary="comments">
-      <created>1666835236639</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1666835236639</updated>
-    </task>
-    <task id="LOCAL-00070" summary="pieces move and are actually highlighted now">
-      <created>1666836304511</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1666836304511</updated>
+      <workItem from="1669179387935" duration="28423000" />
     </task>
     <task id="LOCAL-00071" summary="fixing bugs">
       <created>1666837618100</created>
@@ -672,7 +574,42 @@
       <option name="project" value="LOCAL" />
       <updated>1669278796230</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="Added more skins">
+      <created>1669287133273</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1669287133273</updated>
+    </task>
+    <task id="LOCAL-00116" summary="Updated Test Cases">
+      <created>1669287149180</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1669287149180</updated>
+    </task>
+    <task id="LOCAL-00117" summary="Castling fixed!!!!">
+      <created>1669287193642</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1669287193642</updated>
+    </task>
+    <task id="LOCAL-00118" summary="New AI's implemented from another github">
+      <created>1669287212762</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1669287212762</updated>
+    </task>
+    <task id="LOCAL-00119" summary=".,.">
+      <created>1669287225311</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1669287225311</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -724,11 +661,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Did the diagram better than nathan" />
-    <MESSAGE value="im back" />
-    <MESSAGE value="Created new game history panel" />
-    <MESSAGE value="Added movelog and fixed bugs" />
-    <MESSAGE value="OMG a working game of chess (no en passant)" />
     <MESSAGE value="tying up loose ends + en passant pt1" />
     <MESSAGE value="x" />
     <MESSAGE value="idk what im doing" />
@@ -749,7 +681,12 @@
     <MESSAGE value="implemented fen and pgn into test cases" />
     <MESSAGE value="Still debugging Castling" />
     <MESSAGE value="Castling works?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Castling works?" />
+    <MESSAGE value="Added more skins" />
+    <MESSAGE value="Updated Test Cases" />
+    <MESSAGE value="Castling fixed!!!!" />
+    <MESSAGE value="New AI's implemented from another github" />
+    <MESSAGE value=".,." />
+    <option name="LAST_COMMIT_MESSAGE" value=".,." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
