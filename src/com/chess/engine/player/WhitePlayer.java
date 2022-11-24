@@ -5,6 +5,7 @@ import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
 import com.chess.engine.board.Move.KingSideCastleMove;
+import com.chess.engine.board.Move.QueenSideCastleMove;
 import com.chess.engine.pieces.Piece;
 import com.chess.engine.pieces.Rook;
 
@@ -65,7 +66,7 @@ public class WhitePlayer extends Player {
         if(this.playerKing.isFirstMove() && this.playerKing.getPiecePosition() == 60 && !this.isInCheck()) {
             //WHITE KING SIDE CASTLE
             // If the tiles on the kingside are not occupied
-            if(this.board.getTile(61) == null && this.board.getTile(62) == null) {
+            if(!this.board.getTile(61).isTileOccupied()  && !this.board.getTile(62).isTileOccupied()) {
                 // Get the tile of the kingside rook
                 final Piece kingSideRook = this.board.getTile(63).getPiece();
                 // If the rook has not moved and its tile is not occupied
@@ -83,7 +84,7 @@ public class WhitePlayer extends Player {
             }
             //WHITE QUEEN SIDE CASTLE
             // If the tiles on the queenside are not occupied
-            if(this.board.getTile(59) == null && this.board.getTile(58) == null && this.board.getTile(57) == null) {
+            if(!this.board.getTile(59).isTileOccupied() && !this.board.getTile(58).isTileOccupied() && !this.board.getTile(57).isTileOccupied()) {
                 // Get the tile of the queenside rook
                 final Piece queenSideRook = this.board.getTile(56).getPiece();
                 // If the rook has not moved and its tile is not occupied
@@ -94,7 +95,7 @@ public class WhitePlayer extends Player {
                             queenSideRook.getPieceType() == ROOK) {
                         // Add the move to the list of legal moves
                         if(!BoardUtils.isKingPawnTrap(this.board, this.playerKing, 52)) {
-                            kingCastles.add(new Move.QueenSideCastleMove(this.board, this.playerKing, 58, (Rook) queenSideRook, queenSideRook.getPiecePosition(), 59));
+                            kingCastles.add(new QueenSideCastleMove(this.board, this.playerKing, 58, (Rook) queenSideRook, queenSideRook.getPiecePosition(), 59));
                         }
                     }
                 }

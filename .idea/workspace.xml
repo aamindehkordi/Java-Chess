@@ -4,31 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="breakpoints">
-      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/GameFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/InvalidGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/MySqlGamePersistence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/PGNGameTags.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/PGNPersistence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/PGNUtilities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/ParsePGNException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/PlayPGNException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/Playable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/chess/pgn/ValidGame.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Still debugging Castling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/pgn/FenUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/pgn/FenUtilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestFENParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestFENParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestIterativeDeepening.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestIterativeDeepening.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPGNParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPGNParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestRookStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestRookStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +115,7 @@
       <recent name="com.tests.chess.engine.board" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ChessTestSuite">
+  <component name="RunManager" selected="JUnit.TestCastling.testWhiteKingSideCastle">
     <configuration name="com.chess.OOPChess" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -204,7 +182,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMiniMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCastling.testWhiteKingSideCastle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChessOOP" />
       <extension name="coverage">
         <pattern>
@@ -213,8 +191,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestMiniMax" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestCastling" />
+      <option name="METHOD_NAME" value="testWhiteKingSideCastle" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -237,11 +216,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestCastling.testWhiteKingSideCastle" />
         <item itemvalue="JUnit.ChessTestSuite" />
         <item itemvalue="JUnit.TestCastling.testNoCastlingOutOfCheck" />
         <item itemvalue="JUnit.TestCastling" />
         <item itemvalue="JUnit.TestPieces.testPawnPromotion" />
-        <item itemvalue="JUnit.TestMiniMax" />
       </list>
     </recent_temporary>
   </component>
@@ -280,28 +259,7 @@
       <workItem from="1668209659403" duration="2261000" />
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
-      <workItem from="1669179387935" duration="14762000" />
-    </task>
-    <task id="LOCAL-00060" summary="Initialized all rows and columns">
-      <created>1666823888720</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1666823888720</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Gave the rows and columns color in GUI">
-      <created>1666824699626</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1666824699626</updated>
-    </task>
-    <task id="LOCAL-00062" summary="added exit to menubar">
-      <created>1666824927022</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1666824927022</updated>
+      <workItem from="1669179387935" duration="15963000" />
     </task>
     <task id="LOCAL-00063" summary="Pieces on the checkerboard">
       <created>1666827441219</created>
@@ -625,7 +583,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669271292143</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="Imported PGN FEN from someones github">
+      <created>1669273883902</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1669273883902</updated>
+    </task>
+    <task id="LOCAL-00110" summary="implemented fen and pgn into test cases">
+      <created>1669273912307</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1669273912307</updated>
+    </task>
+    <task id="LOCAL-00111" summary="Still debugging Castling">
+      <created>1669273944022</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1669273944022</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -677,9 +656,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created new Dead Pieces Panel that sorts by piece value" />
-    <MESSAGE value="Bugs" />
-    <MESSAGE value="Bug testing" />
     <MESSAGE value="merge nathan diagram" />
     <MESSAGE value="Did the diagram better than nathan" />
     <MESSAGE value="im back" />
@@ -702,7 +678,10 @@
     <MESSAGE value="Working on castling" />
     <MESSAGE value="Added Comments" />
     <MESSAGE value="breakpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="breakpoints" />
+    <MESSAGE value="Imported PGN FEN from someones github" />
+    <MESSAGE value="implemented fen and pgn into test cases" />
+    <MESSAGE value="Still debugging Castling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Still debugging Castling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -728,6 +707,21 @@
           <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
           <line>39</line>
           <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Board.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="135" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
