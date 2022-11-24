@@ -5,7 +5,6 @@ import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
 import com.chess.engine.board.Move.KingSideCastleMove;
-import com.chess.engine.board.Move.QueenSideCastleMove;
 import com.chess.engine.player.Player;
 
 import java.util.ArrayList;
@@ -157,49 +156,52 @@ public class King extends Piece{
                         }
                     }
                 }
-                if (!this.isCastled) {
-                    if (this.kingSideCastleCapable) {
-                        Collection<Piece> opponentPlayerPieces;
-                        int castleRookStart, castleRookDestination, kingDestination, oppKingDangerPosition;
-                        if (this.getPieceAlliance().toString().equals("BLACK")) {
-                            castleRookStart = 7;
-                            castleRookDestination = 5;
-                            kingDestination = 6;
-                            oppKingDangerPosition = 55;
-                            opponentPlayerPieces = board.getWhitePieces();
+
+                if (!this.isCastled) { //If the king has not castled
+                    if (this.kingSideCastleCapable) { //If the king can castle on the kingside
+                        Collection<Piece> opponentPlayerPieces; //Create a collection of pieces
+                        int castleRookStart, castleRookDestination, kingDestination, oppKingDangerPosition; //Create variables for the rook, king, and opponent king positions
+                        if (this.getPieceAlliance().toString().equals("BLACK")) { //If the king is black
+                            castleRookStart = 7; //Set the rook start position
+                            castleRookDestination = 5; //Set the rook destination position
+                            kingDestination = 6; //Set the king destination position
+                            oppKingDangerPosition = 55; //Set the opponent king danger position
+                            opponentPlayerPieces = board.getWhitePieces(); //Set the opponent pieces to the white pieces
                         } else {
-                            castleRookStart = 63;
-                            castleRookDestination = 61;
-                            kingDestination = 62;
-                            oppKingDangerPosition = 14;
-                            opponentPlayerPieces = board.getBlackPieces();
+                            castleRookStart = 63; //Set the rook start position
+                            castleRookDestination = 61; //Set the rook destination position
+                            kingDestination = 62; //Set the king destination position
+                            oppKingDangerPosition = 14; //Set the opponent king danger position
+                            opponentPlayerPieces = board.getBlackPieces(); //Set the opponent pieces to the black pieces
                         }
-                        boolean a = true, b = true;
-                        if (board.getTile(kingDestination).isTileOccupied() || board.getTile(castleRookDestination).isTileOccupied())
-                            a = false;
+                        boolean a = true, b = true; //Create boolean variables
+                        if (board.getTile(kingDestination).isTileOccupied() || board.getTile(castleRookDestination).isTileOccupied()) //If the king or rook destination is occupied
+                            a = false; //Set a to false
 
 
                         outer:
-                        for (Piece oppPiece : opponentPlayerPieces) {
-                            if (!oppPiece.getPieceType().isKing()) {
-                                Collection<Move> oppMoves = oppPiece.calculateLegalMoves(board);
-                                for (Move m : oppMoves) {
-                                    int target = m.getDestinationCoordinate();
-                                    if (target == castleRookDestination || target == kingDestination) {
-                                        b = false;
-                                        break outer;
+                        //Create a label
+                        for (Piece oppPiece : opponentPlayerPieces) { //Loop through the opponent pieces
+                            if (!oppPiece.getPieceType().isKing()) { //If the piece is not a king
+                                Collection<Move> oppMoves = oppPiece.calculateLegalMoves(board); //Get the legal moves of the opponent piece
+                                for (Move m : oppMoves) { //Loop through the opponent moves
+                                    int target = m.getDestinationCoordinate(); //Get the destination coordinate of the opponent move
+                                    if (target == castleRookDestination || target == kingDestination) { //If the destination coordinate is the rook or king destination
+                                        b = false; //Set b to false
+                                        break outer; //Break out of the loop
                                     }
                                 }
-                            } else {
-                                if (oppPiece.getPiecePosition() == oppKingDangerPosition) {
-                                    b = false;
-                                    break;
+                            } else { //If the piece is a king
+                                if (oppPiece.getPiecePosition() == oppKingDangerPosition) { //If the king is in the danger position
+                                    b = false; //Set b to false
+                                    break; //Break out of the loop
                                 }
                             }
                         }
 
 
-                        if (a & b)
+                        if (a & b) //If a and b are true
+                            // Add the move to the list of legal moves
                             legalMoves.add(new KingSideCastleMove(board,
                                     this,
                                     kingDestination,
@@ -208,54 +210,60 @@ public class King extends Piece{
                                     castleRookDestination));
 
                     }
-                    if (this.queenSideCastleCapable) {
-                        Collection<Piece> opponentPlayerPieces;
-                        int castleRookStart, castleRookDestination, kingDestination, extraTileCoordinate, oppKingDangerPosition;
-                        if (this.getPieceAlliance().toString().equals("BLACK")) {
-                            castleRookStart = 0;
-                            castleRookDestination = 3;
-                            kingDestination = 2;
-                            extraTileCoordinate = 1;
-                            oppKingDangerPosition = 10;
-                            opponentPlayerPieces = board.getWhitePieces();
+                    if (this.queenSideCastleCapable) { //If the king can castle on the queenside
+                        Collection<Piece> opponentPlayerPieces; //Create a collection of pieces
+                        int castleRookStart, castleRookDestination, kingDestination, extraTileCoordinate, oppKingDangerPosition; //Create variables for the rook, king, and opponent king positions
+                        if (this.getPieceAlliance().toString().equals("BLACK")) { //If the king is black
+                            castleRookStart = 0; //Set the rook start position
+                            castleRookDestination = 3; //Set the rook destination position
+                            kingDestination = 2; //Set the king destination position
+                            extraTileCoordinate = 1; //Set the extra tile coordinate
+                            oppKingDangerPosition = 55; //Set the opponent king danger position
+                            opponentPlayerPieces = board.getWhitePieces(); //Set the opponent pieces to the white pieces
                         } else {
-                            castleRookStart = 56;
-                            castleRookDestination = 59;
-                            kingDestination = 58;
-                            extraTileCoordinate = 57;
-                            oppKingDangerPosition = 50;
-                            opponentPlayerPieces = board.getBlackPieces();
+                            castleRookStart = 56; //Set the rook start position
+                            castleRookDestination = 59; //Set the rook destination position
+                            kingDestination = 58; //Set the king destination position
+                            extraTileCoordinate = 57; //Set the extra tile coordinate
+                            oppKingDangerPosition = 14; //Set the opponent king danger position
+                            opponentPlayerPieces = board.getBlackPieces(); //Set the opponent pieces to the black pieces
                         }
-                        boolean a = true, b = true;
-                        if (board.getTile(kingDestination).isTileOccupied() || board.getTile(castleRookDestination).isTileOccupied() || board.getTile(extraTileCoordinate).isTileOccupied())
-                            a = false;
 
-                        outer:
-                        for (Piece oppPiece : opponentPlayerPieces) {
-                            if (!oppPiece.getPieceType().isKing()) {
-                                Collection<Move> oppMoves = oppPiece.calculateLegalMoves(board);
-                                for (Move m : oppMoves) {
-                                    int target = m.getDestinationCoordinate();
-                                    if (target == castleRookDestination || target == kingDestination || target == extraTileCoordinate) {
-                                        b = false;
-                                        break outer;
+                        boolean a = true, b = true; //Create boolean variables
+                        if (board.getTile(kingDestination).isTileOccupied() || board.getTile(castleRookDestination).isTileOccupied() || board.getTile(extraTileCoordinate).isTileOccupied()) { //If the king or rook destination is occupied
+                            a = false; //Set a to false
+
+
+                            outer:
+                            //Create a label
+                            for (Piece oppPiece : opponentPlayerPieces) { //Loop through the opponent pieces
+                                if (!oppPiece.getPieceType().isKing()) { //If the piece is not a king
+                                    Collection<Move> oppMoves = oppPiece.calculateLegalMoves(board); //Get the legal moves of the opponent piece
+                                    for (Move m : oppMoves) { //Loop through the opponent moves
+                                        int target = m.getDestinationCoordinate(); //Get the destination coordinate of the opponent move
+                                        if (target == castleRookDestination || target == kingDestination) { //If the destination coordinate is the rook or king destination
+                                            b = false; //Set b to false
+                                            break outer; //Break out of the loop
+                                        }
+                                    }
+                                } else { //If the piece is a king
+                                    if (oppPiece.getPiecePosition() == oppKingDangerPosition) { //If the king is in the danger position
+                                        b = false; //Set b to false
+                                        break; //Break out of the loop
                                     }
                                 }
-                            } else {
-                                if (oppPiece.getPiecePosition() == oppKingDangerPosition || oppPiece.getPiecePosition() == oppKingDangerPosition - 1) {
-                                    b = false;
-                                    break;
-                                }
                             }
-                        }
 
-                        if (a & b)
-                            legalMoves.add(new QueenSideCastleMove(board,
-                                    this,
-                                    kingDestination,
-                                    new Rook(castleRookStart, this.getPieceAlliance(), false),
-                                    castleRookStart,
-                                    castleRookDestination));
+                            if (a & b) //If a and b are true
+                                // Add the move to the list of legal moves
+                                legalMoves.add(new Move.QueenSideCastleMove(board,
+                                        this,
+                                        kingDestination,
+                                        new Rook(castleRookStart, this.getPieceAlliance(), false),
+                                        castleRookStart,
+                                        castleRookDestination));
+
+                        }
                     }
                 }
             }
