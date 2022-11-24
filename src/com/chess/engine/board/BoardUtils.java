@@ -4,9 +4,7 @@ import com.chess.engine.pieces.King;
 import com.chess.engine.pieces.Piece;
 import com.chess.engine.pieces.PieceType;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class BoardUtils {
 
@@ -150,5 +148,35 @@ public class BoardUtils {
         return piece != null &&
                 piece.getPieceType() == PieceType.PAWN &&
                 piece.getPieceAlliance() != king.getPieceAlliance();
+    }
+
+    public static int mvvlva(final Move move) {
+        final Piece movingPiece = move.getMovedPiece();
+        if(move.isAttack()) {
+            final Piece attackedPiece = move.getAttackedPiece();
+            return (attackedPiece.getPieceValue() - movingPiece.getPieceValue() +  PieceType.KING.getPieceValue()) * 100;
+        }
+        return PieceType.KING.getPieceValue() - movingPiece.getPieceValue();
+    }
+
+    public static List<Move> lastNMoves(final Board board, int N) {
+        final List<Move> moveHistory = new ArrayList<>();
+        Move currentMove = board.getTransitionMove();
+        int i = 0;
+        while(currentMove != Move.MoveFactory.getNullMove() && i < N) {
+            moveHistory.add(currentMove);
+            currentMove = currentMove.getBoard().getTransitionMove();
+            i++;
+        }
+        return Collections.unmodifiableList(moveHistory);
+    }
+
+    public static boolean isEndGame(final Board board) {
+        return board.currentPlayer().isInCheckMate() ||
+                board.currentPlayer().isInStaleMate();
+    }
+
+    public static boolean kingThreat(Move move) {
+        return move.isAttack() && move.getAttackedPiece().getPieceType() == PieceType.KING;
     }
 }

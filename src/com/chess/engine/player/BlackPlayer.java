@@ -3,7 +3,6 @@ package com.chess.engine.player;
 import com.chess.engine.Alliance;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.Move;
-import com.chess.engine.board.Tile;
 import com.chess.engine.pieces.Piece;
 import com.chess.engine.pieces.Rook;
 
@@ -52,37 +51,38 @@ public class BlackPlayer extends Player {
 
         final List<Move> kingCastles = new ArrayList<>(); // List of legal moves
 
-        //White Castling requirements
-        if (this.playerKing.isFirstMove() && this.playerKing.getPiecePosition() == 60 && !this.isInCheck()) {
-            //WHITE KING SIDE CASTLE
-            // If the tiles on the kingside are not occupied
-            if (!this.board.getTile(61).isTileOccupied() && !this.board.getTile(62).isTileOccupied()) {
-                final Tile rookTile = this.board.getTile(63);
-                // If the rook is on the tile and its first move
-                if (rookTile.isTileOccupied() && rookTile.getPiece().isFirstMove()) {
-                    // If the king is not in check
-                    if (Player.calculateAttacksOnTile(61, opponentLegals).isEmpty() &&
-                            Player.calculateAttacksOnTile(62, opponentLegals).isEmpty() &&
-                            rookTile.getPiece().getPieceType().isRook()) {
-                        Move kingSideCastle = new Move.KingSideCastleMove(this.board, this.playerKing, 62, (Rook) rookTile.getPiece(), rookTile.getTileCoordinate(), 61);
-                        kingCastles.add( kingSideCastle );
-                        this.playerKing.setCastled();
+        //Black Castling Requirements
+        if(this.playerKing.isFirstMove() && this.playerKing.getPiecePosition() == 4 && !this.isInCheck()) {
+            //Black King Side Castle
+            // If the tiles between the king and the rook are empty
+            if(!this.board.getTile(5).isTileOccupied() && !this.board.getTile(6).isTileOccupied()) {
+                final Piece kingSideRook = this.board.getTile(7).getPiece();
+                // If the rook is not null and the rook is a rook and the rook is the first move
+                if(kingSideRook != null && kingSideRook.isFirstMove()) {
+                    // If the king is not in check and the tiles between the king and the rook are not in check
+                    if(Player.calculateAttacksOnTile(5, opponentLegals).isEmpty() &&
+                            Player.calculateAttacksOnTile(6, opponentLegals).isEmpty() &&
+                            kingSideRook.getPieceType().isRook()) {
+                        // Add the king side castle move to the list of legal moves
+                        kingCastles.add(new Move.KingSideCastleMove(this.board, this.playerKing, 6,
+                                (Rook) kingSideRook, kingSideRook.getPiecePosition(), 5));
                     }
                 }
             }
-            //WHITE QUEEN SIDE CASTLE
-            // If the tiles on the queenside are not occupied
-            if (!this.board.getTile(59).isTileOccupied() && !this.board.getTile(58).isTileOccupied() && !this.board.getTile(57).isTileOccupied()) {
-                final Tile rookTile = this.board.getTile(56);
-                // If the rook is on the tile and it is the first move
-                if (rookTile.isTileOccupied() && rookTile.getPiece().isFirstMove()) {
-                    // If the king is not in check
-                    if (Player.calculateAttacksOnTile(58, opponentLegals).isEmpty() &&
-                            Player.calculateAttacksOnTile(59, opponentLegals).isEmpty() &&
-                            rookTile.getPiece().getPieceType().isRook()) {
-                        Move queenSideCastle = new Move.QueenSideCastleMove(this.board, this.playerKing, 58, (Rook) rookTile.getPiece(), rookTile.getTileCoordinate(), 59);
-                            kingCastles.add( queenSideCastle );
-                            this.playerKing.setCastled();
+            //Black Queen Side Castle
+            // If the tiles between the king and the rook are empty
+            if(!this.board.getTile(1).isTileOccupied() && !this.board.getTile(2).isTileOccupied() &&
+                    !this.board.getTile(3).isTileOccupied()) {
+                final Piece queenSideRook = this.board.getTile(0).getPiece();
+                // If the rook is not null and the rook is a rook and the rook is the first move
+                if(queenSideRook != null && queenSideRook.isFirstMove()) {
+                    // If the king is not in check and the tiles between the king and the rook are not in check
+                    if(Player.calculateAttacksOnTile(2, opponentLegals).isEmpty() &&
+                            Player.calculateAttacksOnTile(3, opponentLegals).isEmpty() &&
+                            queenSideRook.getPieceType().isRook()) {
+                        // Add the queen side castle move to the list of legal moves
+                        kingCastles.add(new Move.QueenSideCastleMove(this.board, this.playerKing, 2,
+                                (Rook) queenSideRook, queenSideRook.getPiecePosition(), 3));
                     }
                 }
             }

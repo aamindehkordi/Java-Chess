@@ -74,6 +74,13 @@ public class King extends Piece{
         this.queenSideCastleCapable = queenSideCastleCapable;
     }
 
+    public King(int destinationCoordinate, Alliance pieceAlliance, boolean isCastled, boolean kingSideCastleCapable, boolean queenSideCastleCapable) {
+        super(PieceType.KING, destinationCoordinate, pieceAlliance, true);
+        this.isCastled = isCastled;
+        this.kingSideCastleCapable = kingSideCastleCapable;
+        this.queenSideCastleCapable = queenSideCastleCapable;
+    }
+
     public boolean isCastled() {
         return this.isCastled;
     }
@@ -145,6 +152,10 @@ public class King extends Piece{
     @Override
     public Piece movePiece(Move move) {
         return new King(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
+    }
+
+    public Piece movePiece(Move move, boolean isCastled) {
+        return new King(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance(), isCastled, false, false);
     }
 
     @Override

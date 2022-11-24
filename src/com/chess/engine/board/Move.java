@@ -1,6 +1,7 @@
 package com.chess.engine.board;
 
 import com.chess.engine.board.Board.Builder;
+import com.chess.engine.pieces.King;
 import com.chess.engine.pieces.Pawn;
 import com.chess.engine.pieces.Piece;
 import com.chess.engine.pieces.Rook;
@@ -518,8 +519,8 @@ public abstract class Move {
             for (final Piece piece : this.board.currentPlayer().getOpponent().getActivePieces()) { /* for each ennemy piece on the board */
                 builder.setPiece(piece); /* add the piece to the board */
             }
-            builder.setPiece(this.movedPiece.movePiece(this)); /* move the King */
-            //TODO look into first move of the castle rook
+            King king = this.board.currentPlayer().getPlayerKing(); /* get the king */
+            builder.setPiece(king.movePiece(this, true)); /* move the piece */
             builder.setPiece(new Rook(this.castleRookDestination, this.castleRook.getPieceAlliance())); /* move the rook */
             builder.setMoveMaker(this.board.currentPlayer().getOpponent().getAlliance()); /* set the move maker to the opponent */
             return builder.build(); /* build the board */

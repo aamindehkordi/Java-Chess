@@ -5,7 +5,6 @@ import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
 import com.chess.engine.board.Move.KingSideCastleMove;
-import com.chess.engine.board.Move.QueenSideCastleMove;
 import com.chess.engine.pieces.Piece;
 import com.chess.engine.pieces.Rook;
 
@@ -77,14 +76,14 @@ public class WhitePlayer extends Player {
                             Move kingSideCastle = new KingSideCastleMove(this.board, this.playerKing, 62,
                                     (Rook) kingSideRook, kingSideRook.getPiecePosition(), 61);
                             kingCastles.add(kingSideCastle);
-                            this.playerKing.setCastled();
                         }
                     }
                 }
             }
             //WHITE QUEEN SIDE CASTLE
             // If the tiles on the queenside are not occupied
-            if(!this.board.getTile(59).isTileOccupied() && !this.board.getTile(58).isTileOccupied() && !this.board.getTile(57).isTileOccupied()) {
+            if(!this.board.getTile(59).isTileOccupied()  && !this.board.getTile(58).isTileOccupied() &&
+                    !this.board.getTile(57).isTileOccupied()) {
                 // Get the tile of the queenside rook
                 final Piece queenSideRook = this.board.getTile(56).getPiece();
                 // If the rook has not moved and its tile is not occupied
@@ -95,10 +94,9 @@ public class WhitePlayer extends Player {
                             queenSideRook.getPieceType() == ROOK) {
                         // Add the move to the list of legal moves
                         if(!BoardUtils.isKingPawnTrap(this.board, this.playerKing, 52)) {
-                            Move queenSideCastle = new QueenSideCastleMove(this.board, this.playerKing, 58,
+                            Move queenSideCastle = new Move.QueenSideCastleMove(this.board, this.playerKing, 58,
                                     (Rook) queenSideRook, queenSideRook.getPiecePosition(), 59);
                             kingCastles.add(queenSideCastle);
-                            this.playerKing.setCastled();
                         }
                     }
                 }

@@ -1,6 +1,7 @@
 package com.chess.engine.board;
 
 import com.chess.engine.Alliance;
+import com.chess.engine.board.Move.MoveFactory;
 import com.chess.engine.pieces.*;
 import com.chess.engine.player.BlackPlayer;
 import com.chess.engine.player.Player;
@@ -20,6 +21,7 @@ public class Board {
     private final Collection<Piece> blackPieces; /* the black pieces */
     private final Player currentPlayer; /* the current player */
     private final Pawn enPassantPawn; /* the pawn that can be captured en passant */
+    private Move transitionMove; /* the move transition */
 
 
     /** Constructor
@@ -40,6 +42,7 @@ public class Board {
         this.whitePlayer = new WhitePlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the white player */
         this.blackPlayer = new BlackPlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the black player */
         this.currentPlayer = builder.nextMoveMaker.choosePlayer(this.whitePlayer, this.blackPlayer); /* set the current player */
+        this.transitionMove = builder.transitionMove != null ? builder.transitionMove : MoveFactory.getNullMove();
     }
 
     @Override
@@ -224,10 +227,15 @@ public class Board {
         return this.currentPlayer.getLegalMoves(); /* return the legal moves of the current player */
     }
 
+    public Move getTransitionMove() {
+        return this.transitionMove; /* return the transition move */
+    }
+
     /** ‘Builder’ class */
     public static class Builder {
 
         final Map<Integer, Piece> boardConfig; /* the board configuration */
+        public Move transitionMove;
         Alliance nextMoveMaker; /* the next move maker */
         Pawn enPassantPawn; /* the en passant pawn */
 
@@ -255,6 +263,11 @@ public class Board {
             this.nextMoveMaker = nextMoveMaker; /* set the next move maker */
             return this;
         }
+        public Builder setMoveTransition(final Move transitionMove) {
+            this.transitionMove = transitionMove;
+            return this;
+        }
+
         /** Build the board
         *
         * @return the board
