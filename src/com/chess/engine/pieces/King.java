@@ -113,29 +113,31 @@ public class King extends Piece{
             // Get the destination coordinate
             final int candidateDestinationCoordinate = this.piecePosition + currentCandidateOffset;
 
-            // Check if the exclusions
-            if (isFirstColumnExclusion(this.piecePosition, currentCandidateOffset) ||
-                    isEighthColumnExclusion(this.piecePosition, currentCandidateOffset)) {
-                continue;
-            }
-
-            // Check if the destination coordinate is valid
+            // If the destination coordinate is valid
             if (BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)) {
-                // Get the piece at the destination coordinate
+                // If the king is on the edge of the board
+                if (isFirstColumnExclusion(this.piecePosition, currentCandidateOffset) ||
+                        isEighthColumnExclusion(this.piecePosition, currentCandidateOffset)) {
+                    continue;
+                }
+
+                // Get the tile at the destination coordinate
                 final Piece pieceAtDestination = board.getTile(candidateDestinationCoordinate).getPiece();
 
-                // Check if the piece at the destination coordinate is null
+                // If the tile is empty
                 if (pieceAtDestination == null) {
                     // Add the move to the list of legal moves
                     legalMoves.add(new Move.MajorMove(board, this, candidateDestinationCoordinate));
-                } else { // if the piece at the destination coordinate is not null
+                }
+                // If the tile is occupied
+                else {
                     // Get the alliance of the piece at the destination coordinate
                     final Alliance pieceAtDestinationAlliance = pieceAtDestination.getPieceAlliance();
 
-                    // Check if the alliance of the piece at the destination coordinate is not the same as the alliance of the piece
+                    // If the piece at the destination coordinate is not the same alliance as the king
                     if (this.pieceAlliance != pieceAtDestinationAlliance) {
                         // Add the move to the list of legal moves
-                        legalMoves.add(new Move.AttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination));
+                        legalMoves.add(new Move.MajorAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination));
                     }
                 }
             }
