@@ -23,7 +23,7 @@ public class MiniMax implements MoveStrategy{
      * @param searchDepth the depth of the search tree
      */
     public MiniMax(final int searchDepth) {
-        this.boardEvaluator = new StandardBoardEvaluator();
+        this.boardEvaluator = StandardBoardEvaluator.get();
         this.searchDepth = searchDepth;
         this.boardsEvaluated = 0;
     }
