@@ -84,10 +84,10 @@ public abstract class Player {
         for (final Move move : this.legalMoves) { /* For each legal move */
             final MoveTransition transition = makeMove(move); /* Make the move */
             if (transition.getMoveStatus().isDone()) { /* If the move is done */
-                return true; /* The player has an escape move */
+                return true; /* Return true */
             }
         }
-        return false; /* The player does not have an escape move */
+        return false; /* Return false */
     }
 
     /** Checks if a move is legal
