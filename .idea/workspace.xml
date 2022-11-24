@@ -5,8 +5,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Castling works?">
+      <change afterPath="$PROJECT_DIR$/art/fancy/BB.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy/BK.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy/BN.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy/BP.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy/BQ.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy/BR.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy/WB.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy/WK.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy/WN.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy/WP.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy/WQ.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy/WR.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy2/BB.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy2/BK.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy2/BN.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy2/BP.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy2/BQ.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy2/BR.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy2/WB.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy2/WK.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy2/WN.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy2/WP.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy2/WQ.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/fancy2/WR.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BB.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BK.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BN.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BP.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BQ.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/holyWarriors/BR.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WB.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WK.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WN.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WP.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WQ.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/holyWarriors/WR.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/misc/illegal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/misc/red_dot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/simple/BB.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/simple/BK.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/simple/BN.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/simple/BP.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/simple/BQ.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/simple/BR.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/simple/WB.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/simple/WK.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/simple/WN.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/simple/WP.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/simple/WQ.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/simple/WR.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/AlphaBetaWithMoveOrdering.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/KingSafetyAnalyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MoveOrdering.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/PawnStructureAnalyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/RookStructureAnalyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/StockAlphaBeta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/BoardUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/BoardUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/BlackPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/BlackPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestAlphaBeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestAlphaBeta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestKingSafety.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestKingSafety.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestRookStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestRookStructure.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +144,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
     "extract.method.default.visibility": "private",
-    "last_opened_file_path": "/Users/ali/Library/CloudStorage/OneDrive-Personal/Desktop/Other/Coding/School/Object Oriented Programming/ChessOOP/src/com/chess/pgn",
+    "last_opened_file_path": "/Users/ali/Library/CloudStorage/OneDrive-Personal/Desktop/Other/Coding/School/Object Oriented Programming/ChessOOP/src/com/chess/engine/player/ai",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -98,6 +165,8 @@
       <recent name="com.chess.engine.pieces" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/chess/engine/player/ai" />
+      <recent name="$PROJECT_DIR$/art" />
       <recent name="$PROJECT_DIR$/src/com/chess/pgn" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
@@ -115,7 +184,7 @@
       <recent name="com.tests.chess.engine.board" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.chess.OOPChess">
+  <component name="RunManager" selected="JUnit.ChessTestSuite">
     <configuration name="com.chess.OOPChess" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -151,7 +220,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCastling" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAlphaBeta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChessOOP" />
       <extension name="coverage">
         <pattern>
@@ -160,13 +229,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestCastling" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestAlphaBeta" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCastling.testNoCastlingOutOfCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCheckmate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChessOOP" />
       <extension name="coverage">
         <pattern>
@@ -175,14 +244,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestCastling" />
-      <option name="METHOD_NAME" value="testNoCastlingOutOfCheck" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestCheckmate" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCheckmate.testMateInTwoTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChessOOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.com.chess.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestCheckmate" />
+      <option name="METHOD_NAME" value="testMateInTwoTest2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCastling.testWhiteKingSideCastle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestFENParser.testWriteFEN2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChessOOP" />
       <extension name="coverage">
         <pattern>
@@ -191,24 +275,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestCastling" />
-      <option name="METHOD_NAME" value="testWhiteKingSideCastle" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestPieces.testPawnPromotion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ChessOOP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.com.chess.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestPieces" />
-      <option name="METHOD_NAME" value="testPawnPromotion" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestFENParser" />
+      <option name="METHOD_NAME" value="testWriteFEN2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -216,11 +284,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestCastling.testWhiteKingSideCastle" />
-        <item itemvalue="JUnit.TestCastling" />
         <item itemvalue="JUnit.ChessTestSuite" />
-        <item itemvalue="JUnit.TestCastling.testNoCastlingOutOfCheck" />
-        <item itemvalue="JUnit.TestPieces.testPawnPromotion" />
+        <item itemvalue="JUnit.TestCheckmate.testMateInTwoTest2" />
+        <item itemvalue="JUnit.TestCheckmate" />
+        <item itemvalue="JUnit.TestAlphaBeta" />
+        <item itemvalue="JUnit.TestFENParser.testWriteFEN2" />
       </list>
     </recent_temporary>
   </component>
@@ -259,14 +327,7 @@
       <workItem from="1668209659403" duration="2261000" />
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
-      <workItem from="1669179387935" duration="19808000" />
-    </task>
-    <task id="LOCAL-00065" summary="improvements">
-      <created>1666830843951</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1666830843951</updated>
+      <workItem from="1669179387935" duration="28126000" />
     </task>
     <task id="LOCAL-00066" summary="Added a mouse listener to the GUI tile class">
       <created>1666831831554</created>
@@ -604,7 +665,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669278249809</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Castling works?">
+      <created>1669278796230</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1669278796230</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -705,18 +773,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="156" />
+          <line>55</line>
+          <option name="timeStamp" value="167" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Board.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="159" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="160" />
+          <url>file://$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java</url>
+          <line>163</line>
+          <option name="timeStamp" value="168" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
