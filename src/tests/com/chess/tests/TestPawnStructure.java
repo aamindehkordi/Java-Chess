@@ -7,7 +7,7 @@ import com.chess.engine.pieces.Pawn;
 import com.chess.engine.player.ai.PawnStructureAnalyzer;
 import com.chess.engine.player.ai.StandardBoardEvaluator;
 import com.chess.pgn.FenUtilities;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import static com.chess.engine.board.Board.Builder;
 import static com.chess.engine.board.Board.createStandardBoard;

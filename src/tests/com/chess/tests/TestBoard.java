@@ -21,45 +21,23 @@ import static com.chess.engine.Alliance.WHITE;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
 
 public class TestBoard {
 
     @Test
     public void initialBoard() {
-
         final Board board = Board.createStandardBoard();
+        assertEquals(board.currentPlayer().getAlliance(), WHITE);
+        assertEquals(board.currentPlayer().getOpponent().getAlliance(), BLACK);
+        assertEquals(board.currentPlayer().isInCheck(), false);
+        assertEquals(board.currentPlayer().isInCheckMate(), false);
+        assertEquals(board.currentPlayer().isCastled(), false);
         assertEquals(board.currentPlayer().getLegalMoves().size(), 20);
         assertEquals(board.currentPlayer().getOpponent().getLegalMoves().size(), 20);
-        assertFalse(board.currentPlayer().isInCheck());
-        assertFalse(board.currentPlayer().isInCheckMate());
+        assertFalse(board.currentPlayer().isInStaleMate());
+        assertFalse(board.currentPlayer().getOpponent().isInStaleMate());
         assertFalse(board.currentPlayer().isCastled());
-        assertTrue(board.currentPlayer().getPlayerKing().isKingSideCastleCapable());
-        assertTrue(board.currentPlayer().getPlayerKing().isQueenSideCastleCapable());
-        assertEquals(board.currentPlayer(), board.whitePlayer());
-        assertEquals(board.currentPlayer().getOpponent(), board.blackPlayer());
-        assertFalse(board.currentPlayer().getOpponent().isInCheck());
-        assertFalse(board.currentPlayer().getOpponent().isInCheckMate());
         assertFalse(board.currentPlayer().getOpponent().isCastled());
-        assertTrue(board.currentPlayer().getOpponent().getPlayerKing().isKingSideCastleCapable());
-        assertTrue(board.currentPlayer().getOpponent().getPlayerKing().isQueenSideCastleCapable());
-        assertEquals("White", board.whitePlayer().toString());
-        assertEquals("Black", board.blackPlayer().toString());
-        /*
-        final Iterable<Piece> allPieces = board.getAllPieces();
-        final Iterable<Move> allMoves = Iterables.concat(board.whitePlayer().getLegalMoves(), board.blackPlayer().getLegalMoves());
-        for(final Move move : allMoves) {
-            assertFalse(move.isAttack());
-            assertFalse(move.isCastlingMove());
-            assertEquals(MoveUtils.exchangeScore(move), 1);
-        }
-        assertEquals(Iterables.size(allMoves), 40);
-        assertEquals(Iterables.size(allPieces), 32);
-        assertFalse(BoardUtils.isEndGame(board));
-        assertFalse(BoardUtils.isThreatenedBoardImmediate(board));
-        assertEquals(StandardBoardEvaluator.get().evaluate(board, 0), 0);
-        */
-        assertNull(board.getTile(35));
     }
 
     @Test
@@ -344,7 +322,7 @@ public class TestBoard {
         assertTrue(t3.getMoveStatus().isDone());
 
         //Ask the AI for the best move
-        final MoveStrategy miniMax = new MiniMax(4);
+        final MoveStrategy miniMax = new MiniMax(3);
         final Move aiMove = miniMax.execute(t3.getTransitionBoard());
 
         //The best move is checkmate

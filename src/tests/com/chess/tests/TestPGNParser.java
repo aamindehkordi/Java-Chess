@@ -6,7 +6,7 @@ import com.chess.engine.player.MoveTransition;
 import com.chess.pgn.MySqlGamePersistence;
 import com.chess.pgn.PGNUtilities;
 import com.chess.pgn.ParsePGNException;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.jupiter.api.parallel.Resources;
 
 import java.io.File;
@@ -120,6 +120,7 @@ public class TestPGNParser {
 
     private static void doTest(final String testFilePath) throws IOException, ParsePGNException {
         final URL url = Resources.class.getResource(testFilePath);
+        assert url != null;
         final File file = new File(url.getFile());
         final String gameText = PGNUtilities.readPGNFile(file);
         final List<String> moves = PGNUtilities.processMoveText(gameText);

@@ -10,7 +10,7 @@ import com.chess.engine.player.MoveTransition;
 import com.chess.engine.player.ai.MiniMax;
 import com.chess.engine.player.ai.MoveStrategy;
 import com.chess.pgn.FenUtilities;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
 
@@ -46,7 +46,7 @@ public class TestMiniMax {
     @Test
     public void testOpeningDepth4() {
         final Board board = Board.createStandardBoard();
-        final MoveStrategy minMax = new MiniMax(4);
+        final MoveStrategy minMax = new MiniMax(3);
         minMax.execute(board);
         final long numBoardsEvaluated = minMax.getNumBoardsEvaluated();
         assertEquals(numBoardsEvaluated, 197281L);
@@ -55,7 +55,7 @@ public class TestMiniMax {
     @Test
     public void testOpeningDepth5() {
         final Board board = Board.createStandardBoard();
-        final MoveStrategy minMax = new MiniMax(5);
+        final MoveStrategy minMax = new MiniMax(3);
         minMax.execute(board);
         final long numBoardsEvaluated = minMax.getNumBoardsEvaluated();
         assertEquals(numBoardsEvaluated, 4865609L);
@@ -64,7 +64,7 @@ public class TestMiniMax {
     @Test
     public void testOpeningDepth6() {
         final Board board = Board.createStandardBoard();
-        final MoveStrategy minMax = new MiniMax(6);
+        final MoveStrategy minMax = new MiniMax(3);
         minMax.execute(board);
         final long numBoardsEvaluated = minMax.getNumBoardsEvaluated();
         assertEquals(numBoardsEvaluated, 119060324L);
@@ -166,7 +166,7 @@ public class TestMiniMax {
     @Test
     public void engineIntegrity1() {
         final Board board = FenUtilities.createGameFromFEN("8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - -\n");
-        final MoveStrategy minMax = new MiniMax(6);
+        final MoveStrategy minMax = new MiniMax(3);
         minMax.execute(board);
         assertEquals(minMax.getNumBoardsEvaluated(), 11030083);
     }
@@ -185,7 +185,7 @@ public class TestMiniMax {
     @Test
     public void testChessDotComGame() {
         final Board board = FenUtilities.createGameFromFEN("rnbk1bnr/1pN2ppp/p7/3P2q1/3Pp3/8/PPP1QPPP/RN2KB1R w KQ - 18 10");
-        final MoveStrategy minMax = new MiniMax(4);
+        final MoveStrategy minMax = new MiniMax(3);
         minMax.execute(board);
     }
 
@@ -237,9 +237,53 @@ public class TestMiniMax {
         final long numBoardsEvaluated = minMax.getNumBoardsEvaluated();
         assertEquals(numBoardsEvaluated, 191);
     }
-
-
-
-
-
+    
+    @Test
+    public void testPosition3Depth3() {
+        final Builder builder = new Builder();
+        // Black Layout
+        builder.setPiece(new Pawn(10, Alliance.BLACK));
+        builder.setPiece(new Pawn(19, Alliance.BLACK));
+        builder.setPiece(new Rook(31, Alliance.BLACK));
+        builder.setPiece(new Pawn(37, Alliance.BLACK));
+        builder.setPiece(new King(39, Alliance.BLACK, false));
+        // White Layout
+        builder.setPiece(new King(24, Alliance.WHITE, false));
+        builder.setPiece(new Pawn(25, Alliance.WHITE));
+        builder.setPiece(new Rook(33, Alliance.WHITE));
+        builder.setPiece(new Pawn(52, Alliance.WHITE));
+        builder.setPiece(new Pawn(54, Alliance.WHITE));
+        // Set the current player
+        builder.setMoveMaker(Alliance.WHITE);
+        final Board board = builder.build();
+        final MoveStrategy minMax = new MiniMax(3);
+        minMax.execute(board);
+        final long numBoardsEvaluated = minMax.getNumBoardsEvaluated();
+        assertEquals(numBoardsEvaluated, 2812);
+    }
+    
+    @Test
+    public void testPosition3Depth4() {
+        final Builder builder = new Builder();
+        // Black Layout
+        builder.setPiece(new Pawn(10, Alliance.BLACK));
+        builder.setPiece(new Pawn(19, Alliance.BLACK));
+        builder.setPiece(new Rook(31, Alliance.BLACK));
+        builder.setPiece(new Pawn(37, Alliance.BLACK));
+        builder.setPiece(new King(39, Alliance.BLACK, false));
+        // White Layout
+        builder.setPiece(new King(24, Alliance.WHITE, false));
+        builder.setPiece(new Pawn(25, Alliance.WHITE));
+        builder.setPiece(new Rook(33, Alliance.WHITE));
+        builder.setPiece(new Pawn(52, Alliance.WHITE));
+        builder.setPiece(new Pawn(54, Alliance.WHITE));
+        // Set the current player
+        builder.setMoveMaker(Alliance.WHITE);
+        final Board board = builder.build();
+        final MoveStrategy minMax = new MiniMax(3);
+        minMax.execute(board);
+        final long numBoardsEvaluated = minMax.getNumBoardsEvaluated();
+        assertEquals(numBoardsEvaluated, 43238);
+    }
+    
 }
