@@ -117,16 +117,17 @@ public class TestIterativeDeepening {
         builder.setPiece(new Rook(63, Alliance.WHITE));
         // Set the current player
         builder.setMoveMaker(Alliance.BLACK);
-        final Board board = builder.build();
         /*
-        final String fen = FenUtilities.createFENFromGame(board);
+        final Board board = builder.build();
+
+        final String fen = createFENFromGame(board);
         System.out.println(fen);
         final MoveStrategy iterativeDeepening = new IterativeDeepening(7);
         final Move bestMove = iterativeDeepening.execute(board);
         assertEquals(bestMove, Move.MoveFactory
                 .createMove(board, BoardUtils.getCoordinateAtPosition("c8"), BoardUtils.getCoordinateAtPosition("a6")));
+        */
 
-         */
     }
 
     /*

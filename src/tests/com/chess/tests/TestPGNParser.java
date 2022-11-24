@@ -1,80 +1,94 @@
 package tests.com.chess.tests;
 
+import com.chess.engine.board.Board;
+import com.chess.engine.board.Move;
+import com.chess.engine.player.MoveTransition;
+import com.chess.pgn.MySqlGamePersistence;
+import com.chess.pgn.PGNUtilities;
+import com.chess.pgn.ParsePGNException;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Resources;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.List;
+
 public class TestPGNParser {
 
-    /*
+
     @Test
-    public void test1() throws IOException {
+    public void test1() throws IOException, ParsePGNException {
         doTest("com/chess/tests/pgn/t1.pgn");
     }
 
     @Test
-    public void test2() throws IOException {
+    public void test2() throws IOException, ParsePGNException {
         doTest("com/chess/tests/pgn/t2.pgn");
     }
 
     @Test
-    public void test3() throws IOException {
+    public void test3() throws IOException, ParsePGNException {
         doTest("com/chess/tests/pgn/t3.pgn");
     }
 
     @Test
-    public void test4() throws IOException {
+    public void test4() throws IOException, ParsePGNException {
         doTest("com/chess/tests/pgn/t4.pgn");
     }
 
     @Test
-    public void test5() throws IOException {
+    public void test5() throws IOException, ParsePGNException {
         doTest("com/chess/tests/pgn/smallerTest.pgn");
     }
 
     @Test
-    public void test6() throws IOException {
+    public void test6() throws IOException, ParsePGNException {
         doTest("com/chess/tests/pgn/t6.pgn");
     }
 
     @Test
-    public void test8() throws IOException {
+    public void test8() throws IOException, ParsePGNException {
         doTest("com/chess/tests/pgn/t8.pgn");
     }
 
     @Test
-    public void test9() throws IOException {
+    public void test9() throws IOException, ParsePGNException {
         doTest("com/chess/tests/pgn/t9.pgn");
     }
 
     @Test
-    public void testPawnPromotion() throws IOException {
+    public void testPawnPromotion() throws IOException, ParsePGNException {
         doTest("com/chess/tests/pgn/queenPromotion.pgn");
     }
 
     @Test
-    public void test10() throws IOException {
+    public void test10() throws IOException, ParsePGNException {
         doTest("com/chess/tests/pgn/t10.pgn");
     }
 
     @Test
-    public void test11() throws IOException {
+    public void test11() throws IOException, ParsePGNException {
         doTest("com/chess/tests/pgn/bigTest.pgn");
     }
 
     @Test
-    public void test12() throws IOException {
+    public void test12() throws IOException, ParsePGNException {
         doTest("com/chess/tests/pgn/twic1047.pgn");
     }
 
     @Test
-    public void test13() throws IOException {
+    public void test13() throws IOException, ParsePGNException {
         doTest("com/chess/tests/pgn/twic1046.pgn");
     }
 
     @Test
-    public void test14() throws IOException {
+    public void test14() throws IOException, ParsePGNException {
         doTest("com/chess/tests/pgn/combined.pgn");
     }
 
     @Test
-    public void test15() throws IOException {
+    public void test15() throws IOException, ParsePGNException {
         doTest("com/chess/tests/pgn/c2012.pgn");
     }
 
@@ -104,11 +118,12 @@ public class TestPGNParser {
         System.out.println("move 2 = " +move2);
     }
 
-    private static void doTest(final String testFilePath) throws IOException {
-        final URL url = Resources.getResource(testFilePath);
-        final File testPGNFile = new File(url.getFile());
-        PGNUtilities.persistPGNFile(testPGNFile);
+    private static void doTest(final String testFilePath) throws IOException, ParsePGNException {
+        final URL url = Resources.class.getResource(testFilePath);
+        final File file = new File(url.getFile());
+        final String gameText = PGNUtilities.readPGNFile(file);
+        final List<String> moves = PGNUtilities.processMoveText(gameText);
+        System.out.println("moves = " +moves);
     }
 
-     */
 }

@@ -4,9 +4,13 @@ import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
 import com.chess.engine.player.MoveTransition;
+import com.chess.engine.player.ai.MiniMax;
+import com.chess.engine.player.ai.MoveStrategy;
+import com.chess.pgn.FenUtilities;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertTrue;
+import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertFalse;
 
 public class TestCastling {
@@ -294,11 +298,16 @@ public class TestCastling {
         assertTrue(t11.getMoveStatus().isDone());
 
         //final MoveStrategy moveStrategy = new StockAlphaBeta(6);
+        final MoveStrategy moveStrategy = new MiniMax(4);
 
         //moveStrategy.execute(t11.getTransitionBoard());
+        final Move aiMove = moveStrategy.execute(t11.getTransitionBoard());
+        final Move bestMove = Move.MoveFactory.createMove(t11.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("d7"),
+                BoardUtils.getCoordinateAtPosition("d8"));
+        assertEquals(aiMove, bestMove);
     }
 
-    /*
+
     @Test
     public void testNoCastlingOutOfCheck() {
         final Board board = FenUtilities.createGameFromFEN("r3k2r/1pN1nppp/p3p3/3p4/8/8/PPPK1PPP/R6R b kq - 1 18");
@@ -308,5 +317,5 @@ public class TestCastling {
                 .makeMove(illegalCastleMove);
         assertFalse(t1.getMoveStatus().isDone());
     }
-    */
+
 }

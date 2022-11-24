@@ -9,14 +9,16 @@ import com.chess.engine.pieces.Bishop;
 import com.chess.engine.pieces.King;
 import com.chess.engine.pieces.Rook;
 import com.chess.engine.player.MoveTransition;
+import com.chess.engine.player.ai.StandardBoardEvaluator;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPlayer {
 
-    /*
+
     @Test
     public void testSimpleEvaluation() {
         final Board board = Board.createStandardBoard();
@@ -31,7 +33,7 @@ public class TestPlayer {
         assertTrue(t2.getMoveStatus().isDone());
         assertEquals(StandardBoardEvaluator.get().evaluate(t2.getTransitionBoard(), 0), 0);
     }
-     */
+
 
     @Test
     public void testBug() {

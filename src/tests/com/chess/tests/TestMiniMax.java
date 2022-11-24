@@ -3,9 +3,13 @@ package tests.com.chess.tests;
 import com.chess.engine.Alliance;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.Board.Builder;
+import com.chess.engine.board.BoardUtils;
+import com.chess.engine.board.Move;
 import com.chess.engine.pieces.*;
+import com.chess.engine.player.MoveTransition;
 import com.chess.engine.player.ai.MiniMax;
 import com.chess.engine.player.ai.MoveStrategy;
+import com.chess.pgn.FenUtilities;
 import org.junit.jupiter.api.Test;
 
 import static junit.framework.TestCase.assertEquals;
@@ -158,7 +162,7 @@ public class TestMiniMax {
         assertEquals(minMax.getNumBoardsEvaluated(), 1866L);
     }
 
-    /*
+
     @Test
     public void engineIntegrity1() {
         final Board board = FenUtilities.createGameFromFEN("8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - -\n");
@@ -184,7 +188,7 @@ public class TestMiniMax {
         final MoveStrategy minMax = new MiniMax(4);
         minMax.execute(board);
     }
-    */
+
 
     @Test
     public void testPosition3Depth1() {

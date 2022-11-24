@@ -1,8 +1,20 @@
 package tests.com.chess.tests;
 
+import com.chess.engine.board.Board;
+import com.chess.engine.board.BoardUtils;
+import com.chess.engine.board.Move;
+import com.chess.engine.player.MoveTransition;
+import com.chess.pgn.FenUtilities;
+import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class TestFENParser {
 
-    /*
+
     @Test
     public void testWriteFEN1() throws IOException {
         final Board board = Board.createStandardBoard();
@@ -27,7 +39,5 @@ public class TestFENParser {
         assertEquals(fenString2, "rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq c6 0 1");
 
     }
-
-     */
 
 }
