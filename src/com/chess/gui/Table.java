@@ -24,6 +24,7 @@ import java.util.*;
 import static javax.swing.SwingUtilities.*;
 
 public class Table extends Observable {
+//TODO ADD COMMENTS and cleanup
 
     private final JFrame gameFrame; // JFrame is a class that creates a window
     private final GameHistoryPanel gameHistoryPanel; // the panel for the game history
@@ -183,7 +184,7 @@ public class Table extends Observable {
     private JMenu createFileMenu() {
         final JMenu filesMenu = new JMenu("File");
         filesMenu.setMnemonic(KeyEvent.VK_F);
-
+        //TODO add UNDO function
         /*
         final JMenuItem openPGN = new JMenuItem("Load PGN File", KeyEvent.VK_O);
         openPGN.addActionListener(e -> {

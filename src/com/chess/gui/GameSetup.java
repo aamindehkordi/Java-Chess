@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 class GameSetup extends JDialog {
+//TODO ADD COMMENTS
 
     private PlayerType whitePlayerType;
     private PlayerType blackPlayerType;
