@@ -216,6 +216,14 @@ public class Board {
         return Collections.unmodifiableCollection(allPieces); /* return the list of all pieces */
     }
 
+    public Alliance getAlliance() {
+        return this.currentPlayer.getAlliance(); /* return the alliance of the current player */
+    }
+
+    public Collection<Move> getAllianceToMove() {
+        return this.currentPlayer.getLegalMoves(); /* return the legal moves of the current player */
+    }
+
     /** ‘Builder’ class */
     public static class Builder {
 

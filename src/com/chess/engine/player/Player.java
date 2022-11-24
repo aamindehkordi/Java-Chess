@@ -20,6 +20,7 @@ public abstract class Player {
     protected final Collection<Move> opponentLegalMoves;
     /** If the player is in check */
     private final boolean isInCheck;
+    private int moveNumber;
 
     /** Constructor
      *
@@ -38,6 +39,7 @@ public abstract class Player {
         if (!castleMoves.isEmpty()) {
             legalMoves.addAll(castleMoves);
         }
+        this.moveNumber = 0;
         this.legalMoves = Collections.unmodifiableCollection(legalMoves);
         this.opponentLegalMoves = Collections.unmodifiableCollection(opponentMoves);
     }
@@ -48,7 +50,7 @@ public abstract class Player {
      * @param opponentLegalMoves the opponent's legal moves
      * @return a collection of legal moves
      */
-    protected static Collection<Move> calculateAttacksOnTile(int piecePosition, Collection<Move> opponentLegalMoves) {
+    public static Collection<Move> calculateAttacksOnTile(int piecePosition, Collection<Move> opponentLegalMoves) {
         final List<Move> attackMoves = new ArrayList<>(); /* List of legal moves */
         for(final Move move : opponentLegalMoves){ /* For each legal move */
             if(piecePosition == move.getDestinationCoordinate()){ /* If the piece's position is the same as the destination coordinate */
@@ -139,7 +141,7 @@ public abstract class Player {
         }
 
         final Board transitionBoard = move.execute(); /* Execute the move on a temporary board*/
-
+        this.moveNumber++; /* Increment the move number */
         /* Create a new collection of legal moves for the opponent on the new board */
         final Collection<Move> kingAttacks = Player.calculateAttacksOnTile(transitionBoard.currentPlayer().getOpponent().getPlayerKing().getPiecePosition(),
                 transitionBoard.currentPlayer().getLegalMoves());
@@ -176,11 +178,6 @@ public abstract class Player {
      */
     public abstract Collection<Piece> getActivePieces();
 
-    /** Gets the alliance of a player
-     *
-     * @return the alliance
-     */
-    public abstract Alliance getAlliance();
 
     /** Gets the opponent of a player
      *
@@ -203,4 +200,14 @@ public abstract class Player {
     protected boolean hasCastleOpportunities() {
         return !this.isInCheck && !this.isCastled();
     }
+
+    public int getMoveNumber() {
+        return this.moveNumber;
+    }
+
+    /** Get the alliance of the player
+     *
+     * @return the alliance
+     */
+    public abstract Alliance getAlliance();
 }
