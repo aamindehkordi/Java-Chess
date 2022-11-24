@@ -156,6 +156,38 @@ public class King extends Piece{
                         }
                     }
                 }
+                // White Queenside Castle
+                if (this.piecePosition == 60 && this.pieceAlliance.isWhite() && !this.isFirstMove() &&
+                        !this.isCastled()) { //If the white king is in the starting position has not moved and has not castled
+                    if (!board.getTile(59).isTileOccupied() && !board.getTile(58).isTileOccupied() && !board.getTile(57).isTileOccupied()) { //If the tiles between the king and the rook are empty
+                        final Piece rookTile = board.getTile(56).getPiece(); //Get the rook on the left side
+                        if (rookTile != null && rookTile.getPieceType().isRook() && //If the rook is not null and is a rook
+                                rookTile.getPieceAlliance() == this.pieceAlliance && //If the rook is the same alliance as the king
+                                rookTile.isFirstMove()) { //If the rook has not moved
+                            if (Player.calculateAttacksOnTile(59, board.getAllianceToMove()).isEmpty() && //If the tiles between the king and the rook are not attacked
+                                    Player.calculateAttacksOnTile(58, board.getAllianceToMove()).isEmpty() &&
+                                    Player.calculateAttacksOnTile(57, board.getAllianceToMove()).isEmpty()) {
+                                legalMoves.add(new Move.QueenSideCastleMove(board, this, 58, (Rook) rookTile, 59, 57));
+                            }
+                        }
+                    }
+                }
+                // Black Queenside Castle
+                if (this.piecePosition == 4 && this.pieceAlliance.isBlack() && !this.isFirstMove() &&
+                        !this.isCastled()) { //If the black king is in the starting position has not moved and has not castled
+                    if (!board.getTile(3).isTileOccupied() && !board.getTile(2).isTileOccupied() && !board.getTile(1).isTileOccupied()) { //If the tiles between the king and the rook are empty
+                        final Piece rookTile = board.getTile(0).getPiece(); //Get the rook on the left side
+                        if (rookTile != null && rookTile.getPieceType().isRook() && //If the rook is not null and is a rook
+                                rookTile.getPieceAlliance() == this.pieceAlliance && //If the rook is the same alliance as the king
+                                rookTile.isFirstMove()) { //If the rook has not moved
+                            if (Player.calculateAttacksOnTile(3, board.getAllianceToMove()).isEmpty() && //If the tiles between the king and the rook are not attacked
+                                    Player.calculateAttacksOnTile(2, board.getAllianceToMove()).isEmpty() &&
+                                    Player.calculateAttacksOnTile(1, board.getAllianceToMove()).isEmpty()) {
+                                legalMoves.add(new Move.QueenSideCastleMove(board, this, 2, (Rook) rookTile, 3, 1));
+                            }
+                        }
+                    }
+                }
 
                 if (!this.isCastled) { //If the king has not castled
                     if (this.kingSideCastleCapable) { //If the king can castle on the kingside
