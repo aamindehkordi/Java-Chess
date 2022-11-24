@@ -26,15 +26,25 @@ public class MoveTransition {
         return this.moveStatus;
     }
 
+    /** Gets the board after the move
+     * @return the board after the move
+     */
     public Board getTransitionBoard() {
         return this.transitionBoard;
     }
 
+    /** Gets the move
+     * @return the move
+     */
     public MoveTransition getTransitionMove() {
         return this;
     }
 
+    /** Gets the tile of the current piece's position that is attempted to moved
+     * @return the tile of the current piece's position from the board
+     */
     public int getFromBoard() {
+        //TODO CLEANUP
         return this.transitionBoard.getTile(this.move.getCurrentCoordinate()).getPiece().getPiecePosition();
     }
 }

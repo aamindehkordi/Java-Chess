@@ -23,5 +23,9 @@ public enum MoveStatus {
         }
     };
 
+    /**
+     * Returns true if the move is done
+     * @return true if the move is done
+     */
     public abstract boolean isDone();
 }

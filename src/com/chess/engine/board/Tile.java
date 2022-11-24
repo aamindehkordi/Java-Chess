@@ -64,6 +64,10 @@ public abstract class Tile {
      */
     public abstract Piece getPiece();
 
+    /** Get the tile coordinate
+     *
+     * @return the tile coordinate
+     */
     public int getTileCoordinate() {
         return this.tileCoord;
     }

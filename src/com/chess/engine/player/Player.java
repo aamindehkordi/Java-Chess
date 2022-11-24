@@ -212,10 +212,18 @@ public abstract class Player {
      */
     public abstract Alliance getAlliance();
 
+    /** Can the player castle on the king side?
+     *
+     * @return true if the player can castle on the king side
+     */
     public boolean isKingSideCastleCapable() {
         return this.playerKing.isKingSideCastleCapable();
     }
 
+    /** Can the player castle on the queen side?
+     *
+     * @return true if the player can castle on the queen side
+     */
     public boolean isQueenSideCastleCapable() {
         return this.playerKing.isQueenSideCastleCapable();
     }

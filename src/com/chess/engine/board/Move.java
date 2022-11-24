@@ -118,6 +118,9 @@ public abstract class Move {
     public Piece getAttackedPiece() {
         return null;
     }
+    /** Executes the standard move
+     * @return the new board
+     */
     public Board execute() {
 
         final Builder builder = new Builder(); /* create a new board builder */
@@ -149,6 +152,11 @@ public abstract class Move {
         return this;
     }
 
+    //TODO Fix UNDO
+    /** Undo the move
+     *
+     * @return the board after the move has been undone
+     */
     public Board undo() {
         final Board.Builder builder = new Builder();
         this.board.getAllPieces().forEach(builder::setPiece);
@@ -305,7 +313,9 @@ public abstract class Move {
     }
 
     public static class PawnPromotion extends Move {
+        /** The decorated move is the move that is being promoted */
         final Move decoratedMove;
+        /** The pawn that is being promoted */
         final Pawn promotedPawn;
 
         /** Constructor
@@ -499,6 +509,10 @@ public abstract class Move {
             this.castleRookDestination = castleRookDestination;
         }
 
+        /** Returns the rook that is being castled
+         *
+         * @return the rook that is being castled
+         */
         public Rook getCastleRook() {
             return this.castleRook;
         }
@@ -623,14 +637,28 @@ public abstract class Move {
         /** A null move */
         public static final Move NULL_MOVE = new NullMove();
 
+        /** Constructor
+         *
+         */
         private MoveFactory() {
             throw new RuntimeException("Not instantiable!");
         }
 
+        /** Get the Null Move
+         *
+         * @return null move
+         */
         public static Move getNullMove() {
             return NULL_MOVE;
         }
 
+        /** Create a move
+         *
+         * @param board the board
+         * @param currentCoordinate the current coordinate
+         * @param destinationCoordinate the destination coordinate
+         * @return the move
+         */
         public static Move createMove(final Board board, final int currentCoordinate, final int destinationCoordinate) {
 
             for(final Move move : board.getAllLegalMoves()) {
