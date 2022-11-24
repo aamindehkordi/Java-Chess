@@ -128,7 +128,7 @@ public abstract class Player {
      * @return true if the player is castled
      */
     public boolean isCastled() {
-        return this.getPlayerKing().isCastled();
+        return false;
     }
 
     /** Make a move
