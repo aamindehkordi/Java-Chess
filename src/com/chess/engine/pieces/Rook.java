@@ -90,6 +90,11 @@ public class Rook extends Piece {
         return new Rook(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
     }
 
+    @Override
+    public int locationBonus() {
+        return this.pieceAlliance.rookBonus(this.piecePosition);
+    }
+
     /** If the rook is on the eighth column, the move is illegal
      *
      * @param candidateDestinationCoordinate the destination coordinate

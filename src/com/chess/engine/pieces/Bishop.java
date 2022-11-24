@@ -92,6 +92,11 @@ public class Bishop extends Piece {
         return new Bishop(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
     }
 
+    @Override
+    public int locationBonus() {
+        return this.pieceAlliance.bishopBonus(this.piecePosition);
+    }
+
     /** if the bishop is on the first, the move is illegal
      *
      * @param currentPosition the current position of the bishop

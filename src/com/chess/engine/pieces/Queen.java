@@ -95,6 +95,11 @@ public class Queen extends Piece{
         return new Queen(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
     }
 
+    @Override
+    public int locationBonus() {
+        return this.pieceAlliance.queenBonus(this.piecePosition);
+    }
+
     /** If the Queen is on the Eighth Column, the move is illegal
      *
      * @param candidateDestinationCoordinate the current position of the Queen

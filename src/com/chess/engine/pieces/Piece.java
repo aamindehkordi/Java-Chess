@@ -118,7 +118,17 @@ public abstract class Piece {
         return this.pieceType;
     }
 
+    /** Get the value of the piece
+     *
+     * @return the value of the piece
+     */
     public int getPieceValue() {
         return this.pieceType.getPieceValue();
     }
+
+    /** Get the bonus for the piece's position for evaluations
+     *
+     * @return the bonus for the piece's position
+     */
+    public abstract int locationBonus();
 }

@@ -177,6 +177,15 @@ public class Pawn extends Piece {
         return new Pawn(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
     }
 
+    @Override
+    public int locationBonus() {
+        return this.pieceAlliance.pawnBonus(this.piecePosition);
+    }
+
+    /** Promote the pawn to a queen
+     *
+     * @return a new queen with the same alliance as the pawn on the same position as the pawn
+     */
     public Piece getPromotionPiece() {
         return new Queen(this.piecePosition, this.pieceAlliance, false);
     }

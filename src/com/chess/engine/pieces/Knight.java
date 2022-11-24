@@ -95,6 +95,11 @@ public class Knight extends Piece {
         return new Knight(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
     }
 
+    @Override
+    public int locationBonus() {
+        return this.pieceAlliance.knightBonus(this.piecePosition);
+    }
+
     /** if the knight is on the 8th column then the corresponding move is illegal
      *
      * @param currentPos the current position of the knight

@@ -156,6 +156,11 @@ public class King extends Piece{
         return new King(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance());
     }
 
+    @Override
+    public int locationBonus() {
+        return this.pieceAlliance.kingBonus(this.piecePosition);
+    }
+
     public Piece movePiece(Move move, boolean isCastled) {
         return new King(move.getDestinationCoordinate(), move.getMovedPiece().getPieceAlliance(), isCastled, false, false);
     }
