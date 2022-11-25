@@ -19,20 +19,44 @@ import static com.chess.engine.board.BoardUtils.mvvlva;
  */
 public class AlphaBetaWithMoveOrdering extends Observable implements MoveStrategy {
 
-    //TODO these need comments too
     /**
      * The Evaluator is used to evaluate the board.
      */
     private final BoardEvaluator evaluator;
+
     /**
      * The search depth determines how many moves ahead the AI will look.
      */
     private final int searchDepth;
+
+    /**
+     * MoveSorter is used to sort the moves.
+     */
     private final MoveSorter moveSorter;
+
+    /**
+     * quiescenceFactor is used to determine how many moves ahead the AI will look in quiescence search.
+     */
     private final int quiescenceFactor;
+
+    /**
+     * The number of boards evaluated.
+     */
     private long boardsEvaluated;
+
+    /**
+     * Execution time of the AI.
+     */
     private long executionTime;
+
+    /**
+     * The quiescenceCount is a count of the number of quiescence searches performed.
+     */
     private int quiescenceCount;
+
+    /**
+     * The cutOffsProduced is a count of the number of cut-offs produced.
+     */
     private int cutOffsProduced;
 
 
