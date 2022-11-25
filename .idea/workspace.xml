@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Commented KingSafetyAnalyzer">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Commented MoveOrdering and took off todo for this file and the previous&#10;Taking a break, this is so tedious , even with copilot &#10;I need cope pilot rn honestly">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/KingSafetyAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/KingSafetyAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MoveOrdering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MoveOrdering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/PawnStructureAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/PawnStructureAnalyzer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,13 +270,6 @@
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
       <workItem from="1669179387935" duration="28423000" />
-    </task>
-    <task id="LOCAL-00088" summary="Added movelog and fixed bugs">
-      <created>1668058785427</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1668058785428</updated>
     </task>
     <task id="LOCAL-00089" summary="OMG a working game of chess (no en passant)">
       <created>1668210631367</created>
@@ -615,7 +607,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669341067082</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="Commented MoveOrdering and took off todo for this file and the previous&#10;Taking a break, this is so tedious , even with copilot &#10;I need cope pilot rn honestly">
+      <created>1669342829195</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1669342829195</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -667,7 +666,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added Comments" />
     <MESSAGE value="breakpoints" />
     <MESSAGE value="Imported PGN FEN from someones github" />
     <MESSAGE value="implemented fen and pgn into test cases" />
@@ -692,7 +690,8 @@
     <MESSAGE value="needs cleanup &amp; comments" />
     <MESSAGE value="Fixed the previous comments in AlphabBetaWithMoveOrdering" />
     <MESSAGE value="Commented KingSafetyAnalyzer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commented KingSafetyAnalyzer" />
+    <MESSAGE value="Commented MoveOrdering and took off todo for this file and the previous&#10;Taking a break, this is so tedious , even with copilot &#10;I need cope pilot rn honestly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commented MoveOrdering and took off todo for this file and the previous&#10;Taking a break, this is so tedious , even with copilot &#10;I need cope pilot rn honestly" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
