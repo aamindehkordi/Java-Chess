@@ -11,7 +11,6 @@ import java.util.*;
  * This class analyzes the king safety of a player's king
  */
 public final class KingSafetyAnalyzer {
-//TODO ADD COMMENTS
 
     private static final KingSafetyAnalyzer INSTANCE = new KingSafetyAnalyzer();        //Initializing Singleton
     private static final List<boolean[]> COLUMNS = initColumns();                       //List of columns

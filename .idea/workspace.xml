@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Fixed the previous comments in AlphabBetaWithMoveOrdering">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Commented KingSafetyAnalyzer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/KingSafetyAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/KingSafetyAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MoveOrdering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MoveOrdering.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,13 +271,6 @@
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
       <workItem from="1669179387935" duration="28423000" />
-    </task>
-    <task id="LOCAL-00087" summary="Created new game history panel">
-      <created>1668056617469</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1668056617469</updated>
     </task>
     <task id="LOCAL-00088" summary="Added movelog and fixed bugs">
       <created>1668058785427</created>
@@ -614,7 +608,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669339333020</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="Commented KingSafetyAnalyzer">
+      <created>1669341067082</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1669341067082</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,7 +667,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Working on castling" />
     <MESSAGE value="Added Comments" />
     <MESSAGE value="breakpoints" />
     <MESSAGE value="Imported PGN FEN from someones github" />
@@ -691,7 +691,8 @@
     <MESSAGE value="cleaned up and proper, needs comments" />
     <MESSAGE value="needs cleanup &amp; comments" />
     <MESSAGE value="Fixed the previous comments in AlphabBetaWithMoveOrdering" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the previous comments in AlphabBetaWithMoveOrdering" />
+    <MESSAGE value="Commented KingSafetyAnalyzer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commented KingSafetyAnalyzer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
