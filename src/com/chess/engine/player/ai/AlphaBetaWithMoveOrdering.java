@@ -19,7 +19,14 @@ import static com.chess.engine.board.BoardUtils.mvvlva;
  */
 public class AlphaBetaWithMoveOrdering extends Observable implements MoveStrategy {
 
+    //TODO these need comments too
+    /**
+     * The Evaluator is used to evaluate the board.
+     */
     private final BoardEvaluator evaluator;
+    /**
+     * The search depth determines how many moves ahead the AI will look.
+     */
     private final int searchDepth;
     private final MoveSorter moveSorter;
     private final int quiescenceFactor;
@@ -74,11 +81,11 @@ public class AlphaBetaWithMoveOrdering extends Observable implements MoveStrateg
                                      final int quiescenceFactor) {
         this.evaluator = StandardBoardEvaluator.get();
         this.searchDepth = searchDepth;
-        this.quiescenceFactor = quiescenceFactor;
-        this.moveSorter = MoveSorter.SORT;
-        this.boardsEvaluated = 0;
-        this.quiescenceCount = 0;
-        this.cutOffsProduced = 0;
+        this.quiescenceFactor = quiescenceFactor; // Quiescence factor is the number of moves to search before using the quiescence search which is a search that only looks at captures
+        this.moveSorter = MoveSorter.SORT; // The move sorter is an enum that determines how the moves are sorted
+        this.boardsEvaluated = 0; // The number of boards evaluated
+        this.quiescenceCount = 0; // The number of times quiescence search was used
+        this.cutOffsProduced = 0; // The number of times the alpha-beta pruning algorithm cut off a branch
     }
 
     @Override
@@ -127,10 +134,9 @@ public class AlphaBetaWithMoveOrdering extends Observable implements MoveStrateg
                     //setChanged();
                     //notifyObservers(bestMove);
                 }
-                final String quiescenceInfo = " [h: " +highestSeenValue+ " l: " +lowestSeenValue+ "] q: " +this.quiescenceCount;   // get the quiescence info
-                s = "\t" + toString() + "(" +this.searchDepth+ "), m: (" +moveCounter+ "/" +numMoves+ ") " + move + ", best:  " + bestMove // get the string
-
-                        + quiescenceInfo + ", t: " +calculateTimeTaken(candidateMoveStartTime, System.nanoTime());                 // get the time taken
+                final String quiescenceInfo = " [h: " +highestSeenValue+ " l: " +lowestSeenValue+ "] q: " +this.quiescenceCount;   // get the quiescence info which:
+                s = "\t" + toString() + "(" +this.searchDepth+ "), m: (" +moveCounter+ "/" +numMoves+ ") " + move + ", best:  " + bestMove // gets the best move and the current move and the number of moves and the move counter and the search depth
+                        + quiescenceInfo + ", t: " +calculateTimeTaken(candidateMoveStartTime, System.nanoTime());                 // gets the time taken to make the move and the quiescence info
             } else {
                 s = "\t" + toString() + ", m: (" +moveCounter+ "/" +numMoves+ ") " + move + " is illegal, best: " +bestMove;       // get the string
             }
