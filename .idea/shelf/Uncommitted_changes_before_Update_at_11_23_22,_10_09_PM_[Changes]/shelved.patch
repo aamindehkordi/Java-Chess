@@ -1,0 +1,127 @@
+Index: src/tests/com/chess/tests/TestPieces.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/tests/com/chess/tests/TestPieces.java b/src/tests/com/chess/tests/TestPieces.java
+--- a/src/tests/com/chess/tests/TestPieces.java	
++++ b/src/tests/com/chess/tests/TestPieces.java	
+@@ -498,7 +498,8 @@
+         final Board board = Board.createStandardBoard();
+         final Board board2 = Board.createStandardBoard();
+         assertEquals(board.getTile(60), board2.getTile(60));
+-        assertFalse(board.getTile(60).equals(null));
++        assertFalse(board.getTile(60).equals(null)); // 
++
+     }
+ 
+ 
+Index: src/com/chess/engine/pieces/Pawn.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/com/chess/engine/pieces/Pawn.java b/src/com/chess/engine/pieces/Pawn.java
+--- a/src/com/chess/engine/pieces/Pawn.java	
++++ b/src/com/chess/engine/pieces/Pawn.java	
+@@ -58,6 +58,7 @@
+      * @param board the board
+      * @return a collection of legal moves
+      */
++
+     @Override
+     public Collection<Move> calculateLegalMoves(final Board board) {
+ 
+@@ -127,7 +128,7 @@
+                 }
+             }
+             // Attack move to the right
+-            else if (currentCandidateOffset == 7 &&                                                          /* if you are moving one tile diagonally to the left */
++            else if (currentCandidateOffset == 7 &&     /* if you are moving one tile diagonally to the left */
+                     !((BoardUtils.FIRST_COLUMN[this.piecePosition] && this.pieceAlliance.isBlack() ||       /* and you are not on the first column, and you are black */
+                             (BoardUtils.EIGHTH_COLUMN[this.piecePosition] && this.pieceAlliance.isWhite())))) {       /* or you are not on the eighth column, and you are white  (because of promotions)*/
+ 
+@@ -160,8 +161,8 @@
+             }
+         }
+ 
+-
+-    return Collections.unmodifiableList(legalMoves); /* return an unmodifiable list of legal moves */
++         /* return an unmodifiable list of legal moves */
++    return Collections.unmodifiableList(legalMoves);
+     }
+ 
+     /**
+Index: ChessOOP.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ChessOOP.iml b/ChessOOP.iml
+--- a/ChessOOP.iml	
++++ b/ChessOOP.iml	
+@@ -58,5 +58,15 @@
+         <SOURCES />
+       </library>
+     </orderEntry>
++    <orderEntry type="module-library">
++      <library name="JUnit4">
++        <CLASSES>
++          <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.13.1/junit-4.13.1.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" />
++        </CLASSES>
++        <JAVADOC />
++        <SOURCES />
++      </library>
++    </orderEntry>
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,10 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="min max recursive functions added">
++    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="x">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/Alliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/Alliance.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/ChessOOP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChessOOP.iml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -239,6 +240,7 @@
+       <workItem from="1668209659403" duration="2261000" />
+       <workItem from="1668825021194" duration="4854000" />
+       <workItem from="1668933010847" duration="4686000" />
++      <workItem from="1669174260481" duration="111000" />
+     </task>
+     <task id="LOCAL-00056" summary="Created GUI package and Table class">
+       <created>1666822013432</created>
+@@ -601,7 +603,7 @@
+                   <entry key="branch">
+                     <value>
+                       <list>
+-                        <option value="Promotion" />
++                        <option value="En_Passant" />
+                       </list>
+                     </value>
+                   </entry>
+@@ -684,7 +686,7 @@
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
+           <url>file://$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java</url>
+-          <line>118</line>
++          <line>117</line>
+           <option name="timeStamp" value="100" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
