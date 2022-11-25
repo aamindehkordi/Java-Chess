@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="PawnStructureAnalyzer comments">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="RookStructureAnalyzer comments, still have to fix though.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/RookStructureAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/RookStructureAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/StandardBoardEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/StandardBoardEvaluator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,13 +270,6 @@
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
       <workItem from="1669179387935" duration="28423000" />
-    </task>
-    <task id="LOCAL-00090" summary="tying up loose ends + en passant pt1">
-      <created>1668211589759</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1668211589759</updated>
     </task>
     <task id="LOCAL-00091" summary="x">
       <created>1668817943613</created>
@@ -614,7 +607,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669348741783</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="RookStructureAnalyzer comments, still have to fix though.">
+      <created>1669350050799</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1669350050799</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,7 +666,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Imported PGN FEN from someones github" />
     <MESSAGE value="implemented fen and pgn into test cases" />
     <MESSAGE value="Still debugging Castling" />
     <MESSAGE value="Castling works?" />
@@ -691,7 +690,8 @@
     <MESSAGE value="Commented KingSafetyAnalyzer" />
     <MESSAGE value="Commented MoveOrdering and took off todo for this file and the previous&#10;Taking a break, this is so tedious , even with copilot &#10;I need cope pilot rn honestly" />
     <MESSAGE value="PawnStructureAnalyzer comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="PawnStructureAnalyzer comments" />
+    <MESSAGE value="RookStructureAnalyzer comments, still have to fix though." />
+    <option name="LAST_COMMIT_MESSAGE" value="RookStructureAnalyzer comments, still have to fix though." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

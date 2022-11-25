@@ -9,7 +9,7 @@ import java.util.Dictionary;
 import java.util.Hashtable;
 
 public class StandardBoardEvaluator implements BoardEvaluator {
-//TODO ADD COMMENTS
+
 
     /** Bonus for checkmate */
     private static final int CHECK_MATE_BONUS = 10000;
@@ -31,11 +31,17 @@ public class StandardBoardEvaluator implements BoardEvaluator {
 
     /** Bonus for having a queen pair */
     private static final int QUEEN_PAIR_BONUS = 40;
+    /** mobility multiplier */
+
     private final static int MOBILITY_MULTIPLIER = 5;
+
+    /** attack multiplier */
     private final static int ATTACK_MULTIPLIER = 1;
 
+    /** New instance of the piece values */
     private static final BoardEvaluator INSTANCE = new StandardBoardEvaluator();
 
+    /** Singleton pattern */
     private StandardBoardEvaluator() {
     }
 
@@ -47,7 +53,7 @@ public class StandardBoardEvaluator implements BoardEvaluator {
 
 
     @Override
-    public int evaluate(Board board, int depth) {
+    public int evaluate(Board board, int depth) {           // evaluate() returns the score of the players and the depth
         // Returns the score of the board
         return scorePlayer(board.whitePlayer(), depth) -
                scorePlayer(board.blackPlayer(), depth);
@@ -121,15 +127,21 @@ public class StandardBoardEvaluator implements BoardEvaluator {
      * @return the score of the player
      */
     private int scorePlayer(Player player, int depth) {
-        return mobility(player) +
-                kingThreats(player, depth) +
-                attacks(player) +
+        return mobility(player) +               // returns the score by adding the mobility, king threats,
+                kingThreats(player, depth) +    //attacks, castling, piece evaluations, pawn structure, rook structure,
+                attacks(player) +               //bishop pair, knight pair, rook pair, and queen pair
                 castled(player) +
                 pieceEvaluations(player) +
                 pawnStructure(player);
 
     }
 
+    /**
+     * This method returns the player's attack score
+     *
+     * @param player The player
+     * @return the attack scire and attack multiplier
+     */
     private static int attacks(final Player player) {
         int attackScore = 0;
         for(final Move move : player.getLegalMoves()) {
@@ -144,6 +156,12 @@ public class StandardBoardEvaluator implements BoardEvaluator {
         return attackScore * ATTACK_MULTIPLIER;
     }
 
+    /**
+     * This method returns an evaluation of the player's pieces
+     *
+     * @param player The player
+     * @return the numerical value of the player's pieces
+     */
     private static int pieceEvaluations(Player player) {
         int pieceValueScore = 0;
         int numBishops = 0;
@@ -168,14 +186,33 @@ public class StandardBoardEvaluator implements BoardEvaluator {
                 (numQueens == 2 ? QUEEN_PAIR_BONUS : 0);
     }
 
+    /**
+     * This method returns the player's mobility score
+     *
+     * @param player The player
+     * @return the mobility score
+     */
     private static int mobility(final Player player) {
         return MOBILITY_MULTIPLIER * mobilityRatio(player);
     }
 
+    /**
+     * This method returns the player's mobility ratio
+     *
+     * @param player The player
+     * @return the mobility ratio
+     */
     private static int mobilityRatio(final Player player) {
         return (int)((player.getLegalMoves().size() * 10.0f) / player.getOpponent().getLegalMoves().size());
     }
 
+    /**
+     * This method returns the player's king threats score
+     *
+     * @param player The player
+     * @param depth The depth
+     * @return the king threats score
+     */
     private int kingThreats(Player player, int depth) {
         return player.getOpponent().isInCheckMate() ? CHECK_MATE_BONUS * depthBonus(depth) : check(player);
     }
@@ -210,10 +247,22 @@ public class StandardBoardEvaluator implements BoardEvaluator {
         return depth == 0 ? 1 : DEPTH_BONUS * depth; // If the depth is 0, return 1, otherwise return the depth bonus
     }
 
+    /**
+     * This method returns the player's pawn structure score
+     *
+     * @param player The player
+     * @return the pawn structure score
+     */
     private static int pawnStructure(Player player) {
         return PawnStructureAnalyzer.get().pawnStructureScore(player);
     }
 
+    /**
+     * This method returns the player's rook structure score
+     *
+     * @param player The player
+     * @return the rook structure score
+     */
     private static int rookStructure(Player player) {
         return RookStructureAnalyzer.get().rookStructureScore(player);
     }
