@@ -7,8 +7,9 @@ import com.chess.engine.player.MoveTransition;
 import com.chess.engine.player.Player;
 
 import java.util.Collection;
+import java.util.Observable;
 
-public class MiniMax implements MoveStrategy{
+public class MiniMax extends Observable implements MoveStrategy{
     
 
     /* The evaluation metric for the board. */

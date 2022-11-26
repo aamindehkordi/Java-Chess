@@ -5,7 +5,6 @@ import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
 import com.chess.engine.player.MoveTransition;
 import com.chess.engine.player.ai.AlphaBetaWithMoveOrdering;
-import com.chess.engine.player.ai.MoveStrategy;
 import com.chess.pgn.FenUtilities;
 import org.junit.Test;
 
@@ -297,7 +296,7 @@ public class TestCastling {
                                 BoardUtils.getCoordinateAtPosition("c3")));
         assertTrue(t11.getMoveStatus().isDone());
 
-        final MoveStrategy moveStrategy = new AlphaBetaWithMoveOrdering(3,1000);
+        final AlphaBetaWithMoveOrdering moveStrategy = new AlphaBetaWithMoveOrdering(4,1000);
         //final MoveStrategy moveStrategy = new MiniMax(3);
 
         moveStrategy.execute(t11.getTransitionBoard());

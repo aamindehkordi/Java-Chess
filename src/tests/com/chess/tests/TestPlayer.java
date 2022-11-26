@@ -89,7 +89,6 @@ public class TestPlayer {
         assertTrue(t3.getMoveStatus().isDone());
     }
 
-    /*
     @Test
     public void testUnmakeMove() {
         final Board board = Board.createStandardBoard();
@@ -100,7 +99,6 @@ public class TestPlayer {
         assertTrue(t1.getMoveStatus().isDone());
         t1.getTransitionBoard().currentPlayer().getOpponent().unMakeMove(m1);
     }
-    */
 
     @Test
     public void testIllegalMove() {

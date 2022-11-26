@@ -35,6 +35,7 @@ public class TestStaleMate {
                 .makeMove(MoveFactory.createMove(board, BoardUtils.getCoordinateAtPosition("e4"),
                         BoardUtils.getCoordinateAtPosition("f5")));
         assertTrue(t1.getMoveStatus().isDone());
+        //TODO: Stalemate is not being detected
         assertTrue(t1.getTransitionBoard().currentPlayer().isInStaleMate());
         assertFalse(t1.getTransitionBoard().currentPlayer().isInCheck());
         assertFalse(t1.getTransitionBoard().currentPlayer().isInCheckMate());

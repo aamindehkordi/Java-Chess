@@ -10,7 +10,6 @@ import com.chess.engine.pieces.*;
 import com.chess.engine.player.MoveTransition;
 import com.chess.engine.player.ai.BoardEvaluator;
 import com.chess.engine.player.ai.MiniMax;
-import com.chess.engine.player.ai.MoveStrategy;
 import com.chess.engine.player.ai.StandardBoardEvaluator;
 import org.junit.Test;
 
@@ -55,6 +54,7 @@ public class TestBoard {
         final Board board = builder.build();
         System.out.println(board);
 
+        //TODO: Player has too many moves, possibly king issue
         assertEquals(board.whitePlayer().getLegalMoves().size(), 6);
         assertEquals(board.blackPlayer().getLegalMoves().size(), 6);
         assertFalse(board.currentPlayer().isInCheck());
@@ -322,7 +322,7 @@ public class TestBoard {
         assertTrue(t3.getMoveStatus().isDone());
 
         //Ask the AI for the best move
-        final MoveStrategy miniMax = new MiniMax(3);
+        final MiniMax miniMax = new MiniMax(3);
         final Move aiMove = miniMax.execute(t3.getTransitionBoard());
 
         //The best move is checkmate
