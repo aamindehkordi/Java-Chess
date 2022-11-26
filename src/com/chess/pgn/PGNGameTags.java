@@ -7,7 +7,6 @@ import java.util.Map;
  * This class represents the tags of a PGN game.
  */
 public class PGNGameTags {
-    //TODO ADD COMMENTS
 
     /**
      * The map of tags.

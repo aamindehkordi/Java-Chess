@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Commented StockAlphaBeta, this was a long one.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="I commented PGNGameTags." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -269,13 +267,7 @@
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
       <workItem from="1669179387935" duration="28423000" />
-    </task>
-    <task id="LOCAL-00092" summary="En Passant is highlighted but not executed">
-      <created>1668819730323</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1668819730323</updated>
+      <workItem from="1669443616952" duration="483000" />
     </task>
     <task id="LOCAL-00093" summary="En Passant is highlighted but not executed">
       <created>1668820115918</created>
@@ -613,7 +605,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669353016847</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="I commented PGNGameTags.">
+      <created>1669444008209</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1669444008209</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +664,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Still debugging Castling" />
     <MESSAGE value="Castling works?" />
     <MESSAGE value="Added more skins" />
     <MESSAGE value="Updated Test Cases" />
@@ -690,7 +688,8 @@
     <MESSAGE value="PawnStructureAnalyzer comments" />
     <MESSAGE value="RookStructureAnalyzer comments, still have to fix though." />
     <MESSAGE value="Finished up the comments inside of StandardBoardEvaluator. It had been started and I just finished it." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished up the comments inside of StandardBoardEvaluator. It had been started and I just finished it." />
+    <MESSAGE value="I commented PGNGameTags." />
+    <option name="LAST_COMMIT_MESSAGE" value="I commented PGNGameTags." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
