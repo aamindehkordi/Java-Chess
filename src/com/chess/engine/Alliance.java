@@ -164,20 +164,49 @@ public enum Alliance {
         return -1 * this.getDirection();
     }
 
-    //TODO ADD COMMENTS
-
+    /** Get the pawn bonus
+     *
+     * @param position the position
+     * @return the pawn bonus
+     */
     public abstract int pawnBonus(int position);
 
+    /** Get the knight bonus
+     *
+     * @param position the position
+     * @return the knight bonus
+     */
     public abstract int knightBonus(int position);
 
+    /** Get the bishop bonus
+     *
+     * @param position the position
+     * @return the bishop bonus
+     */
     public abstract int bishopBonus(int position);
 
+    /** Get the rook bonus
+     *
+     * @param position the position
+     * @return the rook bonus
+     */
     public abstract int rookBonus(int position);
 
+    /** Get the queen bonus
+     *
+     * @param position the position
+     * @return the queen bonus
+     */
     public abstract int queenBonus(int position);
 
+    /** Get the king bonus
+     *
+     * @param position the position
+     * @return the king bonus
+     */
     public abstract int kingBonus(int position);
 
+    /** White pawn preferred coordinates */
     private final static int[] WHITE_PAWN_PREFERRED_COORDINATES = {
             0,  0,  0,  0,  0,  0,  0,  0,
             75, 75, 75, 75, 75, 75, 75, 75,
@@ -189,6 +218,7 @@ public enum Alliance {
             0,  0,  0,  0,  0,  0,  0,  0
     };
 
+    /** Black pawn preferred coordinates */
     private final static int[] BLACK_PAWN_PREFERRED_COORDINATES = {
             0,  0,  0,  0,  0,  0,  0,  0,
             5, 10, 10,-20,-20, 10, 10,  5,
@@ -200,6 +230,7 @@ public enum Alliance {
             0,  0,  0,  0,  0,  0,  0,  0
     };
 
+    /** White knight preferred coordinates */
     private final static int[] WHITE_KNIGHT_PREFERRED_COORDINATES = {
             -50,-40,-30,-30,-30,-30,-40,-50,
             -40,-20,  0,  0,  0,  0,-20,-40,
@@ -211,6 +242,7 @@ public enum Alliance {
             -50,-40,-30,-30,-30,-30,-40,-50
     };
 
+    /** Black knight preferred coordinates */
     private final static int[] BLACK_KNIGHT_PREFERRED_COORDINATES = {
             -50,-40,-30,-30,-30,-30,-40,-50,
             -40,-20,  0,  5,  5,  0,-20,-40,
@@ -222,6 +254,7 @@ public enum Alliance {
             -50,-40,-30,-30,-30,-30,-40,-50,
     };
 
+    /** White bishop preferred coordinates */
     private final static int[] WHITE_BISHOP_PREFERRED_COORDINATES = {
             -20,-10,-10,-10,-10,-10,-10,-20,
             -10,  0,  0,  0,  0,  0,  0,-10,
@@ -233,6 +266,7 @@ public enum Alliance {
             -20,-10,-10,-10,-10,-10,-10,-20
     };
 
+    /** Black bishop preferred coordinates */
     private final static int[] BLACK_BISHOP_PREFERRED_COORDINATES = {
             -20,-10,-10,-10,-10,-10,-10,-20,
             -10,  5,  0,  0,  0,  0,  5,-10,
@@ -244,6 +278,7 @@ public enum Alliance {
             -20,-10,-10,-10,-10,-10,-10,-20,
     };
 
+    /** White rook preferred coordinates */
     private final static int[] WHITE_ROOK_PREFERRED_COORDINATES = {
             0,  0,  0,  0,  0,  0,  0,  0,
             5, 20, 20, 20, 20, 20, 20,  5,
@@ -255,6 +290,7 @@ public enum Alliance {
             0,  0,  0,  5,  5,  0,  0,  0
     };
 
+    /** Black rook preferred coordinates */
     private final static int[] BLACK_ROOK_PREFERRED_COORDINATES = {
             0,  0,  0,  5,  5,  0,  0,  0,
             -5,  0,  0,  0,  0,  0,  0, -5,
@@ -266,6 +302,7 @@ public enum Alliance {
             0,  0,  0,  0,  0,  0,  0,  0,
     };
 
+    /** White queen preferred coordinates */
     private final static int[] WHITE_QUEEN_PREFERRED_COORDINATES = {
             -20,-10,-10, -5, -5,-10,-10,-20,
             -10,  0,  0,  0,  0,  0,  0,-10,
@@ -277,6 +314,7 @@ public enum Alliance {
             -20,-10,-10, -5, -5,-10,-10,-20
     };
 
+    /** Black queen preferred coordinates */
     private final static int[] BLACK_QUEEN_PREFERRED_COORDINATES = {
             -20,-10,-10, -5, -5,-10,-10,-20,
             -10,  0,  5,  0,  0,  0,  0,-10,
@@ -288,6 +326,7 @@ public enum Alliance {
             -20,-10,-10, -5, -5,-10,-10,-20
     };
 
+    /** White king preferred coordinates */
     private final static int[] WHITE_KING_PREFERRED_COORDINATES = {
             -30,-40,-40,-50,-50,-40,-40,-30,
             -30,-40,-40,-50,-50,-40,-40,-30,
@@ -299,6 +338,7 @@ public enum Alliance {
             20, 30, 10,  0,  0, 10, 30, 20
     };
 
+    /** Black king preferred coordinates */
     private final static int[] BLACK_KING_PREFERRED_COORDINATES = {
             20, 30, 10,  0,  0, 10, 30, 20,
             20, 20,  0,  0,  0,  0, 20, 20,
