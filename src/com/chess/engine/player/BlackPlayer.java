@@ -36,6 +36,10 @@ public class BlackPlayer extends Player {
         return this.board.whitePlayer();
     }
 
+    @Override
+    public String toString() {
+        return Alliance.BLACK.toString() + " Player";
+    }
     /**
      * @param playerLegals the player's legal moves
      * @param opponentLegals the opponent's legal moves

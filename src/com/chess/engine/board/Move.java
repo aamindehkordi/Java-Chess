@@ -158,9 +158,11 @@ public abstract class Move {
      * @return the board after the move has been undone
      */
     public Board undo() {
+        /* create a new board builder */
         final Board.Builder builder = new Builder();
+
+        /* for each piece on the board, add it to the new board */
         this.board.getAllPieces().forEach(builder::setPiece);
-        builder.setEnPassantPawn((Pawn)this.getAttackedPiece());
         builder.setMoveMaker(this.board.currentPlayer().getAlliance());
         return builder.build();
     }

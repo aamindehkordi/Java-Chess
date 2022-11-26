@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="RookStructureAnalyzer comments, still have to fix though.">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="needs cleanup &amp; comments">
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/board/MoveUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/BlackPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/BlackPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/MoveTransition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/MoveTransition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/StandardBoardEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/StandardBoardEvaluator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,6 +277,48 @@
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
       <workItem from="1669179387935" duration="28423000" />
+    </task>
+    <task id="LOCAL-00085" summary="Did the diagram better than nathan">
+      <created>1667032217867</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1667032217867</updated>
+    </task>
+    <task id="LOCAL-00086" summary="im back">
+      <created>1668054987452</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1668054987452</updated>
+    </task>
+    <task id="LOCAL-00087" summary="Created new game history panel">
+      <created>1668056617469</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1668056617469</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Added movelog and fixed bugs">
+      <created>1668058785427</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1668058785428</updated>
+    </task>
+    <task id="LOCAL-00089" summary="OMG a working game of chess (no en passant)">
+      <created>1668210631367</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1668210631367</updated>
+    </task>
+    <task id="LOCAL-00090" summary="tying up loose ends + en passant pt1">
+      <created>1668211589759</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1668211589759</updated>
     </task>
     <task id="LOCAL-00091" summary="x">
       <created>1668817943613</created>
@@ -572,49 +621,7 @@
       <option name="project" value="LOCAL" />
       <updated>1669333884427</updated>
     </task>
-    <task id="LOCAL-00134" summary="x">
-      <created>1669335124460</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1669335124460</updated>
-    </task>
-    <task id="LOCAL-00135" summary="Fixed the previous comments in AlphabBetaWithMoveOrdering">
-      <created>1669339333019</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1669339333020</updated>
-    </task>
-    <task id="LOCAL-00136" summary="Commented KingSafetyAnalyzer">
-      <created>1669341067082</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1669341067082</updated>
-    </task>
-    <task id="LOCAL-00137" summary="Commented MoveOrdering and took off todo for this file and the previous&#10;Taking a break, this is so tedious , even with copilot &#10;I need cope pilot rn honestly">
-      <created>1669342829195</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1669342829195</updated>
-    </task>
-    <task id="LOCAL-00138" summary="PawnStructureAnalyzer comments">
-      <created>1669348741783</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1669348741783</updated>
-    </task>
-    <task id="LOCAL-00139" summary="RookStructureAnalyzer comments, still have to fix though.">
-      <created>1669350050799</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1669350050799</updated>
-    </task>
-    <option name="localTasksCounter" value="140" />
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,6 +673,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added FEN support, not complete" />
+    <MESSAGE value="Working on castling" />
+    <MESSAGE value="Added Comments" />
+    <MESSAGE value="breakpoints" />
+    <MESSAGE value="Imported PGN FEN from someones github" />
     <MESSAGE value="implemented fen and pgn into test cases" />
     <MESSAGE value="Still debugging Castling" />
     <MESSAGE value="Castling works?" />
@@ -686,59 +698,9 @@
     <MESSAGE value="cleanup" />
     <MESSAGE value="cleaned up and proper, needs comments" />
     <MESSAGE value="needs cleanup &amp; comments" />
-    <MESSAGE value="Fixed the previous comments in AlphabBetaWithMoveOrdering" />
-    <MESSAGE value="Commented KingSafetyAnalyzer" />
-    <MESSAGE value="Commented MoveOrdering and took off todo for this file and the previous&#10;Taking a break, this is so tedious , even with copilot &#10;I need cope pilot rn honestly" />
-    <MESSAGE value="PawnStructureAnalyzer comments" />
-    <MESSAGE value="RookStructureAnalyzer comments, still have to fix though." />
-    <option name="LAST_COMMIT_MESSAGE" value="RookStructureAnalyzer comments, still have to fix though." />
+    <option name="LAST_COMMIT_MESSAGE" value="needs cleanup &amp; comments" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint type="java-exception">
-          <properties class="java.lang.UnsupportedOperationException" package="java.lang" />
-          <option name="timeStamp" value="16" />
-        </breakpoint>
-        <breakpoint type="java-exception">
-          <properties class="java.lang.OutOfMemoryError" package="java.lang" />
-          <option name="timeStamp" value="17" />
-        </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="64" />
-        </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.RuntimeException" package="java.lang" />
-          <option name="timeStamp" value="172" />
-        </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/gui/Table.java</url>
-          <line>920</line>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="167" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java</url>
-          <line>163</line>
-          <option name="timeStamp" value="168" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tests/com/chess/tests/TestStaleMate.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="171" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/ai/MiniMax.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="173" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="com.chess.engine.board.Board" memberName="enPassantPawn" />

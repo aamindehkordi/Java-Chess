@@ -65,7 +65,7 @@ public class StandardBoardEvaluator implements BoardEvaluator {
      * @param depth the depth of the search
      * @return the details of the evaluation in Dictionary format
      */
-    public Hashtable<String, Integer> evaluationDetails(Board board, int depth) {
+    public static Hashtable<String, Integer> evaluationDetails(Board board, int depth) {
         Dictionary<String, Integer> details = new Hashtable<String, Integer>();
         details.put("wMobility", mobility(board.whitePlayer()));
         details.put("wKingThreats", kingThreats(board.whitePlayer(), depth));
@@ -90,32 +90,32 @@ public class StandardBoardEvaluator implements BoardEvaluator {
      * @param depth the depth of the search
      * @return the details of the evaluation in string format
      */
-    public String evaluationDetailsString(final Board board, final int depth) {
+    public static String evaluationDetailsString(final Board board, final int depth) {
         Dictionary<String, Integer> details = evaluationDetails(board, depth);
         StringBuilder sb = new StringBuilder();
         sb.append("White Mobility: " + details.get("wMobility") +
-                    "White King Threats: " + details.get("wKingThreats") +
-                    "White Attacks: " + details.get("wAttacks") +
-                    "White Castling: " + details.get("wCastle") +
-                    "White Piece Evaluation: " + details.get("wPieceEval") +
-                    "White Pawn Structure: " + details.get("wPawnStructure") +
-                    "White Rook Structure: " + details.get("wRookStructure") +
-                    "White Bishop Pair: " + details.get("wBishopPair") +
-                    "White Knight Pair: " + details.get("wKnightPair") +
-                    "White Rook Pair: " + details.get("wRookPair") +
-                    "White Queen Pair: " + details.get("wQueenPair") +
-                        "---------------------\n" +
-                    "Black Mobility: " + details.get("bMobility") +
-                    "Black King Threats: " + details.get("bKingThreats") +
-                    "Black Attacks: " + details.get("bAttacks") +
-                    "Black Castling: " + details.get("bCastle") +
-                    "Black Piece Evaluation: " + details.get("bPieceEval") +
-                    "Black Pawn Structure: " + details.get("bPawnStructure") +
-                    "Black Rook Structure: " + details.get("bRookStructure") +
-                    "Black Bishop Pair: " + details.get("bBishopPair") +
-                    "Black Knight Pair: " + details.get("bKnightPair") +
-                    "Black Rook Pair: " + details.get("bRookPair") +
-                    "Black Queen Pair: " + details.get("bQueenPair"));
+                    " White King Threats: " + details.get("wKingThreats") +
+                    " White Attacks: " + details.get("wAttacks") +
+                    " White Castling: " + details.get("wCastle") +
+                    " White Piece Evaluation: " + details.get("wPieceEval") +
+                    " White Pawn Structure: " + details.get("wPawnStructure") +
+                    " White Rook Structure: " + details.get("wRookStructure") +
+                    " White Bishop Pair: " + details.get("wBishopPair") +
+                    " White Knight Pair: " + details.get("wKnightPair") +
+                    " White Rook Pair: " + details.get("wRookPair") +
+                    " White Queen Pair: " + details.get("wQueenPair") +
+                        "----------------------\n" +
+                    " Black Mobility: " + details.get("bMobility") +
+                    " Black King Threats: " + details.get("bKingThreats") +
+                    " Black Attacks: " + details.get("bAttacks") +
+                    " Black Castling: " + details.get("bCastle") +
+                    " Black Piece Evaluation: " + details.get("bPieceEval") +
+                    " Black Pawn Structure: " + details.get("bPawnStructure") +
+                    " Black Rook Structure: " + details.get("bRookStructure") +
+                    " Black Bishop Pair: " + details.get("bBishopPair") +
+                    " Black Knight Pair: " + details.get("bKnightPair") +
+                    " Black Rook Pair: " + details.get("bRookPair") +
+                    " Black Queen Pair: " + details.get("bQueenPair"));
         return sb.toString();
     }
 
@@ -213,7 +213,7 @@ public class StandardBoardEvaluator implements BoardEvaluator {
      * @param depth The depth
      * @return the king threats score
      */
-    private int kingThreats(Player player, int depth) {
+    private static int kingThreats(Player player, int depth) {
         return player.getOpponent().isInCheckMate() ? CHECK_MATE_BONUS * depthBonus(depth) : check(player);
     }
 
@@ -223,7 +223,7 @@ public class StandardBoardEvaluator implements BoardEvaluator {
      * @param player The player
      * @return the score of the player's check
      */
-    private int check(Player player) {
+    private static int check(Player player) {
         return player.isInCheck() ? CHECK_BONUS : 0; // If the player is in check, return the check bonus
     }
 
@@ -233,7 +233,7 @@ public class StandardBoardEvaluator implements BoardEvaluator {
      * @param player The player
      * @return the score of the player's castling
      */
-    private int castled(Player player) {
+    private static int castled(Player player) {
         return player.isCastled() ? CASTLE_BONUS : 0; // If the player has castled, return the castling bonus
     }
 
@@ -243,7 +243,7 @@ public class StandardBoardEvaluator implements BoardEvaluator {
      * @param depth The depth
      * @return the depth bonus
      */
-    private int depthBonus(int depth) {
+    private static int depthBonus(int depth) {
         return depth == 0 ? 1 : DEPTH_BONUS * depth; // If the depth is 0, return 1, otherwise return the depth bonus
     }
 
