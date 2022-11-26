@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="RookStructureAnalyzer comments, still have to fix though.">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Commented StockAlphaBeta, this was a long one.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/StandardBoardEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/StandardBoardEvaluator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,13 +269,6 @@
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
       <workItem from="1669179387935" duration="28423000" />
-    </task>
-    <task id="LOCAL-00091" summary="x">
-      <created>1668817943613</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1668817943614</updated>
     </task>
     <task id="LOCAL-00092" summary="En Passant is highlighted but not executed">
       <created>1668819730323</created>
@@ -614,7 +606,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669350050799</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="Finished up the comments inside of StandardBoardEvaluator. It had been started and I just finished it.">
+      <created>1669353016847</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1669353016847</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,7 +665,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="implemented fen and pgn into test cases" />
     <MESSAGE value="Still debugging Castling" />
     <MESSAGE value="Castling works?" />
     <MESSAGE value="Added more skins" />
@@ -691,7 +689,8 @@
     <MESSAGE value="Commented MoveOrdering and took off todo for this file and the previous&#10;Taking a break, this is so tedious , even with copilot &#10;I need cope pilot rn honestly" />
     <MESSAGE value="PawnStructureAnalyzer comments" />
     <MESSAGE value="RookStructureAnalyzer comments, still have to fix though." />
-    <option name="LAST_COMMIT_MESSAGE" value="RookStructureAnalyzer comments, still have to fix though." />
+    <MESSAGE value="Finished up the comments inside of StandardBoardEvaluator. It had been started and I just finished it." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished up the comments inside of StandardBoardEvaluator. It had been started and I just finished it." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
