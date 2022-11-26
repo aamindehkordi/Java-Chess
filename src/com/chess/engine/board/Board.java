@@ -3,9 +3,7 @@ package com.chess.engine.board;
 import com.chess.engine.Alliance;
 import com.chess.engine.board.Move.MoveFactory;
 import com.chess.engine.pieces.*;
-import com.chess.engine.player.BlackPlayer;
-import com.chess.engine.player.Player;
-import com.chess.engine.player.WhitePlayer;
+import com.chess.engine.player.*;
 
 import java.util.*;
 
@@ -22,6 +20,9 @@ public class Board {
     private final Player currentPlayer; /* the current player */
     private final Pawn enPassantPawn; /* the pawn that can be captured en passant */
     private Move transitionMove; /* the move transition */
+    private int moveCount;
+    private int halfMoveClock;
+    private MoveTransitionTracker moveTransitionTracker;
 
 
     /** Constructor
@@ -35,14 +36,14 @@ public class Board {
         this.whitePieces = calculateActivePieces(this.gameBoard, Alliance.WHITE); /* calculate the white pieces */
         /* the black pieces */
         this.blackPieces = calculateActivePieces(this.gameBoard, Alliance.BLACK); /* calculate the black pieces */
-
+        this.moveCount = builder.moveCount;
         final Collection<Move> whiteStandardLegalMoves = calculateLegalMoves(whitePieces); /* calculate the white legal moves */
         final Collection<Move> blackStandardLegalMoves = calculateLegalMoves(blackPieces); /* calculate the black legal moves */
-
         this.whitePlayer = new WhitePlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the white player */
         this.blackPlayer = new BlackPlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the black player */
         this.currentPlayer = builder.nextMoveMaker.choosePlayer(this.whitePlayer, this.blackPlayer); /* set the current player */
         this.transitionMove = builder.transitionMove != null ? builder.transitionMove : MoveFactory.getNullMove();
+        this.moveTransitionTracker = new MoveTransitionTracker(this);
     }
 
     @Override
@@ -231,16 +232,74 @@ public class Board {
         return this.transitionMove; /* return the transition move */
     }
 
+    public Player getMoveMaker() {
+        return this.currentPlayer; /* return the current player */
+    }
+
+    public int getMoveCounter() {
+        return this.moveCount; /* return the move counter */
+    }
+
+    public MoveTransition getMoveTransition() {
+        return this.transitionMove.getBoard().getMoveTransition();
+    }
+
+    public MoveTransitionTracker getMoveTransitionTracker() {
+        return this.moveTransitionTracker;
+    }
+
+
+    public class MoveTransitionTracker {
+        private final Board transitionBoard;
+
+        public MoveTransitionTracker(final Board transitionBoard){
+            this.transitionBoard = transitionBoard;
+        }
+
+
+        public String getHalfMoveClock() {
+            return String.valueOf(HalfMoveClock());
+        }
+
+        public String getFullMoveNumber() {
+            return String.valueOf(transitionBoard.getMoveCounter());
+        }
+    }
+
+    /** The HalfMoveClock is a counter that is incremented after each move. The counter is reset to zero when a pawn is
+     * moved, a piece is captured, or a move results in a pawn promotion. The counter is incremented when a player makes
+     * a move that does not meet any of the above criteria. The HalfMoveClock is used to determine if a draw can be
+     * claimed under the fifty-move rule.
+     *
+     * @return the HalfMoveClock
+     */
+    public int HalfMoveClock() {
+        int halfMoveClock = 0; /* the half move clock */
+        // check if transition move is null
+        if (this.transitionMove.getMovedPiece() != null) {
+            // check if the transition move is a pawn move or a capture move
+            if (this.transitionMove.getMovedPiece().getPieceType().isPawn() || this.transitionMove.isAttack()) {
+                halfMoveClock = 0; /* reset the half move clock */
+            } else {
+                halfMoveClock = this.halfMoveClock + 1; /* increment the half move clock */
+            }
+        }
+        return halfMoveClock; /* return the half move clock */
+    }
+
+
     /** ‘Builder’ class */
     public static class Builder {
 
         final Map<Integer, Piece> boardConfig; /* the board configuration */
         public Move transitionMove;
+        public int moveCount;
         Alliance nextMoveMaker; /* the next move maker */
         Pawn enPassantPawn; /* the en passant pawn */
 
         /** Constructor */
         public Builder() {
+            this.moveCount = 0;
             this.boardConfig = new HashMap<>(); /* initialize the board configuration */
         }
 
@@ -261,6 +320,7 @@ public class Board {
          */
         public Builder setMoveMaker(final Alliance nextMoveMaker) {
             this.nextMoveMaker = nextMoveMaker; /* set the next move maker */
+            this.moveCount++;
             return this;
         }
         public Builder setMoveTransition(final Move transitionMove) {
