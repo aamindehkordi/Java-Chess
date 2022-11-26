@@ -20,11 +20,84 @@ public class FenUtilities {
     }
 
     public static String createFENFromGame(final Board board) {
-        return calculateBoardText(board) + " " +
-               calculateCurrentPlayerText(board) + " " +
-               calculateCastleText(board) + " " +
-               calculateEnPassantSquare(board) + " " +
-               "0 1";
+        return generateFEN(board);
+    }
+
+    /** Generates a correct FEN string from a board following FEN rules
+     * Example of starting board FEN would be:
+     * rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+     *
+     * @param board the board
+     * @return the FEN string
+     */
+    private static String generateFEN(final Board board) {
+        // Create a string builder to build the FEN string
+        final StringBuilder fenBuilder = new StringBuilder();
+        int emptyTileCount = 0;
+        // Loop through the board tiles
+        for (int i = 0; i < BoardUtils.NUM_TILES; i++) {
+            // Get the piece at the current tile
+            final Piece piece = board.getTile(i).getPiece();
+            // If the tile is empty, add a dash
+            if (piece == null) {
+                fenBuilder.append("-");
+                emptyTileCount++;
+            } else { // If the tile is not empty
+                // If there are empty tiles
+                if (emptyTileCount > 0) {
+                    // Remove the empty tiles from the FEN string
+                    for (int j = 0; j < emptyTileCount; j++) {
+                        fenBuilder.deleteCharAt(fenBuilder.length() - 1);
+                    }
+                    // Add the empty tile count to the FEN string
+                    fenBuilder.append(emptyTileCount);
+                    // Reset the empty tile count
+                    emptyTileCount = 0;
+                }
+                // If the piece is white, add the piece type as a capital letter
+                if (piece.getPieceAlliance() == Alliance.WHITE) {
+                    fenBuilder.append(piece.getPieceType().toString());
+                } else { // If the piece is black, add the piece type as a lowercase letter
+                    fenBuilder.append(piece.getPieceType().toString().toLowerCase());
+                }
+            }
+            // If the current tile is the end of a row
+            if ((i + 1) % 8 == 0 && i != 63) {
+                // If there are empty tiles
+                if (emptyTileCount > 0) {
+                    // Remove all preceding '-'s
+                    for (int j = 0; j < emptyTileCount; j++) {
+                        fenBuilder.deleteCharAt(fenBuilder.length() - 1);
+                    }
+                    // Add the empty tile count to the FEN string
+                    fenBuilder.append(emptyTileCount);
+                    // Reset the empty tile count
+                    emptyTileCount = 0;
+                }
+
+                // Add a slash to the FEN string
+                fenBuilder.append("/");
+            }
+        }
+
+        // Add the current player
+        fenBuilder.append(" " + calculateCurrentPlayerText(board));
+
+        // Add the castling rights
+        fenBuilder.append(" " + calculateCastleText(board));
+
+        // Add the en passant square
+        fenBuilder.append(" " + calculateEnPassantSquare(board));
+
+        // Add the half move clock
+        fenBuilder.append(" " + board.HalfMoveClock());
+
+        // Add the full move number which is the current move number
+        fenBuilder.append(" " + board.getMoveCounter());
+
+        // Return the FEN string
+        return fenBuilder.toString();
+
     }
 
     private static Board parseFEN(final String fenString) {
@@ -135,16 +208,16 @@ public class FenUtilities {
 
     private static String calculateCastleText(final Board board) {
         final StringBuilder builder = new StringBuilder();
-        if(board.whitePlayer().isKingSideCastleCapable()) {
+        if(!board.whitePlayer().isKingSideCastleCapable()) {
             builder.append("K");
         }
-        if(board.whitePlayer().isQueenSideCastleCapable()) {
+        if(!board.whitePlayer().isQueenSideCastleCapable()) {
             builder.append("Q");
         }
-        if(board.blackPlayer().isKingSideCastleCapable()) {
+        if(!board.blackPlayer().isKingSideCastleCapable()) {
             builder.append("k");
         }
-        if(board.blackPlayer().isQueenSideCastleCapable()) {
+        if(!board.blackPlayer().isQueenSideCastleCapable()) {
             builder.append("q");
         }
         final String result = builder.toString();
@@ -160,34 +233,6 @@ public class FenUtilities {
         }
         return "-";
     }
-
-    private static String calculateBoardText(final Board board) {
-        final StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < BoardUtils.NUM_TILES; i++) {
-            final String tileText = board.getTile(i).toString();
-            builder.append(tileText);
-            if((i + 1) % BoardUtils.NUM_TILES_PER_ROW == 0) {
-                builder.append("/");
-            }
-        }
-        builder.insert(8, "/");
-        builder.insert(17, "/");
-        builder.insert(26, "/");
-        builder.insert(35, "/");
-        builder.insert(44, "/");
-        builder.insert(53, "/");
-        builder.insert(62, "/");
-        return builder.toString()
-                .replaceAll("--------", "8")
-                .replaceAll("-------", "7")
-                .replaceAll("------", "6")
-                .replaceAll("-----", "5")
-                .replaceAll("----", "4")
-                .replaceAll("---", "3")
-                .replaceAll("--", "2")
-                .replaceAll("-", "1");
-    }
-
     private static String calculateCurrentPlayerText(final Board board) {
         return board.currentPlayer().toString().substring(0, 1).toLowerCase();
     }
