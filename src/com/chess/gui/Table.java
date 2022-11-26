@@ -1,18 +1,18 @@
 package com.chess.gui;
 
 
-import com.chess.engine.board.Board;
-import com.chess.engine.board.BoardUtils;
-import com.chess.engine.board.Move;
-import com.chess.engine.board.Tile;
+import com.chess.engine.board.*;
 import com.chess.engine.pieces.Piece;
 import com.chess.engine.player.MoveTransition;
 import com.chess.engine.player.Player;
 import com.chess.engine.player.ai.AlphaBetaWithMoveOrdering;
-import com.chess.engine.player.ai.MoveStrategy;
+import com.chess.engine.player.ai.StandardBoardEvaluator;
+import com.chess.pgn.FenUtilities;
+import com.chess.pgn.MySqlGamePersistence;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
@@ -21,6 +21,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.*;
 
+import static com.chess.pgn.PGNUtilities.persistPGNFile;
+import static com.chess.pgn.PGNUtilities.writeGameToPGNFile;
 import static javax.swing.SwingUtilities.*;
 
 public class Table extends Observable {
@@ -51,6 +53,7 @@ public class Table extends Observable {
     private Move computerMove; // computer move
 
     private static final Table INSTANCE = new Table(); // Table is a class that creates a table
+    private boolean useBook;
 
 
     /**
@@ -62,7 +65,7 @@ public class Table extends Observable {
         this.gameFrame = new JFrame("Chess"); // Creates a new JFrame with the title "Chess"
         this.gameFrame.setSize(OUTER_FRAME_DIMENSION); // Sets the size of the JFrame to 600x600
         final JMenuBar tableMenuBar = createTableMenuBar(); // Creates a new JMenuBar
-
+        this.useBook = false;
         this.gameFrame.setLayout(new BorderLayout()); // Sets the layout of the JFrame to a BorderLayout
         this.destinationTile = null; // Sets the destination tile to null
         this.gameFrame.setJMenuBar(tableMenuBar); // Sets the JMenuBar of the JFrame to the JMenuBar created above
@@ -124,12 +127,6 @@ public class Table extends Observable {
 
     }
 
-    /*
-      Creates and adds the file menu to the JMenuBar
-
-      @return the File JMenu created
-     */
-
     /**
      * Adds the PGN menu item to the File JMenu
      *
@@ -161,10 +158,6 @@ public class Table extends Observable {
         });
         fileMenu.add(exitMenuItem); // Adds the JMenuItem to the File JMenu
     }
-    /**
-     * Creates and adds the preferences menu to the JMenuBar
-     *
-     */
 
     private void populateMenuBar(final JMenuBar tableMenuBar) {
         tableMenuBar.add(createFileMenu());
@@ -184,8 +177,7 @@ public class Table extends Observable {
     private JMenu createFileMenu() {
         final JMenu filesMenu = new JMenu("File");
         filesMenu.setMnemonic(KeyEvent.VK_F);
-        //TODO add UNDO function
-        /*
+
         final JMenuItem openPGN = new JMenuItem("Load PGN File", KeyEvent.VK_O);
         openPGN.addActionListener(e -> {
             JFileChooser chooser = new JFileChooser();
@@ -234,7 +226,6 @@ public class Table extends Observable {
         });
         filesMenu.add(exitMenuItem);
 
-         */
 
         return filesMenu;
     }
@@ -244,13 +235,13 @@ public class Table extends Observable {
         final JMenu optionsMenu = new JMenu("Options");
         optionsMenu.setMnemonic(KeyEvent.VK_O);
 
-        /*
+
         final JMenuItem resetMenuItem = new JMenuItem("New Game", KeyEvent.VK_P);
         resetMenuItem.addActionListener(e -> undoAllMoves());
         optionsMenu.add(resetMenuItem);
 
         final JMenuItem evaluateBoardMenuItem = new JMenuItem("Evaluate Board", KeyEvent.VK_E);
-        evaluateBoardMenuItem.addActionListener(e -> System.out.println(StandardBoardEvaluator.get().evaluationDetails(chessBoard, gameSetup.getSearchDepth())));
+        evaluateBoardMenuItem.addActionListener(e -> System.out.println(StandardBoardEvaluator.evaluationDetailsString(chessBoard, gameSetup.getSearchDepth())));
         optionsMenu.add(evaluateBoardMenuItem);
 
         final JMenuItem escapeAnalysis = new JMenuItem("Escape Analysis Score", KeyEvent.VK_S);
@@ -270,7 +261,7 @@ public class Table extends Observable {
             }
         });
         optionsMenu.add(undoMoveMenuItem);
-         */
+
 
         final JMenuItem legalMovesMenuItem = new JMenuItem("Current State", KeyEvent.VK_L);
         legalMovesMenuItem.addActionListener(e -> {
@@ -394,16 +385,16 @@ public class Table extends Observable {
 
 
         final JCheckBoxMenuItem cbLegalMoveHighlighter = new JCheckBoxMenuItem(
-                "Highlight Legal Moves", false);
+                "Highlight Legal Moves", true);
 
         cbLegalMoveHighlighter.addActionListener(e -> highlightLegalMoves = cbLegalMoveHighlighter.isSelected());
 
         preferencesMenu.add(cbLegalMoveHighlighter);
 
         final JCheckBoxMenuItem cbUseBookMoves = new JCheckBoxMenuItem(
-                "Use Book Moves", false);
+                "Use Book Moves", true);
 
-        //cbUseBookMoves.addActionListener(e -> useBook = cbUseBookMoves.isSelected());
+        cbUseBookMoves.addActionListener(e -> useBook = cbUseBookMoves.isSelected());
 
         preferencesMenu.add(cbUseBookMoves);
 
@@ -421,22 +412,23 @@ public class Table extends Observable {
                 "\nisCastled = " +player.isCastled())+ "\n";
     }
 
-    /*
+
     private void undoAllMoves() {
         for(int i = Table.get().getMoveLog().size() - 1; i >= 0; i--) {
             final Move lastMove = Table.get().getMoveLog().removeMove(Table.get().getMoveLog().size() - 1);
-            this.chessBoard = this.chessBoard.currentPlayer().unMakeMove(lastMove).getToBoard();
+            this.chessBoard = this.chessBoard.currentPlayer().unMakeMove(lastMove).getTransitionBoard();
         }
         this.computerMove = null;
         Table.get().getMoveLog().clear();
         Table.get().getGameHistoryPanel().redo(chessBoard, Table.get().getMoveLog());
         Table.get().getTakenPiecesPanel().redo(Table.get().getMoveLog());
         Table.get().getBoardPanel().drawBoard(chessBoard);
+
         //Table.get().getDebugPanel().redo();
     }
     private void undoLastMove() {
         final Move lastMove = Table.get().getMoveLog().removeMove(Table.get().getMoveLog().size() - 1);
-        this.chessBoard = this.chessBoard.currentPlayer().unMakeMove(lastMove).getToBoard();
+        this.chessBoard = this.chessBoard.currentPlayer().unMakeMove(lastMove).getTransitionBoard();
         this.computerMove = null;
         Table.get().getMoveLog().removeMove(lastMove);
         Table.get().getGameHistoryPanel().redo(chessBoard, Table.get().getMoveLog());
@@ -445,7 +437,7 @@ public class Table extends Observable {
         //Table.get().getDebugPanel().redo();
     }
 
-     */
+
 
     private void setupUpdate(final GameSetup gameSetup) {
         setChanged();
@@ -499,26 +491,26 @@ public class Table extends Observable {
 
         @Override
         protected Move doInBackground() {
-            /*
-            final Move bookMove = Table.get().getUseBook()
-                    ? MySqlGamePersistence.get().getNextBestMove(Table.get().getGameBoard(),
-                    Table.get().getGameBoard().currentPlayer(),
-                    Table.get().getMoveLog().getMoves().toString().replaceAll("\\[", "").replaceAll("]", ""))
-                    : MoveFactory.getNullMove();
-            if (Table.get().getUseBook() && bookMove != MoveFactory.getNullMove()) {
+
+            Move bestMove;
+
+            final Move bookMove = Table.get().getUseBook() // if use book is true
+                    ? MySqlGamePersistence.get().getNextBestMove(Table.get().getGameBoard(), // get the next best move from the database,
+                    Table.get().getGameBoard().currentPlayer(), // for the current player
+                    Table.get().getMoveLog().getMoves().toString().replaceAll("\\[", "").replaceAll("]", "")) // and the current move log
+                    : Move.MoveFactory.getNullMove(); // else if use book is false, return a null move
+            if (Table.get().getUseBook() && bookMove != Move.MoveFactory.getNullMove()) {
                 bestMove = bookMove;
             }
             else {
-                final StockAlphaBeta strategy = new StockAlphaBeta(Table.get().getGameSetup().getSearchDepth());
-                strategy.addObserver(Table.get().getDebugPanel());
-                bestMove = strategy.execute(Table.get().getGameBoard());
+                // initialize a decent search depth
+                int depth = 4;
+                // initialize a decent quiescence search depth
+                int quiescence = 8;
+                final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(depth, quiescence);
+                //alphaBeta.addObserver(Table.get().getDebugPanel());
+                bestMove = alphaBeta.execute(Table.get().getGameBoard());
             }
-
-             */
-
-            /* Sets the best move to the move returned by the minimax algorithm. */
-            final MoveStrategy AlphaBetaWithMoveOrderOrdering = new AlphaBetaWithMoveOrdering(Table.get().getGameSetup().getSearchDepth(), 1500);
-            final Move bestMove = AlphaBetaWithMoveOrderOrdering.execute(Table.get().getGameBoard());
             return bestMove;
         }
 
@@ -526,6 +518,7 @@ public class Table extends Observable {
         public void done() {
             try {
                 // get() is a method of SwingWorker that returns the value returned by doInBackground()
+                //TODO breaks when checked, maybe not checking for null?
                 final Move bestMove = get();
                 // The best move is set to the computer move.
                 Table.get().updateComputerMove(bestMove);
@@ -545,6 +538,10 @@ public class Table extends Observable {
                 e.printStackTrace();
             }
         }
+    }
+
+    private boolean getUseBook() {
+        return this.useBook;
     }
 
     public void updateGameBoard(final Board board) {
@@ -576,9 +573,22 @@ public class Table extends Observable {
         notifyObservers(playerType);
     }
 
-    private void setupNewGame() {
-        this.chessBoard = Board.createStandardBoard(); // Creates a new chess board
-        this.boardPanel.drawBoard(this.chessBoard); // Draws the board
+    private static void loadPGNFile(final File pgnFile) {
+        try {
+            persistPGNFile(pgnFile);
+        }
+        catch (final IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void savePGNFile(final File pgnFile) {
+        try {
+            writeGameToPGNFile(pgnFile, Table.get().getMoveLog());
+        }
+        catch (final IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
