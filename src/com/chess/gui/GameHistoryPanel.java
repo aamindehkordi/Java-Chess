@@ -125,13 +125,26 @@ public class GameHistoryPanel extends JPanel {
     private static class DataModel extends DefaultTableModel {
 //TODO ADD COMMENTS
 
+        /**
+         * The row values.
+         */
         private final List<Row> values;
+
+        /**
+         * Constructor
+         */
         private static final String[] NAMES = {"White", "Black"};
 
+        /**
+         * Constructor
+         */
         DataModel() {
             this.values = new ArrayList<>();
         }
 
+        /**
+         * Clear the table
+         */
         public void clear() {
             this.values.clear();
             setRowCount(0);
@@ -139,55 +152,55 @@ public class GameHistoryPanel extends JPanel {
 
         @Override
         public int getRowCount() {
-            if (this.values == null) {
-                return 0;
+            if (this.values == null) {          // if the values are null
+                return 0;                       // return 0
             }
-            return this.values.size();
+            return this.values.size();          // return the size of the values
         }
 
         @Override
         public int getColumnCount() {
             return NAMES.length;
-        }
+        }  // return the length of the names
 
         @Override
         public Object getValueAt(final int row, final int column) {
-            final Row currentRow = this.values.get(row);
-            if (column == 0) {
-                return currentRow.getWhiteMove();
-            } else if (column == 1) {
-                return currentRow.getBlackMove();
+            final Row currentRow = this.values.get(row);    // get the current row
+            if (column == 0) {                              // if the column is 0
+                return currentRow.getWhiteMove();           // return the white move
+            } else if (column == 1) {                       // if the column is 1
+                return currentRow.getBlackMove();           // return the black move
             }
-            return null;
+            return null;                                    // return null
         }
 
         @Override
         public void setValueAt(final Object aValue, final int row, final int column) {
-            final Row currentRow;
-            if (this.values.size() <= row) {
-                currentRow = new Row();
-                this.values.add(currentRow);
-            } else {
-                currentRow = this.values.get(row);
+            final Row currentRow;                           // the current row
+            if (this.values.size() <= row) {                // if the size of the values is less than or equal to the row
+                currentRow = new Row();                     // create a new row
+                this.values.add(currentRow);                // add the row to the values
+            } else {                                        // else
+                currentRow = this.values.get(row);          // get the current row
             }
-            if (column == 0) {
-                currentRow.setWhiteMove((String) aValue);
-                fireTableRowsInserted(row, row);
-            } else if (column == 1) {
-                currentRow.setBlackMove((String) aValue);
-                fireTableCellUpdated(row, column);
+            if (column == 0) {                              // if the column is 0
+                currentRow.setWhiteMove((String) aValue);   // set the white move
+                fireTableRowsInserted(row, row);            // fire the table rows inserted
+            } else if (column == 1) {                       // if the column is 1
+                currentRow.setBlackMove((String) aValue);   // set the black move
+                fireTableCellUpdated(row, column);          // fire the table cell updated
             }
         }
 
         @Override
         public Class<?> getColumnClass(final int column) {
             return Move.class;
-        }
+        }   // return the move class
 
         @Override
         public String getColumnName(final int column) {
             return NAMES[column];
-        }
+        }   // return the name of the column
     }
 
 

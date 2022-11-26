@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="I commented PGNGameTags." />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Alliance commented.">
+      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/GameHistoryPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/GameHistoryPanel.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -268,27 +270,6 @@
       <workItem from="1668933010847" duration="4686000" />
       <workItem from="1669179387935" duration="28423000" />
       <workItem from="1669443616952" duration="483000" />
-    </task>
-    <task id="LOCAL-00093" summary="En Passant is highlighted but not executed">
-      <created>1668820115918</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1668820115918</updated>
-    </task>
-    <task id="LOCAL-00094" summary="idk what im doing">
-      <created>1668827281569</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1668827281569</updated>
-    </task>
-    <task id="LOCAL-00095" summary="cleanup i think">
-      <created>1668828391054</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1668828391054</updated>
     </task>
     <task id="LOCAL-00096" summary="cleanup">
       <created>1668828954078</created>
@@ -612,7 +593,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669444008209</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="I commented PGNGameTags.">
+      <created>1669444201085</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1669444201085</updated>
+    </task>
+    <task id="LOCAL-00143" summary="I commented PGNGameTags.">
+      <created>1669444220073</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1669444220073</updated>
+    </task>
+    <task id="LOCAL-00144" summary="Alliance commented.">
+      <created>1669444524905</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1669444524905</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +666,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Castling works?" />
     <MESSAGE value="Added more skins" />
     <MESSAGE value="Updated Test Cases" />
     <MESSAGE value="Castling fixed!!!!" />
@@ -689,7 +690,8 @@
     <MESSAGE value="RookStructureAnalyzer comments, still have to fix though." />
     <MESSAGE value="Finished up the comments inside of StandardBoardEvaluator. It had been started and I just finished it." />
     <MESSAGE value="I commented PGNGameTags." />
-    <option name="LAST_COMMIT_MESSAGE" value="I commented PGNGameTags." />
+    <MESSAGE value="Alliance commented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Alliance commented." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -712,17 +714,17 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/gui/Table.java</url>
-          <line>920</line>
+          <line>930</line>
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java</url>
-          <line>55</line>
+          <line>54</line>
           <option name="timeStamp" value="167" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java</url>
-          <line>163</line>
+          <line>162</line>
           <option name="timeStamp" value="168" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -732,7 +734,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/chess/engine/player/ai/MiniMax.java</url>
-          <line>25</line>
+          <line>26</line>
           <option name="timeStamp" value="173" />
         </line-breakpoint>
       </breakpoints>
