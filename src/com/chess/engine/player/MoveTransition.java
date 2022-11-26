@@ -7,6 +7,26 @@ public class MoveTransition {
     private final Board transitionBoard; // the board after the move
     private final Move move; // the move
     private final MoveStatus moveStatus; // the status of the move
+    private Board fromBoard; // From Board
+
+
+    /**
+     * Constructor for MoveTransition
+     *
+     * @param fromBoard the board before the move
+     * @param toBoard the board after the move
+     * @param move the move
+     * @param moveStatus the status of the move
+     */
+    public MoveTransition(final Board fromBoard,
+                          final Board toBoard,
+                          final Move move,
+                          final MoveStatus moveStatus) {
+        this.fromBoard = fromBoard;
+        this.transitionBoard = toBoard;
+        this.move = move;
+        this.moveStatus = moveStatus;
+    }
 
     /** Constructor
      * @param transitionBoard the board after the move
@@ -40,11 +60,12 @@ public class MoveTransition {
         return this;
     }
 
-    /** Gets the tile of the current piece's position that is attempted to moved
+    /**
+     * Gets the tile of the current piece's position that is attempted to moved
+     *
      * @return the tile of the current piece's position from the board
      */
-    public int getFromBoard() {
-        //TODO CLEANUP
-        return this.transitionBoard.getTile(this.move.getCurrentCoordinate()).getPiece().getPiecePosition();
+    public Board getFromBoard() {
+        return this.fromBoard;
     }
 }
