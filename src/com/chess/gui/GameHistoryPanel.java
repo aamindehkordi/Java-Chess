@@ -123,7 +123,6 @@ public class GameHistoryPanel extends JPanel {
      * 6. Setting the column alignment
      */
     private static class DataModel extends DefaultTableModel {
-//TODO ADD COMMENTS
 
         /**
          * The row values.

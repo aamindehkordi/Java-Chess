@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Alliance commented.">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="GameHistoryPanel commented ( i am tired.)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/gui/GameHistoryPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/GameHistoryPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/GameSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/GameSetup.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,13 +272,6 @@
       <workItem from="1668933010847" duration="4686000" />
       <workItem from="1669179387935" duration="28423000" />
       <workItem from="1669443616952" duration="483000" />
-    </task>
-    <task id="LOCAL-00096" summary="cleanup">
-      <created>1668828954078</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1668828954078</updated>
     </task>
     <task id="LOCAL-00097" summary="En Passant is highlighted but not executed">
       <created>1668829272280</created>
@@ -614,7 +609,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669444524905</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="GameHistoryPanel commented ( i am tired.)">
+      <created>1669445051694</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1669445051694</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,7 +668,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added more skins" />
     <MESSAGE value="Updated Test Cases" />
     <MESSAGE value="Castling fixed!!!!" />
     <MESSAGE value="New AI's implemented from another github" />
@@ -691,7 +692,8 @@
     <MESSAGE value="Finished up the comments inside of StandardBoardEvaluator. It had been started and I just finished it." />
     <MESSAGE value="I commented PGNGameTags." />
     <MESSAGE value="Alliance commented." />
-    <option name="LAST_COMMIT_MESSAGE" value="Alliance commented." />
+    <MESSAGE value="GameHistoryPanel commented ( i am tired.)" />
+    <option name="LAST_COMMIT_MESSAGE" value="GameHistoryPanel commented ( i am tired.)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
