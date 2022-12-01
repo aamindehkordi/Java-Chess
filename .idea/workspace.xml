@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="added undo and cleanup, file menu works too">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="sorry for no commits i did a  bit tho">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_12_24_AM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_12_33_AM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__12_24_AM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__12_33_AM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MiniMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/ai/MiniMax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/pgn/FenUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/pgn/FenUtilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestAlphaBeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestAlphaBeta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestFENParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestFENParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPGNParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPGNParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestStaleMate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestStaleMate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/diagram.uml" beforeDir="false" afterPath="$PROJECT_DIR$/src/diagram.uml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,40 +71,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "true",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "extract.method.default.visibility": "private",
-    "last_opened_file_path": "/Users/ali/Library/CloudStorage/OneDrive-Personal/Desktop/Other/Coding/School/Object_Oriented_Programming/ChessOOP",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ali/Library/CloudStorage/OneDrive-Personal/Desktop/Other/Coding/School/Object_Oriented_Programming/ChessOOP&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.chess.gui" />
@@ -285,20 +277,7 @@
       <workItem from="1668933010847" duration="4686000" />
       <workItem from="1669179387935" duration="28423000" />
       <workItem from="1669429889086" duration="7266000" />
-    </task>
-    <task id="LOCAL-00090" summary="tying up loose ends + en passant pt1">
-      <created>1668211589759</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1668211589759</updated>
-    </task>
-    <task id="LOCAL-00091" summary="x">
-      <created>1668817943613</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1668817943614</updated>
+      <workItem from="1669922332702" duration="2198000" />
     </task>
     <task id="LOCAL-00092" summary="En Passant is highlighted but not executed">
       <created>1668819730323</created>
@@ -629,7 +608,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669427188312</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="sorry for no comments i did a  bit tho">
+      <created>1669881121620</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1669881121620</updated>
+    </task>
+    <task id="LOCAL-00140" summary="sorry for no commits i did a  bit tho">
+      <created>1669881146945</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1669881146945</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -681,8 +674,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Imported PGN FEN from someones github" />
-    <MESSAGE value="implemented fen and pgn into test cases" />
     <MESSAGE value="Still debugging Castling" />
     <MESSAGE value="Castling works?" />
     <MESSAGE value="Added more skins" />
@@ -706,7 +697,9 @@
     <MESSAGE value="new constructor for undo" />
     <MESSAGE value="added undo" />
     <MESSAGE value="added undo and cleanup, file menu works too" />
-    <option name="LAST_COMMIT_MESSAGE" value="added undo and cleanup, file menu works too" />
+    <MESSAGE value="sorry for no comments i did a  bit tho" />
+    <MESSAGE value="sorry for no commits i did a  bit tho" />
+    <option name="LAST_COMMIT_MESSAGE" value="sorry for no commits i did a  bit tho" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
