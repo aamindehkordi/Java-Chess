@@ -2,6 +2,7 @@ package tests.com.chess.tests;
 
 import com.chess.engine.Alliance;
 import com.chess.engine.board.Board;
+import com.chess.engine.board.Board.Builder;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
 import com.chess.engine.pieces.*;
@@ -20,7 +21,7 @@ public class TestPieces {
 
     @Test
     public void testMiddleQueenOnEmptyBoard() {
-        final Board.Builder builder = new Board.Builder();
+        final Builder builder = new Builder();
         // Black Layout
         builder.setPiece(new King(4, Alliance.BLACK));
         // White Layout
@@ -64,7 +65,7 @@ public class TestPieces {
     @Test
     public void testLegalMoveAllAvailable() {
 
-        final Board.Builder boardBuilder = new Board.Builder();
+        final Builder boardBuilder = new Builder();
         // Black Layout
         boardBuilder.setPiece(new King(4, Alliance.BLACK));
         boardBuilder.setPiece(new Knight(28, Alliance.BLACK));
@@ -102,7 +103,7 @@ public class TestPieces {
         assertTrue(whiteLegals.contains(wm7));
         assertTrue(whiteLegals.contains(wm8));
 
-        final Board.Builder boardBuilder2 = new Board.Builder();
+        final Builder boardBuilder2 = new Builder();
         // Black Layout
         boardBuilder2.setPiece(new King(4, Alliance.BLACK));
         boardBuilder2.setPiece(new Knight(28, Alliance.BLACK));
@@ -145,7 +146,7 @@ public class TestPieces {
 
     @Test
     public void testKnightInCorners() {
-        final Board.Builder boardBuilder = new Board.Builder();
+        final Builder boardBuilder = new Builder();
         boardBuilder.setPiece(new King(4, Alliance.BLACK));
         boardBuilder.setPiece(new Knight(0, Alliance.BLACK));
         boardBuilder.setPiece(new Knight(56, Alliance.WHITE));
@@ -173,7 +174,7 @@ public class TestPieces {
 
     @Test
     public void testMiddleBishopOnEmptyBoard() {
-        final Board.Builder builder = new Board.Builder();
+        final Builder builder = new Builder();
         // Black Layout
         builder.setPiece(new King(4, Alliance.BLACK));
         // White Layout
@@ -203,7 +204,7 @@ public class TestPieces {
 
     @Test
     public void testTopLeftBishopOnEmptyBoard() {
-        Board.Builder builder = new Board.Builder();
+        Builder builder = new Builder();
         // Black Layout
         builder.setPiece(new King(4, Alliance.BLACK));
         // White Layout
@@ -237,7 +238,7 @@ public class TestPieces {
 
     @Test
     public void testTopRightBishopOnEmptyBoard() {
-        Board.Builder builder = new Board.Builder();
+        Builder builder = new Builder();
         // Black Layout
         builder.setPiece(new King(4, Alliance.BLACK));
         // White Layout
@@ -269,7 +270,7 @@ public class TestPieces {
 
     @Test
     public void testBottomLeftBishopOnEmptyBoard() {
-        Board.Builder builder = new Board.Builder();
+        Builder builder = new Builder();
         // Black Layout
         builder.setPiece(new King(4, Alliance.BLACK));
         // White Layout
@@ -301,7 +302,7 @@ public class TestPieces {
 
     @Test
     public void testBottomRightBishopOnEmptyBoard() {
-        Board.Builder builder = new Board.Builder();
+        Builder builder = new Builder();
         // Black Layout
         builder.setPiece(new King(4, Alliance.BLACK));
         // White Layout
@@ -333,7 +334,7 @@ public class TestPieces {
 
     @Test
     public void testMiddleRookOnEmptyBoard() {
-        final Board.Builder builder = new Board.Builder();
+        final Builder builder = new Builder();
         // Black Layout
         builder.setPiece(new King(4, Alliance.BLACK));
         // White Layout
@@ -376,7 +377,7 @@ public class TestPieces {
 
     @Test
     public void testPawnPromotion() {
-        final Board.Builder builder = new Board.Builder();
+        final Builder builder = new Builder();
         // Black Layout
         builder.setPiece(new Rook(3, Alliance.BLACK)); /* Rook on position 3 aka d8 */
         builder.setPiece(new King(22, Alliance.BLACK, false)); /* King on position 22 aka g6 */
@@ -411,7 +412,7 @@ public class TestPieces {
 
     @Test
     public void testSimpleWhiteEnPassant() {
-        final Board.Builder builder = new Board.Builder();
+        final Builder builder = new Builder();
         // Black Layout
         builder.setPiece(new King(4, Alliance.BLACK));
         builder.setPiece(new Pawn(11, Alliance.BLACK));
@@ -441,7 +442,7 @@ public class TestPieces {
 
     @Test
     public void testSimpleBlackEnPassant() {
-        final Board.Builder builder = new Board.Builder();
+        final Builder builder = new Builder();
         // Black Layout
         builder.setPiece(new King(4, Alliance.BLACK));
         builder.setPiece(new Pawn(11, Alliance.BLACK));
@@ -503,7 +504,44 @@ public class TestPieces {
         assertFalse(board.getTile(60) == null);
     }
 
+    @Test
+    public void testKingEdgeLegalMoves(){
+        final Builder builder = new Builder();
+        // Black Layout
+        builder.setPiece(new King(63, Alliance.BLACK));
+        // White Layout
+        builder.setPiece(new King(0, Alliance.WHITE));
+        // Set the current player
+        builder.setMoveMaker(Alliance.WHITE);
+        final Board board = builder.build();
+        // Test the king moves on the edge of the board
+        final Collection<Move> whiteLegalMoves = board.currentPlayer().getLegalMoves();
+        final Collection<Move> blackLegalMoves = board.currentPlayer().getOpponent().getLegalMoves();
 
+        assertEquals(whiteLegalMoves.size(), 3);
+        assertEquals(blackLegalMoves.size(), 3);
+
+        // Move the kings up and down respectively
+        final Move m1 = Move.MoveFactory.createMove(board, BoardUtils.getCoordinateAtPosition(
+                "a1"), BoardUtils.getCoordinateAtPosition("a2"));
+        final MoveTransition t1 = board.currentPlayer().makeMove(m1);
+        assertTrue(t1.getMoveStatus().isDone());
+        final Move m2 = Move.MoveFactory.createMove(t1.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("h8"), BoardUtils.getCoordinateAtPosition("h7"));
+        final MoveTransition t2 = t1.getTransitionBoard().currentPlayer().makeMove(m2);
+        assertTrue(t2.getMoveStatus().isDone());
+
+        // Test the king moves on the edge of the board
+        final Collection<Move> whiteLegalMoves2 = t2.getTransitionBoard().currentPlayer().getLegalMoves();
+        final Collection<Move> blackLegalMoves2 = t2.getTransitionBoard().currentPlayer().getOpponent().getLegalMoves();
+
+        assertEquals(whiteLegalMoves2.size(), 5);
+        assertEquals(blackLegalMoves2.size(), 5);
+
+
+
+
+
+    }
 
     /*
     @Test

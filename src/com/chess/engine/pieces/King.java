@@ -118,6 +118,7 @@ public class King extends Piece{
                 // If the king is on the edge of the board
                 if (isFirstColumnExclusion(this.piecePosition, currentCandidateOffset) ||
                         isEighthColumnExclusion(this.piecePosition, currentCandidateOffset)) {
+                    // Skip to the next offset
                     continue;
                 }
 
@@ -177,7 +178,13 @@ public class King extends Piece{
      * @return true if the move is illegal
      */
     private boolean isEighthColumnExclusion(int piecePosition, int currentCandidateOffset) {
-        return BoardUtils.EIGHTH_COLUMN[piecePosition] && (currentCandidateOffset == -9 || currentCandidateOffset == -1 || currentCandidateOffset == 7); /* if the king is on the eighth column, the move is illegal */
+        // If the king is on the eighth column and the move is to the rightup, right, or rightdown, the move is illegal
+        boolean onEightgh = BoardUtils.EIGHTH_COLUMN[piecePosition];
+        boolean toRight = currentCandidateOffset == 1;
+        boolean toRightUp = currentCandidateOffset == 9;
+        boolean toRightDown = currentCandidateOffset == -7;
+return onEightgh && (toRight || toRightUp || toRightDown);
+
     }
 
     /** If the king is on the eighth column, the move is illegal
@@ -187,6 +194,11 @@ public class King extends Piece{
      * @return true if the move is illegal
      */
     private boolean isFirstColumnExclusion(int piecePosition, int currentCandidateOffset) {
-        return BoardUtils.FIRST_COLUMN[piecePosition] && (currentCandidateOffset == -7 || currentCandidateOffset == 1 || currentCandidateOffset == 9); /* if the king is on the first column, the move is illegal */
+        // If the king is on the first column and the move is to the leftup, left, or leftdown, the move is illegal
+        boolean onFirst = BoardUtils.FIRST_COLUMN[piecePosition];
+        boolean toLeft = currentCandidateOffset == -1;
+        boolean toLeftUp = currentCandidateOffset == 7;
+        boolean toLeftDown = currentCandidateOffset == -9;
+        return onFirst && (toLeft || toLeftUp || toLeftDown);
     }
 }

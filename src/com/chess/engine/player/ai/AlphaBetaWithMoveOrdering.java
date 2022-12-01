@@ -149,20 +149,20 @@ public class AlphaBetaWithMoveOrdering extends Observable implements MoveStrateg
                 if (alliance.isWhite() && currentValue > highestSeenValue) {
                     highestSeenValue = currentValue;              // set the highest seen value to the current value
                     bestMove = move;                              // set the best move to the current move
-                    //setChanged();
-                    //notifyObservers(bestMove);
+                    setChanged();
+                    notifyObservers(bestMove);
                 }
                 else if (alliance.isBlack() && currentValue < lowestSeenValue) {
                     lowestSeenValue = currentValue;               // set the lowest seen value to the current value
                     bestMove = move;                              // set the best move to the current move
-                    //setChanged();
-                    //notifyObservers(bestMove);
+                    setChanged();
+                    notifyObservers(bestMove);
                 }
                 final String quiescenceInfo = " [h: " +highestSeenValue+ " l: " +lowestSeenValue+ "] q: " +this.quiescenceCount;   // get the quiescence info which:
                 s = "\t" + toString() + "(" +this.searchDepth+ "), m: (" +moveCounter+ "/" +numMoves+ ") " + move + ", best:  " + bestMove // gets the best move and the current move and the number of moves and the move counter and the search depth
                         + quiescenceInfo + ", t: " +calculateTimeTaken(candidateMoveStartTime, System.nanoTime());                 // gets the time taken to make the move and the quiescence info
             } else {
-                s = "\t" + toString() + ", m: (" +moveCounter+ "/" +numMoves+ ") " + move + " is illegal, best: " +bestMove;       // get the string
+                s = "\t" + toString() + ", m: (" +moveCounter+ "/" +numMoves+ ") " + move + " is illegal, best: " + bestMove;       // get the string
             }
             System.out.println(s);      // print the string
             setChanged();               // set the changed

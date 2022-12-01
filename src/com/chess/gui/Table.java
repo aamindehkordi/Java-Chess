@@ -2,6 +2,7 @@ package com.chess.gui;
 
 
 import com.chess.engine.board.*;
+import com.chess.engine.board.Move.MoveFactory;
 import com.chess.engine.pieces.Piece;
 import com.chess.engine.player.MoveTransition;
 import com.chess.engine.player.Player;
@@ -498,15 +499,15 @@ public class Table extends Observable {
                     ? MySqlGamePersistence.get().getNextBestMove(Table.get().getGameBoard(), // get the next best move from the database,
                     Table.get().getGameBoard().currentPlayer(), // for the current player
                     Table.get().getMoveLog().getMoves().toString().replaceAll("\\[", "").replaceAll("]", "")) // and the current move log
-                    : Move.MoveFactory.getNullMove(); // else if use book is false, return a null move
-            if (Table.get().getUseBook() && bookMove != Move.MoveFactory.getNullMove()) {
+                    : MoveFactory.getNullMove(); // else if use book is false, return a null move
+            if (Table.get().getUseBook() && bookMove != MoveFactory.getNullMove()) {
                 bestMove = bookMove;
             }
             else {
-                // initialize a decent search depth
-                int depth = 4;
+                // initialize the board depth from the setup panel
+                int depth = Table.get().getGameSetup().getSearchDepth();
                 // initialize a decent quiescence search depth
-                int quiescence = 8;
+                int quiescence = depth * 2;
                 final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(depth, quiescence);
                 //alphaBeta.addObserver(Table.get().getDebugPanel());
                 bestMove = alphaBeta.execute(Table.get().getGameBoard());
@@ -828,7 +829,7 @@ public class Table extends Observable {
                             if(tileId == 28 || tileId == 20){
                                 int x = 0;
                             }
-                            final Move move = Move.MoveFactory.createMove(chessBoard, sourceTile.getTileCoordinate(), destinationTile.getTileCoordinate()); // Create a move from the source tile to the destination tile
+                            final Move move = MoveFactory.createMove(chessBoard, sourceTile.getTileCoordinate(), destinationTile.getTileCoordinate()); // Create a move from the source tile to the destination tile
                             final MoveTransition transition = chessBoard.currentPlayer().makeMove(move); // Make the move
                             if (transition.getMoveStatus().isDone()) { // If the move was successful
                                 chessBoard = transition.getTransitionBoard(); // Set the chess board to the transition board
