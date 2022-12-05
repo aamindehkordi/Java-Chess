@@ -40,6 +40,19 @@ public abstract class Move {
         this.movedPiece = movedPiece;
         this.destinationCoordinate = destinationCoordinate;
         this.isFirstMove = isFirstMove;
+        printValues();
+    }
+
+    /**
+     * Print the values of the parameters for this move.
+     */
+    void printValues() {
+        //System.out.println("-------------------");
+        //System.out.println("board: \n" + this.board);
+        //System.out.println("movedPiece: " + this.movedPiece);
+        //System.out.println("destinationCoordinate: " + this.destinationCoordinate);
+        //System.out.println("isFirstMove: " + this.isFirstMove);
+        //System.out.println("-------------------");
     }
 
     /** Hashcode
@@ -152,7 +165,6 @@ public abstract class Move {
         return this;
     }
 
-    //TODO Fix UNDO
     /** Undo the move
      *
      * @return the board after the move has been undone
@@ -167,7 +179,6 @@ public abstract class Move {
         return builder.build();
     }
 
-
     /** The Major Move class */
     public static final class MajorMove extends Move {
         /** Constructor
@@ -178,6 +189,7 @@ public abstract class Move {
          */
         public MajorMove(final Board board, final Piece movedPiece, final int destinationCoordinate) {
             super(board, movedPiece, destinationCoordinate);
+            this.printValues();
         }
 
         @Override
@@ -203,6 +215,7 @@ public abstract class Move {
          */
         public MajorAttackMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Piece attackedPiece) {
             super(board, movedPiece, destinationCoordinate, attackedPiece);
+            this.printValues();
         }
 
         @Override
@@ -231,6 +244,8 @@ public abstract class Move {
         public AttackMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Piece attackedPiece) {
             super(board, movedPiece, destinationCoordinate);
             this.attackedPiece = attackedPiece;
+            this.printValues();
+
         }
 
         @Override
@@ -274,6 +289,7 @@ public abstract class Move {
          */
         public PawnMove(final Board board, final Piece movedPiece, final int destinationCoordinate) {
             super(board, movedPiece, destinationCoordinate);
+            this.printValues();
         }
 
         @Override
@@ -300,6 +316,7 @@ public abstract class Move {
          */
         public PawnAttackMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Piece attackedPiece) {
             super(board, movedPiece, destinationCoordinate, attackedPiece);
+            this.printValues();
         }
 
         @Override
@@ -328,6 +345,7 @@ public abstract class Move {
             super(decoratedMove.getBoard(), decoratedMove.getMovedPiece(), decoratedMove.getDestinationCoordinate());
             this.decoratedMove = decoratedMove;
             this.promotedPawn = (Pawn) decoratedMove.getMovedPiece();
+            this.printValues();
         }
 
         @Override
@@ -430,6 +448,7 @@ public abstract class Move {
          */
         public PawnEnPassantAttackMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Piece attackedPiece) {
             super(board, movedPiece, destinationCoordinate, attackedPiece);
+            this.printValues();
         }
 
         @Override
@@ -464,6 +483,7 @@ public abstract class Move {
                         final Piece movedPiece,
                         final int destinationCoordinate) {
             super(board, movedPiece, destinationCoordinate);
+            this.printValues();
         }
 
         @Override
@@ -509,6 +529,7 @@ public abstract class Move {
             this.castleRook = castleRook;
             this.castleRookStart = castleRookStart;
             this.castleRookDestination = castleRookDestination;
+            this.printValues();
         }
 
         /** Returns the rook that is being castled
@@ -576,6 +597,7 @@ public abstract class Move {
          */
         public KingSideCastleMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Rook castleRook, final int castleRookStart, final int castleRookDestination) {
             super(board, movedPiece, destinationCoordinate, castleRook, castleRookStart, castleRookDestination);
+            this.printValues();
         }
 
         @Override
@@ -602,6 +624,7 @@ public abstract class Move {
          */
         public QueenSideCastleMove(final Board board, final Piece movedPiece, final int destinationCoordinate, final Rook castleRook, final int castleRookStart, final int castleRookDestination) {
             super(board, movedPiece, destinationCoordinate, castleRook, castleRookStart, castleRookDestination);
+            this.printValues();
         }
 
         @Override
@@ -621,6 +644,7 @@ public abstract class Move {
          */
         public NullMove() {
             super(null, null, -1);
+            this.printValues();
         }
 
         @Override
@@ -632,6 +656,14 @@ public abstract class Move {
         public int getCurrentCoordinate() {
             return -1;
         }
+
+        @Override
+        public int hashCode() {
+            return 1;
+        }
+
+
+
     }
 
     public static class MoveFactory {
