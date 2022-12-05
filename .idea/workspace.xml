@@ -4,253 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="diagram">
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/OOPChess.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/class-use/OOPChess.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Board.MoveTransitionTracker.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.MajorAttackMove.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.PawnPromotion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/MoveUtils.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Board.MoveTransitionTracker.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.MajorAttackMove.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.PawnPromotion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/MoveUtils.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/AlphaBetaWithMoveOrdering.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/BoardEvaluator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/KingSafetyAnalyzer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/MiniMax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/MoveOrdering.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/MoveStrategy.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/PawnStructureAnalyzer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/RookStructureAnalyzer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/StandardBoardEvaluator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/StockAlphaBeta.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/class-use/AlphaBetaWithMoveOrdering.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/class-use/BoardEvaluator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/class-use/KingSafetyAnalyzer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/class-use/MiniMax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/class-use/MoveOrdering.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/class-use/MoveStrategy.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/class-use/PawnStructureAnalyzer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/class-use/RookStructureAnalyzer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/class-use/StandardBoardEvaluator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/class-use/StockAlphaBeta.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/ai/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/gui/GameHistoryPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/gui/Table.BoardDirection.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/gui/Table.MoveLog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/gui/Table.PlayerType.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/gui/Table.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/gui/TakenPiecesPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/gui/class-use/GameHistoryPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/gui/class-use/Table.BoardDirection.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/gui/class-use/Table.MoveLog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/gui/class-use/Table.PlayerType.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/gui/class-use/Table.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/gui/class-use/TakenPiecesPanel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/gui/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/gui/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/gui/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/FenUtilities.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/Game.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/GameFactory.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/InvalidGame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/MySqlGamePersistence.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/PGNGameTags.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/PGNPersistence.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/PGNUtilities.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/ParsePGNException.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/PlayPGNException.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/Playable.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/ValidGame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/class-use/FenUtilities.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/class-use/Game.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/class-use/GameFactory.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/class-use/InvalidGame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/class-use/MySqlGamePersistence.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/class-use/PGNGameTags.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/class-use/PGNPersistence.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/class-use/PGNUtilities.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/class-use/ParsePGNException.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/class-use/PlayPGNException.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/class-use/Playable.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/class-use/ValidGame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/com/chess/pgn/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-22.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/serialized-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/ChessTestSuite.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/TestAlphaBeta.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/TestBoard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/TestCastling.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/TestCheckmate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/TestEngine.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/TestFENParser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/TestIterativeDeepening.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/TestKingSafety.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/TestMiniMax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/TestPGNParser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/TestPawnStructure.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/TestPieces.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/TestPlayer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/TestRookStructure.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/TestStaleMate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/ChessTestSuite.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/TestAlphaBeta.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/TestBoard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/TestCastling.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/TestCheckmate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/TestEngine.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/TestFENParser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/TestIterativeDeepening.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/TestKingSafety.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/TestMiniMax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/TestPGNParser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/TestPawnStructure.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/TestPieces.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/TestPlayer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/TestRookStructure.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/class-use/TestStaleMate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JAVADOC/tests/com/chess/tests/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_24_22,_3_59_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_24_22__3_59_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_4_05_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_4_12_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_4_14_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_5_01_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_5_13_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__4_05_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__4_12_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__4_14_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__5_01_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__5_13_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_25_22,_4_51_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_25_22__4_51_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/Alliance.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/Alliance.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Board.Builder.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Board.Builder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Board.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Board.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/BoardUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/BoardUtils.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.AttackMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.AttackMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.CastleMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.CastleMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.KingSideCastleMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.KingSideCastleMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.MajorMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.MajorMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.MoveFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.MoveFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.NullMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.NullMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.PawnAttackMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.PawnAttackMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.PawnEnPassantAttackMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.PawnEnPassantAttackMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.PawnJump.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.PawnJump.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.PawnMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.PawnMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.QueenSideCastleMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.QueenSideCastleMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Move.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Tile.EmptyTile.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Tile.EmptyTile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Tile.OccupiedTile.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Tile.OccupiedTile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Tile.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/Tile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Board.Builder.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Board.Builder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Board.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Board.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/BoardUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/BoardUtils.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.AttackMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.AttackMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.CastleMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.CastleMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.KingSideCastleMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.KingSideCastleMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.MajorMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.MajorMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.MoveFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.MoveFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.NullMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.NullMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.PawnAttackMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.PawnAttackMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.PawnEnPassantAttackMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.PawnEnPassantAttackMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.PawnJump.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.PawnJump.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.PawnMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.PawnMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.QueenSideCastleMove.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.QueenSideCastleMove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Move.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Tile.EmptyTile.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Tile.EmptyTile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Tile.OccupiedTile.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Tile.OccupiedTile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Tile.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/class-use/Tile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/board/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/class-use/Alliance.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/class-use/Alliance.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/Bishop.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/Bishop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/King.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/King.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/Knight.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/Knight.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/Pawn.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/Pawn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/Piece.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/Piece.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/PieceType.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/PieceType.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/Queen.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/Queen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/Rook.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/Rook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/Bishop.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/Bishop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/King.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/King.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/Knight.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/Knight.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/Pawn.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/Pawn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/Piece.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/Piece.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/PieceType.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/PieceType.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/Queen.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/Queen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/Rook.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/class-use/Rook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/pieces/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/BlackPlayer.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/BlackPlayer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/MoveStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/MoveStatus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/MoveTransition.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/MoveTransition.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/Player.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/Player.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/WhitePlayer.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/WhitePlayer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/class-use/BlackPlayer.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/class-use/BlackPlayer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/class-use/MoveStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/class-use/MoveStatus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/class-use/MoveTransition.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/class-use/MoveTransition.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/class-use/Player.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/class-use/Player.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/class-use/WhitePlayer.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/class-use/WhitePlayer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/com/chess/engine/player/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/element-list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-15.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-16.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-17.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-18.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-18.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-19.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-19.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-20.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-20.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-21.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-21.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/legal/jqueryUI.md" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/legal/jqueryUI.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/member-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/overview-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/package-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/tag-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/tag-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVADOC/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/JAVADOC/type-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChessOOP/diagram.uml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChessOOP/diagram.uml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" afterDir="false" />
-    </list>
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="wtf is this file, its commented tho" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -294,7 +48,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -336,8 +89,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -372,7 +124,7 @@
       <recent name="com.tests.chess.engine.board" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.chess.OOPChess">
+  <component name="RunManager" selected="JUnit.ChessTestSuite">
     <configuration name="com.chess.OOPChess" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -517,11 +269,14 @@
       <workItem from="1668933010847" duration="4686000" />
       <workItem from="1669179387935" duration="28423000" />
       <workItem from="1669429889086" duration="7266000" />
-      <workItem from="1669922332702" duration="2842000" />
-      <workItem from="1669930769163" duration="1057000" />
-      <workItem from="1670229099001" duration="34000" />
-      <workItem from="1670229566015" duration="51000" />
-      <workItem from="1670229920667" duration="3044000" />
+      <workItem from="1669922332702" duration="2198000" />
+    </task>
+    <task id="LOCAL-00092" summary="En Passant is highlighted but not executed">
+      <created>1668819730323</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1668819730323</updated>
     </task>
     <task id="LOCAL-00093" summary="En Passant is highlighted but not executed">
       <created>1668820115918</created>
@@ -859,14 +614,7 @@
       <option name="project" value="LOCAL" />
       <updated>1669881146945</updated>
     </task>
-    <task id="LOCAL-00141" summary="diagram">
-      <created>1669927494381</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1669927494381</updated>
-    </task>
-    <option name="localTasksCounter" value="142" />
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -942,8 +690,8 @@
     <MESSAGE value="added undo and cleanup, file menu works too" />
     <MESSAGE value="sorry for no comments i did a  bit tho" />
     <MESSAGE value="sorry for no commits i did a  bit tho" />
-    <MESSAGE value="diagram" />
-    <option name="LAST_COMMIT_MESSAGE" value="diagram" />
+    <MESSAGE value="wtf is this file, its commented tho" />
+    <option name="LAST_COMMIT_MESSAGE" value="wtf is this file, its commented tho" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
