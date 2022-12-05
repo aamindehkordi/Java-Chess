@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="just push please" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="just push please">
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,22 +163,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestBoard.testFoolsMate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ChessOOP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.com.chess.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestBoard" />
-      <option name="METHOD_NAME" value="testFoolsMate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestFENParser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChessOOP" />
       <extension name="coverage">
@@ -223,13 +209,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestPieces.testAllKingMovesWhileAttacked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChessOOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.com.chess.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestPieces" />
+      <option name="METHOD_NAME" value="testAllKingMovesWhileAttacked" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestPieces.testAllKingMovesWhileAttacked" />
         <item itemvalue="JUnit.ChessTestSuite" />
         <item itemvalue="JUnit.TestFENParser.testWriteFEN2" />
         <item itemvalue="JUnit.TestFENParser" />
         <item itemvalue="JUnit.TestPGNParser" />
-        <item itemvalue="JUnit.TestBoard.testFoolsMate" />
       </list>
     </recent_temporary>
   </component>
@@ -271,14 +273,7 @@
       <workItem from="1669179387935" duration="28423000" />
       <workItem from="1669429889086" duration="7266000" />
       <workItem from="1669922332702" duration="2198000" />
-      <workItem from="1670235506208" duration="318000" />
-    </task>
-    <task id="LOCAL-00097" summary="En Passant is highlighted but not executed">
-      <created>1668829272280</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1668829272280</updated>
+      <workItem from="1670235506208" duration="700000" />
     </task>
     <task id="LOCAL-00098" summary="Pawn promotion doesn't work but it should">
       <created>1668941908446</created>
@@ -616,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670235795771</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="just push please">
+      <created>1670235892692</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1670235892692</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
