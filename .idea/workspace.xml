@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="sorry for no commits i did a  bit tho">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_12_24_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_12_33_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__12_24_AM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__12_33_AM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diagram.uml" beforeDir="false" afterPath="$PROJECT_DIR$/src/diagram.uml" afterDir="false" />
-    </list>
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="wtf is this file, its commented tho" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +48,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -674,7 +666,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Still debugging Castling" />
     <MESSAGE value="Castling works?" />
     <MESSAGE value="Added more skins" />
     <MESSAGE value="Updated Test Cases" />
@@ -699,7 +690,8 @@
     <MESSAGE value="added undo and cleanup, file menu works too" />
     <MESSAGE value="sorry for no comments i did a  bit tho" />
     <MESSAGE value="sorry for no commits i did a  bit tho" />
-    <option name="LAST_COMMIT_MESSAGE" value="sorry for no commits i did a  bit tho" />
+    <MESSAGE value="wtf is this file, its commented tho" />
+    <option name="LAST_COMMIT_MESSAGE" value="wtf is this file, its commented tho" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
