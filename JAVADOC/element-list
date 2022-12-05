@@ -1,4 +1,9 @@
+com.chess
 com.chess.engine
 com.chess.engine.board
 com.chess.engine.pieces
 com.chess.engine.player
+com.chess.engine.player.ai
+com.chess.gui
+com.chess.pgn
+tests.com.chess.tests

@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.chess.engine"},{"l":"com.chess.engine.board"},{"l":"com.chess.engine.pieces"},{"l":"com.chess.engine.player"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.chess"},{"l":"com.chess.engine"},{"l":"com.chess.engine.board"},{"l":"com.chess.engine.pieces"},{"l":"com.chess.engine.player"},{"l":"com.chess.engine.player.ai"},{"l":"com.chess.gui"},{"l":"com.chess.pgn"},{"l":"tests.com.chess.tests"}];updateSearchResults();
