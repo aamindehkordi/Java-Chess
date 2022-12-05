@@ -4,45 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="wtf is this file, its commented tho">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_21_22,_10_46_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_21_22,_10_59_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_21_22,_2_03_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_21_22,_2_29_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_21_22__10_46_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_21_22__10_59_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_21_22__2_03_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_21_22__2_29_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_23_22,_10_17_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_23_22__10_17_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_24_22,_3_59_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_24_22__3_59_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_21_22,_11_50_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_21_22__11_50_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_22,_12_51_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_22_22__12_51_AM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_22,_10_25_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_22,_11_29_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_22__10_25_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_22__11_29_PM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="sorry for no commits i did a  bit tho">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_12_24_AM_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_12_33_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_4_05_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_4_12_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_4_14_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_5_01_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22,_5_13_PM_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__12_24_AM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__12_33_AM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__4_05_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__4_12_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__4_14_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__5_01_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_24_22__5_13_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_25_22,_10_29_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_25_22,_4_51_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_25_22__4_51_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/diagram.uml" beforeDir="false" afterPath="$PROJECT_DIR$/src/diagram.uml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +20,7 @@
   <component name="ChangesViewManager">
     <option name="groupingKeys">
       <option value="directory" />
+      <option value="module" />
     </option>
   </component>
   <component name="CodeInsightWorkspaceSettings">
@@ -102,42 +71,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "true",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TODO_SCOPE": "All Places",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "extract.method.default.visibility": "private",
-    "last_opened_file_path": "/Users/ali/Library/CloudStorage/OneDrive-Personal/Desktop/Other/Coding/School/Object Oriented Programming/ChessOOP/src/com/chess/engine/player/ai",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ali/Library/CloudStorage/OneDrive-Personal/Desktop/Other/Coding/School/Object_Oriented_Programming/ChessOOP&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.chess.gui" />
@@ -146,11 +113,11 @@
       <recent name="com.chess.engine.pieces" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com" />
       <recent name="$PROJECT_DIR$/src/com/chess/engine/player/ai" />
       <recent name="$PROJECT_DIR$/art" />
       <recent name="$PROJECT_DIR$/src/com/chess/pgn" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="com.chess.engine.board.BoardUtils" />
@@ -165,7 +132,7 @@
       <recent name="com.tests.chess.engine.board" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.chess.OOPChess">
+  <component name="RunManager" selected="JUnit.ChessTestSuite">
     <configuration name="com.chess.OOPChess" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -217,7 +184,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPawnStructure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestFENParser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChessOOP" />
       <extension name="coverage">
         <pattern>
@@ -226,13 +193,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestPawnStructure" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestFENParser" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRookStructure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestFENParser.testWriteFEN2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChessOOP" />
       <extension name="coverage">
         <pattern>
@@ -241,13 +208,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestRookStructure" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestFENParser" />
+      <option name="METHOD_NAME" value="testWriteFEN2" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestStaleMate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPGNParser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChessOOP" />
       <extension name="coverage">
         <pattern>
@@ -256,7 +224,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestStaleMate" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestPGNParser" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -265,10 +233,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ChessTestSuite" />
+        <item itemvalue="JUnit.TestFENParser.testWriteFEN2" />
+        <item itemvalue="JUnit.TestFENParser" />
+        <item itemvalue="JUnit.TestPGNParser" />
         <item itemvalue="JUnit.TestBoard.testFoolsMate" />
-        <item itemvalue="JUnit.TestPawnStructure" />
-        <item itemvalue="JUnit.TestRookStructure" />
-        <item itemvalue="JUnit.TestStaleMate" />
       </list>
     </recent_temporary>
   </component>
@@ -308,11 +276,64 @@
       <workItem from="1668825021194" duration="4854000" />
       <workItem from="1668933010847" duration="4686000" />
       <workItem from="1669179387935" duration="28423000" />
-      <workItem from="1669443616952" duration="483000" />
-      <workItem from="1669880144692" duration="2856000" />
-      <workItem from="1670232292359" duration="82000" />
-      <workItem from="1670232397066" duration="70000" />
-      <workItem from="1670232510441" duration="19000" />
+      <workItem from="1669429889086" duration="7266000" />
+      <workItem from="1669922332702" duration="2198000" />
+    </task>
+    <task id="LOCAL-00092" summary="En Passant is highlighted but not executed">
+      <created>1668819730323</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1668819730323</updated>
+    </task>
+    <task id="LOCAL-00093" summary="En Passant is highlighted but not executed">
+      <created>1668820115918</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1668820115918</updated>
+    </task>
+    <task id="LOCAL-00094" summary="idk what im doing">
+      <created>1668827281569</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1668827281569</updated>
+    </task>
+    <task id="LOCAL-00095" summary="cleanup i think">
+      <created>1668828391054</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1668828391054</updated>
+    </task>
+    <task id="LOCAL-00096" summary="cleanup">
+      <created>1668828954078</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1668828954078</updated>
+    </task>
+    <task id="LOCAL-00097" summary="En Passant is highlighted but not executed">
+      <created>1668829272280</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1668829272280</updated>
+    </task>
+    <task id="LOCAL-00098" summary="Pawn promotion doesn't work but it should">
+      <created>1668941908446</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1668941908446</updated>
+    </task>
+    <task id="LOCAL-00099" summary="The Beginnings of unit testers">
+      <created>1668944716649</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1668944716649</updated>
     </task>
     <task id="LOCAL-00100" summary="Testers brought over from BlackWidow and fitted to current project - all tests failed :/">
       <created>1669064664549</created>
@@ -552,112 +573,56 @@
       <option name="project" value="LOCAL" />
       <updated>1669333884427</updated>
     </task>
-    <task id="LOCAL-00134" summary="x">
-      <created>1669335124460</created>
+    <task id="LOCAL-00134" summary="Escape analysis score">
+      <created>1669427026862</created>
       <option name="number" value="00134" />
       <option name="presentableId" value="LOCAL-00134" />
       <option name="project" value="LOCAL" />
-      <updated>1669335124460</updated>
+      <updated>1669427026862</updated>
     </task>
-    <task id="LOCAL-00135" summary="Fixed the previous comments in AlphabBetaWithMoveOrdering">
-      <created>1669339333019</created>
+    <task id="LOCAL-00135" summary="cleanup">
+      <created>1669427098735</created>
       <option name="number" value="00135" />
       <option name="presentableId" value="LOCAL-00135" />
       <option name="project" value="LOCAL" />
-      <updated>1669339333020</updated>
+      <updated>1669427098736</updated>
     </task>
-    <task id="LOCAL-00136" summary="Commented KingSafetyAnalyzer">
-      <created>1669341067082</created>
+    <task id="LOCAL-00136" summary="new constructor for undo">
+      <created>1669427134093</created>
       <option name="number" value="00136" />
       <option name="presentableId" value="LOCAL-00136" />
       <option name="project" value="LOCAL" />
-      <updated>1669341067082</updated>
+      <updated>1669427134093</updated>
     </task>
-    <task id="LOCAL-00137" summary="Commented MoveOrdering and took off todo for this file and the previous&#10;Taking a break, this is so tedious , even with copilot &#10;I need cope pilot rn honestly">
-      <created>1669342829195</created>
+    <task id="LOCAL-00137" summary="added undo">
+      <created>1669427150978</created>
       <option name="number" value="00137" />
       <option name="presentableId" value="LOCAL-00137" />
       <option name="project" value="LOCAL" />
-      <updated>1669342829195</updated>
+      <updated>1669427150978</updated>
     </task>
-    <task id="LOCAL-00138" summary="PawnStructureAnalyzer comments">
-      <created>1669348741783</created>
+    <task id="LOCAL-00138" summary="added undo and cleanup, file menu works too">
+      <created>1669427188312</created>
       <option name="number" value="00138" />
       <option name="presentableId" value="LOCAL-00138" />
       <option name="project" value="LOCAL" />
-      <updated>1669348741783</updated>
+      <updated>1669427188312</updated>
     </task>
-    <task id="LOCAL-00139" summary="RookStructureAnalyzer comments, still have to fix though.">
-      <created>1669350050799</created>
+    <task id="LOCAL-00139" summary="sorry for no comments i did a  bit tho">
+      <created>1669881121620</created>
       <option name="number" value="00139" />
       <option name="presentableId" value="LOCAL-00139" />
       <option name="project" value="LOCAL" />
-      <updated>1669350050799</updated>
+      <updated>1669881121620</updated>
     </task>
-    <task id="LOCAL-00140" summary="Finished up the comments inside of StandardBoardEvaluator. It had been started and I just finished it.">
-      <created>1669353016847</created>
+    <task id="LOCAL-00140" summary="sorry for no commits i did a  bit tho">
+      <created>1669881146945</created>
       <option name="number" value="00140" />
       <option name="presentableId" value="LOCAL-00140" />
       <option name="project" value="LOCAL" />
-      <updated>1669353016847</updated>
+      <updated>1669881146945</updated>
     </task>
-    <task id="LOCAL-00141" summary="I commented PGNGameTags.">
-      <created>1669444008209</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1669444008209</updated>
-    </task>
-    <task id="LOCAL-00142" summary="I commented PGNGameTags.">
-      <created>1669444201085</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1669444201085</updated>
-    </task>
-    <task id="LOCAL-00143" summary="I commented PGNGameTags.">
-      <created>1669444220073</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1669444220073</updated>
-    </task>
-    <task id="LOCAL-00144" summary="Alliance commented.">
-      <created>1669444524905</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1669444524905</updated>
-    </task>
-    <task id="LOCAL-00145" summary="GameHistoryPanel commented ( i am tired.)">
-      <created>1669445051694</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1669445051694</updated>
-    </task>
-    <task id="LOCAL-00146" summary="GameSetup commented, probably the most unsure of any file I have done so if you think it may be an issue just give it a look.">
-      <created>1669527737907</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1669527737907</updated>
-    </task>
-    <task id="LOCAL-00147" summary="StockAlphaBeta commented. Weird file this one.">
-      <created>1669529868671</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1669529868671</updated>
-    </task>
-    <task id="LOCAL-00148" summary="wtf is this file, its commented tho">
-      <created>1669882670907</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1669882670908</updated>
-    </task>
-    <option name="localTasksCounter" value="149" />
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -709,6 +674,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Still debugging Castling" />
+    <MESSAGE value="Castling works?" />
+    <MESSAGE value="Added more skins" />
+    <MESSAGE value="Updated Test Cases" />
+    <MESSAGE value="Castling fixed!!!!" />
+    <MESSAGE value="New AI's implemented from another github" />
     <MESSAGE value=".,." />
     <MESSAGE value="Debugging king legal moves" />
     <MESSAGE value="Updated more test cases" />
@@ -719,66 +690,34 @@
     <MESSAGE value="cleanup and comments" />
     <MESSAGE value="added hotspots for each piece for evaluations" />
     <MESSAGE value="comments" />
-    <MESSAGE value="cleanup" />
     <MESSAGE value="cleaned up and proper, needs comments" />
     <MESSAGE value="needs cleanup &amp; comments" />
-    <MESSAGE value="Fixed the previous comments in AlphabBetaWithMoveOrdering" />
-    <MESSAGE value="Commented KingSafetyAnalyzer" />
-    <MESSAGE value="Commented MoveOrdering and took off todo for this file and the previous&#10;Taking a break, this is so tedious , even with copilot &#10;I need cope pilot rn honestly" />
-    <MESSAGE value="PawnStructureAnalyzer comments" />
-    <MESSAGE value="RookStructureAnalyzer comments, still have to fix though." />
-    <MESSAGE value="Finished up the comments inside of StandardBoardEvaluator. It had been started and I just finished it." />
-    <MESSAGE value="I commented PGNGameTags." />
-    <MESSAGE value="Alliance commented." />
-    <MESSAGE value="GameHistoryPanel commented ( i am tired.)" />
-    <MESSAGE value="GameSetup commented, probably the most unsure of any file I have done so if you think it may be an issue just give it a look." />
-    <MESSAGE value="StockAlphaBeta commented. Weird file this one." />
-    <MESSAGE value="wtf is this file, its commented tho" />
-    <option name="LAST_COMMIT_MESSAGE" value="wtf is this file, its commented tho" />
+    <MESSAGE value="Escape analysis score" />
+    <MESSAGE value="cleanup" />
+    <MESSAGE value="new constructor for undo" />
+    <MESSAGE value="added undo" />
+    <MESSAGE value="added undo and cleanup, file menu works too" />
+    <MESSAGE value="sorry for no comments i did a  bit tho" />
+    <MESSAGE value="sorry for no commits i did a  bit tho" />
+    <option name="LAST_COMMIT_MESSAGE" value="sorry for no commits i did a  bit tho" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <breakpoint type="java-exception">
-          <properties class="java.lang.UnsupportedOperationException" package="java.lang" />
-          <option name="timeStamp" value="16" />
-        </breakpoint>
-        <breakpoint type="java-exception">
-          <properties class="java.lang.OutOfMemoryError" package="java.lang" />
-          <option name="timeStamp" value="17" />
-        </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="64" />
-        </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.RuntimeException" package="java.lang" />
-          <option name="timeStamp" value="172" />
-        </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/gui/Table.java</url>
-          <line>930</line>
-          <option name="timeStamp" value="92" />
+          <url>file://$PROJECT_DIR$/src/tests/com/chess/tests/TestPGNParser.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="177" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="167" />
+          <url>file://$PROJECT_DIR$/src/com/chess/pgn/PGNUtilities.java</url>
+          <line>288</line>
+          <option name="timeStamp" value="178" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java</url>
-          <line>162</line>
-          <option name="timeStamp" value="168" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tests/com/chess/tests/TestStaleMate.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="171" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/ai/MiniMax.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="173" />
+          <url>file://$PROJECT_DIR$/src/tests/com/chess/tests/TestFENParser.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="180" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
