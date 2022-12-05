@@ -8,17 +8,33 @@ import com.chess.engine.pieces.*;
 
 import static com.chess.engine.board.Board.Builder;
 
+/**
+ * This class is a utility class that is used to create a board from a FEN string.
+ */
 public class FenUtilities {
 //TODO ADD COMMENTS
 
+    /**
+     * This is throwing a runtime exception because the FEN string is not valid.
+     */
     private FenUtilities() {
         throw new RuntimeException("Not Instantiable!");
     }
 
+    /**
+     * This method is used to create a board from a FEN string.
+     * @param fenString
+     * @return
+     */
     public static Board createGameFromFEN(final String fenString) {
         return parseFEN(fenString);
     }
 
+    /**
+     * This is the method that parses the FEN string and creates a board.
+     * @param board
+     * @return
+     */
     public static String createFENFromGame(final Board board) {
         return generateFEN(board);
     }
@@ -100,15 +116,20 @@ public class FenUtilities {
 
     }
 
+    /**
+     * This method is used to parse the FEN string
+     * @param fenString
+     * @return
+     */
     private static Board parseFEN(final String fenString) {
-        final String[] fenPartitions = fenString.trim().split(" ");
-        final Builder builder = new Builder();
-        final boolean whiteKingSideCastle = whiteKingSideCastle(fenPartitions[2]);
-        final boolean whiteQueenSideCastle = whiteQueenSideCastle(fenPartitions[2]);
-        final boolean blackKingSideCastle = blackKingSideCastle(fenPartitions[2]);
-        final boolean blackQueenSideCastle = blackQueenSideCastle(fenPartitions[2]);
-        final String gameConfiguration = fenPartitions[0];
-        final char[] boardTiles = gameConfiguration.replaceAll("/", "")
+        final String[] fenPartitions = fenString.trim().split(" "); // Split the FEN string into partitions
+        final Builder builder = new Builder();                            // Create a new board builder
+        final boolean whiteKingSideCastle = whiteKingSideCastle(fenPartitions[2]);       // Check if white can castle kingside
+        final boolean whiteQueenSideCastle = whiteQueenSideCastle(fenPartitions[2]);     // Check if white can castle queenside
+        final boolean blackKingSideCastle = blackKingSideCastle(fenPartitions[2]);       // Check if black can castle kingside
+        final boolean blackQueenSideCastle = blackQueenSideCastle(fenPartitions[2]);     // Check if black can castle queenside
+        final String gameConfiguration = fenPartitions[0];                               // Get the game configuration
+        final char[] boardTiles = gameConfiguration.replaceAll("/", "") // Remove all slashes from the game configuration
                 .replaceAll("8", "--------")
                 .replaceAll("7", "-------")
                 .replaceAll("6", "------")
@@ -120,74 +141,74 @@ public class FenUtilities {
                 .toCharArray();
         int i = 0;
         while (i < boardTiles.length) {
-            switch (boardTiles[i]) {
+            switch (boardTiles[i]) {                                // Switch on the current tile
                 case 'r':
-                    builder.setPiece(new Rook(i, Alliance.BLACK));
+                    builder.setPiece(new Rook(i, Alliance.BLACK));  // If the tile is a black rook, add a black rook to the board
                     i++;
                     break;
                 case 'n':
-                    builder.setPiece(new Knight(i, Alliance.BLACK));
+                    builder.setPiece(new Knight(i, Alliance.BLACK)); // If the tile is a black knight, add a black knight to the board
                     i++;
                     break;
                 case 'b':
-                    builder.setPiece(new Bishop(i, Alliance.BLACK));
+                    builder.setPiece(new Bishop(i, Alliance.BLACK)); // If the tile is a black bishop, add a black bishop to the board
                     i++;
                     break;
                 case 'q':
-                    builder.setPiece(new Queen(i, Alliance.BLACK));
+                    builder.setPiece(new Queen(i, Alliance.BLACK)); // If the tile is a black queen, add a black queen to the board
                     i++;
                     break;
                 case 'k':
-                    final boolean isCastled = !blackKingSideCastle && !blackQueenSideCastle;
-                    builder.setPiece(new King(Alliance.BLACK, i, blackKingSideCastle, blackQueenSideCastle));
+                    final boolean isCastled = !blackKingSideCastle && !blackQueenSideCastle; // Check if the black king is castled
+                    builder.setPiece(new King(Alliance.BLACK, i, blackKingSideCastle, blackQueenSideCastle)); // Add a black king to the board
                     i++;
                     break;
                 case 'p':
-                    builder.setPiece(new Pawn(i, Alliance.BLACK));
+                    builder.setPiece(new Pawn(i, Alliance.BLACK)); // If the tile is a black pawn, add a black pawn to the board
                     i++;
                     break;
                 case 'R':
-                    builder.setPiece(new Rook(i, Alliance.WHITE));
+                    builder.setPiece(new Rook(i, Alliance.WHITE)); // If the tile is a white rook, add a white rook to the board
                     i++;
                     break;
                 case 'N':
-                    builder.setPiece(new Knight(i, Alliance.WHITE));
+                    builder.setPiece(new Knight(i, Alliance.WHITE)); // If the tile is a white knight, add a white knight to the board
                     i++;
                     break;
                 case 'B':
-                    builder.setPiece(new Bishop(i, Alliance.WHITE));
+                    builder.setPiece(new Bishop(i, Alliance.WHITE)); // If the tile is a white bishop, add a white bishop to the board
                     i++;
                     break;
                 case 'Q':
-                    builder.setPiece(new Queen(i, Alliance.WHITE));
+                    builder.setPiece(new Queen(i, Alliance.WHITE)); // If the tile is a white queen, add a white queen to the board
                     i++;
                     break;
                 case 'K':
-                    builder.setPiece(new King(Alliance.WHITE, i, whiteKingSideCastle, whiteQueenSideCastle));
+                    builder.setPiece(new King(Alliance.WHITE, i, whiteKingSideCastle, whiteQueenSideCastle)); // Add a white king to the board
                     i++;
                     break;
                 case 'P':
-                    builder.setPiece(new Pawn(i, Alliance.WHITE));
+                    builder.setPiece(new Pawn(i, Alliance.WHITE)); // If the tile is a white pawn, add a white pawn to the board
                     i++;
                     break;
                 case '-':
                     i++;
                     break;
                 default:
-                    throw new RuntimeException("Invalid FEN String " +gameConfiguration);
+                    throw new RuntimeException("Invalid FEN String " +gameConfiguration); // Throw an exception if the FEN string is invalid
             }
         }
-        builder.setMoveMaker(moveMaker(fenPartitions[1]));
-        return builder.build();
+        builder.setMoveMaker(moveMaker(fenPartitions[1]));  // Set the current player
+        return builder.build();                             // Build the board
     }
 
     private static Alliance moveMaker(final String moveMakerString) {
-        if(moveMakerString.equals("w")) {
+        if(moveMakerString.equals("w")) {           // If the current player is white
             return Alliance.WHITE;
-        } else if(moveMakerString.equals("b")) {
+        } else if(moveMakerString.equals("b")) {    // If the current player is black
             return Alliance.BLACK;
         }
-        throw new RuntimeException("Invalid FEN String " +moveMakerString);
+        throw new RuntimeException("Invalid FEN String " +moveMakerString);     // Throw an exception if the FEN string is invalid
     }
 
     private static boolean whiteKingSideCastle(final String fenCastleString) {
@@ -205,6 +226,12 @@ public class FenUtilities {
     private static boolean blackQueenSideCastle(final String fenCastleString) {
         return fenCastleString.contains("q");
     }
+
+    /**
+     * This method is used to calculate the current player text
+     * @param board
+     * @return
+     */
 
     private static String calculateCastleText(final Board board) {
         final StringBuilder builder = new StringBuilder();
@@ -225,6 +252,11 @@ public class FenUtilities {
         return result.isEmpty() ? "-" : result;
     }
 
+    /**
+     * This method is used to calculate en passant text
+     * @param board
+     * @return
+     */
     private static String calculateEnPassantSquare(final Board board) {
         final Pawn enPassantPawn = board.getEnPassantPawn();
         if(enPassantPawn != null) {
@@ -233,6 +265,12 @@ public class FenUtilities {
         }
         return "-";
     }
+
+    /**
+     * This method is used to calculate the current player text
+     * @param board
+     * @return
+     */
     private static String calculateCurrentPlayerText(final Board board) {
         return board.currentPlayer().toString().substring(0, 1).toLowerCase();
     }
