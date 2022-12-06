@@ -18,7 +18,7 @@ public class TestMiniMax {
     @Test
     public void testOpeningDepth1() {
         final Board board = Board.createStandardBoard();
-        final MiniMax miniMax = new MiniMax(3);
+        final MiniMax miniMax = new MiniMax(1);
         miniMax.execute(board);
         final long numBoardsEvaluated = miniMax.getNumBoardsEvaluated();
         assertEquals(numBoardsEvaluated, 20L);
@@ -27,7 +27,7 @@ public class TestMiniMax {
     @Test
     public void testOpeningDepth2() {
         final Board board = Board.createStandardBoard();
-        final MiniMax miniMax = new MiniMax(3);
+        final MiniMax miniMax = new MiniMax(2);
         miniMax.execute(board);
         final long numBoardsEvaluated = miniMax.getNumBoardsEvaluated();
         assertEquals(numBoardsEvaluated, 400L);
@@ -45,7 +45,7 @@ public class TestMiniMax {
     @Test
     public void testOpeningDepth4() {
         final Board board = Board.createStandardBoard();
-        final MiniMax miniMax = new MiniMax(3);
+        final MiniMax miniMax = new MiniMax(4);
         miniMax.execute(board);
         final long numBoardsEvaluated = miniMax.getNumBoardsEvaluated();
         assertEquals(numBoardsEvaluated, 197281L);
@@ -54,7 +54,7 @@ public class TestMiniMax {
     @Test
     public void testOpeningDepth5() {
         final Board board = Board.createStandardBoard();
-        final MiniMax miniMax = new MiniMax(3);
+        final MiniMax miniMax = new MiniMax(5);
         miniMax.execute(board);
         final long numBoardsEvaluated = miniMax.getNumBoardsEvaluated();
         assertEquals(numBoardsEvaluated, 4865609L);
@@ -63,7 +63,7 @@ public class TestMiniMax {
     @Test
     public void testOpeningDepth6() {
         final Board board = Board.createStandardBoard();
-        final MiniMax miniMax = new MiniMax(3);
+        final MiniMax miniMax = new MiniMax(6);
         miniMax.execute(board);
         final long numBoardsEvaluated = miniMax.getNumBoardsEvaluated();
         assertEquals(numBoardsEvaluated, 119060324L);
@@ -109,7 +109,7 @@ public class TestMiniMax {
         // Set the current player
         builder.setMoveMaker(Alliance.WHITE);
         final Board board = builder.build();
-        final MiniMax miniMax = new MiniMax(3);
+        final MiniMax miniMax = new MiniMax(1);
         miniMax.execute(board);
         final long numBoardsEvaluated = miniMax.getNumBoardsEvaluated();
         assertEquals(numBoardsEvaluated, 46);
@@ -156,7 +156,7 @@ public class TestMiniMax {
         builder.setMoveMaker(Alliance.WHITE);
         final Board board = builder.build();
         //System.out.println(FenUtilities.createFENFromGame(board));
-        final MiniMax miniMax = new MiniMax(3);
+        final MiniMax miniMax = new MiniMax(2);
         miniMax.execute(board);
         assertEquals(miniMax.getNumBoardsEvaluated(), 1866L);
     }
@@ -176,7 +176,7 @@ public class TestMiniMax {
         final MoveTransition t1 = board.currentPlayer()
                 .makeMove(Move.MoveFactory.createMove(board, BoardUtils.getCoordinateAtPosition("e5"),
                         BoardUtils.getCoordinateAtPosition("d7")));
-        final MiniMax miniMax = new MiniMax(3);
+        final MiniMax miniMax = new MiniMax(2);
         miniMax.execute(t1.getTransitionBoard());
         assertEquals(miniMax.getNumBoardsEvaluated(), 45);
     }
@@ -207,7 +207,7 @@ public class TestMiniMax {
         // Set the current player
         builder.setMoveMaker(Alliance.WHITE);
         final Board board = builder.build();
-        final MiniMax miniMax = new MiniMax(3);
+        final MiniMax miniMax = new MiniMax(1);
         miniMax.execute(board);
         final long numBoardsEvaluated = miniMax.getNumBoardsEvaluated();
         assertEquals(numBoardsEvaluated, 14);
@@ -231,7 +231,7 @@ public class TestMiniMax {
         // Set the current player
         builder.setMoveMaker(Alliance.WHITE);
         final Board board = builder.build();
-        final MiniMax miniMax = new MiniMax(3);
+        final MiniMax miniMax = new MiniMax(2);
         miniMax.execute(board);
         final long numBoardsEvaluated = miniMax.getNumBoardsEvaluated();
         assertEquals(numBoardsEvaluated, 191);
@@ -279,7 +279,7 @@ public class TestMiniMax {
         // Set the current player
         builder.setMoveMaker(Alliance.WHITE);
         final Board board = builder.build();
-        final MiniMax miniMax = new MiniMax(3);
+        final MiniMax miniMax = new MiniMax(4);
         miniMax.execute(board);
         final long numBoardsEvaluated = miniMax.getNumBoardsEvaluated();
         assertEquals(numBoardsEvaluated, 43238);

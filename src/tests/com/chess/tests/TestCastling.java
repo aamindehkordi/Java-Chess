@@ -296,7 +296,7 @@ public class TestCastling {
                                 BoardUtils.getCoordinateAtPosition("c3")));
         assertTrue(t11.getMoveStatus().isDone());
 
-        final AlphaBetaWithMoveOrdering moveStrategy = new AlphaBetaWithMoveOrdering(4,1000);
+        final AlphaBetaWithMoveOrdering moveStrategy = new AlphaBetaWithMoveOrdering(5,5);
         //final MoveStrategy moveStrategy = new MiniMax(3);
 
         moveStrategy.execute(t11.getTransitionBoard());

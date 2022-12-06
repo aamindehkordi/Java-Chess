@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="just push please">
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" afterDir="false" />
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Now just working on fixing test cases and adding more until everything is fixed and then new features get added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestAlphaBeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestAlphaBeta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +132,7 @@
       <recent name="com.tests.chess.engine.board" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.chess.OOPChess">
+  <component name="RunManager" selected="JUnit.ChessTestSuite">
     <configuration name="com.chess.OOPChess" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -227,8 +232,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestPieces.testAllKingMovesWhileAttacked" />
         <item itemvalue="JUnit.ChessTestSuite" />
+        <item itemvalue="JUnit.TestPieces.testAllKingMovesWhileAttacked" />
         <item itemvalue="JUnit.TestFENParser.testWriteFEN2" />
         <item itemvalue="JUnit.TestFENParser" />
         <item itemvalue="JUnit.TestPGNParser" />
@@ -273,14 +278,7 @@
       <workItem from="1669179387935" duration="28423000" />
       <workItem from="1669429889086" duration="7266000" />
       <workItem from="1669922332702" duration="2198000" />
-      <workItem from="1670235506208" duration="700000" />
-    </task>
-    <task id="LOCAL-00098" summary="Pawn promotion doesn't work but it should">
-      <created>1668941908446</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1668941908446</updated>
+      <workItem from="1670235506208" duration="3368000" />
     </task>
     <task id="LOCAL-00099" summary="The Beginnings of unit testers">
       <created>1668944716649</created>
@@ -618,7 +616,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670235892692</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary="Now just working on fixing test cases and adding more until everything is fixed and then new features get added">
+      <created>1670236553537</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1670236553537</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -672,7 +677,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated Test Cases" />
     <MESSAGE value="Castling fixed!!!!" />
     <MESSAGE value="New AI's implemented from another github" />
     <MESSAGE value=".,." />
@@ -697,7 +701,8 @@
     <MESSAGE value="cleanup" />
     <MESSAGE value="javadocs" />
     <MESSAGE value="just push please" />
-    <option name="LAST_COMMIT_MESSAGE" value="just push please" />
+    <MESSAGE value="Now just working on fixing test cases and adding more until everything is fixed and then new features get added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now just working on fixing test cases and adding more until everything is fixed and then new features get added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

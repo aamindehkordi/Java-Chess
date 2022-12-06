@@ -1015,7 +1015,7 @@ public class TestCheckmate {
     @Test
     public void testMagnusBlackToMoveAndWinTest1() {
         final Board board = FenUtilities.createGameFromFEN("2rr2k1/pb3pp1/4q2p/2pn4/2Q1P3/P4P2/1P3BPP/2KR2NR b - - 0 1");
-        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(4, 8);
+        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(6, 8);
         final Move bestMove = alphaBeta.execute(board);
         assertEquals(bestMove, Move.MoveFactory
                 .createMove(board, BoardUtils.getCoordinateAtPosition("d5"), BoardUtils.getCoordinateAtPosition("e3")));

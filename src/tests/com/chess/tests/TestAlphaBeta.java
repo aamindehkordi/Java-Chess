@@ -56,11 +56,11 @@ public class TestAlphaBeta {
         // Set the current player
         builder.setMoveMaker(Alliance.BLACK);
         final Board board = builder.build();
-        //System.out.println(FenUtilities.createFENFromGame(board));
-        //final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(4, 8);
-        //final Move bestMove = alphaBeta.execute(board);
-        //assertEquals(bestMove, Move.MoveFactory
-        //        .createMove(board, BoardUtils.getCoordinateAtPosition("e7"), BoardUtils.getCoordinateAtPosition("e5")));
+        System.out.println(FenUtilities.createFENFromGame(board));
+        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(4, 8);
+        final Move bestMove = alphaBeta.execute(board);
+        assertEquals(bestMove, Move.MoveFactory
+                .createMove(board, BoardUtils.getCoordinateAtPosition("e7"), BoardUtils.getCoordinateAtPosition("e5")));
     }
 
     @Test
@@ -122,7 +122,7 @@ public class TestAlphaBeta {
         final Board board = builder.build();
         final String fen = FenUtilities.createFENFromGame(board);
         System.out.println(fen);
-        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(4, 8);
+        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(5, 8);
         final Move bestMove = alphaBeta.execute(board);
         assertEquals(bestMove, Move.MoveFactory
                 .createMove(board, BoardUtils.getCoordinateAtPosition("c8"), BoardUtils.getCoordinateAtPosition("a6")));
@@ -131,7 +131,7 @@ public class TestAlphaBeta {
     @Test
     public void testQualityDepth6() {
         final Board board = FenUtilities.createGameFromFEN("4k2r/1R3R2/p3p1pp/4b3/1BnNr3/8/P1P5/5K2 w - - 1 0");
-        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(4, 8);
+        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(6, 1);
         final Move bestMove = alphaBeta.execute(board);
         assertEquals(bestMove, Move.MoveFactory
                 .createMove(board, BoardUtils.getCoordinateAtPosition("f7"), BoardUtils.getCoordinateAtPosition("e7")));
@@ -140,7 +140,7 @@ public class TestAlphaBeta {
     @Test
     public void testQualityTwoDepth6() {
         final Board board = FenUtilities.createGameFromFEN("6k1/3b3r/1p1p4/p1n2p2/1PPNpP1q/P3Q1p1/1R1RB1P1/5K2 b - - 0-1");
-        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(4, 8);
+        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(6, 2);
         final Move bestMove = alphaBeta.execute(board);
         assertEquals(bestMove, Move.MoveFactory
                 .createMove(board, BoardUtils.getCoordinateAtPosition("h4"), BoardUtils.getCoordinateAtPosition("f4")));
@@ -149,7 +149,7 @@ public class TestAlphaBeta {
     @Test
     public void testQualityThreeDepth6() {
         final Board board = FenUtilities.createGameFromFEN("r2r1n2/pp2bk2/2p1p2p/3q4/3PN1QP/2P3R1/P4PP1/5RK1 w - - 0 1");
-        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(4, 8);
+        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(6, 3);
         final Move bestMove = alphaBeta.execute(board);
         assertEquals(bestMove, Move.MoveFactory
                 .createMove(board, BoardUtils.getCoordinateAtPosition("g4"), BoardUtils.getCoordinateAtPosition("g7")));
@@ -158,7 +158,7 @@ public class TestAlphaBeta {
     @Test
     public void testQualityFourDepth6() {
         final Board board = FenUtilities.createGameFromFEN("r1b1k2r/pp3pbp/1qn1p1p1/2pnP3/3p1PP1/1P1P1NBP/P1P5/RN1QKB1R b KQkq - 2 11");
-        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(4, 8);
+        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(6, 4);
         final Move bestMove = alphaBeta.execute(board);
         assertEquals(bestMove, Move.MoveFactory
                 .createMove(board, BoardUtils.getCoordinateAtPosition("e8"), BoardUtils.getCoordinateAtPosition("g8")));
@@ -197,7 +197,7 @@ public class TestAlphaBeta {
         builder.setMoveMaker(Alliance.WHITE);
         final Board board = builder.build();
         System.out.println(FenUtilities.createFENFromGame(board));
-        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(4, 8);
+        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(5, 8);
         final Move bestMove = alphaBeta.execute(board);
         assertEquals(bestMove, Move.MoveFactory
                 .createMove(board, BoardUtils.getCoordinateAtPosition("h5"), BoardUtils.getCoordinateAtPosition("g6")));
@@ -261,7 +261,7 @@ public class TestAlphaBeta {
         // Set the current player
         builder.setMoveMaker(Alliance.WHITE);
         final Board board = builder.build();
-        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(4, 8);
+        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(5, 8);
         final Move bestMove = alphaBeta.execute(board);
         assertEquals(bestMove, Move.MoveFactory
                 .createMove(board, BoardUtils.getCoordinateAtPosition("g2"), BoardUtils.getCoordinateAtPosition("g4")));
@@ -297,7 +297,7 @@ public class TestAlphaBeta {
         // Set the current player
         builder.setMoveMaker(Alliance.WHITE);
         final Board board = builder.build();
-        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(4, 8);
+        final AlphaBetaWithMoveOrdering alphaBeta = new AlphaBetaWithMoveOrdering(5, 8);
         final Move bestMove = alphaBeta.execute(board);
         assertEquals(bestMove, Move.MoveFactory
                 .createMove(board, BoardUtils.getCoordinateAtPosition("e4"), BoardUtils.getCoordinateAtPosition("e8")));
