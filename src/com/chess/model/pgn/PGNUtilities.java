@@ -12,7 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static com.chess.model.board.Move.MoveFactory;
-
+//From the internet, which is why it doesnt fully work
 public class PGNUtilities {
     //TODO ADD COMMENTS
 
@@ -214,9 +214,7 @@ public class PGNUtilities {
             currentCoordinate = deriveCurrentCoordinate(board, attackMajorMatcher.group(1), destinationSquare, disambiguationFile);
             return MoveFactory.createMove(board, currentCoordinate, destinationCoordinate);
         }
-
         return MoveFactory.getNullMove();
-
     }
 
     private static Move extractCastleMove(final Board board,
