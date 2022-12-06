@@ -37,8 +37,8 @@ public class Board {
         /* the black pieces */
         this.blackPieces = calculateActivePieces(this.gameBoard, Alliance.BLACK); /* calculate the black pieces */
         this.moveCount = builder.moveCount;
-        final Collection<Move> whiteStandardLegalMoves = calculateLegalMoves(whitePieces); /* calculate the white legal moves */
-        final Collection<Move> blackStandardLegalMoves = calculateLegalMoves(blackPieces); /* calculate the black legal moves */
+        final Collection<Move> whiteStandardLegalMoves = calculateLegalMoves(this.whitePieces); /* calculate the white legal moves */
+        final Collection<Move> blackStandardLegalMoves = calculateLegalMoves(this.blackPieces); /* calculate the black legal moves */
         this.whitePlayer = new WhitePlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the white player */
         this.blackPlayer = new BlackPlayer(this, whiteStandardLegalMoves, blackStandardLegalMoves); /* create the black player */
         this.currentPlayer = builder.nextMoveMaker.choosePlayer(this.whitePlayer, this.blackPlayer); /* set the current player */
@@ -246,6 +246,15 @@ public class Board {
 
     public MoveTransitionTracker getMoveTransitionTracker() {
         return this.moveTransitionTracker;
+    }
+
+    public Player getPlayer(Alliance pieceAlliance) {
+        if (pieceAlliance == Alliance.WHITE) {
+            return this.whitePlayer; /* return the white player */
+        } else if (pieceAlliance == Alliance.BLACK) {
+            return this.blackPlayer; /* return the black player */
+        }
+        return null; /* return null */
     }
 
 

@@ -131,4 +131,5 @@ public abstract class Piece {
      * @return the bonus for the piece's position
      */
     public abstract int locationBonus();
+
 }

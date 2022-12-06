@@ -12,7 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static com.chess.model.board.Move.MoveFactory;
-//From the internet, which is why it doesnt fully work
+//From the internet, which is why it doesn't fully work
 public class PGNUtilities {
     //TODO ADD COMMENTS
 
@@ -255,13 +255,13 @@ public class PGNUtilities {
 
         final List<Move> currentCandidates = new ArrayList<>();
 
-        for(final Move move : candidateMoves) {
-            if(move.getMovedPiece().getPieceType().toString().equals(movedPiece)) {
+        for (final Move move : candidateMoves) {
+            if (move.getMovedPiece().getPieceType().toString().equals(movedPiece)) {
                 currentCandidates.add(move);
             }
         }
 
-        if(currentCandidates.size() == 1) {
+        if (currentCandidates.size() == 1) {
             return currentCandidates.iterator().next().getCurrentCoordinate();
         }
 
@@ -273,15 +273,11 @@ public class PGNUtilities {
                 candidatesRefined.add(move);
             }
         }
-
-        if(candidatesRefined.size() == 1) {
+        if (candidatesRefined.size() == 1) {
             return candidatesRefined.iterator().next().getCurrentCoordinate();
         }
-
         return -1;
-
     }
-
     public static String readPGNFile(File file) {
         try {
             final BufferedReader reader = new BufferedReader(new FileReader(file));

@@ -4,6 +4,7 @@ import com.chess.controller.Alliance;
 import com.chess.model.board.Board;
 import com.chess.model.board.BoardUtils;
 import com.chess.model.board.Move;
+import com.chess.model.board.Tile;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -115,6 +116,7 @@ public class King extends Piece{
 
             // If the destination coordinate is valid
             if (BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)) {
+
                 // If the king is on the edge of the board
                 if (isFirstColumnExclusion(this.piecePosition, currentCandidateOffset) ||
                         isEighthColumnExclusion(this.piecePosition, currentCandidateOffset)) {
@@ -124,21 +126,25 @@ public class King extends Piece{
 
                 // Get the tile at the destination coordinate
                 final Piece pieceAtDestination = board.getTile(candidateDestinationCoordinate).getPiece();
+                final Tile candidateDestinationTile = board.getTile(candidateDestinationCoordinate);
 
-                // If the tile is empty
-                if (pieceAtDestination == null) {
-                    // Add the move to the list of legal moves
-                    legalMoves.add(new Move.MajorMove(board, this, candidateDestinationCoordinate));
-                }
-                // If the tile is occupied
-                else {
-                    // Get the alliance of the piece at the destination coordinate
-                    final Alliance pieceAtDestinationAlliance = pieceAtDestination.getPieceAlliance();
-
-                    // If the piece at the destination coordinate is not the same alliance as the king
-                    if (this.pieceAlliance != pieceAtDestinationAlliance) {
+                // Check if the move puts the king in check
+                if (!candidateDestinationTile.isAttacked(board, this.pieceAlliance)) {
+                    // If the tile is empty
+                    if (pieceAtDestination == null) {
                         // Add the move to the list of legal moves
-                        legalMoves.add(new Move.MajorAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination));
+                        legalMoves.add(new Move.MajorMove(board, this, candidateDestinationCoordinate));
+                    }
+                    // If the tile is occupied
+                    else {
+                        // Get the alliance of the piece at the destination coordinate
+                        final Alliance pieceAtDestinationAlliance = pieceAtDestination.getPieceAlliance();
+
+                        // If the piece at the destination coordinate is not the same alliance as the king
+                        if (this.pieceAlliance != pieceAtDestinationAlliance) {
+                            // Add the move to the list of legal moves
+                            legalMoves.add(new Move.MajorAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination));
+                        }
                     }
                 }
             }

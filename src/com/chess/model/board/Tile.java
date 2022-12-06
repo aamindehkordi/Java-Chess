@@ -1,5 +1,7 @@
 package com.chess.model.board;
 
+import com.chess.controller.Alliance;
+import com.chess.controller.Player;
 import com.chess.model.pieces.Piece;
 
 import java.util.Collections;
@@ -72,6 +74,29 @@ public abstract class Tile {
         return this.tileCoord;
     }
 
+    public boolean isAttacked(Board board, Alliance pieceAlliance) {
+
+        // Check that player is not null
+        if (board.getPlayer(pieceAlliance) != null) {
+
+            if (pieceAlliance == Alliance.WHITE) {
+                Player opponent = board.blackPlayer();
+                for (final Move move : opponent.getLegalMoves()) {
+                    if (move.getDestinationCoordinate() == this.tileCoord){
+                        return true;
+                    }
+                }
+            } else {
+                Player opponent = board.whitePlayer();
+                for (final Move move : opponent.getLegalMoves()) {
+                    if (move.getDestinationCoordinate() == this.tileCoord) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
     public static final class EmptyTile extends Tile {
 
         /** Constructor
