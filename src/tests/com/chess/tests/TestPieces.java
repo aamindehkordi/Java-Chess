@@ -506,38 +506,61 @@ public class TestPieces {
 
     @Test
     public void testAllKingMovesWhileAttacked() {
+        // Create a standard board
         final Board board = Board.createStandardBoard();
+
+        // Piece: Pawn at e2, Move: e2 to e4
         final Move m1 = Move.MoveFactory.createMove(board, BoardUtils.getCoordinateAtPosition(
                 "e2"), BoardUtils.getCoordinateAtPosition("e4"));
         final MoveTransition t1 = board.currentPlayer().makeMove(m1);
         assertTrue(t1.getMoveStatus().isDone());
+
+        // Piece: Pawn at e7, Move: e7 to e5
         final Move m2 = Move.MoveFactory.createMove(t1.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("e7"), BoardUtils.getCoordinateAtPosition("e5"));
         final MoveTransition t2 = t1.getTransitionBoard().currentPlayer().makeMove(m2);
         assertTrue(t2.getMoveStatus().isDone());
+
+        // Piece: Bishop at f1, Move: f1 to c4
         final Move m3 = Move.MoveFactory.createMove(t2.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("f1"), BoardUtils.getCoordinateAtPosition("c4"));
         final MoveTransition t3 = t2.getTransitionBoard().currentPlayer().makeMove(m3);
         assertTrue(t3.getMoveStatus().isDone());
+
+        // Piece: Pawn at d7, Move: d7 to d6
         final Move m4 = Move.MoveFactory.createMove(t3.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("d7"), BoardUtils.getCoordinateAtPosition("d6"));
         final MoveTransition t4 = t3.getTransitionBoard().currentPlayer().makeMove(m4);
         assertTrue(t4.getMoveStatus().isDone());
+
+        // Piece: Queen at d1, Move: d1 to f3
         final Move m5 = Move.MoveFactory.createMove(t4.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("d1"), BoardUtils.getCoordinateAtPosition("f3"));
         final MoveTransition t5 = t4.getTransitionBoard().currentPlayer().makeMove(m5);
         assertTrue(t5.getMoveStatus().isDone());
+
+        // Piece: Queen at d8, Move: d8 to d7
         final Move m6 = Move.MoveFactory.createMove(t5.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("d8"), BoardUtils.getCoordinateAtPosition("d7"));
         final MoveTransition t6 = t5.getTransitionBoard().currentPlayer().makeMove(m6);
         assertTrue(t6.getMoveStatus().isDone());
+
+        // Piece: Queen at f3, Move: f3 to e4
         final Move m7 = Move.MoveFactory.createMove(t6.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("f3"), BoardUtils.getCoordinateAtPosition("e4"));
         final MoveTransition t7 = t6.getTransitionBoard().currentPlayer().makeMove(m7);
         assertTrue(t7.getMoveStatus().isDone());
+
+        // Piece: Queen at d7, Move: d7 to d8
         final Move m8 = Move.MoveFactory.createMove(t7.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("d7"), BoardUtils.getCoordinateAtPosition("d8"));
         final MoveTransition t8 = t7.getTransitionBoard().currentPlayer().makeMove(m8);
         assertTrue(t8.getMoveStatus().isDone());
+
+        // Piece: Queen at e4, Move: e4 to d5
         final Move m9 = Move.MoveFactory.createMove(t8.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("e4"), BoardUtils.getCoordinateAtPosition("d5"));
         final MoveTransition t9 = t8.getTransitionBoard().currentPlayer().makeMove(m9);
         assertTrue(t9.getMoveStatus().isDone());
+
+        // Piece: Queen at d8, Move: d8 to d7
         final Move m10 = Move.MoveFactory.createMove(t9.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("d8"), BoardUtils.getCoordinateAtPosition("d7"));
         final MoveTransition t10 = t9.getTransitionBoard().currentPlayer().makeMove(m10);
         assertTrue(t10.getMoveStatus().isDone());
+
+        // Piece: Queen at d5, Move: d5 to e6
         final Move m11 = Move.MoveFactory.createMove(t10.getTransitionBoard(), BoardUtils.getCoordinateAtPosition("d5"), BoardUtils.getCoordinateAtPosition("e6"));
         final MoveTransition t11 = t10.getTransitionBoard().currentPlayer().makeMove(m11);
         assertTrue(t11.getMoveStatus().isDone());

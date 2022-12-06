@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="Now just working on fixing test cases and adding more until everything is fixed and then new features get added">
+    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestAlphaBeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestAlphaBeta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCastling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestCheckmate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestMiniMax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestPieces.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,21 +274,7 @@
       <workItem from="1669179387935" duration="28423000" />
       <workItem from="1669429889086" duration="7266000" />
       <workItem from="1669922332702" duration="2198000" />
-      <workItem from="1670235506208" duration="3368000" />
-    </task>
-    <task id="LOCAL-00099" summary="The Beginnings of unit testers">
-      <created>1668944716649</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1668944716649</updated>
-    </task>
-    <task id="LOCAL-00100" summary="Testers brought over from BlackWidow and fitted to current project - all tests failed :/">
-      <created>1669064664549</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1669064664549</updated>
+      <workItem from="1670235506208" duration="4093000" />
     </task>
     <task id="LOCAL-00101" summary="minimax should be fully working now">
       <created>1669170436852</created>
@@ -623,7 +605,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670236553537</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="Now just working on fixing test cases and adding more until everything is fixed and then new features get added">
+      <created>1670311441303</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1670311441303</updated>
+    </task>
+    <task id="LOCAL-00149" summary="cleanup">
+      <created>1670311549157</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1670311549157</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -698,11 +694,11 @@
     <MESSAGE value="sorry for no comments i did a  bit tho" />
     <MESSAGE value="sorry for no commits i did a  bit tho" />
     <MESSAGE value="wtf is this file, its commented tho" />
-    <MESSAGE value="cleanup" />
     <MESSAGE value="javadocs" />
     <MESSAGE value="just push please" />
     <MESSAGE value="Now just working on fixing test cases and adding more until everything is fixed and then new features get added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now just working on fixing test cases and adding more until everything is fixed and then new features get added" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
