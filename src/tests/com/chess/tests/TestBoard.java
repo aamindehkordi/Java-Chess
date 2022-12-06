@@ -55,8 +55,8 @@ public class TestBoard {
         System.out.println(board);
 
         //TODO: Player has too many moves, possibly king issue
-        assertEquals(board.whitePlayer().getLegalMoves().size(), 6);
-        assertEquals(board.blackPlayer().getLegalMoves().size(), 6);
+        assertEquals(6, board.whitePlayer().getLegalMoves().size());
+        assertEquals(6, board.blackPlayer().getLegalMoves().size());
         assertFalse(board.currentPlayer().isInCheck());
         assertFalse(board.currentPlayer().isInCheckMate());
         assertFalse(board.currentPlayer().getOpponent().isInCheck());

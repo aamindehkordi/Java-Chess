@@ -1,0 +1,952 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"a031013f-de90-49de-9729-ba8419bbe781\" name=\"Changes\" comment=\"minimax should be fully working now\">\n      <change afterPath=\"$PROJECT_DIR$/src/com/chess/gui/GameSetup.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/com/chess/OOPChess.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/com/chess/OOPChess.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/com/chess/engine/board/Move.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/com/chess/engine/board/Move.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/com/chess/engine/player/Player.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/com/chess/engine/player/Player.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/com/chess/gui/Table.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/com/chess/gui/Table.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/tests/com/chess/tests/TestBoard.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/tests/com/chess/tests/TestBoard.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"CodeInsightWorkspaceSettings\">\n    <option name=\"optimizeImportsOnTheFly\" value=\"true\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Enum\" />\n        <option value=\"JUnit5 Test Class\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <favorite-branches>\n      <branch-storage>\n        <map>\n          <entry type=\"REMOTE\">\n            <value>\n              <list>\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"origin/main\" />\n              </list>\n            </value>\n          </entry>\n        </map>\n      </branch-storage>\n    </favorite-branches>\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"Promotion\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"UPDATE_TYPE\" value=\"REBASE\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProblemsViewState\">\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2GNfURlmVRV4tIlgu55bJVBpqHW\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\n    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\n    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,\n    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,\n    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,\n    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,\n    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/Users/ali/Library/CloudStorage/OneDrive-Personal/Desktop/Other/Coding/School/Object Oriented Programming/ChessOOP&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\n    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CreateClassDialog.RecentsKey\">\n      <recent name=\"com.chess.gui\" />\n      <recent name=\"com.chess.engine.board\" />\n      <recent name=\"com.chess.engine.player\" />\n      <recent name=\"com.chess.engine.pieces\" />\n    </key>\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$\" />\n      <recent name=\"$PROJECT_DIR$/src\" />\n    </key>\n    <key name=\"MoveMembersDialog.RECENTS_KEY\">\n      <recent name=\"com.chess.engine.board.BoardUtils\" />\n    </key>\n    <key name=\"CreateTestDialog.Recents.Supers\">\n      <recent name=\"\" />\n    </key>\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\n      <recent name=\"com.chess\" />\n    </key>\n    <key name=\"CreateTestDialog.RecentsKey\">\n      <recent name=\"com.tests.chess.engine.board\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Application.com.chess.OOPChess\">\n    <configuration name=\"com.chess.OOPChess\" type=\"Application\" factoryName=\"Application\" nameIsGenerated=\"true\">\n      <option name=\"ALTERNATIVE_JRE_PATH\" value=\"corretto-19\" />\n      <option name=\"ALTERNATIVE_JRE_PATH_ENABLED\" value=\"true\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.chess.OOPChess\" />\n      <module name=\"ChessOOP\" />\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-Xms64m -Xmx1024m\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\".*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"ChessTestSuite\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"ChessOOP\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"tests.com.chess.tests.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"tests.com.chess.tests\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.com.chess.tests.ChessTestSuite\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"TestBoard\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"ChessOOP\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"tests.com.chess.tests.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"tests.com.chess.tests\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.com.chess.tests.TestBoard\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"TestCheckmate\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"ChessOOP\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"tests.com.chess.tests.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"tests.com.chess.tests\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.com.chess.tests.TestCheckmate\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"TestMiniMax\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"ChessOOP\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"tests.com.chess.tests.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"tests.com.chess.tests\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.com.chess.tests.TestMiniMax\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"TestPieces.testPawnPromotion\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"ChessOOP\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"tests.com.chess.tests.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"tests.com.chess.tests\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.com.chess.tests.TestPieces\" />\n      <option name=\"METHOD_NAME\" value=\"testPawnPromotion\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"JUnit.ChessTestSuite\" />\n        <item itemvalue=\"JUnit.TestMiniMax\" />\n        <item itemvalue=\"JUnit.TestPieces.testPawnPromotion\" />\n        <item itemvalue=\"JUnit.TestBoard\" />\n        <item itemvalue=\"JUnit.TestCheckmate\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"StructuralSearchPlugin\">\n    <searchConfiguration name=\"new LinkedList&lt;&gt;(legalMoves)\" created=\"1666850543501\" uuid=\"db4b32bb-b2a1-36a8-a896-0d91c20dad28\" text=\"new LinkedList&lt;&gt;(legalMoves)\" recursive=\"true\" caseInsensitive=\"false\" type=\"JAVA\" pattern_context=\"default\" scope_type=\"PROJECT\" scope_descriptor=\"\" history=\"1\">\n      <constraint name=\"__context__\" within=\"\" contains=\"\" />\n    </searchConfiguration>\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"a031013f-de90-49de-9729-ba8419bbe781\" name=\"Changes\" comment=\"\" />\n      <created>1666233984289</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1666233984289</updated>\n      <workItem from=\"1666233985515\" duration=\"2585000\" />\n      <workItem from=\"1666331979402\" duration=\"250000\" />\n      <workItem from=\"1666335632906\" duration=\"6075000\" />\n      <workItem from=\"1666346436499\" duration=\"543000\" />\n      <workItem from=\"1666570921488\" duration=\"68000\" />\n      <workItem from=\"1666571001151\" duration=\"263000\" />\n      <workItem from=\"1666571462875\" duration=\"3178000\" />\n      <workItem from=\"1666649396459\" duration=\"71000\" />\n      <workItem from=\"1666649473994\" duration=\"30122000\" />\n      <workItem from=\"1666720096642\" duration=\"8606000\" />\n      <workItem from=\"1666753810138\" duration=\"13805000\" />\n      <workItem from=\"1666835273945\" duration=\"13575000\" />\n      <workItem from=\"1667031392554\" duration=\"2067000\" />\n      <workItem from=\"1667427093975\" duration=\"600000\" />\n      <workItem from=\"1668054679652\" duration=\"5516000\" />\n      <workItem from=\"1668209659403\" duration=\"2261000\" />\n      <workItem from=\"1668825021194\" duration=\"4854000\" />\n      <workItem from=\"1668933010847\" duration=\"4686000\" />\n    </task>\n    <task id=\"LOCAL-00053\" summary=\"Cleanup\">\n      <created>1666754255141</created>\n      <option name=\"number\" value=\"00053\" />\n      <option name=\"presentableId\" value=\"LOCAL-00053\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666754255141</updated>\n    </task>\n    <task id=\"LOCAL-00054\" summary=\"Cleanup\">\n      <created>1666821966349</created>\n      <option name=\"number\" value=\"00054\" />\n      <option name=\"presentableId\" value=\"LOCAL-00054\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666821966349</updated>\n    </task>\n    <task id=\"LOCAL-00055\" summary=\"Moved main class to main package\">\n      <created>1666821990204</created>\n      <option name=\"number\" value=\"00055\" />\n      <option name=\"presentableId\" value=\"LOCAL-00055\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666821990204</updated>\n    </task>\n    <task id=\"LOCAL-00056\" summary=\"Created GUI package and Table class\">\n      <created>1666822013432</created>\n      <option name=\"number\" value=\"00056\" />\n      <option name=\"presentableId\" value=\"LOCAL-00056\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666822013432</updated>\n    </task>\n    <task id=\"LOCAL-00057\" summary=\"cleanup\">\n      <created>1666822043713</created>\n      <option name=\"number\" value=\"00057\" />\n      <option name=\"presentableId\" value=\"LOCAL-00057\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666822043713</updated>\n    </task>\n    <task id=\"LOCAL-00058\" summary=\"Added MenuBar to GUI\">\n      <created>1666822421947</created>\n      <option name=\"number\" value=\"00058\" />\n      <option name=\"presentableId\" value=\"LOCAL-00058\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666822421947</updated>\n    </task>\n    <task id=\"LOCAL-00059\" summary=\"Added board and tile classes to GUI\">\n      <created>1666823695179</created>\n      <option name=\"number\" value=\"00059\" />\n      <option name=\"presentableId\" value=\"LOCAL-00059\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666823695179</updated>\n    </task>\n    <task id=\"LOCAL-00060\" summary=\"Initialized all rows and columns\">\n      <created>1666823888720</created>\n      <option name=\"number\" value=\"00060\" />\n      <option name=\"presentableId\" value=\"LOCAL-00060\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666823888720</updated>\n    </task>\n    <task id=\"LOCAL-00061\" summary=\"Gave the rows and columns color in GUI\">\n      <created>1666824699626</created>\n      <option name=\"number\" value=\"00061\" />\n      <option name=\"presentableId\" value=\"LOCAL-00061\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666824699626</updated>\n    </task>\n    <task id=\"LOCAL-00062\" summary=\"added exit to menubar\">\n      <created>1666824927022</created>\n      <option name=\"number\" value=\"00062\" />\n      <option name=\"presentableId\" value=\"LOCAL-00062\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666824927022</updated>\n    </task>\n    <task id=\"LOCAL-00063\" summary=\"Pieces on the checkerboard\">\n      <created>1666827441219</created>\n      <option name=\"number\" value=\"00063\" />\n      <option name=\"presentableId\" value=\"LOCAL-00063\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666827441219</updated>\n    </task>\n    <task id=\"LOCAL-00064\" summary=\"improvements\">\n      <created>1666830790955</created>\n      <option name=\"number\" value=\"00064\" />\n      <option name=\"presentableId\" value=\"LOCAL-00064\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666830790955</updated>\n    </task>\n    <task id=\"LOCAL-00065\" summary=\"improvements\">\n      <created>1666830843951</created>\n      <option name=\"number\" value=\"00065\" />\n      <option name=\"presentableId\" value=\"LOCAL-00065\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666830843951</updated>\n    </task>\n    <task id=\"LOCAL-00066\" summary=\"Added a mouse listener to the GUI tile class\">\n      <created>1666831831554</created>\n      <option name=\"number\" value=\"00066\" />\n      <option name=\"presentableId\" value=\"LOCAL-00066\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666831831554</updated>\n    </task>\n    <task id=\"LOCAL-00067\" summary=\"Pieces ~should~ be able to move on the gui\">\n      <created>1666832666879</created>\n      <option name=\"number\" value=\"00067\" />\n      <option name=\"presentableId\" value=\"LOCAL-00067\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666832666879</updated>\n    </task>\n    <task id=\"LOCAL-00068\" summary=\"legal moves ~should~ be highlighting\">\n      <created>1666834900043</created>\n      <option name=\"number\" value=\"00068\" />\n      <option name=\"presentableId\" value=\"LOCAL-00068\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666834900043</updated>\n    </task>\n    <task id=\"LOCAL-00069\" summary=\"comments\">\n      <created>1666835236639</created>\n      <option name=\"number\" value=\"00069\" />\n      <option name=\"presentableId\" value=\"LOCAL-00069\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666835236639</updated>\n    </task>\n    <task id=\"LOCAL-00070\" summary=\"pieces move and are actually highlighted now\">\n      <created>1666836304511</created>\n      <option name=\"number\" value=\"00070\" />\n      <option name=\"presentableId\" value=\"LOCAL-00070\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666836304511</updated>\n    </task>\n    <task id=\"LOCAL-00071\" summary=\"fixing bugs\">\n      <created>1666837618100</created>\n      <option name=\"number\" value=\"00071\" />\n      <option name=\"presentableId\" value=\"LOCAL-00071\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666837618100</updated>\n    </task>\n    <task id=\"LOCAL-00072\" summary=\"fixing bugs\">\n      <created>1666842826653</created>\n      <option name=\"number\" value=\"00072\" />\n      <option name=\"presentableId\" value=\"LOCAL-00072\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666842826653</updated>\n    </task>\n    <task id=\"LOCAL-00073\" summary=\"fixing bugs\">\n      <created>1666844396727</created>\n      <option name=\"number\" value=\"00073\" />\n      <option name=\"presentableId\" value=\"LOCAL-00073\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666844396727</updated>\n    </task>\n    <task id=\"LOCAL-00074\" summary=\"fixing bugs\">\n      <created>1666847944244</created>\n      <option name=\"number\" value=\"00074\" />\n      <option name=\"presentableId\" value=\"LOCAL-00074\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666847944244</updated>\n    </task>\n    <task id=\"LOCAL-00075\" summary=\"Created new Dead Pieces Panel that sorts by piece value\">\n      <created>1666847982663</created>\n      <option name=\"number\" value=\"00075\" />\n      <option name=\"presentableId\" value=\"LOCAL-00075\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666847982663</updated>\n    </task>\n    <task id=\"LOCAL-00076\" summary=\"Created new Dead Pieces Panel that sorts by piece value\">\n      <created>1666848639475</created>\n      <option name=\"number\" value=\"00076\" />\n      <option name=\"presentableId\" value=\"LOCAL-00076\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666848639475</updated>\n    </task>\n    <task id=\"LOCAL-00077\" summary=\"Bugs\">\n      <created>1666848648687</created>\n      <option name=\"number\" value=\"00077\" />\n      <option name=\"presentableId\" value=\"LOCAL-00077\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666848648687</updated>\n    </task>\n    <task id=\"LOCAL-00078\" summary=\"Bug testing\">\n      <created>1666849680913</created>\n      <option name=\"number\" value=\"00078\" />\n      <option name=\"presentableId\" value=\"LOCAL-00078\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666849680913</updated>\n    </task>\n    <task id=\"LOCAL-00079\" summary=\"Bug testing\">\n      <created>1666849734930</created>\n      <option name=\"number\" value=\"00079\" />\n      <option name=\"presentableId\" value=\"LOCAL-00079\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666849734930</updated>\n    </task>\n    <task id=\"LOCAL-00080\" summary=\"cleanup\">\n      <created>1666850304080</created>\n      <option name=\"number\" value=\"00080\" />\n      <option name=\"presentableId\" value=\"LOCAL-00080\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1666850304080</updated>\n    </task>\n    <task id=\"LOCAL-00081\" summary=\"merge nathan diagram\">\n      <created>1667030571505</created>\n      <option name=\"number\" value=\"00081\" />\n      <option name=\"presentableId\" value=\"LOCAL-00081\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1667030571505</updated>\n    </task>\n    <task id=\"LOCAL-00082\" summary=\"Did the diagram better than nathan\">\n      <created>1667031689322</created>\n      <option name=\"number\" value=\"00082\" />\n      <option name=\"presentableId\" value=\"LOCAL-00082\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1667031689322</updated>\n    </task>\n    <task id=\"LOCAL-00083\" summary=\"Did the diagram better than nathan\">\n      <created>1667031800317</created>\n      <option name=\"number\" value=\"00083\" />\n      <option name=\"presentableId\" value=\"LOCAL-00083\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1667031800317</updated>\n    </task>\n    <task id=\"LOCAL-00084\" summary=\"Did the diagram better than nathan\">\n      <created>1667031965570</created>\n      <option name=\"number\" value=\"00084\" />\n      <option name=\"presentableId\" value=\"LOCAL-00084\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1667031965570</updated>\n    </task>\n    <task id=\"LOCAL-00085\" summary=\"Did the diagram better than nathan\">\n      <created>1667032217867</created>\n      <option name=\"number\" value=\"00085\" />\n      <option name=\"presentableId\" value=\"LOCAL-00085\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1667032217867</updated>\n    </task>\n    <task id=\"LOCAL-00086\" summary=\"im back\">\n      <created>1668054987452</created>\n      <option name=\"number\" value=\"00086\" />\n      <option name=\"presentableId\" value=\"LOCAL-00086\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668054987452</updated>\n    </task>\n    <task id=\"LOCAL-00087\" summary=\"Created new game history panel\">\n      <created>1668056617469</created>\n      <option name=\"number\" value=\"00087\" />\n      <option name=\"presentableId\" value=\"LOCAL-00087\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668056617469</updated>\n    </task>\n    <task id=\"LOCAL-00088\" summary=\"Added movelog and fixed bugs\">\n      <created>1668058785427</created>\n      <option name=\"number\" value=\"00088\" />\n      <option name=\"presentableId\" value=\"LOCAL-00088\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668058785428</updated>\n    </task>\n    <task id=\"LOCAL-00089\" summary=\"OMG a working game of chess (no en passant)\">\n      <created>1668210631367</created>\n      <option name=\"number\" value=\"00089\" />\n      <option name=\"presentableId\" value=\"LOCAL-00089\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668210631367</updated>\n    </task>\n    <task id=\"LOCAL-00090\" summary=\"tying up loose ends + en passant pt1\">\n      <created>1668211589759</created>\n      <option name=\"number\" value=\"00090\" />\n      <option name=\"presentableId\" value=\"LOCAL-00090\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668211589759</updated>\n    </task>\n    <task id=\"LOCAL-00091\" summary=\"x\">\n      <created>1668817943613</created>\n      <option name=\"number\" value=\"00091\" />\n      <option name=\"presentableId\" value=\"LOCAL-00091\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668817943614</updated>\n    </task>\n    <task id=\"LOCAL-00092\" summary=\"En Passant is highlighted but not executed\">\n      <created>1668819730323</created>\n      <option name=\"number\" value=\"00092\" />\n      <option name=\"presentableId\" value=\"LOCAL-00092\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668819730323</updated>\n    </task>\n    <task id=\"LOCAL-00093\" summary=\"En Passant is highlighted but not executed\">\n      <created>1668820115918</created>\n      <option name=\"number\" value=\"00093\" />\n      <option name=\"presentableId\" value=\"LOCAL-00093\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668820115918</updated>\n    </task>\n    <task id=\"LOCAL-00094\" summary=\"idk what im doing\">\n      <created>1668827281569</created>\n      <option name=\"number\" value=\"00094\" />\n      <option name=\"presentableId\" value=\"LOCAL-00094\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668827281569</updated>\n    </task>\n    <task id=\"LOCAL-00095\" summary=\"cleanup i think\">\n      <created>1668828391054</created>\n      <option name=\"number\" value=\"00095\" />\n      <option name=\"presentableId\" value=\"LOCAL-00095\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668828391054</updated>\n    </task>\n    <task id=\"LOCAL-00096\" summary=\"cleanup\">\n      <created>1668828954078</created>\n      <option name=\"number\" value=\"00096\" />\n      <option name=\"presentableId\" value=\"LOCAL-00096\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668828954078</updated>\n    </task>\n    <task id=\"LOCAL-00097\" summary=\"En Passant is highlighted but not executed\">\n      <created>1668829272280</created>\n      <option name=\"number\" value=\"00097\" />\n      <option name=\"presentableId\" value=\"LOCAL-00097\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668829272280</updated>\n    </task>\n    <task id=\"LOCAL-00098\" summary=\"Pawn promotion doesn't work but it should\">\n      <created>1668941908446</created>\n      <option name=\"number\" value=\"00098\" />\n      <option name=\"presentableId\" value=\"LOCAL-00098\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668941908446</updated>\n    </task>\n    <task id=\"LOCAL-00099\" summary=\"The Beginnings of unit testers\">\n      <created>1668944716649</created>\n      <option name=\"number\" value=\"00099\" />\n      <option name=\"presentableId\" value=\"LOCAL-00099\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668944716649</updated>\n    </task>\n    <task id=\"LOCAL-00100\" summary=\"Testers brought over from BlackWidow and fitted to current project - all tests failed :/\">\n      <created>1669064664549</created>\n      <option name=\"number\" value=\"00100\" />\n      <option name=\"presentableId\" value=\"LOCAL-00100\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669064664549</updated>\n    </task>\n    <task id=\"LOCAL-00101\" summary=\"minimax should be fully working now\">\n      <created>1669170436852</created>\n      <option name=\"number\" value=\"00101\" />\n      <option name=\"presentableId\" value=\"LOCAL-00101\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669170436852</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"102\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"BEK_SORT_TYPE\" value=\"1\" />\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"branch\">\n                    <value>\n                      <list>\n                        <option value=\"En_Passant\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"RECENT_FILTERS\">\n      <map>\n        <entry key=\"Branch\">\n          <value>\n            <list>\n              <RecentGroup>\n                <option name=\"FILTER_VALUES\">\n                  <option value=\"origin/main\" />\n                </option>\n              </RecentGroup>\n              <RecentGroup>\n                <option name=\"FILTER_VALUES\">\n                  <option value=\"HEAD\" />\n                </option>\n              </RecentGroup>\n            </list>\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n    <MESSAGE value=\"Added a mouse listener to the GUI tile class\" />\n    <MESSAGE value=\"Pieces ~should~ be able to move on the gui\" />\n    <MESSAGE value=\"legal moves ~should~ be highlighting\" />\n    <MESSAGE value=\"comments\" />\n    <MESSAGE value=\"pieces move and are actually highlighted now\" />\n    <MESSAGE value=\"fixing bugs\" />\n    <MESSAGE value=\"Created new Dead Pieces Panel that sorts by piece value\" />\n    <MESSAGE value=\"Bugs\" />\n    <MESSAGE value=\"Bug testing\" />\n    <MESSAGE value=\"merge nathan diagram\" />\n    <MESSAGE value=\"Did the diagram better than nathan\" />\n    <MESSAGE value=\"im back\" />\n    <MESSAGE value=\"Created new game history panel\" />\n    <MESSAGE value=\"Added movelog and fixed bugs\" />\n    <MESSAGE value=\"OMG a working game of chess (no en passant)\" />\n    <MESSAGE value=\"tying up loose ends + en passant pt1\" />\n    <MESSAGE value=\"x\" />\n    <MESSAGE value=\"idk what im doing\" />\n    <MESSAGE value=\"cleanup i think\" />\n    <MESSAGE value=\"cleanup\" />\n    <MESSAGE value=\"En Passant is highlighted but not executed\" />\n    <MESSAGE value=\"Pawn promotion doesn't work but it should\" />\n    <MESSAGE value=\"The Beginnings of unit testers\" />\n    <MESSAGE value=\"Testers brought over from BlackWidow and fitted to current project - all tests failed :/\" />\n    <MESSAGE value=\"minimax should be fully working now\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"minimax should be fully working now\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <breakpoint type=\"java-exception\">\n          <properties class=\"java.lang.UnsupportedOperationException\" package=\"java.lang\" />\n          <option name=\"timeStamp\" value=\"16\" />\n        </breakpoint>\n        <breakpoint type=\"java-exception\">\n          <properties class=\"java.lang.OutOfMemoryError\" package=\"java.lang\" />\n          <option name=\"timeStamp\" value=\"17\" />\n        </breakpoint>\n        <breakpoint enabled=\"true\" type=\"java-exception\">\n          <properties class=\"java.lang.NullPointerException\" package=\"java.lang\" />\n          <option name=\"timeStamp\" value=\"64\" />\n        </breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/com/chess/gui/Table.java</url>\n          <line>884</line>\n          <option name=\"timeStamp\" value=\"92\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java</url>\n          <line>117</line>\n          <option name=\"timeStamp\" value=\"100\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>\n          <line>139</line>\n          <option name=\"timeStamp\" value=\"104\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>\n          <line>146</line>\n          <option name=\"timeStamp\" value=\"108\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>\n          <line>142</line>\n          <option name=\"timeStamp\" value=\"109\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Move.java</url>\n          <line>340</line>\n          <option name=\"timeStamp\" value=\"111\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Board.java</url>\n          <line>40</line>\n          <option name=\"timeStamp\" value=\"115\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>\n          <line>36</line>\n          <option name=\"timeStamp\" value=\"118\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n    <pin-to-top-manager>\n      <pinned-members>\n        <PinnedItemInfo parentTag=\"com.chess.engine.board.Board\" memberName=\"enPassantPawn\" />\n      </pinned-members>\n    </pin-to-top-manager>\n  </component>\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\n    <expand />\n    <select />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision bcafea20c5b02dbc502a667fc1097fbfc0256c55)
++++ b/.idea/workspace.xml	(date 1670317959381)
+@@ -4,23 +4,22 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="minimax should be fully working now">
+-      <change afterPath="$PROJECT_DIR$/src/com/chess/gui/GameSetup.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/com/chess/OOPChess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/OOPChess.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Move.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/com/chess/gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/gui/Table.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/tests/com/chess/tests/TestBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/com/chess/tests/TestBoard.java" afterDir="false" />
+-    </list>
++    <list default="true" id="a031013f-de90-49de-9729-ba8419bbe781" name="Changes" comment="the king's moves have been reduced however still not fully functional" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="ChangesViewManager">
++    <option name="groupingKeys">
++      <option value="directory" />
++      <option value="module" />
++    </option>
+   </component>
+   <component name="CodeInsightWorkspaceSettings">
+     <option name="optimizeImportsOnTheFly" value="true" />
+   </component>
++  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" userTempatePath="" />
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
+@@ -46,11 +45,10 @@
+     </favorite-branches>
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="Promotion" />
++        <entry key="$PROJECT_DIR$" value="Testing_and_debugging" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -82,7 +80,7 @@
+     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+     &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/Users/ali/Library/CloudStorage/OneDrive-Personal/Desktop/Other/Coding/School/Object Oriented Programming/ChessOOP&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/Users/ali/Library/CloudStorage/OneDrive-Personal/Desktop/Other/Coding/School/Object_Oriented_Programming/ChessOOP&quot;,
+     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+@@ -92,7 +90,13 @@
+     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  },
++  &quot;keyToStringList&quot;: {
++    &quot;DatabaseDriversLRU&quot;: [
++      &quot;mysql&quot;
++    ]
+   }
+ }</component>
+   <component name="RecentsManager">
+@@ -103,8 +107,11 @@
+       <recent name="com.chess.engine.pieces" />
+     </key>
+     <key name="CopyFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/src/com" />
++      <recent name="$PROJECT_DIR$/src/com/chess/engine/player/ai" />
++      <recent name="$PROJECT_DIR$/art" />
++      <recent name="$PROJECT_DIR$/src/com/chess/pgn" />
+       <recent name="$PROJECT_DIR$" />
+-      <recent name="$PROJECT_DIR$/src" />
+     </key>
+     <key name="MoveMembersDialog.RECENTS_KEY">
+       <recent name="com.chess.engine.board.BoardUtils" />
+@@ -113,6 +120,8 @@
+       <recent name="" />
+     </key>
+     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
++      <recent name="com.chess.player" />
++      <recent name="com.chess.engine" />
+       <recent name="com.chess" />
+     </key>
+     <key name="CreateTestDialog.RecentsKey">
+@@ -155,7 +164,7 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="TestBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="TestFENParser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="ChessOOP" />
+       <extension name="coverage">
+         <pattern>
+@@ -164,13 +173,13 @@
+         </pattern>
+       </extension>
+       <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
+-      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestBoard" />
++      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestFENParser" />
+       <option name="TEST_OBJECT" value="class" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="TestCheckmate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="TestFENParser.testWriteFEN2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="ChessOOP" />
+       <extension name="coverage">
+         <pattern>
+@@ -179,13 +188,14 @@
+         </pattern>
+       </extension>
+       <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
+-      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestCheckmate" />
+-      <option name="TEST_OBJECT" value="class" />
++      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestFENParser" />
++      <option name="METHOD_NAME" value="testWriteFEN2" />
++      <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="TestMiniMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="TestPGNParser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="ChessOOP" />
+       <extension name="coverage">
+         <pattern>
+@@ -194,13 +204,13 @@
+         </pattern>
+       </extension>
+       <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
+-      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestMiniMax" />
++      <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestPGNParser" />
+       <option name="TEST_OBJECT" value="class" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="TestPieces.testPawnPromotion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="TestPieces.testAllKingMovesWhileAttacked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="ChessOOP" />
+       <extension name="coverage">
+         <pattern>
+@@ -210,7 +220,7 @@
+       </extension>
+       <option name="PACKAGE_NAME" value="tests.com.chess.tests" />
+       <option name="MAIN_CLASS_NAME" value="tests.com.chess.tests.TestPieces" />
+-      <option name="METHOD_NAME" value="testPawnPromotion" />
++      <option name="METHOD_NAME" value="testAllKingMovesWhileAttacked" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+@@ -218,14 +228,18 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="JUnit.TestPieces.testAllKingMovesWhileAttacked" />
+         <item itemvalue="JUnit.ChessTestSuite" />
+-        <item itemvalue="JUnit.TestMiniMax" />
+-        <item itemvalue="JUnit.TestPieces.testPawnPromotion" />
+-        <item itemvalue="JUnit.TestBoard" />
+-        <item itemvalue="JUnit.TestCheckmate" />
++        <item itemvalue="JUnit.TestFENParser.testWriteFEN2" />
++        <item itemvalue="JUnit.TestFENParser" />
++        <item itemvalue="JUnit.TestPGNParser" />
+       </list>
+     </recent_temporary>
+   </component>
++  <component name="SliceToolwindowSettings">
++    <option name="autoScroll" value="true" />
++    <option name="preview" value="true" />
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="StructuralSearchPlugin">
+     <searchConfiguration name="new LinkedList&lt;&gt;(legalMoves)" created="1666850543501" uuid="db4b32bb-b2a1-36a8-a896-0d91c20dad28" text="new LinkedList&lt;&gt;(legalMoves)" recursive="true" caseInsensitive="false" type="JAVA" pattern_context="default" scope_type="PROJECT" scope_descriptor="" history="1">
+@@ -257,355 +271,371 @@
+       <workItem from="1668209659403" duration="2261000" />
+       <workItem from="1668825021194" duration="4854000" />
+       <workItem from="1668933010847" duration="4686000" />
++      <workItem from="1669179387935" duration="28423000" />
++      <workItem from="1669429889086" duration="7266000" />
++      <workItem from="1669922332702" duration="2198000" />
++      <workItem from="1670235506208" duration="9138000" />
++      <workItem from="1670317191066" duration="282000" />
+     </task>
+-    <task id="LOCAL-00053" summary="Cleanup">
+-      <created>1666754255141</created>
+-      <option name="number" value="00053" />
+-      <option name="presentableId" value="LOCAL-00053" />
++    <task id="LOCAL-00108" summary="breakpoints">
++      <created>1669271292143</created>
++      <option name="number" value="00108" />
++      <option name="presentableId" value="LOCAL-00108" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666754255141</updated>
++      <updated>1669271292143</updated>
+     </task>
+-    <task id="LOCAL-00054" summary="Cleanup">
+-      <created>1666821966349</created>
+-      <option name="number" value="00054" />
+-      <option name="presentableId" value="LOCAL-00054" />
++    <task id="LOCAL-00109" summary="Imported PGN FEN from someones github">
++      <created>1669273883902</created>
++      <option name="number" value="00109" />
++      <option name="presentableId" value="LOCAL-00109" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666821966349</updated>
++      <updated>1669273883902</updated>
+     </task>
+-    <task id="LOCAL-00055" summary="Moved main class to main package">
+-      <created>1666821990204</created>
+-      <option name="number" value="00055" />
+-      <option name="presentableId" value="LOCAL-00055" />
++    <task id="LOCAL-00110" summary="implemented fen and pgn into test cases">
++      <created>1669273912307</created>
++      <option name="number" value="00110" />
++      <option name="presentableId" value="LOCAL-00110" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666821990204</updated>
++      <updated>1669273912307</updated>
+     </task>
+-    <task id="LOCAL-00056" summary="Created GUI package and Table class">
+-      <created>1666822013432</created>
+-      <option name="number" value="00056" />
+-      <option name="presentableId" value="LOCAL-00056" />
++    <task id="LOCAL-00111" summary="Still debugging Castling">
++      <created>1669273944022</created>
++      <option name="number" value="00111" />
++      <option name="presentableId" value="LOCAL-00111" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666822013432</updated>
++      <updated>1669273944022</updated>
+     </task>
+-    <task id="LOCAL-00057" summary="cleanup">
+-      <created>1666822043713</created>
+-      <option name="number" value="00057" />
+-      <option name="presentableId" value="LOCAL-00057" />
++    <task id="LOCAL-00112" summary="Still debugging Castling">
++      <created>1669274977388</created>
++      <option name="number" value="00112" />
++      <option name="presentableId" value="LOCAL-00112" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666822043713</updated>
++      <updated>1669274977388</updated>
+     </task>
+-    <task id="LOCAL-00058" summary="Added MenuBar to GUI">
+-      <created>1666822421947</created>
+-      <option name="number" value="00058" />
+-      <option name="presentableId" value="LOCAL-00058" />
++    <task id="LOCAL-00113" summary="Castling works?">
++      <created>1669278249809</created>
++      <option name="number" value="00113" />
++      <option name="presentableId" value="LOCAL-00113" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666822421947</updated>
++      <updated>1669278249809</updated>
+     </task>
+-    <task id="LOCAL-00059" summary="Added board and tile classes to GUI">
+-      <created>1666823695179</created>
+-      <option name="number" value="00059" />
+-      <option name="presentableId" value="LOCAL-00059" />
++    <task id="LOCAL-00114" summary="Castling works?">
++      <created>1669278796230</created>
++      <option name="number" value="00114" />
++      <option name="presentableId" value="LOCAL-00114" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666823695179</updated>
++      <updated>1669278796230</updated>
+     </task>
+-    <task id="LOCAL-00060" summary="Initialized all rows and columns">
+-      <created>1666823888720</created>
+-      <option name="number" value="00060" />
+-      <option name="presentableId" value="LOCAL-00060" />
++    <task id="LOCAL-00115" summary="Added more skins">
++      <created>1669287133273</created>
++      <option name="number" value="00115" />
++      <option name="presentableId" value="LOCAL-00115" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666823888720</updated>
++      <updated>1669287133273</updated>
+     </task>
+-    <task id="LOCAL-00061" summary="Gave the rows and columns color in GUI">
+-      <created>1666824699626</created>
+-      <option name="number" value="00061" />
+-      <option name="presentableId" value="LOCAL-00061" />
++    <task id="LOCAL-00116" summary="Updated Test Cases">
++      <created>1669287149180</created>
++      <option name="number" value="00116" />
++      <option name="presentableId" value="LOCAL-00116" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666824699626</updated>
++      <updated>1669287149180</updated>
+     </task>
+-    <task id="LOCAL-00062" summary="added exit to menubar">
+-      <created>1666824927022</created>
+-      <option name="number" value="00062" />
+-      <option name="presentableId" value="LOCAL-00062" />
++    <task id="LOCAL-00117" summary="Castling fixed!!!!">
++      <created>1669287193642</created>
++      <option name="number" value="00117" />
++      <option name="presentableId" value="LOCAL-00117" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666824927022</updated>
++      <updated>1669287193642</updated>
+     </task>
+-    <task id="LOCAL-00063" summary="Pieces on the checkerboard">
+-      <created>1666827441219</created>
+-      <option name="number" value="00063" />
+-      <option name="presentableId" value="LOCAL-00063" />
++    <task id="LOCAL-00118" summary="New AI's implemented from another github">
++      <created>1669287212762</created>
++      <option name="number" value="00118" />
++      <option name="presentableId" value="LOCAL-00118" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666827441219</updated>
++      <updated>1669287212762</updated>
+     </task>
+-    <task id="LOCAL-00064" summary="improvements">
+-      <created>1666830790955</created>
+-      <option name="number" value="00064" />
+-      <option name="presentableId" value="LOCAL-00064" />
++    <task id="LOCAL-00119" summary=".,.">
++      <created>1669287225311</created>
++      <option name="number" value="00119" />
++      <option name="presentableId" value="LOCAL-00119" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666830790955</updated>
++      <updated>1669287225311</updated>
+     </task>
+-    <task id="LOCAL-00065" summary="improvements">
+-      <created>1666830843951</created>
+-      <option name="number" value="00065" />
+-      <option name="presentableId" value="LOCAL-00065" />
++    <task id="LOCAL-00120" summary="Debugging king legal moves">
++      <created>1669328473952</created>
++      <option name="number" value="00120" />
++      <option name="presentableId" value="LOCAL-00120" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666830843951</updated>
++      <updated>1669328473952</updated>
+     </task>
+-    <task id="LOCAL-00066" summary="Added a mouse listener to the GUI tile class">
+-      <created>1666831831554</created>
+-      <option name="number" value="00066" />
+-      <option name="presentableId" value="LOCAL-00066" />
++    <task id="LOCAL-00121" summary="Updated more test cases">
++      <created>1669328487595</created>
++      <option name="number" value="00121" />
++      <option name="presentableId" value="LOCAL-00121" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666831831554</updated>
++      <updated>1669328487595</updated>
+     </task>
+-    <task id="LOCAL-00067" summary="Pieces ~should~ be able to move on the gui">
+-      <created>1666832666879</created>
+-      <option name="number" value="00067" />
+-      <option name="presentableId" value="LOCAL-00067" />
++    <task id="LOCAL-00122" summary="cleanup">
++      <created>1669328508305</created>
++      <option name="number" value="00122" />
++      <option name="presentableId" value="LOCAL-00122" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666832666879</updated>
++      <updated>1669328508306</updated>
+     </task>
+-    <task id="LOCAL-00068" summary="legal moves ~should~ be highlighting">
+-      <created>1666834900043</created>
+-      <option name="number" value="00068" />
+-      <option name="presentableId" value="LOCAL-00068" />
++    <task id="LOCAL-00123" summary="lowered search depth so tests dont take so long to run however most fail now because of this">
++      <created>1669333541501</created>
++      <option name="number" value="00123" />
++      <option name="presentableId" value="LOCAL-00123" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666834900043</updated>
++      <updated>1669333541501</updated>
+     </task>
+-    <task id="LOCAL-00069" summary="comments">
+-      <created>1666835236639</created>
+-      <option name="number" value="00069" />
+-      <option name="presentableId" value="LOCAL-00069" />
++    <task id="LOCAL-00124" summary="FEN works, PGN doesnt, lots of cleanup and debugging work needed">
++      <created>1669333582307</created>
++      <option name="number" value="00124" />
++      <option name="presentableId" value="LOCAL-00124" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666835236639</updated>
++      <updated>1669333582307</updated>
+     </task>
+-    <task id="LOCAL-00070" summary="pieces move and are actually highlighted now">
+-      <created>1666836304511</created>
+-      <option name="number" value="00070" />
+-      <option name="presentableId" value="LOCAL-00070" />
++    <task id="LOCAL-00125" summary="cleanup needed">
++      <created>1669333600609</created>
++      <option name="number" value="00125" />
++      <option name="presentableId" value="LOCAL-00125" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666836304511</updated>
++      <updated>1669333600609</updated>
+     </task>
+-    <task id="LOCAL-00071" summary="fixing bugs">
+-      <created>1666837618100</created>
+-      <option name="number" value="00071" />
+-      <option name="presentableId" value="LOCAL-00071" />
++    <task id="LOCAL-00126" summary="cleanup and added logic needed for evaluations">
++      <created>1669333676840</created>
++      <option name="number" value="00126" />
++      <option name="presentableId" value="LOCAL-00126" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666837618100</updated>
++      <updated>1669333676840</updated>
+     </task>
+-    <task id="LOCAL-00072" summary="fixing bugs">
+-      <created>1666842826653</created>
+-      <option name="number" value="00072" />
+-      <option name="presentableId" value="LOCAL-00072" />
++    <task id="LOCAL-00127" summary="cleanup and comments">
++      <created>1669333727252</created>
++      <option name="number" value="00127" />
++      <option name="presentableId" value="LOCAL-00127" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666842826653</updated>
++      <updated>1669333727252</updated>
+     </task>
+-    <task id="LOCAL-00073" summary="fixing bugs">
+-      <created>1666844396727</created>
+-      <option name="number" value="00073" />
+-      <option name="presentableId" value="LOCAL-00073" />
++    <task id="LOCAL-00128" summary="added hotspots for each piece for evaluations">
++      <created>1669333753617</created>
++      <option name="number" value="00128" />
++      <option name="presentableId" value="LOCAL-00128" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666844396727</updated>
++      <updated>1669333753617</updated>
+     </task>
+-    <task id="LOCAL-00074" summary="fixing bugs">
+-      <created>1666847944244</created>
+-      <option name="number" value="00074" />
+-      <option name="presentableId" value="LOCAL-00074" />
++    <task id="LOCAL-00129" summary="comments">
++      <created>1669333766136</created>
++      <option name="number" value="00129" />
++      <option name="presentableId" value="LOCAL-00129" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666847944244</updated>
++      <updated>1669333766136</updated>
+     </task>
+-    <task id="LOCAL-00075" summary="Created new Dead Pieces Panel that sorts by piece value">
+-      <created>1666847982663</created>
+-      <option name="number" value="00075" />
+-      <option name="presentableId" value="LOCAL-00075" />
++    <task id="LOCAL-00130" summary="cleanup">
++      <created>1669333800070</created>
++      <option name="number" value="00130" />
++      <option name="presentableId" value="LOCAL-00130" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666847982663</updated>
++      <updated>1669333800070</updated>
+     </task>
+-    <task id="LOCAL-00076" summary="Created new Dead Pieces Panel that sorts by piece value">
+-      <created>1666848639475</created>
+-      <option name="number" value="00076" />
+-      <option name="presentableId" value="LOCAL-00076" />
++    <task id="LOCAL-00131" summary="cleaned up and proper, needs comments">
++      <created>1669333842671</created>
++      <option name="number" value="00131" />
++      <option name="presentableId" value="LOCAL-00131" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666848639475</updated>
++      <updated>1669333842671</updated>
+     </task>
+-    <task id="LOCAL-00077" summary="Bugs">
+-      <created>1666848648687</created>
+-      <option name="number" value="00077" />
+-      <option name="presentableId" value="LOCAL-00077" />
++    <task id="LOCAL-00132" summary="needs cleanup &amp; comments">
++      <created>1669333866286</created>
++      <option name="number" value="00132" />
++      <option name="presentableId" value="LOCAL-00132" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666848648687</updated>
++      <updated>1669333866286</updated>
+     </task>
+-    <task id="LOCAL-00078" summary="Bug testing">
+-      <created>1666849680913</created>
+-      <option name="number" value="00078" />
+-      <option name="presentableId" value="LOCAL-00078" />
++    <task id="LOCAL-00133" summary="needs cleanup &amp; comments">
++      <created>1669333884427</created>
++      <option name="number" value="00133" />
++      <option name="presentableId" value="LOCAL-00133" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666849680913</updated>
++      <updated>1669333884427</updated>
+     </task>
+-    <task id="LOCAL-00079" summary="Bug testing">
+-      <created>1666849734930</created>
+-      <option name="number" value="00079" />
+-      <option name="presentableId" value="LOCAL-00079" />
++    <task id="LOCAL-00134" summary="Escape analysis score">
++      <created>1669427026862</created>
++      <option name="number" value="00134" />
++      <option name="presentableId" value="LOCAL-00134" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666849734930</updated>
++      <updated>1669427026862</updated>
+     </task>
+-    <task id="LOCAL-00080" summary="cleanup">
+-      <created>1666850304080</created>
+-      <option name="number" value="00080" />
+-      <option name="presentableId" value="LOCAL-00080" />
++    <task id="LOCAL-00135" summary="cleanup">
++      <created>1669427098735</created>
++      <option name="number" value="00135" />
++      <option name="presentableId" value="LOCAL-00135" />
+       <option name="project" value="LOCAL" />
+-      <updated>1666850304080</updated>
++      <updated>1669427098736</updated>
+     </task>
+-    <task id="LOCAL-00081" summary="merge nathan diagram">
+-      <created>1667030571505</created>
+-      <option name="number" value="00081" />
+-      <option name="presentableId" value="LOCAL-00081" />
++    <task id="LOCAL-00136" summary="new constructor for undo">
++      <created>1669427134093</created>
++      <option name="number" value="00136" />
++      <option name="presentableId" value="LOCAL-00136" />
+       <option name="project" value="LOCAL" />
+-      <updated>1667030571505</updated>
++      <updated>1669427134093</updated>
+     </task>
+-    <task id="LOCAL-00082" summary="Did the diagram better than nathan">
+-      <created>1667031689322</created>
+-      <option name="number" value="00082" />
+-      <option name="presentableId" value="LOCAL-00082" />
++    <task id="LOCAL-00137" summary="added undo">
++      <created>1669427150978</created>
++      <option name="number" value="00137" />
++      <option name="presentableId" value="LOCAL-00137" />
+       <option name="project" value="LOCAL" />
+-      <updated>1667031689322</updated>
++      <updated>1669427150978</updated>
+     </task>
+-    <task id="LOCAL-00083" summary="Did the diagram better than nathan">
+-      <created>1667031800317</created>
+-      <option name="number" value="00083" />
+-      <option name="presentableId" value="LOCAL-00083" />
++    <task id="LOCAL-00138" summary="added undo and cleanup, file menu works too">
++      <created>1669427188312</created>
++      <option name="number" value="00138" />
++      <option name="presentableId" value="LOCAL-00138" />
+       <option name="project" value="LOCAL" />
+-      <updated>1667031800317</updated>
++      <updated>1669427188312</updated>
+     </task>
+-    <task id="LOCAL-00084" summary="Did the diagram better than nathan">
+-      <created>1667031965570</created>
+-      <option name="number" value="00084" />
+-      <option name="presentableId" value="LOCAL-00084" />
++    <task id="LOCAL-00139" summary="sorry for no comments i did a  bit tho">
++      <created>1669881121620</created>
++      <option name="number" value="00139" />
++      <option name="presentableId" value="LOCAL-00139" />
+       <option name="project" value="LOCAL" />
+-      <updated>1667031965570</updated>
++      <updated>1669881121620</updated>
+     </task>
+-    <task id="LOCAL-00085" summary="Did the diagram better than nathan">
+-      <created>1667032217867</created>
+-      <option name="number" value="00085" />
+-      <option name="presentableId" value="LOCAL-00085" />
++    <task id="LOCAL-00140" summary="sorry for no commits i did a  bit tho">
++      <created>1669881146945</created>
++      <option name="number" value="00140" />
++      <option name="presentableId" value="LOCAL-00140" />
+       <option name="project" value="LOCAL" />
+-      <updated>1667032217867</updated>
++      <updated>1669881146945</updated>
+     </task>
+-    <task id="LOCAL-00086" summary="im back">
+-      <created>1668054987452</created>
+-      <option name="number" value="00086" />
+-      <option name="presentableId" value="LOCAL-00086" />
++    <task id="LOCAL-00141" summary="cleanup">
++      <created>1670235570949</created>
++      <option name="number" value="00141" />
++      <option name="presentableId" value="LOCAL-00141" />
+       <option name="project" value="LOCAL" />
+-      <updated>1668054987452</updated>
++      <updated>1670235570949</updated>
+     </task>
+-    <task id="LOCAL-00087" summary="Created new game history panel">
+-      <created>1668056617469</created>
+-      <option name="number" value="00087" />
+-      <option name="presentableId" value="LOCAL-00087" />
++    <task id="LOCAL-00142" summary="cleanup">
++      <created>1670235575532</created>
++      <option name="number" value="00142" />
++      <option name="presentableId" value="LOCAL-00142" />
+       <option name="project" value="LOCAL" />
+-      <updated>1668056617469</updated>
++      <updated>1670235575532</updated>
+     </task>
+-    <task id="LOCAL-00088" summary="Added movelog and fixed bugs">
+-      <created>1668058785427</created>
+-      <option name="number" value="00088" />
+-      <option name="presentableId" value="LOCAL-00088" />
++    <task id="LOCAL-00143" summary="cleanup">
++      <created>1670235621276</created>
++      <option name="number" value="00143" />
++      <option name="presentableId" value="LOCAL-00143" />
+       <option name="project" value="LOCAL" />
+-      <updated>1668058785428</updated>
++      <updated>1670235621276</updated>
+     </task>
+-    <task id="LOCAL-00089" summary="OMG a working game of chess (no en passant)">
+-      <created>1668210631367</created>
+-      <option name="number" value="00089" />
+-      <option name="presentableId" value="LOCAL-00089" />
++    <task id="LOCAL-00144" summary="javadocs">
++      <created>1670235680690</created>
++      <option name="number" value="00144" />
++      <option name="presentableId" value="LOCAL-00144" />
+       <option name="project" value="LOCAL" />
+-      <updated>1668210631367</updated>
++      <updated>1670235680690</updated>
+     </task>
+-    <task id="LOCAL-00090" summary="tying up loose ends + en passant pt1">
+-      <created>1668211589759</created>
+-      <option name="number" value="00090" />
+-      <option name="presentableId" value="LOCAL-00090" />
++    <task id="LOCAL-00145" summary="just push please">
++      <created>1670235795771</created>
++      <option name="number" value="00145" />
++      <option name="presentableId" value="LOCAL-00145" />
+       <option name="project" value="LOCAL" />
+-      <updated>1668211589759</updated>
++      <updated>1670235795771</updated>
+     </task>
+-    <task id="LOCAL-00091" summary="x">
+-      <created>1668817943613</created>
+-      <option name="number" value="00091" />
+-      <option name="presentableId" value="LOCAL-00091" />
++    <task id="LOCAL-00146" summary="just push please">
++      <created>1670235892692</created>
++      <option name="number" value="00146" />
++      <option name="presentableId" value="LOCAL-00146" />
+       <option name="project" value="LOCAL" />
+-      <updated>1668817943614</updated>
++      <updated>1670235892692</updated>
+     </task>
+-    <task id="LOCAL-00092" summary="En Passant is highlighted but not executed">
+-      <created>1668819730323</created>
+-      <option name="number" value="00092" />
+-      <option name="presentableId" value="LOCAL-00092" />
++    <task id="LOCAL-00147" summary="Now just working on fixing test cases and adding more until everything is fixed and then new features get added">
++      <created>1670236553537</created>
++      <option name="number" value="00147" />
++      <option name="presentableId" value="LOCAL-00147" />
+       <option name="project" value="LOCAL" />
+-      <updated>1668819730323</updated>
++      <updated>1670236553537</updated>
+     </task>
+-    <task id="LOCAL-00093" summary="En Passant is highlighted but not executed">
+-      <created>1668820115918</created>
+-      <option name="number" value="00093" />
+-      <option name="presentableId" value="LOCAL-00093" />
++    <task id="LOCAL-00148" summary="Now just working on fixing test cases and adding more until everything is fixed and then new features get added">
++      <created>1670311441303</created>
++      <option name="number" value="00148" />
++      <option name="presentableId" value="LOCAL-00148" />
+       <option name="project" value="LOCAL" />
+-      <updated>1668820115918</updated>
++      <updated>1670311441303</updated>
+     </task>
+-    <task id="LOCAL-00094" summary="idk what im doing">
+-      <created>1668827281569</created>
+-      <option name="number" value="00094" />
+-      <option name="presentableId" value="LOCAL-00094" />
++    <task id="LOCAL-00149" summary="cleanup">
++      <created>1670311549157</created>
++      <option name="number" value="00149" />
++      <option name="presentableId" value="LOCAL-00149" />
+       <option name="project" value="LOCAL" />
+-      <updated>1668827281569</updated>
++      <updated>1670311549157</updated>
+     </task>
+-    <task id="LOCAL-00095" summary="cleanup i think">
+-      <created>1668828391054</created>
+-      <option name="number" value="00095" />
+-      <option name="presentableId" value="LOCAL-00095" />
++    <task id="LOCAL-00150" summary="cleanup">
++      <created>1670312146026</created>
++      <option name="number" value="00150" />
++      <option name="presentableId" value="LOCAL-00150" />
+       <option name="project" value="LOCAL" />
+-      <updated>1668828391054</updated>
++      <updated>1670312146026</updated>
+     </task>
+-    <task id="LOCAL-00096" summary="cleanup">
+-      <created>1668828954078</created>
+-      <option name="number" value="00096" />
+-      <option name="presentableId" value="LOCAL-00096" />
++    <task id="LOCAL-00151" summary="test results that took a long time to run">
++      <created>1670312177316</created>
++      <option name="number" value="00151" />
++      <option name="presentableId" value="LOCAL-00151" />
+       <option name="project" value="LOCAL" />
+-      <updated>1668828954078</updated>
++      <updated>1670312177316</updated>
+     </task>
+-    <task id="LOCAL-00097" summary="En Passant is highlighted but not executed">
+-      <created>1668829272280</created>
+-      <option name="number" value="00097" />
+-      <option name="presentableId" value="LOCAL-00097" />
++    <task id="LOCAL-00152" summary="test results that took a long time to run">
++      <created>1670313626156</created>
++      <option name="number" value="00152" />
++      <option name="presentableId" value="LOCAL-00152" />
+       <option name="project" value="LOCAL" />
+-      <updated>1668829272280</updated>
++      <updated>1670313626156</updated>
+     </task>
+-    <task id="LOCAL-00098" summary="Pawn promotion doesn't work but it should">
+-      <created>1668941908446</created>
+-      <option name="number" value="00098" />
+-      <option name="presentableId" value="LOCAL-00098" />
++    <task id="LOCAL-00153" summary="cleanup">
++      <created>1670313637553</created>
++      <option name="number" value="00153" />
++      <option name="presentableId" value="LOCAL-00153" />
+       <option name="project" value="LOCAL" />
+-      <updated>1668941908446</updated>
++      <updated>1670313637553</updated>
+     </task>
+-    <task id="LOCAL-00099" summary="The Beginnings of unit testers">
+-      <created>1668944716649</created>
+-      <option name="number" value="00099" />
+-      <option name="presentableId" value="LOCAL-00099" />
++    <task id="LOCAL-00154" summary="renamed and refactored files">
++      <created>1670315092768</created>
++      <option name="number" value="00154" />
++      <option name="presentableId" value="LOCAL-00154" />
+       <option name="project" value="LOCAL" />
+-      <updated>1668944716649</updated>
++      <updated>1670315092768</updated>
+     </task>
+-    <task id="LOCAL-00100" summary="Testers brought over from BlackWidow and fitted to current project - all tests failed :/">
+-      <created>1669064664549</created>
+-      <option name="number" value="00100" />
+-      <option name="presentableId" value="LOCAL-00100" />
++    <task id="LOCAL-00155" summary="I thought PGN parser didn't work but you can make it work by deleting the last move and entering the full filename+ext in the save dialouge">
++      <created>1670315410693</created>
++      <option name="number" value="00155" />
++      <option name="presentableId" value="LOCAL-00155" />
+       <option name="project" value="LOCAL" />
+-      <updated>1669064664549</updated>
++      <updated>1670315410693</updated>
+     </task>
+-    <task id="LOCAL-00101" summary="minimax should be fully working now">
+-      <created>1669170436852</created>
+-      <option name="number" value="00101" />
+-      <option name="presentableId" value="LOCAL-00101" />
++    <task id="LOCAL-00156" summary="the king's moves have been reduced however still not fully functional">
++      <created>1670317397362</created>
++      <option name="number" value="00156" />
++      <option name="presentableId" value="LOCAL-00156" />
+       <option name="project" value="LOCAL" />
+-      <updated>1669170436852</updated>
++      <updated>1670317397362</updated>
+     </task>
+-    <option name="localTasksCounter" value="102" />
++    <option name="localTasksCounter" value="157" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.History.Properties">
++    <option name="COLUMN_ID_ORDER">
++      <list>
++        <option value="Default.Root" />
++        <option value="Default.Author" />
++        <option value="Default.Date" />
++        <option value="Default.Subject" />
++        <option value="Space.CommitStatus" />
++      </list>
++    </option>
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">
+@@ -614,17 +644,6 @@
+           <value>
+             <State>
+               <option name="BEK_SORT_TYPE" value="1" />
+-              <option name="FILTERS">
+-                <map>
+-                  <entry key="branch">
+-                    <value>
+-                      <list>
+-                        <option value="En_Passant" />
+-                      </list>
+-                    </value>
+-                  </entry>
+-                </map>
+-              </option>
+             </State>
+           </value>
+         </entry>
+@@ -652,88 +671,53 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
++    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
++    <option name="CHECK_NEW_TODO" value="false" />
+     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+-    <MESSAGE value="Added a mouse listener to the GUI tile class" />
+-    <MESSAGE value="Pieces ~should~ be able to move on the gui" />
+-    <MESSAGE value="legal moves ~should~ be highlighting" />
++    <MESSAGE value="Updated more test cases" />
++    <MESSAGE value="lowered search depth so tests dont take so long to run however most fail now because of this" />
++    <MESSAGE value="FEN works, PGN doesnt, lots of cleanup and debugging work needed" />
++    <MESSAGE value="cleanup needed" />
++    <MESSAGE value="cleanup and added logic needed for evaluations" />
++    <MESSAGE value="cleanup and comments" />
++    <MESSAGE value="added hotspots for each piece for evaluations" />
+     <MESSAGE value="comments" />
+-    <MESSAGE value="pieces move and are actually highlighted now" />
+-    <MESSAGE value="fixing bugs" />
+-    <MESSAGE value="Created new Dead Pieces Panel that sorts by piece value" />
+-    <MESSAGE value="Bugs" />
+-    <MESSAGE value="Bug testing" />
+-    <MESSAGE value="merge nathan diagram" />
+-    <MESSAGE value="Did the diagram better than nathan" />
+-    <MESSAGE value="im back" />
+-    <MESSAGE value="Created new game history panel" />
+-    <MESSAGE value="Added movelog and fixed bugs" />
+-    <MESSAGE value="OMG a working game of chess (no en passant)" />
+-    <MESSAGE value="tying up loose ends + en passant pt1" />
+-    <MESSAGE value="x" />
+-    <MESSAGE value="idk what im doing" />
+-    <MESSAGE value="cleanup i think" />
++    <MESSAGE value="cleaned up and proper, needs comments" />
++    <MESSAGE value="needs cleanup &amp; comments" />
++    <MESSAGE value="Escape analysis score" />
++    <MESSAGE value="new constructor for undo" />
++    <MESSAGE value="added undo" />
++    <MESSAGE value="added undo and cleanup, file menu works too" />
++    <MESSAGE value="sorry for no comments i did a  bit tho" />
++    <MESSAGE value="sorry for no commits i did a  bit tho" />
++    <MESSAGE value="wtf is this file, its commented tho" />
++    <MESSAGE value="javadocs" />
++    <MESSAGE value="just push please" />
++    <MESSAGE value="Now just working on fixing test cases and adding more until everything is fixed and then new features get added" />
++    <MESSAGE value="test results that took a long time to run" />
+     <MESSAGE value="cleanup" />
+-    <MESSAGE value="En Passant is highlighted but not executed" />
+-    <MESSAGE value="Pawn promotion doesn't work but it should" />
+-    <MESSAGE value="The Beginnings of unit testers" />
+-    <MESSAGE value="Testers brought over from BlackWidow and fitted to current project - all tests failed :/" />
+-    <MESSAGE value="minimax should be fully working now" />
+-    <option name="LAST_COMMIT_MESSAGE" value="minimax should be fully working now" />
++    <MESSAGE value="renamed and refactored files" />
++    <MESSAGE value="I thought PGN parser didn't work but you can make it work by deleting the last move and entering the full filename+ext in the save dialouge" />
++    <MESSAGE value="the king's moves have been reduced however still not fully functional" />
++    <option name="LAST_COMMIT_MESSAGE" value="the king's moves have been reduced however still not fully functional" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+       <breakpoints>
+-        <breakpoint type="java-exception">
+-          <properties class="java.lang.UnsupportedOperationException" package="java.lang" />
+-          <option name="timeStamp" value="16" />
+-        </breakpoint>
+-        <breakpoint type="java-exception">
+-          <properties class="java.lang.OutOfMemoryError" package="java.lang" />
+-          <option name="timeStamp" value="17" />
+-        </breakpoint>
+-        <breakpoint enabled="true" type="java-exception">
+-          <properties class="java.lang.NullPointerException" package="java.lang" />
+-          <option name="timeStamp" value="64" />
+-        </breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/com/chess/gui/Table.java</url>
+-          <line>884</line>
+-          <option name="timeStamp" value="92" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java</url>
+-          <line>117</line>
+-          <option name="timeStamp" value="100" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
+-          <line>139</line>
+-          <option name="timeStamp" value="104" />
+-        </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
+-          <line>146</line>
+-          <option name="timeStamp" value="108" />
++          <url>file://$PROJECT_DIR$/src/tests/com/chess/tests/TestPGNParser.java</url>
++          <line>107</line>
++          <option name="timeStamp" value="177" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
+-          <line>142</line>
+-          <option name="timeStamp" value="109" />
++          <url>file://$PROJECT_DIR$/src/com/chess/model/pgn/PGNUtilities.java</url>
++          <line>288</line>
++          <option name="timeStamp" value="178" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Move.java</url>
+-          <line>340</line>
+-          <option name="timeStamp" value="111" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/com/chess/engine/board/Board.java</url>
+-          <line>40</line>
+-          <option name="timeStamp" value="115" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/com/chess/engine/player/Player.java</url>
+-          <line>36</line>
+-          <option name="timeStamp" value="118" />
++          <url>file://$PROJECT_DIR$/src/tests/com/chess/tests/TestFENParser.java</url>
++          <line>32</line>
++          <option name="timeStamp" value="180" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
