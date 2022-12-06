@@ -1,6 +1,6 @@
 package tests.com.chess.tests;
 
-import com.chess.engine.Alliance;
+import com.chess.player.Alliance;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
@@ -8,8 +8,8 @@ import com.chess.engine.board.Move.MoveFactory;
 import com.chess.engine.pieces.Bishop;
 import com.chess.engine.pieces.King;
 import com.chess.engine.pieces.Rook;
-import com.chess.engine.player.MoveTransition;
-import com.chess.engine.player.ai.StandardBoardEvaluator;
+import com.chess.player.MoveTransition;
+import com.chess.player.ai.StandardBoardEvaluator;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertFalse;

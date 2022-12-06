@@ -4,12 +4,12 @@ package com.chess.gui;
 import com.chess.engine.board.*;
 import com.chess.engine.board.Move.MoveFactory;
 import com.chess.engine.pieces.Piece;
-import com.chess.engine.player.MoveTransition;
-import com.chess.engine.player.Player;
-import com.chess.engine.player.ai.AlphaBetaWithMoveOrdering;
-import com.chess.engine.player.ai.StandardBoardEvaluator;
-import com.chess.pgn.FenUtilities;
-import com.chess.pgn.MySqlGamePersistence;
+import com.chess.player.MoveTransition;
+import com.chess.player.Player;
+import com.chess.player.ai.AlphaBetaWithMoveOrdering;
+import com.chess.player.ai.StandardBoardEvaluator;
+import com.chess.engine.pgn.FenUtilities;
+import com.chess.engine.pgn.MySqlGamePersistence;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -22,8 +22,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.*;
 
-import static com.chess.pgn.PGNUtilities.persistPGNFile;
-import static com.chess.pgn.PGNUtilities.writeGameToPGNFile;
+import static com.chess.engine.pgn.PGNUtilities.persistPGNFile;
+import static com.chess.engine.pgn.PGNUtilities.writeGameToPGNFile;
 import static javax.swing.SwingUtilities.*;
 
 public class Table extends Observable {

@@ -1,6 +1,5 @@
-package com.chess.engine.player;
+package com.chess.player;
 
-import com.chess.engine.Alliance;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.Move;
 import com.chess.engine.pieces.Piece;

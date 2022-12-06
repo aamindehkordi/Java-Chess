@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="dc.created" content="2022-10-25">
-<meta name="description" content="declaration: package: com.chess.engine.player, class: Player">
+<meta name="description" content="declaration: package: com.chess.player, class: Player">
 <meta name="generator" content="javadoc/ClassWriterImpl">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../script-dir/jquery-ui.min.css" title="Style">
@@ -84,16 +84,16 @@ loadScripts(document, 'script');</script>
 <main role="main">
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.chess.engine.player</a></div>
+<div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.chess.player</a></div>
 <h1 title="Class Player" class="title">Class Player</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance">com.chess.engine.player.Player</div>
+<div class="inheritance">com.chess.player.Player</div>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="BlackPlayer.html" title="class in com.chess.engine.player">BlackPlayer</a></code>, <code><a href="WhitePlayer.html" title="class in com.chess.engine.player">WhitePlayer</a></code></dd>
+<dd><code><a href="BlackPlayer.html" title="class in com.chess.player">BlackPlayer</a></code>, <code><a href="WhitePlayer.html" title="class in com.chess.player">WhitePlayer</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">Player</span>
@@ -186,7 +186,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get the player's legal moves</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract <a href="Player.html" title="class in com.chess.engine.player">Player</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract <a href="Player.html" title="class in com.chess.player">Player</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOpponent()" class="member-name-link">getOpponent</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Gets the opponent of a player</div>
@@ -221,7 +221,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Checks if a move is legal</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MoveTransition.html" title="class in com.chess.engine.player">MoveTransition</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MoveTransition.html" title="class in com.chess.player">MoveTransition</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#makeMove(com.chess.engine.board.Move)" class="member-name-link">makeMove</a><wbr>(<a href="../board/Move.html" title="class in com.chess.engine.board">Move</a>&nbsp;move)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Make a move</div>
@@ -388,7 +388,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="makeMove(com.chess.engine.board.Move)">
 <h3>makeMove</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MoveTransition.html" title="class in com.chess.engine.player">MoveTransition</a></span>&nbsp;<span class="element-name">makeMove</span><wbr><span class="parameters">(<a href="../board/Move.html" title="class in com.chess.engine.board">Move</a>&nbsp;move)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MoveTransition.html" title="class in com.chess.player">MoveTransition</a></span>&nbsp;<span class="element-name">makeMove</span><wbr><span class="parameters">(<a href="../board/Move.html" title="class in com.chess.engine.board">Move</a>&nbsp;move)</span></div>
 <div class="block">Make a move</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -434,7 +434,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getOpponent()">
 <h3>getOpponent</h3>
-<div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="Player.html" title="class in com.chess.engine.player">Player</a></span>&nbsp;<span class="element-name">getOpponent</span>()</div>
+<div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="Player.html" title="class in com.chess.player">Player</a></span>&nbsp;<span class="element-name">getOpponent</span>()</div>
 <div class="block">Gets the opponent of a player</div>
 <dl class="notes">
 <dt>Returns:</dt>

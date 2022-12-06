@@ -1,12 +1,12 @@
 package tests.com.chess.tests;
 
-import com.chess.engine.Alliance;
+import com.chess.player.Alliance;
 import com.chess.engine.board.Board;
 import com.chess.engine.pieces.King;
 import com.chess.engine.pieces.Pawn;
-import com.chess.engine.player.ai.PawnStructureAnalyzer;
-import com.chess.engine.player.ai.StandardBoardEvaluator;
-import com.chess.pgn.FenUtilities;
+import com.chess.player.ai.PawnStructureAnalyzer;
+import com.chess.player.ai.StandardBoardEvaluator;
+import com.chess.engine.pgn.FenUtilities;
 import org.junit.Test;
 
 import static com.chess.engine.board.Board.Builder;

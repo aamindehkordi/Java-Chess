@@ -1,4 +1,4 @@
-package com.chess.pgn;
+package com.chess.engine.pgn;
 
 import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
@@ -73,8 +73,7 @@ public class PGNUtilities {
         System.out.println("Finished building book from pgn file: " + pgnFile + " Parsed " +count+ " games, valid = " +validCount);
     }
 
-    public static void writeGameToPGNFile(final File pgnFile,
-                                          final MoveLog moveLog) throws IOException {
+    public static void writeGameToPGNFile(final File pgnFile, final MoveLog moveLog) throws IOException {
         final StringBuilder builder = new StringBuilder();
         builder.append(calculateEventString()).append("\n");
         builder.append(calculateDateString()).append("\n");
@@ -88,7 +87,7 @@ public class PGNUtilities {
     }
 
     private static String calculateEventString() {
-        return "[Event \"" +"Black Widow Game"+ "\"]";
+        return "[Event \"" +"AlphaBeta w/ Move-Ordering Game"+ "\"]";
     }
 
     private static String calculateDateString() {
@@ -101,6 +100,7 @@ public class PGNUtilities {
     }
 
     public static List<String> processMoveText(final String gameText) throws ParsePGNException {
+        // if the game text is empty, return an empty list, else split the game text by spaces
         return gameText.isEmpty() ? Collections.emptyList() : createMovesFromPGN(gameText);
     }
 

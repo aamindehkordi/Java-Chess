@@ -1,22 +1,22 @@
 package tests.com.chess.tests;
 
-import com.chess.engine.Alliance;
+import com.chess.player.Alliance;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.Board.Builder;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
 import com.chess.engine.board.Move.MoveFactory;
 import com.chess.engine.pieces.*;
-import com.chess.engine.player.MoveTransition;
-import com.chess.engine.player.ai.BoardEvaluator;
-import com.chess.engine.player.ai.MiniMax;
-import com.chess.engine.player.ai.StandardBoardEvaluator;
+import com.chess.player.MoveTransition;
+import com.chess.player.ai.BoardEvaluator;
+import com.chess.player.ai.MiniMax;
+import com.chess.player.ai.StandardBoardEvaluator;
 import org.junit.Test;
 
 import java.util.Optional;
 
-import static com.chess.engine.Alliance.BLACK;
-import static com.chess.engine.Alliance.WHITE;
+import static com.chess.player.Alliance.BLACK;
+import static com.chess.player.Alliance.WHITE;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;

@@ -1,11 +1,7 @@
 package tests.com.chess.tests;
 
-import com.chess.engine.board.Board;
-import com.chess.engine.board.Move;
-import com.chess.engine.player.MoveTransition;
-import com.chess.pgn.MySqlGamePersistence;
-import com.chess.pgn.PGNUtilities;
-import com.chess.pgn.ParsePGNException;
+import com.chess.engine.pgn.PGNUtilities;
+import com.chess.engine.pgn.ParsePGNException;
 import org.junit.Test;
 
 import java.io.File;
@@ -95,13 +91,6 @@ public class TestPGNParser {
     }
 
      */
-
-    @Test
-    public void testMax() throws IOException {
-        int maxId = MySqlGamePersistence.get().getMaxGameRow();
-        System.out.println("max id = " +maxId);
-    }
-
     @Test
     public void testParens() throws ParsePGNException {
 
@@ -109,17 +98,6 @@ public class TestPGNParser {
         final List<String> moves = PGNUtilities.processMoveText(gameText);
         assert(moves.size() == 2);
 
-    }
-
-    @Test
-    public void testWithErol() throws IOException {
-        final Board board = Board.createStandardBoard();
-        final Move move = MySqlGamePersistence.get().getNextBestMove(board, board.currentPlayer(), "");
-        final MoveTransition moveTransition = board.currentPlayer().makeMove(move);
-        final Move move2 = MySqlGamePersistence.get()
-                .getNextBestMove(moveTransition.getTransitionBoard(),
-                        moveTransition.getTransitionBoard().currentPlayer(), "e4");
-        System.out.println("move 2 = " +move2);
     }
 
     private static void doTest(final String testFilePath) throws IOException, ParsePGNException {

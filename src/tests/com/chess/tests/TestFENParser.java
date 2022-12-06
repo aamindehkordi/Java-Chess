@@ -3,8 +3,8 @@ package tests.com.chess.tests;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
-import com.chess.engine.player.MoveTransition;
-import com.chess.pgn.FenUtilities;
+import com.chess.player.MoveTransition;
+import com.chess.engine.pgn.FenUtilities;
 import org.junit.Test;
 
 import java.io.IOException;

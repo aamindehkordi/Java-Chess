@@ -57,10 +57,10 @@ loadScripts(document, 'script');</script>
 <li><a href="com/chess/engine/package-tree.html">com.chess.engine</a>, </li>
 <li><a href="com/chess/engine/board/package-tree.html">com.chess.engine.board</a>, </li>
 <li><a href="com/chess/engine/pieces/package-tree.html">com.chess.engine.pieces</a>, </li>
-<li><a href="com/chess/engine/player/package-tree.html">com.chess.engine.player</a>, </li>
-<li><a href="com/chess/engine/player/ai/package-tree.html">com.chess.engine.player.ai</a>, </li>
+<li><a href="com/chess/engine/player/package-tree.html">com.chess.player</a>, </li>
+<li><a href="com/chess/engine/player/ai/package-tree.html">com.chess.player.ai</a>, </li>
 <li><a href="com/chess/gui/package-tree.html">com.chess.gui</a>, </li>
-<li><a href="com/chess/pgn/package-tree.html">com.chess.pgn</a>, </li>
+<li><a href="com/chess/pgn/package-tree.html">com.chess.engine.pgn</a>, </li>
 <li><a href="tests/com/chess/tests/package-tree.html">tests.com.chess.tests</a></li>
 </ul>
 </div>
@@ -92,15 +92,15 @@ loadScripts(document, 'script');</script>
 </li>
 </ul>
 </li>
-<li class="circle">com.chess.pgn.<a href="com/chess/pgn/FenUtilities.html" class="type-name-link" title="class in com.chess.pgn">FenUtilities</a></li>
-<li class="circle">com.chess.pgn.<a href="com/chess/pgn/Game.html" class="type-name-link" title="class in com.chess.pgn">Game</a> (implements com.chess.pgn.<a href="com/chess/pgn/Playable.html" title="interface in com.chess.pgn">Playable</a>)
+<li class="circle">com.chess.engine.pgn.<a href="com/chess/pgn/FenUtilities.html" class="type-name-link" title="class in com.chess.engine.pgn">FenUtilities</a></li>
+<li class="circle">com.chess.engine.pgn.<a href="com/chess/pgn/Game.html" class="type-name-link" title="class in com.chess.engine.pgn">Game</a> (implements com.chess.engine.pgn.<a href="com/chess/pgn/Playable.html" title="interface in com.chess.engine.pgn">Playable</a>)
 <ul>
-<li class="circle">com.chess.pgn.<a href="com/chess/pgn/InvalidGame.html" class="type-name-link" title="class in com.chess.pgn">InvalidGame</a></li>
-<li class="circle">com.chess.pgn.<a href="com/chess/pgn/ValidGame.html" class="type-name-link" title="class in com.chess.pgn">ValidGame</a></li>
+<li class="circle">com.chess.engine.pgn.<a href="com/chess/pgn/InvalidGame.html" class="type-name-link" title="class in com.chess.engine.pgn">InvalidGame</a></li>
+<li class="circle">com.chess.engine.pgn.<a href="com/chess/pgn/ValidGame.html" class="type-name-link" title="class in com.chess.engine.pgn">ValidGame</a></li>
 </ul>
 </li>
-<li class="circle">com.chess.pgn.<a href="com/chess/pgn/GameFactory.html" class="type-name-link" title="class in com.chess.pgn">GameFactory</a></li>
-<li class="circle">com.chess.engine.player.ai.<a href="com/chess/engine/player/ai/KingSafetyAnalyzer.html" class="type-name-link" title="class in com.chess.engine.player.ai">KingSafetyAnalyzer</a></li>
+<li class="circle">com.chess.engine.pgn.<a href="com/chess/pgn/GameFactory.html" class="type-name-link" title="class in com.chess.engine.pgn">GameFactory</a></li>
+<li class="circle">com.chess.player.ai.<a href="com/chess/engine/player/ai/KingSafetyAnalyzer.html" class="type-name-link" title="class in com.chess.player.ai">KingSafetyAnalyzer</a></li>
 <li class="circle">com.chess.engine.board.<a href="com/chess/engine/board/Move.html" class="type-name-link" title="class in com.chess.engine.board">Move</a>
 <ul>
 <li class="circle">com.chess.engine.board.<a href="com/chess/engine/board/Move.AttackMove.html" class="type-name-link" title="class in com.chess.engine.board">Move.AttackMove</a>
@@ -130,21 +130,21 @@ loadScripts(document, 'script');</script>
 </ul>
 </li>
 <li class="circle">com.chess.engine.board.<a href="com/chess/engine/board/Move.MoveFactory.html" class="type-name-link" title="class in com.chess.engine.board">Move.MoveFactory</a></li>
-<li class="circle">com.chess.engine.player.ai.<a href="com/chess/engine/player/ai/MoveOrdering.html" class="type-name-link" title="class in com.chess.engine.player.ai">MoveOrdering</a></li>
-<li class="circle">com.chess.engine.player.<a href="com/chess/engine/player/MoveTransition.html" class="type-name-link" title="class in com.chess.engine.player">MoveTransition</a></li>
-<li class="circle">com.chess.pgn.<a href="com/chess/pgn/MySqlGamePersistence.html" class="type-name-link" title="class in com.chess.pgn">MySqlGamePersistence</a> (implements com.chess.pgn.<a href="com/chess/pgn/PGNPersistence.html" title="interface in com.chess.pgn">PGNPersistence</a>)</li>
+<li class="circle">com.chess.player.ai.<a href="com/chess/engine/player/ai/MoveOrdering.html" class="type-name-link" title="class in com.chess.player.ai">MoveOrdering</a></li>
+<li class="circle">com.chess.player.<a href="com/chess/engine/player/MoveTransition.html" class="type-name-link" title="class in com.chess.player">MoveTransition</a></li>
+<li class="circle">com.chess.engine.pgn.<a href="com/chess/pgn/MySqlGamePersistence.html" class="type-name-link" title="class in com.chess.engine.pgn">MySqlGamePersistence</a> (implements com.chess.engine.pgn.<a href="com/chess/pgn/PGNPersistence.html" title="interface in com.chess.engine.pgn">PGNPersistence</a>)</li>
 <li class="circle">java.util.<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/Observable.html" class="type-name-link external-link" title="class or interface in java.util">Observable</a>
 <ul>
-<li class="circle">com.chess.engine.player.ai.<a href="com/chess/engine/player/ai/AlphaBetaWithMoveOrdering.html" class="type-name-link" title="class in com.chess.engine.player.ai">AlphaBetaWithMoveOrdering</a> (implements com.chess.engine.player.ai.<a href="com/chess/engine/player/ai/MoveStrategy.html" title="interface in com.chess.engine.player.ai">MoveStrategy</a>)</li>
-<li class="circle">com.chess.engine.player.ai.<a href="com/chess/engine/player/ai/MiniMax.html" class="type-name-link" title="class in com.chess.engine.player.ai">MiniMax</a> (implements com.chess.engine.player.ai.<a href="com/chess/engine/player/ai/MoveStrategy.html" title="interface in com.chess.engine.player.ai">MoveStrategy</a>)</li>
-<li class="circle">com.chess.engine.player.ai.<a href="com/chess/engine/player/ai/StockAlphaBeta.html" class="type-name-link" title="class in com.chess.engine.player.ai">StockAlphaBeta</a> (implements com.chess.engine.player.ai.<a href="com/chess/engine/player/ai/MoveStrategy.html" title="interface in com.chess.engine.player.ai">MoveStrategy</a>)</li>
+<li class="circle">com.chess.player.ai.<a href="com/chess/engine/player/ai/AlphaBetaWithMoveOrdering.html" class="type-name-link" title="class in com.chess.player.ai">AlphaBetaWithMoveOrdering</a> (implements com.chess.player.ai.<a href="com/chess/engine/player/ai/MoveStrategy.html" title="interface in com.chess.player.ai">MoveStrategy</a>)</li>
+<li class="circle">com.chess.player.ai.<a href="com/chess/engine/player/ai/MiniMax.html" class="type-name-link" title="class in com.chess.player.ai">MiniMax</a> (implements com.chess.player.ai.<a href="com/chess/engine/player/ai/MoveStrategy.html" title="interface in com.chess.player.ai">MoveStrategy</a>)</li>
+<li class="circle">com.chess.player.ai.<a href="com/chess/engine/player/ai/StockAlphaBeta.html" class="type-name-link" title="class in com.chess.player.ai">StockAlphaBeta</a> (implements com.chess.player.ai.<a href="com/chess/engine/player/ai/MoveStrategy.html" title="interface in com.chess.player.ai">MoveStrategy</a>)</li>
 <li class="circle">com.chess.gui.<a href="com/chess/gui/Table.html" class="type-name-link" title="class in com.chess.gui">Table</a></li>
 </ul>
 </li>
 <li class="circle">com.chess.<a href="com/chess/OOPChess.html" class="type-name-link" title="class in com.chess">OOPChess</a></li>
-<li class="circle">com.chess.engine.player.ai.<a href="com/chess/engine/player/ai/PawnStructureAnalyzer.html" class="type-name-link" title="class in com.chess.engine.player.ai">PawnStructureAnalyzer</a></li>
-<li class="circle">com.chess.pgn.<a href="com/chess/pgn/PGNGameTags.html" class="type-name-link" title="class in com.chess.pgn">PGNGameTags</a></li>
-<li class="circle">com.chess.pgn.<a href="com/chess/pgn/PGNUtilities.html" class="type-name-link" title="class in com.chess.pgn">PGNUtilities</a></li>
+<li class="circle">com.chess.player.ai.<a href="com/chess/engine/player/ai/PawnStructureAnalyzer.html" class="type-name-link" title="class in com.chess.player.ai">PawnStructureAnalyzer</a></li>
+<li class="circle">com.chess.engine.pgn.<a href="com/chess/pgn/PGNGameTags.html" class="type-name-link" title="class in com.chess.engine.pgn">PGNGameTags</a></li>
+<li class="circle">com.chess.engine.pgn.<a href="com/chess/pgn/PGNUtilities.html" class="type-name-link" title="class in com.chess.engine.pgn">PGNUtilities</a></li>
 <li class="circle">com.chess.engine.pieces.<a href="com/chess/engine/pieces/Piece.html" class="type-name-link" title="class in com.chess.engine.pieces">Piece</a>
 <ul>
 <li class="circle">com.chess.engine.pieces.<a href="com/chess/engine/pieces/Bishop.html" class="type-name-link" title="class in com.chess.engine.pieces">Bishop</a></li>
@@ -155,14 +155,14 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.chess.engine.pieces.<a href="com/chess/engine/pieces/Rook.html" class="type-name-link" title="class in com.chess.engine.pieces">Rook</a></li>
 </ul>
 </li>
-<li class="circle">com.chess.engine.player.<a href="com/chess/engine/player/Player.html" class="type-name-link" title="class in com.chess.engine.player">Player</a>
+<li class="circle">com.chess.player.<a href="com/chess/engine/player/Player.html" class="type-name-link" title="class in com.chess.player">Player</a>
 <ul>
-<li class="circle">com.chess.engine.player.<a href="com/chess/engine/player/BlackPlayer.html" class="type-name-link" title="class in com.chess.engine.player">BlackPlayer</a></li>
-<li class="circle">com.chess.engine.player.<a href="com/chess/engine/player/WhitePlayer.html" class="type-name-link" title="class in com.chess.engine.player">WhitePlayer</a></li>
+<li class="circle">com.chess.player.<a href="com/chess/engine/player/BlackPlayer.html" class="type-name-link" title="class in com.chess.player">BlackPlayer</a></li>
+<li class="circle">com.chess.player.<a href="com/chess/engine/player/WhitePlayer.html" class="type-name-link" title="class in com.chess.player">WhitePlayer</a></li>
 </ul>
 </li>
-<li class="circle">com.chess.engine.player.ai.<a href="com/chess/engine/player/ai/RookStructureAnalyzer.html" class="type-name-link" title="class in com.chess.engine.player.ai">RookStructureAnalyzer</a></li>
-<li class="circle">com.chess.engine.player.ai.<a href="com/chess/engine/player/ai/StandardBoardEvaluator.html" class="type-name-link" title="class in com.chess.engine.player.ai">StandardBoardEvaluator</a> (implements com.chess.engine.player.ai.<a href="com/chess/engine/player/ai/BoardEvaluator.html" title="interface in com.chess.engine.player.ai">BoardEvaluator</a>)</li>
+<li class="circle">com.chess.player.ai.<a href="com/chess/engine/player/ai/RookStructureAnalyzer.html" class="type-name-link" title="class in com.chess.player.ai">RookStructureAnalyzer</a></li>
+<li class="circle">com.chess.player.ai.<a href="com/chess/engine/player/ai/StandardBoardEvaluator.html" class="type-name-link" title="class in com.chess.player.ai">StandardBoardEvaluator</a> (implements com.chess.player.ai.<a href="com/chess/engine/player/ai/BoardEvaluator.html" title="interface in com.chess.player.ai">BoardEvaluator</a>)</li>
 <li class="circle">com.chess.gui.<a href="com/chess/gui/Table.MoveLog.html" class="type-name-link" title="class in com.chess.gui">Table.MoveLog</a></li>
 <li class="circle">tests.com.chess.tests.<a href="tests/com/chess/tests/TestAlphaBeta.html" class="type-name-link" title="class in tests.com.chess.tests">TestAlphaBeta</a></li>
 <li class="circle">tests.com.chess.tests.<a href="tests/com/chess/tests/TestBoard.html" class="type-name-link" title="class in tests.com.chess.tests">TestBoard</a></li>
@@ -183,10 +183,10 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Exception.html" class="type-name-link external-link" title="class or interface in java.lang">Exception</a>
 <ul>
-<li class="circle">com.chess.pgn.<a href="com/chess/pgn/ParsePGNException.html" class="type-name-link" title="class in com.chess.pgn">ParsePGNException</a></li>
+<li class="circle">com.chess.engine.pgn.<a href="com/chess/pgn/ParsePGNException.html" class="type-name-link" title="class in com.chess.engine.pgn">ParsePGNException</a></li>
 <li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/RuntimeException.html" class="type-name-link external-link" title="class or interface in java.lang">RuntimeException</a>
 <ul>
-<li class="circle">com.chess.pgn.<a href="com/chess/pgn/PlayPGNException.html" class="type-name-link" title="class in com.chess.pgn">PlayPGNException</a></li>
+<li class="circle">com.chess.engine.pgn.<a href="com/chess/pgn/PlayPGNException.html" class="type-name-link" title="class in com.chess.engine.pgn">PlayPGNException</a></li>
 </ul>
 </li>
 </ul>
@@ -206,10 +206,10 @@ loadScripts(document, 'script');</script>
 <section class="hierarchy">
 <h2 title="Interface Hierarchy">Interface Hierarchy</h2>
 <ul>
-<li class="circle">com.chess.engine.player.ai.<a href="com/chess/engine/player/ai/BoardEvaluator.html" class="type-name-link" title="interface in com.chess.engine.player.ai">BoardEvaluator</a></li>
-<li class="circle">com.chess.engine.player.ai.<a href="com/chess/engine/player/ai/MoveStrategy.html" class="type-name-link" title="interface in com.chess.engine.player.ai">MoveStrategy</a></li>
-<li class="circle">com.chess.pgn.<a href="com/chess/pgn/PGNPersistence.html" class="type-name-link" title="interface in com.chess.pgn">PGNPersistence</a></li>
-<li class="circle">com.chess.pgn.<a href="com/chess/pgn/Playable.html" class="type-name-link" title="interface in com.chess.pgn">Playable</a></li>
+<li class="circle">com.chess.player.ai.<a href="com/chess/engine/player/ai/BoardEvaluator.html" class="type-name-link" title="interface in com.chess.player.ai">BoardEvaluator</a></li>
+<li class="circle">com.chess.player.ai.<a href="com/chess/engine/player/ai/MoveStrategy.html" class="type-name-link" title="interface in com.chess.player.ai">MoveStrategy</a></li>
+<li class="circle">com.chess.engine.pgn.<a href="com/chess/pgn/PGNPersistence.html" class="type-name-link" title="interface in com.chess.engine.pgn">PGNPersistence</a></li>
+<li class="circle">com.chess.engine.pgn.<a href="com/chess/pgn/Playable.html" class="type-name-link" title="interface in com.chess.engine.pgn">Playable</a></li>
 </ul>
 </section>
 <section class="hierarchy">
@@ -220,7 +220,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Enum.html" class="type-name-link external-link" title="class or interface in java.lang">Enum</a>&lt;E&gt; (implements java.lang.<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;T&gt;, java.lang.constant.<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a>, java.io.<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>)
 <ul>
 <li class="circle">com.chess.engine.<a href="com/chess/engine/Alliance.html" class="type-name-link" title="enum class in com.chess.engine">Alliance</a></li>
-<li class="circle">com.chess.engine.player.<a href="com/chess/engine/player/MoveStatus.html" class="type-name-link" title="enum class in com.chess.engine.player">MoveStatus</a></li>
+<li class="circle">com.chess.player.<a href="com/chess/engine/player/MoveStatus.html" class="type-name-link" title="enum class in com.chess.player">MoveStatus</a></li>
 <li class="circle">com.chess.engine.board.<a href="com/chess/engine/board/MoveUtils.html" class="type-name-link" title="enum class in com.chess.engine.board">MoveUtils</a></li>
 <li class="circle">com.chess.engine.pieces.<a href="com/chess/engine/pieces/PieceType.html" class="type-name-link" title="enum class in com.chess.engine.pieces">PieceType</a></li>
 <li class="circle">com.chess.gui.<a href="com/chess/gui/Table.BoardDirection.html" class="type-name-link" title="enum class in com.chess.gui">Table.BoardDirection</a></li>

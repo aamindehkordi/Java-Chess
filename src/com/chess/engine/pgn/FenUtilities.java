@@ -1,7 +1,7 @@
-package com.chess.pgn;
+package com.chess.engine.pgn;
 
 
-import com.chess.engine.Alliance;
+import com.chess.player.Alliance;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.pieces.*;

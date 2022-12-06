@@ -1,8 +1,8 @@
-package com.chess.pgn;
+package com.chess.engine.pgn;
 
 import com.chess.engine.board.Board;
 import com.chess.engine.board.Move;
-import com.chess.engine.player.Player;
+import com.chess.player.Player;
 
 public interface PGNPersistence {
 

@@ -1,8 +1,8 @@
-package com.chess.engine.player.ai;
+package com.chess.player.ai;
 
 import com.chess.engine.pieces.Piece;
 import com.chess.engine.pieces.PieceType;
-import com.chess.engine.player.Player;
+import com.chess.player.Player;
 
 import java.util.Collection;
 import java.util.stream.Collectors;

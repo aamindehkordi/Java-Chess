@@ -1,9 +1,9 @@
 package com.chess.engine.board;
 
-import com.chess.engine.Alliance;
+import com.chess.player.Alliance;
 import com.chess.engine.board.Move.MoveFactory;
 import com.chess.engine.pieces.*;
-import com.chess.engine.player.*;
+import com.chess.player.*;
 
 import java.util.*;
 

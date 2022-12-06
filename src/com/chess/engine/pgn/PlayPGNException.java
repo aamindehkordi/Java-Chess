@@ -1,4 +1,4 @@
-package com.chess.pgn;
+package com.chess.engine.pgn;
 
 public class PlayPGNException extends RuntimeException {
 

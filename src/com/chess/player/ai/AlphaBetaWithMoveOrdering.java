@@ -1,12 +1,12 @@
-package com.chess.engine.player.ai;
+package com.chess.player.ai;
 
-import com.chess.engine.Alliance;
+import com.chess.player.Alliance;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
 import com.chess.engine.board.Move.MoveFactory;
-import com.chess.engine.player.MoveTransition;
-import com.chess.engine.player.Player;
+import com.chess.player.MoveTransition;
+import com.chess.player.Player;
 
 import java.util.Collection;
 import java.util.Comparator;
