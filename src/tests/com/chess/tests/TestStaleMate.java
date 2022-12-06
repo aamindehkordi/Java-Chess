@@ -1,14 +1,14 @@
 package tests.com.chess.tests;
 
-import com.chess.player.Alliance;
-import com.chess.engine.board.Board;
-import com.chess.engine.board.Board.Builder;
-import com.chess.engine.board.BoardUtils;
-import com.chess.engine.board.Move.MoveFactory;
-import com.chess.engine.pieces.Bishop;
-import com.chess.engine.pieces.King;
-import com.chess.engine.pieces.Pawn;
-import com.chess.player.MoveTransition;
+import com.chess.controller.Alliance;
+import com.chess.model.board.Board;
+import com.chess.model.board.Board.Builder;
+import com.chess.model.board.BoardUtils;
+import com.chess.model.board.Move.MoveFactory;
+import com.chess.model.pieces.Bishop;
+import com.chess.model.pieces.King;
+import com.chess.model.pieces.Pawn;
+import com.chess.controller.MoveTransition;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;

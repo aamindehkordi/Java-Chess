@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="dc.created" content="2022-10-25">
-<meta name="description" content="declaration: package: com.chess.engine.pieces, class: Bishop">
+<meta name="description" content="declaration: package: com.chess.model.pieces, class: Bishop">
 <meta name="generator" content="javadoc/ClassWriterImpl">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../script-dir/jquery-ui.min.css" title="Style">
@@ -83,18 +83,18 @@ loadScripts(document, 'script');</script>
 <main role="main">
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.chess.engine.pieces</a></div>
+<div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.chess.model.pieces</a></div>
 <h1 title="Class Bishop" class="title">Class Bishop</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance"><a href="Piece.html" title="class in com.chess.engine.pieces">com.chess.engine.pieces.Piece</a>
-<div class="inheritance">com.chess.engine.pieces.Bishop</div>
+<div class="inheritance"><a href="Piece.html" title="class in com.chess.model.pieces">com.chess.model.pieces.Piece</a>
+<div class="inheritance">com.chess.model.pieces.Bishop</div>
 </div>
 </div>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Bishop</span>
-<span class="extends-implements">extends <a href="Piece.html" title="class in com.chess.engine.pieces">Piece</a></span></div>
+<span class="extends-implements">extends <a href="Piece.html" title="class in com.chess.model.pieces">Piece</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -103,7 +103,7 @@ loadScripts(document, 'script');</script>
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
 <div class="inherited-list">
-<h3 id="fields-inherited-from-class-com.chess.engine.pieces.Piece">Fields inherited from class&nbsp;com.chess.engine.pieces.<a href="Piece.html" title="class in com.chess.engine.pieces">Piece</a></h3>
+<h3 id="fields-inherited-from-class-com.chess.engine.pieces.Piece">Fields inherited from class&nbsp;com.chess.model.pieces.<a href="Piece.html" title="class in com.chess.model.pieces">Piece</a></h3>
 <code><a href="Piece.html#isFirstMove">isFirstMove</a>, <a href="Piece.html#pieceAlliance">pieceAlliance</a>, <a href="Piece.html#piecePosition">piecePosition</a>, <a href="Piece.html#pieceType">pieceType</a></code></div>
 </section>
 </li>
@@ -116,7 +116,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,com.chess.engine.Alliance)" class="member-name-link">Bishop</a><wbr>(int&nbsp;piecePosition,
- <a href="../Alliance.html" title="enum class in com.chess.engine">Alliance</a>&nbsp;pieceAlliance)</code></div>
+ <a href="../Alliance.html" title="enum class in com.chess.model">Alliance</a>&nbsp;pieceAlliance)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Constructor</div>
 </div>
@@ -134,13 +134,13 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="../board/Move.html" title="class in com.chess.engine.board">Move</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#calculateLegalMoves(com.chess.engine.board.Board)" class="member-name-link">calculateLegalMoves</a><wbr>(<a href="../board/Board.html" title="class in com.chess.engine.board">Board</a>&nbsp;board)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="../board/Move.html" title="class in com.chess.model.board">Move</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#calculateLegalMoves(com.chess.engine.board.Board)" class="member-name-link">calculateLegalMoves</a><wbr>(<a href="../board/Board.html" title="class in com.chess.model.board">Board</a>&nbsp;board)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Calculate the legal moves for the piece</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Piece.html" title="class in com.chess.engine.pieces">Piece</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#movePiece(com.chess.engine.board.Move)" class="member-name-link">movePiece</a><wbr>(<a href="../board/Move.html" title="class in com.chess.engine.board">Move</a>&nbsp;move)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Piece.html" title="class in com.chess.model.pieces">Piece</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#movePiece(com.chess.engine.board.Move)" class="member-name-link">movePiece</a><wbr>(<a href="../board/Move.html" title="class in com.chess.model.board">Move</a>&nbsp;move)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return a new piece with the updated position</div>
 </div>
@@ -151,7 +151,7 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.chess.engine.pieces.Piece">Methods inherited from class&nbsp;com.chess.engine.pieces.<a href="Piece.html" title="class in com.chess.engine.pieces">Piece</a></h3>
+<h3 id="methods-inherited-from-class-com.chess.engine.pieces.Piece">Methods inherited from class&nbsp;com.chess.model.pieces.<a href="Piece.html" title="class in com.chess.model.pieces">Piece</a></h3>
 <code><a href="Piece.html#equals(java.lang.Object)">equals</a>, <a href="Piece.html#getPieceAlliance()">getPieceAlliance</a>, <a href="Piece.html#getPiecePosition()">getPiecePosition</a>, <a href="Piece.html#getPieceType()">getPieceType</a>, <a href="Piece.html#hashCode()">hashCode</a>, <a href="Piece.html#isFirstMove()">isFirstMove</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
@@ -171,7 +171,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(int,com.chess.engine.Alliance)">
 <h3>Bishop</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Bishop</span><wbr><span class="parameters">(int&nbsp;piecePosition,
- <a href="../Alliance.html" title="enum class in com.chess.engine">Alliance</a>&nbsp;pieceAlliance)</span></div>
+ <a href="../Alliance.html" title="enum class in com.chess.model">Alliance</a>&nbsp;pieceAlliance)</span></div>
 <div class="block">Constructor</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -201,12 +201,12 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="calculateLegalMoves(com.chess.engine.board.Board)">
 <h3>calculateLegalMoves</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="../board/Move.html" title="class in com.chess.engine.board">Move</a>&gt;</span>&nbsp;<span class="element-name">calculateLegalMoves</span><wbr><span class="parameters">(<a href="../board/Board.html" title="class in com.chess.engine.board">Board</a>&nbsp;board)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="../board/Move.html" title="class in com.chess.model.board">Move</a>&gt;</span>&nbsp;<span class="element-name">calculateLegalMoves</span><wbr><span class="parameters">(<a href="../board/Board.html" title="class in com.chess.model.board">Board</a>&nbsp;board)</span></div>
 <div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="Piece.html#calculateLegalMoves(com.chess.engine.board.Board)">Piece</a></code></span></div>
 <div class="block">Calculate the legal moves for the piece</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="Piece.html#calculateLegalMoves(com.chess.engine.board.Board)">calculateLegalMoves</a></code>&nbsp;in class&nbsp;<code><a href="Piece.html" title="class in com.chess.engine.pieces">Piece</a></code></dd>
+<dd><code><a href="Piece.html#calculateLegalMoves(com.chess.engine.board.Board)">calculateLegalMoves</a></code>&nbsp;in class&nbsp;<code><a href="Piece.html" title="class in com.chess.model.pieces">Piece</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>board</code> - the board</dd>
 <dt>Returns:</dt>
@@ -217,11 +217,11 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="movePiece(com.chess.engine.board.Move)">
 <h3>movePiece</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Piece.html" title="class in com.chess.engine.pieces">Piece</a></span>&nbsp;<span class="element-name">movePiece</span><wbr><span class="parameters">(<a href="../board/Move.html" title="class in com.chess.engine.board">Move</a>&nbsp;move)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Piece.html" title="class in com.chess.model.pieces">Piece</a></span>&nbsp;<span class="element-name">movePiece</span><wbr><span class="parameters">(<a href="../board/Move.html" title="class in com.chess.model.board">Move</a>&nbsp;move)</span></div>
 <div class="block">Return a new piece with the updated position</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="Piece.html#movePiece(com.chess.engine.board.Move)">movePiece</a></code>&nbsp;in class&nbsp;<code><a href="Piece.html" title="class in com.chess.engine.pieces">Piece</a></code></dd>
+<dd><code><a href="Piece.html#movePiece(com.chess.engine.board.Move)">movePiece</a></code>&nbsp;in class&nbsp;<code><a href="Piece.html" title="class in com.chess.model.pieces">Piece</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>move</code> - the move</dd>
 <dt>Returns:</dt>

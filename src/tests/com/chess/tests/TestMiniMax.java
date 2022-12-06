@@ -1,14 +1,14 @@
 package tests.com.chess.tests;
 
-import com.chess.player.Alliance;
-import com.chess.engine.board.Board;
-import com.chess.engine.board.Board.Builder;
-import com.chess.engine.board.BoardUtils;
-import com.chess.engine.board.Move;
-import com.chess.engine.pieces.*;
-import com.chess.player.MoveTransition;
-import com.chess.player.ai.MiniMax;
-import com.chess.engine.pgn.FenUtilities;
+import com.chess.controller.Alliance;
+import com.chess.model.board.Board;
+import com.chess.model.board.Board.Builder;
+import com.chess.model.board.BoardUtils;
+import com.chess.model.board.Move;
+import com.chess.model.pieces.*;
+import com.chess.controller.MoveTransition;
+import com.chess.controller.ai.MiniMax;
+import com.chess.model.pgn.FenUtilities;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;

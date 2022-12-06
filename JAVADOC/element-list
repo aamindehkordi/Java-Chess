@@ -1,4 +1,4 @@
-com.chess.engine
-com.chess.engine.board
-com.chess.engine.pieces
-com.chess.player
+com.chess.model
+com.chess.model.board
+com.chess.model.pieces
+com.chess.controller

@@ -1,7 +1,7 @@
 package com.chess;
 
-import com.chess.engine.board.Board;
-import com.chess.gui.Table;
+import com.chess.model.board.Board;
+import com.chess.view.Table;
 
 public class OOPChess {
 

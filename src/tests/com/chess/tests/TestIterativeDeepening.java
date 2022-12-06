@@ -1,9 +1,9 @@
 package tests.com.chess.tests;
 
-import com.chess.player.Alliance;
-import com.chess.engine.board.Board;
-import com.chess.engine.board.Board.Builder;
-import com.chess.engine.pieces.*;
+import com.chess.controller.Alliance;
+import com.chess.model.board.Board;
+import com.chess.model.board.Board.Builder;
+import com.chess.model.pieces.*;
 import org.junit.Test;
 
 public class TestIterativeDeepening {

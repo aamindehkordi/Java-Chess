@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="dc.created" content="2022-10-25">
-<meta name="description" content="declaration: package: com.chess.player, class: MoveTransition">
+<meta name="description" content="declaration: package: com.chess.controller, class: MoveTransition">
 <meta name="generator" content="javadoc/ClassWriterImpl">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../script-dir/jquery-ui.min.css" title="Style">
@@ -83,11 +83,11 @@ loadScripts(document, 'script');</script>
 <main role="main">
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.chess.player</a></div>
+<div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.chess.controller</a></div>
 <h1 title="Class MoveTransition" class="title">Class MoveTransition</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance">com.chess.player.MoveTransition</div>
+<div class="inheritance">com.chess.controller.MoveTransition</div>
 </div>
 <section class="class-description" id="class-description">
 <hr>
@@ -104,9 +104,9 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.chess.engine.board.Board,com.chess.engine.board.Move,com.chess.engine.player.MoveStatus)" class="member-name-link">MoveTransition</a><wbr>(<a href="../board/Board.html" title="class in com.chess.engine.board">Board</a>&nbsp;transitionBoard,
- <a href="../board/Move.html" title="class in com.chess.engine.board">Move</a>&nbsp;move,
- <a href="MoveStatus.html" title="enum class in com.chess.player">MoveStatus</a>&nbsp;moveStatus)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.chess.engine.board.Board,com.chess.engine.board.Move,com.chess.engine.player.MoveStatus)" class="member-name-link">MoveTransition</a><wbr>(<a href="../board/Board.html" title="class in com.chess.model.board">Board</a>&nbsp;transitionBoard,
+ <a href="../board/Move.html" title="class in com.chess.model.board">Move</a>&nbsp;move,
+ <a href="MoveStatus.html" title="enum class in com.chess.controller">MoveStatus</a>&nbsp;moveStatus)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Constructor</div>
 </div>
@@ -124,7 +124,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MoveStatus.html" title="enum class in com.chess.player">MoveStatus</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MoveStatus.html" title="enum class in com.chess.controller">MoveStatus</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMoveStatus()" class="member-name-link">getMoveStatus</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get the board after the move</div>
@@ -149,9 +149,9 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;(com.chess.engine.board.Board,com.chess.engine.board.Move,com.chess.engine.player.MoveStatus)">
 <h3>MoveTransition</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MoveTransition</span><wbr><span class="parameters">(<a href="../board/Board.html" title="class in com.chess.engine.board">Board</a>&nbsp;transitionBoard,
- <a href="../board/Move.html" title="class in com.chess.engine.board">Move</a>&nbsp;move,
- <a href="MoveStatus.html" title="enum class in com.chess.player">MoveStatus</a>&nbsp;moveStatus)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MoveTransition</span><wbr><span class="parameters">(<a href="../board/Board.html" title="class in com.chess.model.board">Board</a>&nbsp;transitionBoard,
+ <a href="../board/Move.html" title="class in com.chess.model.board">Move</a>&nbsp;move,
+ <a href="MoveStatus.html" title="enum class in com.chess.controller">MoveStatus</a>&nbsp;moveStatus)</span></div>
 <div class="block">Constructor</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -172,7 +172,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getMoveStatus()">
 <h3>getMoveStatus</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MoveStatus.html" title="enum class in com.chess.player">MoveStatus</a></span>&nbsp;<span class="element-name">getMoveStatus</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MoveStatus.html" title="enum class in com.chess.controller">MoveStatus</a></span>&nbsp;<span class="element-name">getMoveStatus</span>()</div>
 <div class="block">Get the board after the move</div>
 <dl class="notes">
 <dt>Returns:</dt>

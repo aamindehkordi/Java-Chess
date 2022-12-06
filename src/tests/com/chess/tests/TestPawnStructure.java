@@ -1,16 +1,16 @@
 package tests.com.chess.tests;
 
-import com.chess.player.Alliance;
-import com.chess.engine.board.Board;
-import com.chess.engine.pieces.King;
-import com.chess.engine.pieces.Pawn;
-import com.chess.player.ai.PawnStructureAnalyzer;
-import com.chess.player.ai.StandardBoardEvaluator;
-import com.chess.engine.pgn.FenUtilities;
+import com.chess.controller.Alliance;
+import com.chess.model.board.Board;
+import com.chess.model.pieces.King;
+import com.chess.model.pieces.Pawn;
+import com.chess.controller.ai.PawnStructureAnalyzer;
+import com.chess.controller.ai.StandardBoardEvaluator;
+import com.chess.model.pgn.FenUtilities;
 import org.junit.Test;
 
-import static com.chess.engine.board.Board.Builder;
-import static com.chess.engine.board.Board.createStandardBoard;
+import static com.chess.model.board.Board.Builder;
+import static com.chess.model.board.Board.createStandardBoard;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPawnStructure {

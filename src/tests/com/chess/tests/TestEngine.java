@@ -1,8 +1,8 @@
 package tests.com.chess.tests;
 
-import com.chess.engine.board.Board;
-import com.chess.player.ai.MiniMax;
-import com.chess.engine.pgn.FenUtilities;
+import com.chess.model.board.Board;
+import com.chess.controller.ai.MiniMax;
+import com.chess.model.pgn.FenUtilities;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

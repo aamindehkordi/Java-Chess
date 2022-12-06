@@ -1,11 +1,11 @@
 package tests.com.chess.tests;
 
-import com.chess.player.Alliance;
-import com.chess.engine.board.Board;
-import com.chess.engine.board.Board.Builder;
-import com.chess.engine.pieces.King;
-import com.chess.engine.pieces.Pawn;
-import com.chess.player.ai.KingSafetyAnalyzer;
+import com.chess.controller.Alliance;
+import com.chess.model.board.Board;
+import com.chess.model.board.Board.Builder;
+import com.chess.model.pieces.King;
+import com.chess.model.pieces.Pawn;
+import com.chess.controller.ai.KingSafetyAnalyzer;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

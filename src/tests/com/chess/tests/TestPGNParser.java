@@ -1,7 +1,7 @@
 package tests.com.chess.tests;
 
-import com.chess.engine.pgn.PGNUtilities;
-import com.chess.engine.pgn.ParsePGNException;
+import com.chess.model.pgn.PGNUtilities;
+import com.chess.model.pgn.ParsePGNException;
 import org.junit.Test;
 
 import java.io.File;
