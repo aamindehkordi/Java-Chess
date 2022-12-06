@@ -19,7 +19,7 @@ public final class RookStructureAnalyzer {
     private static final RookStructureAnalyzer INSTANCE = new RookStructureAnalyzer();
 
     /**
-     * This method initializes board culumns for the rook structure.
+     * This method initializes board columns for the rook structure.
      */
     private static final  List<boolean[]> BOARD_COLUMNS = initColumns();
 
