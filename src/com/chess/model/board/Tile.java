@@ -82,7 +82,7 @@ public abstract class Tile {
             if (pieceAlliance == Alliance.WHITE) {
                 Player opponent = board.blackPlayer();
                 for (final Move move : opponent.getLegalMoves()) {
-                    if (move.getDestinationCoordinate() == this.tileCoord){
+                    if (move.getDestinationCoordinate() == this.tileCoord) {
                         return true;
                     }
                 }
